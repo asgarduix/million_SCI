@@ -2975,7 +2975,7 @@
   top:0px;
   width:205px;
   height:26px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -2994,7 +2994,7 @@
   top:0px;
   width:205px;
   height:26px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -3358,7 +3358,7 @@
   top:0px;
   width:125px;
   height:27px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -3377,7 +3377,7 @@
   top:0px;
   width:125px;
   height:27px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4360,7 +4360,7 @@
   top:0px;
   width:244px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4379,7 +4379,7 @@
   top:0px;
   width:244px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4655,7 +4655,7 @@
   top:0px;
   width:245px;
   height:22px;
-  padding:1px 4px 1px 4px;
+  padding:0px 4px 0px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4674,7 +4674,7 @@
   top:0px;
   width:245px;
   height:22px;
-  padding:1px 4px 1px 4px;
+  padding:0px 4px 0px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4850,7 +4850,7 @@
   top:0px;
   width:242px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -4869,7 +4869,7 @@
   top:0px;
   width:242px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -7573,7 +7573,7 @@
   top:0px;
   width:48px;
   height:23px;
-  padding:1px 4px 3px 4px;
+  padding:0px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -7592,7 +7592,7 @@
   top:0px;
   width:48px;
   height:23px;
-  padding:1px 4px 3px 4px;
+  padding:0px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -8061,6 +8061,10 @@
 }
 #u4601.disabled {
 }
+#u4601_img.selectedDisabled {
+}
+#u4601.selectedDisabled {
+}
 #u4601_text {
   border-width:0px;
   position:absolute;
@@ -8159,6 +8163,10 @@
 #u4604_img.disabled {
 }
 #u4604.disabled {
+}
+#u4604_img.selectedDisabled {
+}
+#u4604.selectedDisabled {
 }
 #u4604_text {
   border-width:0px;
@@ -8304,6 +8312,10 @@
 }
 #u4609.disabled {
 }
+#u4609_img.selectedDisabled {
+}
+#u4609.selectedDisabled {
+}
 #u4609_text {
   border-width:0px;
   position:absolute;
@@ -8402,6 +8414,10 @@
 #u4612_img.disabled {
 }
 #u4612.disabled {
+}
+#u4612_img.selectedDisabled {
+}
+#u4612.selectedDisabled {
 }
 #u4612_text {
   border-width:0px;
@@ -8502,6 +8518,10 @@
 }
 #u4615.disabled {
 }
+#u4615_img.selectedDisabled {
+}
+#u4615.selectedDisabled {
+}
 #u4615_text {
   border-width:0px;
   position:absolute;
@@ -8600,6 +8620,10 @@
 #u4618_img.disabled {
 }
 #u4618.disabled {
+}
+#u4618_img.selectedDisabled {
+}
+#u4618.selectedDisabled {
 }
 #u4618_text {
   border-width:0px;
@@ -8779,7 +8803,7 @@
   top:0px;
   width:392px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -8798,7 +8822,7 @@
   top:0px;
   width:392px;
   height:22px;
-  padding:3px 4px 3px 4px;
+  padding:2px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', '微軟正黑體', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -12243,7 +12267,7 @@
   top:0px;
   width:48px;
   height:23px;
-  padding:1px 4px 3px 4px;
+  padding:0px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -12262,7 +12286,7 @@
   top:0px;
   width:48px;
   height:23px;
-  padding:1px 4px 3px 4px;
+  padding:0px 4px 2px 4px;
   font-family:'MicrosoftJhengHeiRegular', 'Microsoft JhengHei', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -12773,6 +12797,10 @@
 }
 #u4761.disabled {
 }
+#u4761_img.selectedDisabled {
+}
+#u4761.selectedDisabled {
+}
 #u4761_text {
   border-width:0px;
   position:absolute;
@@ -12880,6 +12908,10 @@
 }
 #u4765.disabled {
 }
+#u4765_img.selectedDisabled {
+}
+#u4765.selectedDisabled {
+}
 #u4765_text {
   border-width:0px;
   position:absolute;
@@ -12986,6 +13018,10 @@
 #u4769_img.disabled {
 }
 #u4769.disabled {
+}
+#u4769_img.selectedDisabled {
+}
+#u4769.selectedDisabled {
 }
 #u4769_text {
   border-width:0px;
