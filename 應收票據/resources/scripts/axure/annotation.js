@@ -39,28 +39,11 @@ $axure.internal(function($ax) {
     };
 
     var _toggleAnnotationDialog = function (elementId, event) {
-        let win = $(window);
-        let scrollY = win.scrollTop();
-        let scrollX = win.scrollLeft();
-        
-        let x = event.pageX - scrollX;
-        let y = event.pageY - scrollY;
+            var win = $(window);
+            var scrollY = win.scrollTop();
+            var scrollX = win.scrollLeft();
 
-        let frameElement = window.frameElement;
-        let parent = window.parent;
-        //ann dialog is relative to mainFrame, exclude the mainFrame location so the notes shows up correctly in device mode
-        while(frameElement && frameElement.name !== 'mainFrame') {
-            let rect = frameElement.getBoundingClientRect();
-            x += rect.x;
-            y += rect.y;
-            
-            if(!parent) break;
-
-            frameElement = parent.frameElement;
-            parent = parent.parent;
-        }
-        
-        let messageData = { id: elementId, x: x, y: y }
+        var messageData = { id: elementId, x: event.pageX - scrollX, y: event.pageY - scrollY }
         if (!$axure.utils.isInPlayer()) messageData.page = $ax.pageData.notesData;
         $ax.messageCenter.postMessage('toggleAnnDialog', messageData);
     }

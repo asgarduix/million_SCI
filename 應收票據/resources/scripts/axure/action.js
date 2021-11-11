@@ -411,30 +411,25 @@
             }
 
             if(url) {
-                let useStartHtml = shouldUseStartHtml(action);
-                if(useStartHtml) {
+                if(shouldUseStartHtml(action)) {
                     //use start.html to load player
                     url = urlWithStartHtml(url);
                     //collapse player for popup
                     if(action.linkType == "popup") url = urlWithCollapseSitemap(url);
                 }
                 
-                //set useGlobalVarNameInUrl to true to use GLOBAL_VAR_NAME in the url, so player knows how to parse it
-                //without this, we are assuming everything after '#' are global vars 
                 if(action.linkType == "popup") {
                     $ax.navigate({
                         url: url,
                         target: action.linkType,
                         includeVariables: includeVars,
-                        popupOptions: action.popup,
-                        useGlobalVarNameInUrl : useStartHtml
+                        popupOptions: action.popup
                     });
                 } else {
                     $ax.navigate({
                         url: url,
                         target: action.linkType,
-                        includeVariables: includeVars,
-                        useGlobalVarNameInUrl : useStartHtml
+                        includeVariables: includeVars
                     });
                 }
             }
