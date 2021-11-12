@@ -1,0 +1,123 @@
+/*【COLOR】
+standard color: 紅-#ED193A / 黑-#111111
+secondary color: 藍-#0E4C6D / 灰藍1-#88A2AA / 灰藍2-#2E5266 / 橘-#FF6621 / 金-#9A813D / 膚色-#FACD91 /
+*/
+
+/*【FONT】
+10px: 0.625rem
+12px: 0.75rem
+14px: 0.875rem
+16px: 1rem
+18px: 1.125rem
+21px: 1.3125rem
+24px: 1.5rem
+26px: 1.6125rem
+28px: 1.75rem
+30px: 1.875rem
+32px: 2rem */
+@font-face {
+    font-family: Microsoft JhengHei;
+}
+
+* {
+    font-family: Microsoft JhengHei;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+* img {
+    max-width: 100%;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+button {
+    outline: none !important;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: #aaa solid 1px;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 25px;
+    border: #aaa solid 1px;
+    padding: 2px 4px;
+}
+
+select {
+    height: 25px;
+    border: #aaa solid 1px;
+    padding: 2px 4px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+/* START: jquery.mCustomScrollbar */
+.mCSB_scrollTools {
+    width: 8px;
+}
+
+/* END: jquery.mCustomScrollbar */
+@media only screen and (max-width: 1299px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (max-width: 440px) {}
+
+@media only screen and (max-width: 420px) {}
