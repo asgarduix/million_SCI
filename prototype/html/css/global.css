@@ -1,9 +1,20 @@
-    /*【COLOR】
-standard color: 紅-#ED193A / 黑-#111111
-secondary color: 藍-#0E4C6D / 灰藍1-#88A2AA / 灰藍2-#2E5266 / 橘-#FF6621 / 金-#9A813D / 膚色-#FACD91 /
+/*
+【COLOR】
+『主色』紅-#E60012、白-#FFFFFF
+『標題』紅-#E60012、藍-#0E4C6D
+『頁籤』白-#FFFFFF、藍-#038CC7、黑-#555555
+『表格』
+(查詢)藍-#015478、黑-#555555、白-#FFFFF、灰-#F9F9F9
+(自定義表格)藍-#026D93/#EDF4F5、米色-#F2EDE6、黑-#111111
+(tabulator)藍-#027DB4/#038CC7/#026D93、白-#FFFFFF、黑-#111111、灰-#F2F2F2
+『按鈕』
+(主要)藍-#026D93/#026D93、綠-#026D93、紅-#FF3149、白-#FFFFFF
+(次要)米色-#EADECA、咖啡-#8C7457
+(各單元)咖啡-#8C7457、白-#FFFFFF
 */
 
-/*【FONT】
+/*
+【FONT-SIZE】
 10px: 0.625rem
 12px: 0.75rem
 14px: 0.875rem
@@ -14,7 +25,9 @@ secondary color: 藍-#0E4C6D / 灰藍1-#88A2AA / 灰藍2-#2E5266 / 橘-#FF6621 /
 26px: 1.6125rem
 28px: 1.75rem
 30px: 1.875rem
-32px: 2rem */
+32px: 2rem 
+*/
+
 @font-face {
     font-family: Microsoft JhengHei;
 }
