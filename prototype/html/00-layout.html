@@ -42,11 +42,12 @@
                     <div class="menu-filter">
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
-                    <div class="menu-pgName"><span>程式名稱</span></div>
+                    <div class="menu-pgName"><span>應收系統</span></div>
+                    <div class="non-menu-list"><span>暫無項目</span></div>
                     <div class="menu-list">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#" class="menu-list-active">
                                     <span>FBCM0100</span>
                                     <span>應收票據建檔維護</span>
                                 </a>
@@ -71,18 +72,37 @@
                         <div class="menu-btn">
                             <a href="javascript:;" onclick="menuToggle()" class="menu-active"><span class="menu-bar"></span></a>
                         </div>
-                        <!-- <div class="header-title-name">
-                            <h1>主機交易查詢系統</h1>
-                        </div> -->
                         <div class="header-unit">
-                            <ul>
-                                <li><a href="#" title="財務">財務</a></li>
-                                <li><a href="#" title="投資">投資</a></li>
-                                <li><a href="#" title="會計">會計</a></li>
-                                <li><a href="#" title="報表">報表</a></li>
-                                <li><a href="#" title="公用">公用</a></li>
-                                <li><a href="#" title="管理">管理</a></li>
-                            </ul>
+                            <div class="header-unit-inner">
+                                <div class="header-unit-item header-unit-finance">
+                                    <a href="#" title="財務">財務</a>
+                                    <ul>
+                                        <li><a href="#">應收系統</a></li>
+                                        <li><a href="#">銷帳系統</a></li>
+                                        <li><a href="#">應付系統</a></li>
+                                        <li><a href="#">催收系統</a></li>
+                                        <li><a href="#">銀資系統</a></li>
+                                        <li><a href="#">查詢系統</a></li>
+                                        <li><a href="#">統計系統</a></li>
+                                        <li><a href="#">分析系統</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-unit-item header-unit-invest">
+                                    <a href="#" title="投資">投資</a>
+                                </div>
+                                <div class="header-unit-item header-unit-accounting">
+                                    <a href="#" title="會計">會計</a>
+                                </div>
+                                <div class="header-unit-item header-unit-report">
+                                    <a href="#" title="報表">報表</a>
+                                </div>
+                                <div class="header-unit-item header-unit-public">
+                                    <a href="#" title="公用">公用</a>
+                                </div>
+                                <div class="header-unit-item header-unit-manage">
+                                    <a href="#" title="管理">管理</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header-item header-info">
@@ -295,50 +315,46 @@
                 </div>
                 <div class="aside">
                     <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle()" class="aside-btn" data-toggle="tooltip" title="待辦事項" data-placement="left"><span class="material-icons">mail_outline</span></a>
+                        <a href="javascript:;" onclick="asideToggle('aside_func1');" class="aside-btn" data-toggle="tooltip" title="待辦事項" data-placement="left"><span class="material-icons">mail_outline</span></a>
+                        <!-- 待辦事項 -->
+                        <div class="aside-group" id="aside_func1" style="display: none;">
+                            <div class="aside-group-item">待辦事項</div>
+                        </div>
                     </div>
                     <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle()" class="aside-btn" data-toggle="tooltip" title="我的最愛" data-placement="left"><span class="material-icons">grade</span></a>
+                        <a href="javascript:;" onclick="asideToggle('aside_func2')" class="aside-btn" data-toggle="tooltip" title="常用程式" data-placement="left"><span class="material-icons">grade</span></a>
+                        <!-- 常用程式 -->
+                        <div class="aside-group" id="aside_func2" style="display: none;">
+                            <div class="aside-group-item">常用程式</div>
+                        </div>
                     </div>
                     <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle()" class="aside-btn" data-toggle="tooltip" title="操作手冊" data-placement="left"><span class="material-icons">source</span></a>
+                        <a href="javascript:;" onclick="asideToggle('aside_func3')" class="aside-btn" data-toggle="tooltip" title="操作手冊" data-placement="left"><span class="material-icons">source</span></a>
+                        <!-- 操作手冊 -->
+                        <div class="aside-group" id="aside_func3" style="display: none;">
+                            <div class="aside-group-item">操作手冊</div>
+                        </div>
                     </div>
                     <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle()" class="aside-btn" data-toggle="tooltip" title="暫存程式" data-placement="left"><span class="material-icons">save</span></a>
+                        <a href="javascript:;" onclick="asideToggle('aside_func4')" class="aside-btn" data-toggle="tooltip" title="瀏覽紀錄" data-placement="left"><span class="material-icons">save</span></a>
+                        <!-- 瀏覽紀錄 -->
+                        <div class="aside-group" id="aside_func4" style="display: none;">
+                            <div class="aside-group-item">瀏覽紀錄</div>
+                        </div>
                     </div>
                     <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle()" class="aside-btn" data-toggle="tooltip" title="使用者設定" data-placement="left"><span class="material-icons">settings</span></a>
+                        <a href="javascript:;" onclick="asideToggle('aside_func5')" class="aside-btn" data-toggle="tooltip" title="使用者設定" data-placement="left"><span class="material-icons">settings</span></a>
+                        <!-- 使用者設定 -->
+                        <div class="aside-group" id="aside_func5" style="display: none;">
+                            <div class="aside-group-item">使用者設定</div>
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-    <!-- aside-group -->
-    <div class="aside-group" id="aside_func">
-        <!-- aside-group-item -->
-        <div class="aside-group-item aside-group-history">
-            <div class="aside-item-title">右側功能</div>
-            <div class="aside-item-detail">
-                <ul>
-                    <li class="tag-null">無瀏覽紀錄</li>
-                    <li>
-                        <span class="tag-link"><a href="#">功能標題</a></span>
-                        <span class="tag-cancel"><a href="#"><span class="material-icons">cancel</span></a></span>
-                    </li>
-                    <li>
-                        <span class="tag-link"><a href="#">功能標題</a></span>
-                        <span class="tag-cancel"><a href="#"><span class="material-icons">cancel</span></a></span>
-                    </li>
-                </ul>
-                <div class="history-cancel">
-                    <div class="history-cancel-inner">
-                        <a href="javascript:;">全部移除</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- popup -->
+
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>

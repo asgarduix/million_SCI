@@ -88,7 +88,7 @@
 }
 
 .aside a span {
-    font-size: 2rem;
+    font-size: 1.875rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -115,23 +115,6 @@
 
 /* END: frame */
 /* START: aside-group */
-.aside-group {
-    width: 160px;
-    height: calc(100% - 40px);
-    position: fixed;
-    right: 40px;
-    top: 40px;
-    margin-right: -160px;
-    background: #f7f7f7;
-    border-left: #ddd solid 1px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    overflow: hidden;
-    /*-webkit-box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.15);*/
-}
-
 .aside-open {
     margin-right: 0;
     transition: all .3s ease;
@@ -139,6 +122,20 @@
     -ms-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
+}
+
+.aside-group {
+    width: 160px;
+    height: calc(100% - 40px);
+    position: absolute;
+    right: 40px;
+    top: 0;
+    background: #f9f9f9;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    -moz-box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
 }
 
 .aside-item-title {
@@ -191,69 +188,6 @@
     display: block;
 }
 
-/* 標籤紀錄 */
-.aside-group-history .tag-link a {
-    font-size: 0.875rem;
-}
-
-.aside-group-history .tag-link a::before {
-    font-family: 'Material Icons';
-    content: "open_in_new";
-    font-feature-settings: 'liga';
-    margin-right: 3px;
-    font-size: 0.75rem;
-}
-
-.aside-group-history .tag-cancel {
-    width: 20px;
-    text-align: center;
-}
-
-.aside-group-history .tag-cancel a>span {
-    font-size: 1rem;
-}
-
-.aside-group-history .tag-null {
-    border: #ccc solid 1px;
-    background: #eee;
-    color: #777;
-    font-size: 0.875rem;
-}
-
-.history-cancel {
-    padding: 15px 0;
-}
-
-.history-cancel-inner {
-    padding-top: 15px;
-    border-top: rgba(170, 170, 170, 0.2) solid 1px;
-}
-
-.history-cancel a {
-    display: block;
-    border: #FF6621 solid 1px;
-    text-decoration: none;
-    border-radius: 4px;
-    text-align: center;
-    padding: 5px;
-    color: #FF6621;
-}
-
-.history-cancel a:hover {
-    background: #FF6621;
-    color: #fff;
-}
-
-.history-cancel span {
-    display: block;
-    border: #FF6621 solid 1px;
-    text-decoration: none;
-    border-radius: 4px;
-    text-align: center;
-    padding: 5px;
-    color: #FF6621;
-    opacity: 0.4;
-}
 
 /* END: aside-group */
 /* START: menu */
@@ -335,6 +269,10 @@
     color: #026D93;
 }
 
+.menu-list a.menu-list-active {
+    color: #026D93;
+}
+
 .menu-list span {
     display: block;
 }
@@ -345,6 +283,23 @@
 
 .menu-list span:nth-child(1) {
     font-size: 0.625rem;
+}
+
+.non-menu-list {
+    padding: 8px;
+}
+
+.non-menu-list span {
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+.non-menu-list span::before {
+    font-family: 'Material Icons';
+    content: "filter_none";
+    font-feature-settings: 'liga';
+    margin-right: 5px;
+    vertical-align: bottom;
 }
 
 /* END: menu */
@@ -370,24 +325,21 @@
     padding: 0 10px;
 }
 
-.header-unit ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.header-unit-inner {
     display: table;
     table-layout: fixed;
 }
 
-.header-unit li {
+.header-unit-item {
     display: table-cell;
     border-right: rgba(255, 255, 255, 0.4) solid 1px;
 }
 
-.header-unit li:nth-child(1) {
+.header-unit-item:nth-child(1) {
     border-left: rgba(255, 255, 255, 0.4) solid 1px;
 }
 
-.header-unit li>a {
+.header-unit-item>a {
     height: 40px;
     line-height: 40px;
     color: #fff;
@@ -395,10 +347,132 @@
     padding: 0 15px;
     letter-spacing: 0.1rem;
     text-decoration: none;
+    position: relative;
 }
 
-.header-unit li>a:hover {
+.header-unit-item ul {
+    width: 120px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: #ccc solid 1px;
+    border-bottom: #CC000C solid 3px;
+    background: #f4f4f4;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    position: absolute;
+    display: none;
+}
+
+.header-unit-item:hover ul {
+    display: block;
+}
+
+.header-unit-item:hover>a {
     background: #CC000C;
+}
+
+.header-unit-item li {
+    border-bottom: #ccc solid 1px;
+}
+
+.header-unit-item li:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.header-unit-item li a {
+    display: block;
+    padding: 7px;
+    color: #111;
+    text-decoration: none;
+}
+
+.header-unit-item li a:hover {
+    background: #CC000C;
+    color: #fff;
+}
+
+.header-unit-item li a::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    background: #111;
+    margin-right: 5px;
+}
+
+.header-unit-item li a:hover::before {
+    content: "";
+    background: #fff;
+}
+
+.header-unit-item a[title="財務"]::before {
+    font-family: 'Material Icons';
+    content: "local_atm";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.header-unit-item a[title="投資"]::before {
+    font-family: 'Material Icons';
+    content: "emoji_events";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.header-unit-item a[title="會計"]::before {
+    font-family: 'Material Icons';
+    content: "assessment";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.header-unit-item a[title="報表"]::before {
+    font-family: 'Material Icons';
+    content: "description";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.header-unit-item a[title="公用"]::before {
+    font-family: 'Material Icons';
+    content: "supervisor_account";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.header-unit-item a[title="管理"]::before {
+    font-family: 'Material Icons';
+    content: "widgets";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
 }
 
 .menu-btn a {
@@ -1296,6 +1370,7 @@ button.content-btn-warning {
 .query-field-entry input {
     border-radius: 4px;
     padding: 2px 4px;
+    font-size: 0.875rem;
 }
 
 /* END: query */
