@@ -39,12 +39,12 @@ $(document).ready(function() {
 });
 
 // card-detail-show/hide //
-$('.detail-title').each(function() {
-    $(this).click(function() {
-        $(this).closest('.card-detail').find('.detail-board').stop(true, true).slideToggle();
-        $(this).toggleClass('detail-title-close');
-    });
-});
+// $('.detail-title').each(function() {
+//     $(this).click(function() {
+//         $(this).closest('.card-detail').find('.detail-board').stop(true, true).slideToggle();
+//         $(this).toggleClass('detail-title-close');
+//     });
+// });
 
 // table-detail-col-focus //
 $('.table-col-detail').each(function() {
