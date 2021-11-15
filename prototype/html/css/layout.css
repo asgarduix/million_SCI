@@ -3,7 +3,6 @@
     width: 100%;
     display: flex;
     overflow: hidden;
-    /*background: #015478;*/
 }
 
 .frame-block {
@@ -606,6 +605,7 @@ a.menu-active .menu-bar {
 
 .header-info-logout a {
     padding: 0 4px 0 10px;
+    font-weight: bold;
 }
 
 /* END: header */
@@ -949,18 +949,26 @@ a.menu-active .menu-bar {
 /* START: unitname */
 .content-unitname {
     padding: 6px 0;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
+}
+
+.unitname-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.unitname-item {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .unitname-title {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
     font-weight: bold;
     color: #026D93;
     word-break: keep-all;
     white-space: nowrap;
+    padding-right: 5px;
 }
 
 .unitname-title::before {
@@ -971,6 +979,31 @@ a.menu-active .menu-bar {
     color: #038CC7;
     margin-right: 3px;
     font-size: 1.3725rem;
+}
+
+.unitname-favourite {
+    width: 30px;
+    text-align: center;
+}
+
+.unitname-favourite a {
+    height: 30px;
+    line-height: 1;
+    color: #999;
+    display: block;
+    border: #777 solid 1px;
+    background: #f4f4f4;
+    border-radius: 3px;
+}
+
+.unitname-favourite a:active {
+    background: #E60012;
+    color: #fff;
+    border: #E60012 solid 1px;
+}
+
+.unitname-favourite span {
+    font-size: 1.75rem;
 }
 
 /* END: unitname */
@@ -1367,35 +1400,66 @@ button.content-btn-warning {
     font-weight: bold;
 }
 
-.query-field-entry input {
+.query-field-entry input,
+.query-field-entry select {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.875rem;
 }
 
+.query-field-entry ul {
+    list-style: none;
+    padding: 0 0 0 3px;
+    margin: 0;
+}
+
+.query-field-entry li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.query-field-entry label {
+    margin-left: 1px;
+    font-size: 0.875rem;
+    vertical-align: text-bottom;
+}
+
+.query-input input[attr="money"] {
+    text-align: right;
+}
+
 /* END: query */
 /* START: note */
 /* END: note */
+@media only screen and (max-width: 1280px) {
+
+    /* START: header */
+    .header-unit-item>a {
+        padding: 0 15px;
+        font-size: 0.875rem;
+    }
+
+    .header-unit-item li a {
+        font-size: 0.875rem;
+    }
+
+    .header-unit-item a[title="財務"]::before,
+    .header-unit-item a[title="投資"]::before,
+    .header-unit-item a[title="會計"]::before,
+    .header-unit-item a[title="報表"]::before,
+    .header-unit-item a[title="公用"]::before,
+    .header-unit-item a[title="管理"]::before {
+        content: "";
+        margin-right: 0;
+    }
+
+    /* END: header */
+}
+
 @media only screen and (min-width: 1200px) {}
 
-@media only screen and (max-width: 1199px) {
-
-    /* START: highlight */
-    .highlight-item {
-        display: block;
-        text-align: left;
-    }
-
-    .insurance-info {
-        border-bottom: #eee dotted 1px;
-    }
-
-    .insurance-type {
-        padding: 8px 0 4px;
-    }
-
-    /* END: highlight */
-}
+@media only screen and (max-width: 1199px) {}
 
 @media only screen and (min-width: 992px) {}
 

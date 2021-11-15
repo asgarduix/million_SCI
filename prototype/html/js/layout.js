@@ -43,6 +43,15 @@ $(document).ready(function() {
         $(this).attr('data-placement', 'left');
     });
     $('[data-toggle="tooltip"]').tooltip({
-        trigger : 'hover'
+        trigger: 'hover'
     });
 });
+
+// input-field-entry-number-only //
+function onlyNumberKey(evt) {
+    var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        return false;
+    return true;
+}
+

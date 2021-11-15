@@ -79,7 +79,9 @@ textarea {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="date"],
+select {
     width: 100%;
     height: 25px;
     border: #aaa solid 1px;
@@ -89,22 +91,26 @@ input[type="password"] {
 input::placeholder {
     /* CSS 3 標準 */
     color: #bbb;
+    text-align: left;
 }
 
 input::-webkit-input-placeholder {
     /* Chrome, Safari */
     color: #bbb;
+    text-align: left;
 }
 
 input::-ms-input-placeholder {
     /* IE 10+ */
     color: #bbb;
+    text-align: left;
 }
 
 input::-moz-placeholder {
     /* Firefox 19+ */
     color: #bbb;
     opacity: 1;
+    text-align: left;
 }
 
 select {
@@ -129,6 +135,8 @@ h5,
 h6 {
     margin-bottom: 0;
 }
+
+@media only screen and (max-width: 1280px) {}
 
 @media only screen and (max-width: 1299px) {}
 
