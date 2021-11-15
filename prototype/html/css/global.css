@@ -136,6 +136,12 @@ h6 {
     margin-bottom: 0;
 }
 
+hr.seperate-line {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+
 @media only screen and (max-width: 1280px) {}
 
 @media only screen and (max-width: 1299px) {}
