@@ -822,130 +822,43 @@ a.menu-active .menu-bar {
 }
 
 /* END: search */
-/* START: highlight */
-.content-highlight {
-    padding-top: 10px;
+/* START: card */
+.content-card {
+    height: calc(100% - 25px);
+    padding: 10px 15px;
+    background: #F4F4F4;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
-.highlight-inner {
-    width: 100%;
-    display: table;
-    /*table-layout: fixed;*/
-    padding: 7px 10px;
-    background: #015478;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+/* END: card */
+/* START: card-detail >> title */
+/* END: card-detail >> title */
+/* START: card-detail >> board */
+.detail-board {
+    border: #eee solid 1px;
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px 0;
 }
 
-.highlight-item {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.highlight-item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.highlight-item li {
-    display: inline-block;
-    vertical-align: middle;
-    color: #f2f2f2;
-}
-
-.highlight-item.insurance-info li {
-    margin-right: 12px;
-}
-
-.highlight-item.insurance-info li span:nth-child(1)::after {
-    content: "：";
-    margin-right: -4px;
-}
-
-.highlight-insurance-no span:nth-child(1)::before {
-    font-family: 'Material Icons';
-    content: "description";
-    font-feature-settings: 'liga';
-    font-size: 1.125rem;
-    margin-right: 3px;
-    vertical-align: middle;
-    color: #FACD91;
-}
-
-.highlight-insurance-applicant span:nth-child(1)::before {
-    font-family: 'Material Icons';
-    content: "person_pin";
-    font-feature-settings: 'liga';
-    font-size: 1.125rem;
-    margin-right: 3px;
-    vertical-align: middle;
-    color: #FACD91;
-}
-
-.highlight-insurance-assured span:nth-child(1)::before {
-    font-family: 'Material Icons';
-    content: "person_pin";
-    font-feature-settings: 'liga';
-    font-size: 1.125rem;
-    margin-right: 3px;
-    vertical-align: middle;
-    color: #FACD91;
-}
-
-.insurance-type {
+/* END: card-detail >> board */
+/* START: card-detail >> table */
+/* END: card-detail >> table */
+/* START: card-detail >> detail-board-tab */
+/* END: card-detail >> detail-board-tab */
+/* START: date-picker */
+/* END: date-picker */
+/* START: copyright */
+.content-copyright {
+    font-size: 0.75rem;
+    color: #aaa;
     text-align: right;
+    padding: 5px;
+    margin-right: 0;
 }
 
-.insurance-type li {
-    border: rgba(255, 255, 255, 0.2) solid 1px;
-    padding: 4px 10px;
-    border-radius: 30px;
-    font-size: 0.875rem;
-    line-height: 1;
-    background: rgba(255, 255, 255, 0.4);
-    margin-left: 5px;
-}
-
-.highlight-insurance-no a {
-    border: #fff solid 2px;
-    border-radius: 4px;
-    padding: 3px 5px;
-    color: #555;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 0.875rem;
-    line-height: 1;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,d7dee3+51,f5f7f9+100;White+Gloss */
-    background: #f6f8f9;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f8f9', endColorstr='#f5f7f9', GradientType=0);
-    /* IE6-9 */
-}
-
-.highlight-insurance-no a:hover {
-    transform: translate(1px, 1px);
-    -webkit-transform: translate(1px, 1px);
-}
-
-.highlight-insurance-no a::before {
-    font-family: 'Material Icons';
-    content: "mail_outline";
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-    margin-right: 3px;
-}
-
-/* END: highlight */
+/* END: copyright */
 /* START: unitname */
 .content-unitname {
     padding: 6px 0;
@@ -989,7 +902,7 @@ a.menu-active .menu-bar {
 .unitname-favourite a {
     height: 30px;
     line-height: 1;
-    color: #999;
+    color: #777;
     display: block;
     border: #777 solid 1px;
     background: #f4f4f4;
@@ -1008,47 +921,68 @@ a.menu-active .menu-bar {
 }
 
 /* END: unitname */
-/* START: card */
-.content-card {
-    height: calc(100% - 25px);
-    padding: 10px 15px;
-    background: #F4F4F4;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+/* START: unittab */
+.detail-board-unittab {
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.05);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.05);
+    box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.05);
 }
 
-/* END: card */
-/* START: card-detail >> title */
-/* END: card-detail >> title */
-/* START: card-detail >> board */
-.detail-board {
-    border: #eee solid 1px;
-    border-radius: 5px;
+.content-unittab {
+    padding: 0;
+    margin: 0;
+}
+
+.content-unittab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.content-unittab li {
+    display: table-cell;
+    vertical-align: top;
+    border-right: #eee solid 1px;
+}
+
+.content-unittab li:nth-last-child(1) {
+    border-right: none;
+}
+
+.content-unittab a {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 4px;
+    text-align: none;
+    color: #777;
+    text-decoration: none;
     background: #fff;
-    padding: 5px 0;
 }
 
-/* END: card-detail >> board */
-/* START: card-detail >> table */
-/* END: card-detail >> table */
-/* START: card-detail >> detail-board-tab */
-/* END: card-detail >> detail-board-tab */
-/* START: date-picker */
-/* END: date-picker */
-/* START: copyright */
-.content-copyright {
-    font-size: 0.75rem;
-    color: #aaa;
-    text-align: right;
-    padding: 5px;
-    margin-right: 0;
+.content-unittab a:hover,
+.content-unittab a:active,
+.content-unittab a:focus {
+    background: #038CC7;
+    color: #fff;
 }
 
-/* END: copyright */
+.content-unittab a.unittab-active {
+    background: #038CC7;
+    color: #fff;
+}
+
+/* END: unittab */
 /* START: tabulator創立table */
 .content-table {
     margin: 0;
-    padding: 5px 10px;
+    padding: 10px;
 }
 
 .table-func {
@@ -1056,10 +990,11 @@ a.menu-active .menu-bar {
     border-bottom: none;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    overflow: hidden;
 }
 
 .table-func-inner {
-    /*width: 100%;*/
+    width: 100%;
     display: table;
     table-layout: fixed;
 }
@@ -1071,6 +1006,7 @@ a.menu-active .menu-bar {
 }
 
 .func-download {
+    width: 110px;
     border-right: #ccc solid 1px;
 }
 
@@ -1148,12 +1084,17 @@ a.menu-active .menu-bar {
 
 .count-check::before {
     content: "已勾選";
-    margin-right: 3px;    
+    margin-right: 3px;
 }
 
 .count-check::after {
     content: "筆";
     margin-left: 3px;
+}
+
+.func-filter {
+    width: 180px;
+    text-align: right;
 }
 
 .func-filter input {
@@ -1169,12 +1110,19 @@ a.menu-active .menu-bar {
     font-feature-settings: 'liga';
     vertical-align: bottom;
     color: #555;
-    margin-right: 1px; 
+    margin-right: 1px;
     display: inline-block;
 }
 
 .count-error {
     color: #E60012;
+}
+
+.func-page {
+    width: 360px;
+    text-align: right;
+    background: #f7f7f7;
+    font-size: 0.875rem;
 }
 
 .content-table .tabulator {
@@ -1227,6 +1175,75 @@ a.menu-active .menu-bar {
 }
 
 /* END: tabulator創立table */
+/* START: 跟隨tabulator_upload */
+.content-upload {
+    border-bottom: #eee solid 1px;
+    margin: 0;
+}
+
+.upload-inner {
+    display: table;
+    table-layout: fixed;
+    padding: 10px 0;
+}
+
+.upload-item {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    padding: 0 4px;
+}
+
+.upload-title {
+    color: #026D93;
+}
+
+.upload-field input {
+    width: 200px;
+    border-radius: 4px;
+}
+
+.upload-btn ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.upload-btn li {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.upload-btn button {
+    height: 24px;
+    font-size: 0.875rem;
+    background: #026D93;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 12px;
+}
+
+.upload-btn button[disabled] {
+    opacity: 0.5;
+}
+
+.upload-note p {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+    color: #aaa;
+}
+
+.upload-note p::before {
+    content: "(";
+    padding-right: 2px;
+}
+
+.upload-note p::after {
+    content: ")";
+    padding-left: 2px;
+}
+
+/* END: 跟隨tabulator_upload */
 /* START: popup */
 /* END: popup */
 /* START: btn */
@@ -1595,7 +1612,66 @@ a.menu-active .menu-bar {
     text-align: right;
 }
 
+.entry-inner {
+    display: table;
+    table-layout: fixed;
+}
+
+.entry-combine {
+    display: table-cell;
+    padding-right: 3px;
+}
+
+.entry-combine:nth-last-child(1) {
+    padding-right: 0;
+}
+
+.entry-3 {
+    width: 80px;
+}
+
 /* END: query */
+/* START: label */
+.detail-board-label {
+    background: none;
+    margin-bottom: 5px;
+    border: none;
+    padding: 0;
+}
+
+.content-label {
+    margin: 0;
+    padding: 0;
+}
+
+.label-item {
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    border: #6A8EC3 solid 1px;
+    border-left: #6A8EC3 solid 3px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.label-title {
+    font-size: 0.75rem;
+    color: #027DB4;
+    border-bottom: #6A8EC3 solid 1px;
+    background: rgba(206, 226, 255, .6);
+    padding: 0 3px;
+}
+
+.label-content-counter {
+    font-size: 0.875rem;
+    text-align: right;
+    padding: 0 3px;
+    color: #6A8EC3;
+    background: #f9f9f9;
+}
+
+/* END: label */
 /* START: note */
 /* END: note */
 @media only screen and (max-width: 1280px) {
