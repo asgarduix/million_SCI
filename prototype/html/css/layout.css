@@ -73,7 +73,7 @@
     border-left: #eee solid 1px;
 }
 
-.aside a {
+.aside .aside-item>a {
     height: 40px;
     display: block;
     color: #555;
@@ -94,6 +94,7 @@
     color: #aaa;
     padding: 10px;
 }
+
 /* END: frame */
 /* START: aside-group */
 .aside-open {
@@ -106,7 +107,7 @@
 }
 
 .aside-group {
-    width: 160px;
+    width: 180px;
     height: calc(100% - 40px);
     position: absolute;
     right: 40px;
@@ -117,7 +118,192 @@
     -webkit-box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
     -moz-box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
     box-shadow: -3px 3px 5px 0px rgba(17, 17, 17, 0.1);
+    padding: 10px 5px;
 }
+
+.aside-group-header {
+    margin-bottom: 10px;
+}
+
+.group-header-title[title="待辦事項"]::before {
+    font-family: 'Material Icons';
+    content: "mail_outline";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.group-header-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.group-header-item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.group-header-title {
+    color: #036EB7;
+    font-weight: bold;
+}
+
+.group-header-btn {
+    text-align: right;
+    padding-bottom: 2px;
+}
+
+.group-header-btn button {
+    font-size: 0.75rem;
+    line-height: 1;
+    background: #327EC7;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 10px;
+}
+
+.group-header-btn button:hover {
+    opacity: .8;
+}
+
+.group-header-btn button::before {
+    font-family: 'Material Icons';
+    content: "sync";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.todo-component {
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.todo-header {
+    background: #eee;
+    border-bottom: #aaa solid 1px;
+}
+
+.todo-header-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    padding: 0 5px;
+}
+
+.list-todo {
+    height: calc(100% - 30px);
+    overflow-y: auto;
+}
+
+.todo-title,
+.todo-btn {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.todo-title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background: #036EB7;
+    margin-right: 3px;
+}
+
+.todo-title span::before {
+    content: "(";
+    margin-right: 2px;
+    margin-left: 3px;
+}
+
+.todo-title span::after {
+    content: ")";
+    margin-left: 2px;
+}
+
+.todo-btn {
+    width: 25px;
+    text-align: right;
+}
+
+.todo-btn a {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.todo-content {
+    padding: 5px;
+}
+
+.todo-content-item {
+    border-bottom: #ccc dotted 1px;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+}
+
+.todo-date {
+    font-size: 0.625rem;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.todo-link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-link li {
+    margin-bottom: 3px;
+}
+
+.todo-link a {
+    display: block;
+    border: #d7d7d7 solid 2px;
+    color: #027DB4;
+    border-radius: 4px;
+    background: #f2f2f2;
+    text-decoration: none;
+}
+
+.todo-link a:hover,
+.todo-link a:active,
+.todo-link a:focus {
+    background: #027DB4;
+    color: #fff;
+    border-color: #fff;
+}
+
+.todo-link span {
+    padding: 4px;
+}
+
+.todo-link span:nth-child(1) {
+    font-size: 0.75rem;
+    line-height: 1;
+    display: block;
+    border-bottom: #d7d7d7 solid 1px;
+}
+
+.todo-link a:hover span:nth-child(1) {
+    border-bottom: #fff solid 1px;
+}
+
+.todo-link span:nth-child(2) {
+    font-size: 0.875rem;
+}
+
 /* END: aside-group */
 /* START: menu */
 .frame-logo a {
@@ -230,6 +416,7 @@
     margin-right: 5px;
     vertical-align: bottom;
 }
+
 /* END: menu */
 /* START: header */
 .headerModule-inner {
@@ -1283,6 +1470,7 @@ a.menu-active .menu-bar {
     box-shadow: none;
     color: #fff;
 }
+
 /* END: btn */
 /* START: query */
 .detail-board-query {
@@ -1300,8 +1488,8 @@ a.menu-active .menu-bar {
 
 .query-row {
     width: 100%;
-    display: table;
-    table-layout: fixed;
+    /*display: table;
+    table-layout: fixed;*/
     border-bottom: #ccc dotted 1px;
 }
 
@@ -1314,9 +1502,14 @@ a.menu-active .menu-bar {
 }
 
 .query-field {
-    display: table-cell;
+    width: 33%;
+    display: inline-block;
     vertical-align: top;
     padding: 5px 10px 5px 5px;
+}
+
+.query-input-half {
+    width: 50%;
 }
 
 .query-field-inner {
@@ -1385,6 +1578,10 @@ a.menu-active .menu-bar {
     width: 80px;
 }
 
+.entry-7 {
+    width: 200px;
+}
+
 /* END: query */
 /* START: label */
 .detail-board-label {
@@ -1425,6 +1622,7 @@ a.menu-active .menu-bar {
     color: #6A8EC3;
     background: #fff;
 }
+
 /* END: label */
 @media only screen and (max-width: 1280px) {
 
@@ -1477,12 +1675,6 @@ a.menu-active .menu-bar {
     }
 
     /* END: frame */
-    /* START: aside-group */
-    .aside-group {
-        right: 0;
-    }
-
-    /* END: aside-group */
 }
 
 @media only screen and (min-width: 768px) {}
