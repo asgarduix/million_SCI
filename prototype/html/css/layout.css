@@ -369,6 +369,13 @@
     border-radius: 4px;
 }
 
+.favorite-remove:hover,
+.favorite-remove:active,
+.favorite-remove:focus {
+    background: #555;
+    color: #fff;
+}
+
 /* 操作手冊 */
 .group-header-title[title="操作手冊"]::before {
     font-family: 'Material Icons';
@@ -410,6 +417,117 @@
     color: #fff;
 }
 
+/* 瀏覽紀錄 */
+.group-header-title[title="瀏覽紀錄"]::before {
+    font-family: 'Material Icons';
+    content: "save";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.aside-group-note p {
+    font-size: 0.625rem;
+    line-height: 1.2;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.list-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-history li {
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-history a {
+    display: block;
+    padding: 3px;
+    border: #036EB7 solid 1px;
+    border-radius: 4px;
+    background: #fff;
+    text-decoration: none;
+    color: #036EB7;
+}
+
+.list-history a:hover,
+.list-history a:active,
+.list-history a:focus {
+    background: #036EB7;
+    color: #fff;
+}
+
+.list-history span {
+    display: block;
+}
+
+.list-history a span:nth-child(1) {
+    font-size: 0.75rem;
+}
+
+.list-history a span:nth-child(2) {
+    font-size: 0.875rem;
+}
+
+.history-remove {
+    font-size: 1.3125rem;
+    background: rgba(0, 0, 0, .2);
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.history-remove:hover,
+.history-remove:active,
+.history-remove:focus {
+    background: #555;
+    color: #fff;
+}
+
+/* 使用者設定 */
+.group-header-title[title="使用者設定"]::before {
+    font-family: 'Material Icons';
+    content: "settings";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.setting-item {
+    border-bottom: #ccc solid 1px;
+}
+
+.setting-item-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.setting-title ,
+.setting-btn {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 0 2px;
+}
+
+.setting-btn {
+    text-align: right;
+    cursor: pointer;
+}
 
 /* END: aside-group */
 /* START: menu */
