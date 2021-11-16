@@ -13,6 +13,10 @@ function menuToggle() {
     }
 }
 
+$('.menu-btn a').click(function() {
+    $(this).toggleClass('menu-active');
+});
+
 // aside-menu-show/hide //
 var divs = ["aside_func1", "aside_func2", "aside_func3", "aside_func4", "aside_func5"];
 var visibleDivId = null;
