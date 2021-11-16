@@ -125,6 +125,7 @@
     margin-bottom: 10px;
 }
 
+/* 待辦事項  */
 .group-header-title[title="待辦事項"]::before {
     font-family: 'Material Icons';
     content: "mail_outline";
@@ -169,7 +170,7 @@
     opacity: .8;
 }
 
-.group-header-btn button::before {
+.group-header-btn[title="重整"] button::before {
     font-family: 'Material Icons';
     content: "sync";
     font-feature-settings: 'liga';
@@ -178,6 +179,11 @@
     line-height: 1;
     display: inline-block;
     vertical-align: text-bottom;
+}
+
+.aside-group-list {
+    height: calc(100% - 30px);
+    overflow-y: auto;
 }
 
 .todo-component {
@@ -197,11 +203,6 @@
     display: table;
     table-layout: fixed;
     padding: 0 5px;
-}
-
-.list-todo {
-    height: calc(100% - 30px);
-    overflow-y: auto;
 }
 
 .todo-title,
@@ -303,6 +304,112 @@
 .todo-link span:nth-child(2) {
     font-size: 0.875rem;
 }
+
+/* 常用程式 */
+.group-header-title[title="常用程式"]::before {
+    font-family: 'Material Icons';
+    content: "grade";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.list-favorite ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-favorite li {
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-favorite a {
+    display: block;
+    padding: 3px;
+    border: #036EB7 solid 1px;
+    border-radius: 4px;
+    background: #fff;
+    text-decoration: none;
+    color: #036EB7;
+}
+
+.list-favorite a:hover,
+.list-favorite a:active,
+.list-favorite a:focus {
+    background: #036EB7;
+    color: #fff;
+}
+
+.list-favorite span {
+    display: block;
+
+}
+
+.list-favorite a span:nth-child(1) {
+    font-size: 0.75rem;
+}
+
+.list-favorite a span:nth-child(2) {
+    font-size: 0.875rem;
+}
+
+.favorite-remove {
+    font-size: 1.3125rem;
+    background: rgba(0, 0, 0, .2);
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 操作手冊 */
+.group-header-title[title="操作手冊"]::before {
+    font-family: 'Material Icons';
+    content: "source";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-block;
+}
+
+.list-Operation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-Operation li {
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-Operation a {
+    display: block;
+    padding: 3px;
+    border: #036EB7 solid 1px;
+    border-radius: 4px;
+    background: rgba(50, 126, 199, .1);
+    text-decoration: none;
+    color: #036EB7;
+    font-size: 0.875rem;
+}
+
+.list-Operation a:hover,
+.list-Operation a:active,
+.list-Operation a:focus {
+    background: #036EB7;
+    color: #fff;
+}
+
 
 /* END: aside-group */
 /* START: menu */
