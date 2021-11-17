@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險</title>
+    <title>華南產物保險-FEDM0100-銀行檔詢及維護作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas">
+<body id="canvas" class="fedm0100-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -42,20 +42,61 @@
                     <div class="menu-filter">
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
-                    <div class="menu-pgName"><span>應收系統</span></div>
-                    <div class="non-menu-list"><span>暫無項目</span></div>
+                    <div class="menu-pgName"><span>銀行存款</span></div>
                     <div class="menu-list">
                         <ul>
                             <li>
                                 <a href="#" class="menu-list-active">
-                                    <span>FBCM0100</span>
-                                    <span>應收票據建檔維護</span>
+                                    <span>FEDM0100</span>
+                                    <span>銀行檔查詢及維護</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>FBCM0100</span>
-                                    <span>應收票據建檔維護</span>
+                                    <span>FEDM0101</span>
+                                    <span>銀行檔單筆維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEDM0102</span>
+                                    <span>分行資料維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEDM0600</span>
+                                    <span>銀行信評資料維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEDM0500</span>
+                                    <span>印鑑管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEBM0100</span>
+                                    <span>銀行帳戶管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEBM0400</span>
+                                    <span>資金調度及銀行存款餘額查詢</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span></span>
+                                    <span>銀行存款資料匯入作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FEBM0300</span>
+                                    <span>利息建檔與查詢</span>
                                 </a>
                             </li>
                         </ul>
@@ -126,8 +167,9 @@
                     <div class="content-component content-breadcrumb">
                         <ul>
                             <li><a href="#">投資</a></li>
-                            <li><a href="#">應收票據</a></li>
-                            <li><a href="#">應收票據建檔維護</a></li>
+                            <li><a href="#">資金運用</a></li>
+                            <li><a href="#">銀行存款</a></li>
+                            <li><a href="#">銀行檔查詢及維護</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -135,30 +177,9 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">應收票據建檔維護</div>
+                                <div class="unitname-item unitname-title">銀行檔查詢及維護</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- unittab -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
-                                <div class="content-component content-unittab">
-                                    <ul>
-                                        <li><a href="#" class="unittab-active">查詢</a></li>
-                                        <li><a href="#">銀行存款轉入</a></li>
-                                        <li><a href="#">維護</a></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -171,142 +192,20 @@
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公司代碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="公司代碼" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">銀行代號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="銀行代號" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">評等日期</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="評等日期" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">銀行名稱</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="銀行名稱" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">信評機構</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="信評機構" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">中華信評</option>
-                                                        <option value="">標準普爾</option>
-                                                        <option value="">穆迪</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">調度金額</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="調度金額" attr='money' onkeypress="return onlyNumberKey(event)" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-radio">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="作業項目"><label for="rd01">報表</label></li>
-                                                        <li><input type="radio" id="rd02" name="作業項目"><label for="rd02">維護</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-checkbox">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01">報表</label></li>
-                                                        <li><input type="checkbox" id="cb02" name="作業項目"><label for="cb02">維護</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">經辦人員</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-3">
-                                                            <input type="text" name="經辦人員" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-7">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-3">
-                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-7">
-                                                            <input type="text" disabled="" name="幣別" attr="readonly" value="台幣" title="台幣" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-3">
-                                                            <input type="text" disabled="" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-7">
-                                                            <input type="text" disabled="" name="幣別" attr="" value="台幣" title="台幣" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-3">
-                                                            <input type="text" disabled="" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-7">
-                                                            <input type="text" disabled="" name="幣別" attr="" value="台幣" title="台幣" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input query-input-half">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine">
-                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine">
-                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine">
-                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine">
-                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="query-field-item query-field-title">銀行簡稱</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="銀行簡稱" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -319,15 +218,6 @@
                             <div class="detail-board detail-board-btn">
                                 <!-- btn -->
                                 <div class="content-component content-btn">
-                                    <div class="content-btn-basic">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-basic btn-prime"><span>主要確定</span></button></li>
-                                             <li><button class="content-btn-item btn-basic btn-outline"><span>主要確定</span></button></li>
-                                            <li><button class="content-btn-item btn-basic btn-second"><span>次要確定</button></span></li>
-                                            <li><button class="content-btn-item btn-basic btn-disable"><span>無效</span></button></li>
-                                            <li><button class="content-btn-item btn-basic btn-warn"><span>警告</span></button></li>
-                                        </ul>
-                                    </div>
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
@@ -339,40 +229,13 @@
                                     </div>
                                     <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-reject"><span>駁回</span></button></li>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                             <li><button class="content-btn-item btn-secondary btn-insert"><span>轉入資料庫</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third"><span>歷程</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>入帳</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">合計件數</div>
-                                            <div class="label-content label-content-counter">5</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">合計金額</div>
-                                            <div class="label-content label-content-counter">100,000,000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -406,8 +269,7 @@
                                             </div>
                                             <div class="table-func-item func-count">
                                                 <ul>
-                                                    <li class="count-total">15</li>
-                                                    <li class="count-check">12</li>
+                                                    <li class="count-total">2</li>
                                                     <li class="count-error">修改上限不得超過2筆！</li>
                                                 </ul>
                                             </div>
@@ -420,7 +282,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">table-footer</div>
+                                    <div class="table-footer">footer</div>
                                 </div>
                             </div>
                         </div>
@@ -581,30 +443,7 @@
             </main>
         </div>
     </div>
-    <!-- popup-confirm -->
-    <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-confirm">
-            <form action="">
-                <div class="dialog-header">
-                    <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">轉入資料庫</div>
-                        <div class="dialog-header-item dialog-cancel">
-                            <a href="#"><span class="material-icons">cancel</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dialog-content">
-                    <p>是否執行轉入資料庫?<br/>轉入檔案<span class="dialog-count">1</span></p>
-                </div>
-                <div class="dialog-btn">
-                    <ul>
-                        <li><button class="btn-prime">確定</button></li>
-                        <li><button class="btn-outline">取消</button></li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-    </div>
+    <!-- popup -->
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
