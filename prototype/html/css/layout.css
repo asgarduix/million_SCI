@@ -1877,19 +1877,11 @@ a.menu-active .menu-bar {
 
 .popup-dialog {
     display: table;
-    border: #f00 solid 1px;
     background: #f9f9f9;
     border-radius: 10px;
     overflow: hidden;
     border: #eee solid 1px;
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    margin: 60px auto 40px;
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
@@ -2019,6 +2011,7 @@ a.menu-active .menu-bar {
 .customize-form-header span {
     font-size: 0.875rem;
     color: #026D93;
+    font-weight: bold;
 }
 
 .customize-form-header span::before {
@@ -2040,10 +2033,6 @@ a.menu-active .menu-bar {
     background: #f9f9f9;
 }
 
-/*.customize-form-field:nth-child(1) {
-    border-left: none;
-}*/
-
 .customize-form-field-1 {
     width: 25%;
 }
@@ -2058,6 +2047,10 @@ a.menu-active .menu-bar {
 
 .customize-form-field-1:nth-child(1) {
     border-left: none;
+}
+
+.customize-form-field-3:nth-child(even) {
+    border-right: none;
 }
 
 .customize-form-field-2 {
@@ -2097,6 +2090,7 @@ a.menu-active .menu-bar {
     max-width: 85px;
     word-break: break-all;
     background: #F2EDE6;
+    line-height: 1.2;
 }
 
 .customize-form-entry {
