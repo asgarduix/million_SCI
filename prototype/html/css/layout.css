@@ -1416,8 +1416,6 @@ a.menu-active .menu-bar {
 }
 
 /* END: 跟隨tabulator_upload */
-/* START: popup */
-/* END: popup */
 /* START: btn */
 .detail-board-btn {
     background: #F2EDE6;
@@ -1729,8 +1727,6 @@ a.menu-active .menu-bar {
 
 .query-row {
     width: 100%;
-    /*display: table;
-    table-layout: fixed;*/
     border-bottom: #ccc dotted 1px;
 }
 
@@ -1870,7 +1866,7 @@ a.menu-active .menu-bar {
     margin: 0;
     padding: 0;
     position: fixed;
-    overflow: hidden;
+    overflow: auto;
     background: rgba(0, 0, 0, .75);
     z-index: 999;
     top: 0;
@@ -2009,6 +2005,7 @@ a.menu-active .menu-bar {
 
 .customize-form-row {
     border-bottom: #aaa solid 1px;
+    position: relative;
 }
 
 .customize-form-row:nth-last-child(1) {
@@ -2051,8 +2048,16 @@ a.menu-active .menu-bar {
     width: 25%;
 }
 
-.customize-form-field-1:nth-last-child(1) {
+.customize-form-field-1:nth-child(even) {
     border-right: none;
+}
+
+.customize-form-field-1:nth-child(odd) {
+    border-left: #aaa solid 1px;
+}
+
+.customize-form-field-1:nth-child(1) {
+    border-left: none;
 }
 
 .customize-form-field-2 {
@@ -2179,6 +2184,25 @@ a.menu-active .menu-bar {
 .customize-form-entry-10 {
     width: 100%;
     max-width: 100%;
+}
+
+.customize-form-row-control {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.customize-form-row-control a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.customize-form-row:hover .customize-form-row-control {
+    display: block;
 }
 
 /* customize-form > 電話 */

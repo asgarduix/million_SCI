@@ -580,7 +580,7 @@
             </main>
         </div>
     </div>
-    <!-- popup-delete -->
+    <!-- popup-add -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
@@ -600,13 +600,14 @@
                                 <span>基本資料維護</span>
                             </div>
                         </div>
+                        <!-- 總行代號/銀行代號/銀行統編/銀行電話 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">總行代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="總行代號" value="008" placeholder="請輸入值">
+                                            <input type="text" name="總行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -614,7 +615,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">銀行代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行代號" value="008123" placeholder="請輸入值">
+                                            <input type="text" name="銀行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -622,7 +623,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">銀行統編</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行統編" value="03742301" placeholder="請輸入值">
+                                            <input type="text" name="銀行統編" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -633,13 +634,13 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-2">
-                                                    <input type="text" name="銀行電話" value="02" title="02" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="2371" title="2371" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="3111" title="3111" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                             </div>
                                         </div>
@@ -647,6 +648,28 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 銀行簡稱/銀行全名-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行簡稱</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行簡稱" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行全名</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行全名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行地址 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-3">
@@ -662,13 +685,14 @@
                                 <span>利息維護</span>
                             </div>
                         </div>
+                        <!-- 利息進位/匯率進位/台幣公式/外幣公式 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">總行代號</div>
+                                        <div class="customize-form-title">利息進位</div>
                                         <div class="customize-form-entry">
-                                            <select name="" id=""  value="" title="無條件捨去" data-toggle="tooltip" data-placement="left">
+                                            <select name="利息進位" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">無條件捨去</option>
                                                 <option value="">四捨五入</option>
@@ -678,34 +702,314 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行代號</div>
+                                        <div class="customize-form-title">匯率進位</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行代號" value="008123" placeholder="請輸入值">
+                                            <select name="匯率進位" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">無條件捨去</option>
+                                                <option value="">四捨五入</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行統編</div>
+                                        <div class="customize-form-title">台幣公式</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行統編" value="03742301" placeholder="請輸入值">
+                                            <select name="台幣公式" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">(1)A*RATE/12 *MONTH</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- customize-form > 電話 -->
-                                <div class="customize-form-field customize-form-field-1 customize-form-tel">
+                                <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行電話</div>
+                                        <div class="customize-form-title">外幣公式</div>
+                                        <div class="customize-form-entry">
+                                            <select name="外幣公式" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">(1)A*RATE/365 *MONTH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行往來小組銀行/SwoftCode/經手人(1)/經手人(2) -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行往來小組銀行</div>
+                                        <div class="customize-form-entry">
+                                            <select name="銀行往來小組銀行" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">Y</option>
+                                                <option value="">N</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">SwoftCode</div>
+                                        <div class="customize-form-entry">
+                                            <select name="SwoftCode" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">(1)A*RATE/365 *MONTH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">經手人(1)</div>
+                                        <div class="customize-form-entry">
+                                            <select name="經手人(1)" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">經手人</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">經手人(2)</div>
+                                        <div class="customize-form-entry">
+                                            <select name="經手人(2)" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">經手人</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>信評機構</span>
+                            </div>
+                        </div>
+                        <!-- 信評機構/投資限額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">信評機構</div>
+                                        <div class="customize-form-entry">
+                                            <select name="信評機構" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">(E)tw</option>
+                                                <option value="">(E)us</option>
+                                                <option value="">(E)jp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">投資限額</div>
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-2">
-                                                    <input type="text" name="銀行電話" value="02" title="02" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="投資限額" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="2371" title="2371" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="投資限額" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="3111" title="3111" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>憑證</span>
+                            </div>
+                        </div>
+                        <!-- 憑證到期日/憑證更新日/憑證費用 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-row-control"><a href="#"><span class="material-icons">cancel</span></a></div>
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證到期日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="憑證到期日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證更新日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="憑證更新日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證費用</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="憑證費用" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            
+                            <div class="customize-form-row-control"><a href="#"><span class="material-icons">add_circle</span></a></div>
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證到期日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="憑證到期日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證更新日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="憑證更新日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">憑證費用</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="憑證費用" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>權限設定</span>
+                            </div>
+                        </div>
+                        <!-- 權限設定(層) -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">權限設定(層)</div>
+                                        <div class="customize-form-entry">
+                                            <select name="權限設定(層)" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>跨行轉入銀行</span>
+                            </div>
+                        </div>
+                        <!-- 帳號1 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號1</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="帳號1" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="帳號1" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳號2 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號2</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="帳號2" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="帳號2" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳號3 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號3</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="帳號3" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="帳號3" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳號4 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號4</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="帳號4" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="帳號4" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳號5-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號5</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="帳號5" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="帳號5" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                             </div>
                                         </div>
