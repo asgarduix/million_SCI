@@ -2193,8 +2193,8 @@ a.menu-active .menu-bar {
     position: absolute;
     width: 30px;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
-    display: none;
+    background: rgba(0, 123, 255, .8);
+    opacity: .2;
 }
 
 .customize-form-row-control a {
@@ -2202,10 +2202,11 @@ a.menu-active .menu-bar {
     display: block;
     text-align: center;
     vertical-align: middle;
+    padding-top: 4px;
 }
 
 .customize-form-row:hover .customize-form-row-control {
-    display: block;
+    opacity: 1;
 }
 
 /* customize-form > 電話 */
