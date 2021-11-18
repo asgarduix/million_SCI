@@ -14,8 +14,8 @@
 }
 
 .leftBlock {
-    min-width: 140px;
-    max-width: 140px;
+    min-width: 145px;
+    max-width: 145px;
     background: #fff;
     position: relative;
     z-index: 9;
@@ -23,17 +23,17 @@
 
 .leftBlock-inner {
     position: fixed;
-    width: 140px;
+    width: 145px;
     height: 100%;
     overflow-y: auto;
 }
 
 .menu-close {
-    margin-left: -140px;
+    margin-left: -145px;
 }
 
 .rightBlock {
-    width: calc(100% - 140px);
+    width: calc(100% - 145px);
     min-height: 100vh;
     background: #fff;
 }
@@ -1807,6 +1807,7 @@ a.menu-active .menu-bar {
 }
 
 .entry-inner {
+    width: 100%;
     display: table;
     table-layout: fixed;
 }
