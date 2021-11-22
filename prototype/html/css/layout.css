@@ -607,10 +607,12 @@
 .menu-list a:hover,
 .menu-list a:active {
     color: #026D93;
+    background: #f9f9f9;
 }
 
 .menu-list a.menu-list-active {
     color: #026D93;
+    background: #f9f9f9;
 }
 
 .menu-list span {
@@ -1171,7 +1173,8 @@ a.menu-active .menu-bar {
     table-layout: fixed;
 }
 
-.table-func-basic, .table-func-page {
+.table-func-basic,
+.table-func-page {
     display: table-cell;
     vertical-align: middle;
 }
@@ -1807,7 +1810,7 @@ a.menu-active .menu-bar {
 }
 
 .entry-inner {
-    width: 100%;
+    /*width: 100%;*/
     display: table;
     table-layout: fixed;
 }
@@ -1827,6 +1830,29 @@ a.menu-active .menu-bar {
 
 .entry-7 {
     width: 200px;
+}
+
+.required-field .query-field-title::before {
+    content: "*";
+    color: #E60012;
+    margin-right: 1px;
+    font-size: 0.75rem;
+}
+
+.required-field-note p {
+    margin: 0;
+    padding: 0 4px 2px 0;
+    font-size: 0.625rem;
+    color: #E60012;
+    text-align: right;
+}
+
+.required-empty {
+    background: rgba(230, 0, 18, .1);
+}
+
+.required-empty .query-field-title {
+    color: #E60012;
 }
 
 /* END: query */
