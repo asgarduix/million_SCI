@@ -1977,6 +1977,28 @@ a.menu-active .menu-bar {
     content: "：";
 }
 
+.dialog-content-image {
+    border: #aaa solid 1px;
+    text-align: center;
+    padding: 10px;
+}
+
+.dialog-content-image img {
+    max-width: 100px;
+}
+
+.dialog-content-desc {
+    background: #f9f9f9;
+
+}
+
+.dialog-content-desc p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    padding: 3px;
+    text-align: left;
+}
+
 .dialog-btn {
     padding: 20px 5px 15px;
 }
