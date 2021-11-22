@@ -1243,6 +1243,7 @@ a.menu-active .menu-bar {
 .func-count li {
     display: inline-block;
     font-size: 0.875rem;
+    line-height: 1;
     border-right: #aaa solid 1px;
     padding-right: 5px;
 }
@@ -1269,6 +1270,10 @@ a.menu-active .menu-bar {
 .count-check::after {
     content: "筆";
     margin-left: 3px;
+}
+
+.func-filter {
+    padding: 6px 5px 6px 0;
 }
 
 .func-filter input {
@@ -2073,7 +2078,7 @@ a.menu-active .menu-bar {
     width: 25%;
 }
 
-.customize-form-field-1:nth-child(even) {
+/*.customize-form-field-1:nth-child(even) {
     border-right: none;
 }
 
@@ -2083,9 +2088,19 @@ a.menu-active .menu-bar {
 
 .customize-form-field-1:nth-child(1) {
     border-left: none;
+}*/
+
+.customize-form-field:nth-last-child(1) {
+    border-right: none;
 }
 
-.customize-form-field-3:nth-child(even) {
+.customize-form-field:nth-child(1),
+.customize-form-field:nth-child(2),
+.customize-form-field:nth-child(3) {
+    border-right: #aaa solid 1px;
+}
+
+.customize-form-field-1~.customize-form-field-3 {
     border-right: none;
 }
 
