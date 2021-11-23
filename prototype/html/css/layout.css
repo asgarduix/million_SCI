@@ -2049,6 +2049,256 @@ a.menu-active .menu-bar {
 .popup-dialog-add .dialog-header {
     background: #018dcd;
 }
+/* END: popup */
+/* START: customize-form */
+.customize-form {
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.customize-form-row {
+    border-bottom: #aaa solid 1px;
+    position: relative;
+}
+
+.customize-form-row:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.customize-form-header {
+    background: rgba(3, 140, 199, .05);
+}
+
+.customize-form-header span {
+    font-size: 0.875rem;
+    color: #026D93;
+    font-weight: bold;
+}
+
+.customize-form-header span::before {
+    font-family: 'Material Icons';
+    content: "arrow_right";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #018dcd;
+    margin-right: 1px;
+}
+
+.customize-form-inner {
+    overflow: hidden;
+}
+
+.customize-form-field {
+    float: left;
+    border-right: #aaa solid 1px;
+    background: #f9f9f9;
+}
+
+.customize-form-field-1 {
+    width: 25%;
+}
+
+.customize-form-field:nth-last-child(1) {
+    border-right: none;
+}
+
+.customize-form-field:nth-child(1),
+.customize-form-field:nth-child(2),
+.customize-form-field:nth-child(3) {
+    border-right: #aaa solid 1px;
+}
+
+.customize-form-field-1~.customize-form-field-3,
+.customize-form-field-3~.customize-form-field-1 {
+    border-right: none;
+}
+
+.customize-form-field-2 {
+    width: 50%;
+}
+
+.customize-form-field-3 {
+    width: 75%;
+}
+
+.customize-form-field-4 {
+    width: 100%;
+}
+
+.customize-field-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.customize-form-title,
+.customize-form-entry {
+    min-height: 30px;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customize-form-title {
+    padding: 4px;
+    text-align: right;
+    width: 85px;
+    max-width: 85px;
+    word-break: break-all;
+    background: #F2EDE6;
+    line-height: 1.2;
+}
+
+.customize-form-entry {
+    background: #fff;
+    padding: 4px 3px;
+}
+
+.customize-form-entry input,
+.customize-form-entry select {
+    height: 24px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.75rem;
+}
+
+.customize-form-entry input[attr="money"] {
+    text-align: right;
+}
+
+.customize-form-entry ul {
+    list-style: none;
+    padding: 0 2px;
+    margin: 0;
+}
+
+.customize-form-entry li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.customize-form-entry input[type="radio"] {
+    height: auto;
+}
+
+.customize-form-entry label {
+    margin-left: 1px;
+    font-size: 0.875rem;
+    vertical-align: text-bottom;
+}
+
+.customize-form-entry-container {
+    overflow: hidden;
+}
+
+.customize-form-entry-col {
+    float: left;
+    padding: 0 3px;
+    font-size: 0.75rem;
+}
+
+.customize-form-entry-col:nth-child(1) {
+    padding-left: 0;
+}
+
+.customize-form-entry-col:nth-last-child(1) {
+    padding-right: 0;
+}
+
+.customize-form-entry-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.customize-form-entry-1 {
+    width: 10%;
+    max-width: 10%;
+}
+
+.customize-form-entry-2 {
+    width: 20%;
+    max-width: 20%;
+}
+
+.customize-form-entry-3 {
+    width: 30%;
+    max-width: 30%;
+}
+
+.customize-form-entry-4 {
+    width: 40%;
+    max-width: 40%;
+}
+
+.customize-form-entry-5 {
+    width: 50%;
+    max-width: 50%;
+}
+
+.customize-form-entry-6 {
+    width: 60%;
+    max-width: 60%;
+}
+
+.customize-form-entry-7 {
+    width: 70%;
+    max-width: 70%;
+}
+
+.customize-form-entry-8 {
+    width: 80%;
+    max-width: 80%;
+}
+
+.customize-form-entry-9 {
+    width: 90%;
+    max-width: 90%;
+}
+
+.customize-form-entry-10 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.customize-form-row-control {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background: rgba(0, 123, 255, .8);
+    opacity: .2;
+}
+
+.customize-form-row-control a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 4px;
+}
+
+.customize-form-row:hover .customize-form-row-control {
+    opacity: 1;
+}
+
+/* customize-form > 電話 */
+.customize-form-tel .customize-form-entry-col::after {
+    content: "-";
+    position: absolute;
+    margin-left: 1px;
+}
+
+.customize-form-tel .customize-form-entry-col:nth-last-child(1)::after {
+    content: "";
+    position: static;
+    margin-left: 0;
+}
 
 /* 圖像上傳 */
 .customize-form-upload {
@@ -2193,231 +2443,6 @@ a.menu-active .menu-bar {
 .thumbnail-clear:focus,
 .thumbnail-clear:active {
     background: #eee;
-}
-
-/* END: popup */
-/* START: customize-form */
-.customize-form {
-    border: #aaa solid 1px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.customize-form-row {
-    border-bottom: #aaa solid 1px;
-    position: relative;
-}
-
-.customize-form-row:nth-last-child(1) {
-    border-bottom: none;
-}
-
-.customize-form-header {
-    background: rgba(3, 140, 199, .05);
-}
-
-.customize-form-header span {
-    font-size: 0.875rem;
-    color: #026D93;
-    font-weight: bold;
-}
-
-.customize-form-header span::before {
-    font-family: 'Material Icons';
-    content: "arrow_right";
-    font-feature-settings: 'liga';
-    vertical-align: middle;
-    color: #018dcd;
-    margin-right: 1px;
-}
-
-.customize-form-inner {
-    overflow: hidden;
-}
-
-.customize-form-field {
-    float: left;
-    border-right: #aaa solid 1px;
-    background: #f9f9f9;
-}
-
-.customize-form-field-1 {
-    width: 25%;
-}
-
-.customize-form-field:nth-last-child(1) {
-    border-right: none;
-}
-
-.customize-form-field:nth-child(1),
-.customize-form-field:nth-child(2),
-.customize-form-field:nth-child(3) {
-    border-right: #aaa solid 1px;
-}
-
-.customize-form-field-1~.customize-form-field-3,
-.customize-form-field-3~.customize-form-field-1 {
-    border-right: none;
-}
-
-.customize-form-field-2 {
-    width: 50%;
-}
-
-.customize-form-field-3 {
-    width: 75%;
-}
-
-.customize-form-field-4 {
-    width: 100%;
-}
-
-.customize-field-inner {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    margin: 0;
-    padding: 0;
-}
-
-.customize-form-title,
-.customize-form-entry {
-    min-height: 30px;
-    font-size: 0.75rem;
-    margin: 0;
-    padding: 0;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.customize-form-title {
-    padding: 4px;
-    text-align: right;
-    width: 85px;
-    max-width: 85px;
-    word-break: break-all;
-    background: #F2EDE6;
-    line-height: 1.2;
-}
-
-.customize-form-entry {
-    background: #fff;
-    padding: 4px 3px;
-}
-
-.customize-form-entry input,
-.customize-form-entry select {
-    height: 25px;
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-size: 0.75rem;
-}
-
-.customize-form-entry-container {
-    overflow: hidden;
-}
-
-.customize-form-entry-col {
-    float: left;
-    padding: 0 3px;
-    font-size: 0.75rem;
-}
-
-.customize-form-entry-col:nth-child(1) {
-    padding-left: 0;
-}
-
-.customize-form-entry-col:nth-last-child(1) {
-    padding-right: 0;
-}
-
-.customize-form-entry-inner {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-}
-
-.customize-form-entry-1 {
-    width: 10%;
-    max-width: 10%;
-}
-
-.customize-form-entry-2 {
-    width: 20%;
-    max-width: 20%;
-}
-
-.customize-form-entry-3 {
-    width: 30%;
-    max-width: 30%;
-}
-
-.customize-form-entry-4 {
-    width: 40%;
-    max-width: 40%;
-}
-
-.customize-form-entry-5 {
-    width: 50%;
-    max-width: 50%;
-}
-
-.customize-form-entry-6 {
-    width: 60%;
-    max-width: 60%;
-}
-
-.customize-form-entry-7 {
-    width: 70%;
-    max-width: 70%;
-}
-
-.customize-form-entry-8 {
-    width: 80%;
-    max-width: 80%;
-}
-
-.customize-form-entry-9 {
-    width: 90%;
-    max-width: 90%;
-}
-
-.customize-form-entry-10 {
-    width: 100%;
-    max-width: 100%;
-}
-
-.customize-form-row-control {
-    position: absolute;
-    width: 30px;
-    height: 100%;
-    background: rgba(0, 123, 255, .8);
-    opacity: .2;
-}
-
-.customize-form-row-control a {
-    color: #fff;
-    display: block;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 4px;
-}
-
-.customize-form-row:hover .customize-form-row-control {
-    opacity: 1;
-}
-
-/* customize-form > 電話 */
-.customize-form-tel .customize-form-entry-col::after {
-    content: "-";
-    position: absolute;
-    margin-left: 1px;
-}
-
-.customize-form-tel .customize-form-entry-col:nth-last-child(1)::after {
-    content: "";
-    position: static;
-    margin-left: 0;
 }
 
 /* END: customize-form */
