@@ -2050,6 +2050,151 @@ a.menu-active .menu-bar {
     background: #018dcd;
 }
 
+/* 圖像上傳 */
+.customize-form-upload {
+    border-bottom: #aaa solid 1px;
+}
+
+.customize-form-upload-inner {
+    /*width: 100%;*/
+    display: table;
+    table-layout: fixed;
+    padding: 5px 10px;
+}
+
+.customize-form-upload-item {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    color: #026D93;
+}
+
+.customize-form-upload-title {
+    padding-right: 10px;
+}
+
+.customize-form-upload-input,
+.customize-form-upload-button,
+.customize-form-upload-note {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customize-form-upload-input input {
+    height: 24px;
+    font-size: 0.875rem;
+}
+
+.customize-form-upload-button {
+    padding-left: 5px;
+}
+
+.customize-form-upload-button button {
+    background: #026D93;
+    color: #fff;
+    height: 24px;
+    border-radius: 3px;
+}
+
+.customize-form-upload-note p {
+    padding: 0 5px;
+    margin: 0;
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+.customize-form-desc-inner {
+    padding: 5px 10px;
+}
+
+.customize-form-desc-title {
+    font-size: 0.875rem;
+    color: #026D93;
+    padding: 5px 0 5px;
+}
+
+.customize-form-desc-textarea {
+    font-size: 0.875rem;
+}
+
+.customize-form-thumbnail {
+    padding: 10px;
+}
+
+.customize-form-thumbnail-image {
+    border: #eee solid 1px;
+    background: #f4f4f4;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.customize-form-thumbnail-image[attr="empty"] {
+    min-height: 120px;
+    position: relative;
+}
+
+.customize-form-thumbnail-image[attr="empty"]::after {
+    font-family: 'Material Icons';
+    content: "image";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ddd;
+    font-size: 100px;
+    line-height: 1;
+}
+
+.customize-form-thumbnail-image img {
+    max-height: 100px;
+    vertical-align: middle;
+}
+
+.customize-form-thumbnail-button  {
+    padding: 10px 0;
+}
+
+.customize-form-thumbnail-button ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.customize-form-thumbnail-button li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 1px;
+}
+
+.customize-form-thumbnail-button button {
+    border-radius: 4px;
+}
+
+.thumbnail-confirm {
+    background: #03B615;
+    color: #fff;
+    border: #03B615 solid 1px;
+}
+
+.thumbnail-confirm:hover,
+.thumbnail-confirm:focus,
+.thumbnail-confirm:active {
+    background: #01830D;
+    border: #01830D solid 1px;
+}
+
+.thumbnail-clear {
+    background: #fff;
+    color: #333;
+    border: #333 solid 1px;
+}
+
+.thumbnail-clear:hover,
+.thumbnail-clear:focus,
+.thumbnail-clear:active {
+    background: #eee;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
@@ -2100,18 +2245,6 @@ a.menu-active .menu-bar {
     width: 25%;
 }
 
-/*.customize-form-field-1:nth-child(even) {
-    border-right: none;
-}
-
-.customize-form-field-1:nth-child(odd) {
-    border-left: #aaa solid 1px;
-}
-
-.customize-form-field-1:nth-child(1) {
-    border-left: none;
-}*/
-
 .customize-form-field:nth-last-child(1) {
     border-right: none;
 }
@@ -2122,7 +2255,8 @@ a.menu-active .menu-bar {
     border-right: #aaa solid 1px;
 }
 
-.customize-form-field-1~.customize-form-field-3 {
+.customize-form-field-1~.customize-form-field-3,
+.customize-form-field-3~.customize-form-field-1 {
     border-right: none;
 }
 
