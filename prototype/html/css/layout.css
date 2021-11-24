@@ -1114,13 +1114,12 @@ a.menu-active .menu-bar {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
+    width: 100%;;
+    display: flex;
 }
 
 .content-unittab li {
-    display: table-cell;
+    flex: 10;
     vertical-align: top;
     border-right: #eee solid 1px;
 }
@@ -1137,6 +1136,7 @@ a.menu-active .menu-bar {
     color: #777;
     text-decoration: none;
     background: #fff;
+    height: 100%;
 }
 
 .content-unittab a:hover,
@@ -1820,7 +1820,7 @@ a.menu-active .menu-bar {
 }
 
 .entry-inner {
-    /*width: 100%;*/
+    width: 100%;
     display: table;
     table-layout: fixed;
 }
@@ -1895,6 +1895,10 @@ a.menu-active .menu-bar {
 
 .required-empty .query-field-title {
     color: #E60012;
+}
+
+.query-double-datepicker .entry-combine:nth-child(2) {
+    text-align: center;
 }
 
 /* END: query */
@@ -2049,6 +2053,7 @@ a.menu-active .menu-bar {
 
 .dialog-btn li {
     display: inline-block;
+    margin: 0 2px;
 }
 
 .dialog-btn button {
