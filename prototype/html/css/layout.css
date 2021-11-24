@@ -1134,7 +1134,6 @@ a.menu-active .menu-bar {
     text-align: center;
     font-size: 0.875rem;
     padding: 4px;
-    text-align: none;
     color: #777;
     text-decoration: none;
     background: #fff;
@@ -1147,7 +1146,7 @@ a.menu-active .menu-bar {
     color: #fff;
 }
 
-.content-unittab a.unittab-active {
+.content-unittab .unittab-active {
     background: #038CC7;
     color: #fff;
 }
@@ -1835,12 +1834,44 @@ a.menu-active .menu-bar {
     padding-right: 0;
 }
 
+.entry-1 {
+    width: 10%;
+}
+
+.entry-2 {
+    width: 20%;
+}
+
 .entry-3 {
-    width: 80px;
+    width: 30%;
+}
+
+.entry-4 {
+    width: 40%;
+}
+
+.entry-5 {
+    width: 50%;
+}
+
+.entry-6 {
+    width: 60%;
 }
 
 .entry-7 {
-    width: 200px;
+    width: 70%;
+}
+
+.entry-8 {
+    width: 80%;
+}
+
+.entry-9 {
+    width: 90%;
+}
+
+.entry-10 {
+    width: 100%;
 }
 
 .required-field .query-field-title::before {
@@ -2046,7 +2077,17 @@ a.menu-active .menu-bar {
 .popup-dialog-delete .dialog-header {
     background: #E60012;
 }
+/* 上傳異常 */
+/* 刪除 */
+.popup-dialog-error {
+    width: 370px;
+    max-width: 370px;
+}
 
+.popup-dialog-error .dialog-header {
+    background: #E60012;
+}
+/* 新增 */
 .popup-dialog-add {
     width: 1090px;
     max-width: 1090px;
