@@ -2162,6 +2162,8 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-field-1~.customize-form-field-3,
+.customize-form-field-1~.customize-form-field-1~.customize-form-field-2,
+.customize-form-field-2~.customize-form-field-2,
 .customize-form-field-3~.customize-form-field-1 {
     border-right: none;
 }
@@ -2274,6 +2276,11 @@ a.menu-active .menu-bar {
     max-width: 10%;
 }
 
+.customize-form-entry-1-5 {
+    width: 16.5%;
+    max-width: 16.5%;
+}
+
 .customize-form-entry-2 {
     width: 20%;
     max-width: 20%;
@@ -2352,13 +2359,29 @@ a.menu-active .menu-bar {
     margin-left: 0;
 }
 
+/* customize-form > 起迄 */
+.customize-form-fromend .customize-form-entry-col::after {
+    content: "~";
+    position: absolute;
+    margin-left: 2px;
+}
+
+.customize-form-fromend .customize-form-entry-col:nth-last-child(1)::after {
+    content: "";
+    position: static;
+    margin-left: 0;
+}
+
+.customize-form-fromend .customize-form-entry-col {
+    padding: 0 13px 0 0;
+}
+
 /* 圖像上傳 */
 .customize-form-upload {
     border-bottom: #aaa solid 1px;
 }
 
 .customize-form-upload-inner {
-    /*width: 100%;*/
     display: table;
     table-layout: fixed;
     padding: 5px 10px;
@@ -2495,6 +2518,10 @@ a.menu-active .menu-bar {
 .thumbnail-clear:focus,
 .thumbnail-clear:active {
     background: #eee;
+}
+
+.form-field-highlight input {
+    color: #E60012;
 }
 
 /* END: customize-form */
