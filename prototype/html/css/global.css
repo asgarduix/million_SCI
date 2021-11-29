@@ -145,6 +145,11 @@ input[attr="readonly-money-highlight"] {
     text-align: right; 
 }
 
+input[attr="readonly-warning"] {
+    color: #E60012;
+    font-weight: bold;
+} 
+
 select {
     height: 25px;
     border: #aaa solid 1px;
