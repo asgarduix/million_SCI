@@ -123,10 +123,27 @@ input[disabled] {
     color: #aaa;
 }
 
-input[attr="readonly"] {
+input[attr="readonly"],
+select[attr="readonly"] {
     background: #FFFEE1;
     color: #333;
-} 
+}
+
+input[attr="money"] {
+    text-align: right;
+}
+
+input[attr="readonly-money"] {
+    background: #FFFEE1;
+    color: #333;
+    text-align: right;  
+}
+
+input[attr="readonly-money-highlight"] {
+    color: #E60012;
+    background: #FFFEE1;
+    text-align: right; 
+}
 
 select {
     height: 25px;

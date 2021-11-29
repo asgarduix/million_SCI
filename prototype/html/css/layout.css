@@ -1289,7 +1289,7 @@ a.menu-active .menu-bar {
 }
 
 .table-func-page {
-    width: 360px;
+    /*width: 360px;*/
     text-align: right;
     background: #f7f7f7;
     font-size: 0.875rem;
@@ -1986,6 +1986,10 @@ a.menu-active .menu-bar {
     color: #fff;
 }
 
+.dialog-title span::before {
+    content: "：";
+}
+
 .dialog-cancel {
     width: 30px;
     text-align: center;
@@ -2113,6 +2117,19 @@ a.menu-active .menu-bar {
     overflow: hidden;
 }
 
+.customize-form-symmetry {
+    display: flex;
+}
+
+.customize-form-5 {
+    flex: 2;
+    border-right: #aaa solid 1px;
+}
+
+.customize-form-5:nth-last-child(1) {
+    border-right: none;
+}
+
 .customize-form-row,
 .customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
@@ -2234,9 +2251,9 @@ a.menu-active .menu-bar {
     font-size: 0.75rem;
 }
 
-.customize-form-entry input[attr="money"] {
+/*.customize-form-entry input[attr="money"] {
     text-align: right;
-}
+}*/
 
 .customize-form-entry ul {
     list-style: none;
@@ -2541,6 +2558,43 @@ a.menu-active .menu-bar {
 
 .form-title-highlight {
     color: #038CC7;
+}
+
+.table-func-btn {
+    width: 110px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-func-btn button {
+    font-size: 0.75rem;
+    background: #027DB4;
+    color: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(26, 78, 102, 1);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(26, 78, 102, 1);
+    box-shadow: 0px 1px 0px 0px rgba(26, 78, 102, 1);
+}
+
+.table-func-btn button:hover {
+    background: #0B408F;
+    box-shadow: none;
+}
+
+.customize-form-table .content-table {
+    padding: 0;
+    border-radius: 0;
+}
+
+.customize-form-table .table-func,
+.customize-form-table .table-footer {
+    border: none;
+    border-radius: 0;
+}
+
+.customize-form-table-content {
+    padding: 5px;
 }
 
 /* END: customize-form */
