@@ -1114,7 +1114,8 @@ a.menu-active .menu-bar {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;;
+    width: 100%;
+    ;
     display: flex;
 }
 
@@ -2082,6 +2083,7 @@ a.menu-active .menu-bar {
 .popup-dialog-delete .dialog-header {
     background: #E60012;
 }
+
 /* 上傳異常 */
 /* 刪除 */
 .popup-dialog-error {
@@ -2092,6 +2094,7 @@ a.menu-active .menu-bar {
 .popup-dialog-error .dialog-header {
     background: #E60012;
 }
+
 /* 新增 */
 .popup-dialog-add {
     width: 1090px;
@@ -2101,6 +2104,7 @@ a.menu-active .menu-bar {
 .popup-dialog-add .dialog-header {
     background: #018dcd;
 }
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
@@ -2109,13 +2113,21 @@ a.menu-active .menu-bar {
     overflow: hidden;
 }
 
-.customize-form-row {
+.customize-form-row,
+.customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
     position: relative;
+    overflow: auto;
 }
 
-.customize-form-row:nth-last-child(1) {
+.customize-form-row:nth-last-child(1),
+.customize-form-multiple-row:nth-last-child(1) {
     border-bottom: none;
+}
+
+.customize-form-multiple-row {
+    border-bottom: #aaa solid 1px;
+    position: relative;
 }
 
 .customize-form-header {
@@ -2128,7 +2140,7 @@ a.menu-active .menu-bar {
     font-weight: bold;
 }
 
-.customize-form-header span::before {
+.customize-form-header>span::before {
     font-family: 'Material Icons';
     content: "arrow_right";
     font-feature-settings: 'liga';
@@ -2164,8 +2176,9 @@ a.menu-active .menu-bar {
 .customize-form-field-1~.customize-form-field-3,
 .customize-form-field-1~.customize-form-field-1~.customize-form-field-2,
 .customize-form-field-2~.customize-form-field-2,
+.customize-form-field-4,
 .customize-form-field-3~.customize-form-field-1 {
-    border-right: none;
+    border-right: none !important;
 }
 
 .customize-form-field-2 {
@@ -2332,6 +2345,7 @@ a.menu-active .menu-bar {
     height: 100%;
     background: rgba(0, 123, 255, .8);
     opacity: .2;
+    z-index: 9;
 }
 
 .customize-form-row-control a {
@@ -2342,6 +2356,7 @@ a.menu-active .menu-bar {
     padding-top: 4px;
 }
 
+.customize-form-multiple-row:hover .customize-form-row-control,
 .customize-form-row:hover .customize-form-row-control {
     opacity: 1;
 }
@@ -2474,7 +2489,7 @@ a.menu-active .menu-bar {
     vertical-align: middle;
 }
 
-.customize-form-thumbnail-button  {
+.customize-form-thumbnail-button {
     padding: 10px 0;
 }
 
@@ -2522,6 +2537,10 @@ a.menu-active .menu-bar {
 
 .form-field-highlight input {
     color: #E60012;
+}
+
+.form-title-highlight {
+    color: #038CC7;
 }
 
 /* END: customize-form */
