@@ -1796,6 +1796,11 @@ a.menu-active .menu-bar {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.875rem;
+    height: 24px;
+}
+
+.query-field-entry select {
+    vertical-align: top;
 }
 
 .query-field-entry ul {
@@ -2605,6 +2610,30 @@ a.menu-active .menu-bar {
     padding: 5px;
 }
 
+/* 流水序號 */
+.customize-form-serial-number a {
+    display: block;
+    color: #027DB4;
+    border-radius: 3px;
+    border: #027DB4 solid 1px;
+    background: #fff;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+.customize-form-serial-number a:hover,
+.customize-form-serial-number a:focus,
+.customize-form-serial-number a:active {
+    background: #027DB4;
+    color: #fff;   
+}
+
+.customize-form-serial-number a.serial-number-active {
+    background: #027DB4;
+    color: #fff;
+}
 /* END: customize-form */
 @media only screen and (max-width: 1280px) {
 
