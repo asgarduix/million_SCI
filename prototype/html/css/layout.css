@@ -2194,7 +2194,8 @@ a.menu-active .menu-bar {
 .customize-form-field-1~.customize-form-field-1~.customize-form-field-2,
 .customize-form-field-2~.customize-form-field-2,
 .customize-form-field-4,
-.customize-form-field-3~.customize-form-field-1 {
+.customize-form-field-3~.customize-form-field-1,
+.customize-form-field-2~.customize-form-field-1~.customize-form-field-1 {
     border-right: none !important;
 }
 
@@ -2267,7 +2268,8 @@ a.menu-active .menu-bar {
     margin-right: 4px;
 }
 
-.customize-form-entry input[type="radio"] {
+.customize-form-entry input[type="radio"],
+.customize-form-entry input[type="checkbox"] {
     height: auto;
     margin: 0;
     vertical-align: middle;
@@ -2280,7 +2282,7 @@ a.menu-active .menu-bar {
 
 .customize-form-entry label {
     margin-left: 1px;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
 }
 
 .customize-form-entry-container {
