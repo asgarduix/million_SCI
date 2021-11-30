@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="febm0100-tab2-query">
+<body id="canvas" class="febm0100-tab2-add">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -360,6 +360,7 @@
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">1</li>
+                                                        <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -533,7 +534,114 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-add -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-add">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>經手人可認領帳戶維護</span>
+                            </div>
+                        </div>
+                        <!-- 授權銀行/帳號/銷戶日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">授權銀行</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="授權銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="授權銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銷戶日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="銷戶日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳戶性質/報告申請日期/使用期間-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳戶性質</div>
+                                        <div class="customize-form-entry">
+                                            <select name="帳戶性質" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">永久</option>
+                                                <option value="">暫時</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">報告申請日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="報告申請日期" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 起訖 -->
+                                <div class="customize-form-field customize-form-field-2 customize-form-fromend">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">使用期間</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="date" name="使用期間" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="date" name="使用期間" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -586,4 +694,5 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 </script>
+
 </html>

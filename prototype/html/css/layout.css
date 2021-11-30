@@ -2263,18 +2263,24 @@ a.menu-active .menu-bar {
 
 .customize-form-entry li {
     display: inline-block;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     margin-right: 4px;
 }
 
 .customize-form-entry input[type="radio"] {
     height: auto;
+    margin: 0;
+    vertical-align: middle;
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
 }
 
 .customize-form-entry label {
     margin-left: 1px;
     font-size: 0.875rem;
-    vertical-align: text-bottom;
 }
 
 .customize-form-entry-container {
