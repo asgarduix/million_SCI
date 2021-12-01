@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="febm0400-query">
+<body id="canvas" class="febm0400-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -630,7 +630,145 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-modify -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-add">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">修改</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>總行資料</span>
+                            </div>
+                        </div>
+                        <!-- 銀行/帳戶餘額/常駐金/調度金額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">列帳公司</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="列帳公司" value="總公司" title="總公司" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行代號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行代號" value="8050034" title="8050034" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行簡稱</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行簡稱" value="遠銀台北逸仙" title="遠銀台北逸仙" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="帳號" value="00300100016302" title="00300100016302" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 狀態/入息年月/幣別/匯率 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">狀態</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="狀態" value="活存" title="活存" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">入息年月</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="入息年月" value="2021-11-30" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-entry">
+                                            <select name="幣別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="" selected="">NTD</option>
+                                                <option value="">USD</option>
+                                                <option value="">CYN</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯率</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯率" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" onkeypress="return onlyNumberKey(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 利息收入/預付款/銀行存款 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">利息收入</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="利息收入" value="1,868" title="1,868" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" onkeypress="return onlyNumberKey(event)" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預付款</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="預付款" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" onkeypress="return onlyNumberKey(event)" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行存款</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行存款" value="1,868" title="1,868" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" onkeypress="return onlyNumberKey(event)" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>

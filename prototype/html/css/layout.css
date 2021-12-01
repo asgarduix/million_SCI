@@ -1315,8 +1315,9 @@ a.menu-active .menu-bar {
     font-weight: normal;
 }
 
-.content-table .tabulator-col-title,
-.content-table .tabulator-cell {
+.content-table .tabulator div,
+.content-table .tabulator a,
+.content-table .tabulator p {
     font-size: 0.875rem;
 }
 
@@ -2008,6 +2009,7 @@ a.menu-active .menu-bar {
 }
 
 .dialog-content {
+    max-width: 1090px;
     padding: 10px 5px;
 }
 
@@ -2112,6 +2114,10 @@ a.menu-active .menu-bar {
 
 .popup-dialog-add .dialog-header {
     background: #018dcd;
+}
+
+.popup-dialog-add .content-table {
+    padding: 0;
 }
 
 /* END: popup */
@@ -2627,14 +2633,71 @@ a.menu-active .menu-bar {
 .customize-form-serial-number a:focus,
 .customize-form-serial-number a:active {
     background: #027DB4;
-    color: #fff;   
+    color: #fff;
 }
 
 .customize-form-serial-number a.serial-number-active {
     background: #027DB4;
     color: #fff;
 }
+
+.page-customize-form {
+    background: #fff;
+    margin-bottom: 10px;
+    border: #bbb solid 2px;
+}
+
 /* END: customize-form */
+/* START:  燈號 */
+.content-hint {
+    margin-right: 0;
+}
+
+.content-hint ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.content-hint li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    font-size: 0.75rem;
+}
+
+.hint-good::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 2px;
+    background: #70B603;
+}
+
+.hint-normal::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 2px;
+    background: #FACD91;
+}
+
+.hint-bad::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 2px;
+    background: #EC808D;
+}
+
+/* END:  燈號 */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
