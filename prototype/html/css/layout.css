@@ -2674,7 +2674,8 @@ a.menu-active .menu-bar {
     display: inline-block;
     border-radius: 30px;
     margin-right: 2px;
-    background: #70B603;
+    background: #75BD0E;
+    border: rgba(255, 255, 255, .2) solid 1px;
 }
 
 .hint-normal::before {
@@ -2684,7 +2685,8 @@ a.menu-active .menu-bar {
     display: inline-block;
     border-radius: 30px;
     margin-right: 2px;
-    background: #FACD91;
+    background: #FFA225;
+    border: rgba(255, 255, 255, .2) solid 1px;
 }
 
 .hint-bad::before {
@@ -2694,7 +2696,8 @@ a.menu-active .menu-bar {
     display: inline-block;
     border-radius: 30px;
     margin-right: 2px;
-    background: #EC808D;
+    background: #F33349;
+    border: rgba(255, 255, 255, .2) solid 1px;
 }
 
 /* END:  燈號 */
