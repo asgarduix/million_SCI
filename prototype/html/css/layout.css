@@ -1841,6 +1841,10 @@ a.menu-active .menu-bar {
     padding-right: 0;
 }
 
+.entry-05 {
+    width: 5%;
+}
+
 .entry-1 {
     width: 10%;
 }
@@ -1855,6 +1859,10 @@ a.menu-active .menu-bar {
 
 .entry-4 {
     width: 40%;
+}
+
+.entry-45 {
+    width: 45%;
 }
 
 .entry-5 {
@@ -2701,6 +2709,7 @@ a.menu-active .menu-bar {
 }
 
 /* END:  燈號 */
+
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
