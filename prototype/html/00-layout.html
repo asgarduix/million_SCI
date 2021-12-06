@@ -812,7 +812,14 @@ var table = new Tabulator("#table02", {
             maxWidth: 30,
             minWidth: 30
         },
-        { title: "批號", field: "批號" },
+        {
+            title: "批號",
+            field: "批號",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+            // formatter: "link",
+        },
         { title: "賠案號碼", field: "賠案號碼" },
         { title: "收款人", field: "收款人" },
         { title: "賠付金額", field: "賠付金額" },
