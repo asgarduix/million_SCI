@@ -1297,7 +1297,8 @@ a.menu-active .menu-bar {
 }
 
 .content-table .tabulator {
-    border: none;
+    border: #aaa solid 1px;
+    border-right: none;
     background: #aaa;
 }
 
@@ -1327,9 +1328,9 @@ a.menu-active .menu-bar {
 
 .content-table .tabulator-row:hover {
     background: #F6EFE6;
-    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(14, 76, 109, 1);
+    /*-webkit-box-shadow: inset 0px 0px 0px 2px rgba(14, 76, 109, 1);
     -moz-box-shadow: inset 0px 0px 0px 2px rgba(14, 76, 109, 1);
-    box-shadow: inset 0px 0px 0px 2px rgba(14, 76, 109, 1);
+    box-shadow: inset 0px 0px 0px 2px rgba(14, 76, 109, 1);*/
 }
 
 .content-table .tabulator-paginator label {
@@ -1353,6 +1354,26 @@ a.menu-active .menu-bar {
     border-top: none;
     padding: 5px;
     font-size: 0.875rem;
+}
+
+/* nest table */
+.table-subtable-container {
+    padding: 5px;
+    background: #EAF9FF;
+    border-right: #aaa solid 1px;
+}
+
+.table-btn-switch {
+    background: #027DB4;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 1px;
+    padding: 0;
+    border-radius: 30px;
 }
 
 /* END: tabulator創立table */
@@ -2153,7 +2174,7 @@ a.menu-active .menu-bar {
 .customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
     position: relative;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .customize-form-row:nth-last-child(1),
