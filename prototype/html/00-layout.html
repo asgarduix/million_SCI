@@ -482,6 +482,39 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 巢狀結構tabulator -->
+                        <!-- tabulator創立table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">3</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table02"></div>
+                                    <div class="table-footer">footer</div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -701,6 +734,117 @@ var table01 = new Tabulator("#table01", {
         { title: "作業人員", field: "作業人員" },
     ],
 });
+</script>
+<!-- 巢狀結構tabulator設定 -->
+<script>
+let nestedData = [{
+    selection: true,
+    id: "a1",
+    批號: "批號",
+    賠案號碼: "賠案號碼",
+    收款人: "收款人",
+    賠付金額: "賠付金額",
+    票號: "票號",
+    付款別: "付款別",
+    到期日: "到期日",
+    帳號: "帳號",
+    狀態: "狀態",
+    ntTable: [
+        { 收款人: "001193-吳孟哲", 應付金額: "500", 賠案號碼: "90870169" },
+        { 收款人: "001193-吳孟哲", 應付金額: "337", 賠案號碼: "90870170" },
+    ]
+}, ]
+
+var table = new Tabulator("#table02", {
+    height: "100%",
+    layout: "fitColumns",
+    movableColumns: true,
+    data: nestedData,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        {
+            formatter: (cell, formatterParams, onRendered) => {
+                let div = document.createElement('div');
+                let el = cell.getRow().getElement()
+                let btnName = ["＋", "–"]
+
+                btnName.forEach((name, index) => {
+                    let btn = document.createElement('button');
+                    $(btn).text(name)
+                    elementsChangeClass(btn, "add", "table-btn-switch")
+                    btn.addEventListener("click", (e) => {
+                        $(el).find(".table-btn-switch").toggle()
+                        $(el).find(".table-subtable-container").toggle()
+                    });
+                    if (index === 1) {
+                        $(btn).css("display", "none")
+                    }
+                    div.appendChild(btn)
+                })
+                return div
+            },
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false
+        },
+        { title: "批號", field: "批號" },
+        { title: "賠案號碼", field: "賠案號碼" },
+        { title: "收款人", field: "收款人" },
+        { title: "賠付金額", field: "賠付金額" },
+        { title: "票號", field: "票號" },
+        { title: "付款別", field: "付款別" },
+        { title: "到期日", field: "到期日" },
+        { title: "帳號", field: "帳號" },
+        { title: "狀態", field: "狀態" },
+    ],
+    rowFormatter: function(row) {
+        let container = document.createElement("div");
+        let subtable = document.createElement("div");
+
+        $(container).css("display", "none")
+        elementsChangeClass(container, "add", "table-subtable-container")
+        elementsChangeClass(subtable, "add", "table-subtable")
+        $(subtable).attr("id", row.getData().id)
+
+        container.appendChild(subtable);
+        row.getElement().appendChild(container);
+
+        let subTable = new Tabulator("#" + row.getData().id, {
+            layout: "fitColumns",
+            data: row.getData().ntTable,
+            columns: [
+                { title: "收款人", field: "收款人" },
+                { title: "應付金額", field: "應付金額" },
+                { title: "賠案號碼", field: "賠案號碼" },
+            ]
+        })
+    },
+});
+// 選擇預設勾選row
+table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+
+
+function elementsChangeClass(elements, behavior, classNames) {
+    if (behavior === "add") {
+        $(elements).each(function(index, element) {
+            $(element).addClass(classNames)
+        })
+    } else if (behavior === "remove") {
+        $(elements).each(function(index, element) {
+            $(element).removeClass(classNames)
+        })
+    }
+}
 </script>
 
 </html>

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbcm0100-tab2-query">
+<body id="canvas" class="fbcm0100-tab2-error">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -330,7 +330,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">1</li>
+                                                        <li class="count-error">查無資料</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -525,7 +525,7 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let nestedData = [{
+let nestedData = [/*{
     id: "a1",
     批號: "批號",
     賠案號碼: "賠案號碼",
@@ -540,7 +540,7 @@ let nestedData = [{
         { 收款人: "001193-吳孟哲", 應付金額: "500", 賠案號碼: "90870169" },
         { 收款人: "001193-吳孟哲", 應付金額: "337", 賠案號碼: "90870170" },
     ]
-}, ]
+},*/ ]
 
 var table = new Tabulator("#table01", {
     height: "100%",

@@ -1303,12 +1303,12 @@ a.menu-active .menu-bar {
 }
 
 .content-table .tabulator .tabulator-header {
-    background: #aaa;
+    background: #027DB4;
     color: #fff;
 }
 
 .content-table .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
-    background: #ccc;
+    background: #027DB4;
 }
 
 .content-table .tabulator .tabulator-header .tabulator-col {
@@ -1361,6 +1361,7 @@ a.menu-active .menu-bar {
     padding: 5px;
     background: #EAF9FF;
     border-right: #aaa solid 1px;
+    border-top: #aaa solid 1px;
 }
 
 .table-btn-switch {
@@ -1374,6 +1375,15 @@ a.menu-active .menu-bar {
     line-height: 1px;
     padding: 0;
     border-radius: 30px;
+}
+
+.table-subtable-container .tabulator .tabulator-header {
+    background: #F7F2EB;
+    color: #111;
+}
+
+.table-subtable-container .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
+    background: #F7F2EB;
 }
 
 /* END: tabulator創立table */
