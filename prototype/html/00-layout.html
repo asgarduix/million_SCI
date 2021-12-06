@@ -693,8 +693,8 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
+let table01Data = [{
+    id: "b1",
     總行代碼: "設計文字",
     分行代碼: "設計文字",
     名稱: "設計文字",
@@ -708,7 +708,7 @@ var table01Data = [{
 }, ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
+    //autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -720,8 +720,18 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "總行代碼", field: "總行代碼" },
         { title: "分行代碼", field: "分行代碼" },
         { title: "名稱", field: "名稱" },
@@ -734,11 +744,14 @@ var table01 = new Tabulator("#table01", {
         { title: "作業人員", field: "作業人員" },
     ],
 });
+// 選擇預設勾選row
+table01.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 <!-- 巢狀結構tabulator設定 -->
 <script>
 let nestedData = [{
-    selection: true,
     id: "a1",
     批號: "批號",
     賠案號碼: "賠案號碼",
@@ -766,6 +779,8 @@ var table = new Tabulator("#table02", {
             headerHozAlign: "center",
             hozAlign: "center",
             headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
             }
@@ -793,7 +808,9 @@ var table = new Tabulator("#table02", {
             },
             headerHozAlign: "center",
             hozAlign: "center",
-            headerSort: false
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30
         },
         { title: "批號", field: "批號" },
         { title: "賠案號碼", field: "賠案號碼" },
@@ -828,11 +845,6 @@ var table = new Tabulator("#table02", {
         })
     },
 });
-// 選擇預設勾選row
-table.selectRow("a1");
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
-
 
 function elementsChangeClass(elements, behavior, classNames) {
     if (behavior === "add") {

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbcm0100-tab3-query">
+<body id="canvas" class="fbcm0100-tab3-upload">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -369,11 +369,11 @@
                                     <div class="label-inner">
                                         <div class="label-item">
                                             <div class="label-title">張數合計</div>
-                                            <div class="label-content label-content-counter">0</div>
+                                            <div class="label-content label-content-counter">2</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">金額合計</div>
-                                            <div class="label-content label-content-counter">0</div>
+                                            <div class="label-content label-content-counter">1,000</div>
                                         </div>
                                     </div>
                                 </div>
@@ -388,11 +388,11 @@
                                     <form action="">
                                         <div class="upload-inner">
                                             <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text"></div>
+                                            <div class="upload-item upload-field"><input type="text" value="recive_lsit.csv"></div>
                                             <div class="upload-item upload-btn">
                                                 <ul>
                                                     <li><button>瀏覽</button></li>
-                                                    <li><button disabled="">上傳</button></li>
+                                                    <li><button>上傳</button></li>
                                                 </ul>
                                             </div>
                                             <div class="upload-item upload-note">
@@ -586,7 +586,30 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-confirm -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-confirm">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">轉入資料庫</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <p>是否執行轉入資料庫?<br />轉入檔案<span class="dialog-count">1</span></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -614,7 +637,7 @@ let table01Data = [{
     金額: "設計",
     開票人: "設計",
     備註: "設計",
-}, 
+},
 {
     id: "a2",
     到期日: "設計",
@@ -622,7 +645,7 @@ let table01Data = [{
     金額: "設計",
     開票人: "設計",
     備註: "設計",
-},]
+}, ]
 
 var table = new Tabulator("#table01", {
     data: table01Data,
@@ -656,7 +679,7 @@ var table = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-// table.selectRow("a1");
+table.selectRow("a1,a2");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 

@@ -412,7 +412,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">2</li>
+                                                        <li class="count-error">查無資料！</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -607,27 +607,19 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table01Data = [{
+let table01Data = [/*{
     id: "a1",
     到期日: "設計",
     票號: "設計",
     金額: "設計",
     開票人: "設計",
     備註: "設計",
-}, 
-{
-    id: "a2",
-    到期日: "設計",
-    票號: "設計",
-    金額: "設計",
-    開票人: "設計",
-    備註: "設計",
-},]
+},*/ ]
 
 var table = new Tabulator("#table01", {
     data: table01Data,
     layout: "fitColumns",
-    height: "255px",
+    height: "100%",
     pagination: "local",
     paginationSize: 5,
     paginationSizeSelector: [5, 10, 30, 50, true],
