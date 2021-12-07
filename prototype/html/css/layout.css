@@ -2176,6 +2176,36 @@ a.menu-active .menu-bar {
     padding: 0;
 }
 
+/* 有輸入的跳窗 */
+.dialog-entry {
+    padding: 10px;
+}
+
+.dialog-entry-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.dialog-entry p {
+    display: block;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.dialog-entry-item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dialog-entry-title {
+    width: 50px;
+    font-size: 0.875rem;
+    color: #015478;
+    font-weight: bold;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
