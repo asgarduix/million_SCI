@@ -2005,6 +2005,30 @@ a.menu-active .menu-bar {
     background: #fff;
 }
 
+.label-warning {
+    border: #E60012 solid 1px;
+    border-left: #E60012 solid 3px;
+}
+
+.label-warning .label-title {
+    font-size: 0.75rem;
+    color: #fff;
+    border-bottom: #E60012 solid 1px;
+    background: #E60012;
+    padding: 0 3px;
+}
+
+.label-warning .label-content-counter {
+    color: #E60012;
+}
+
+.label-warning .label-content-counter::after {
+    content: attr(warn);
+    display: block;
+    font-size: 0.75rem;
+    border-top: #E60012 solid 1px;
+}
+
 /* END: label */
 /* START: popup */
 .content-popup {
