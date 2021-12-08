@@ -2212,6 +2212,11 @@ a.menu-active .menu-bar {
     border: #aaa solid 1px;
     border-radius: 4px;
     overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.customize-form:nth-last-child(1) {
+    margin-bottom: 0;
 }
 
 .customize-form-symmetry {
@@ -2261,6 +2266,37 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #018dcd;
     margin-right: 1px;
+}
+
+.customize-form-header .add-sub-form {
+    border-right: #aaa solid 1px;
+    display: table-cell;
+    
+}
+
+.customize-form-header .add-sub-form button{
+    font-size: 0.75rem;
+    line-height: 1;
+    background: #018dcd;
+    border: #f7f7f7 solid 1px;
+    color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 5px 12px;
+    display: table;
+}
+
+.customize-form-header .add-sub-form button:hover {
+    background: #027bb3;
+}
+
+.sub-form {
+    border-top: #ccc solid 10px;
+}
+
+.sub-form:nth-last-child(1) {
+    border-bottom: #ccc solid 10px;
 }
 
 .customize-form-inner {
@@ -2327,7 +2363,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-title {
-    padding: 4px;
+    padding: 0 4px;
     text-align: right;
     width: 85px;
     max-width: 85px;
@@ -2735,6 +2771,21 @@ a.menu-active .menu-bar {
     background: #fff;
     margin-bottom: 10px;
     border: #bbb solid 2px;
+}
+
+.field-account-day .customize-form-entry input {
+    width: 70px;
+}
+
+.field-account-day .customize-form-entry span {
+    line-height: 1;
+}
+
+.field-account-day .customize-form-entry span::after {
+    content: "天";
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 1;
 }
 
 /* END: customize-form */
