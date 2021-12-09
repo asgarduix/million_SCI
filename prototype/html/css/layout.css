@@ -1812,6 +1812,14 @@ a.menu-active .menu-bar {
     padding: 5px 10px 5px 5px;
 }
 
+.query-field.query-textarea {
+    width: 100%;
+}
+
+.query-field.query-textarea textarea {
+    font-size: 0.875rem;
+}
+
 .query-input-half {
     width: 50%;
 }
@@ -1824,6 +1832,7 @@ a.menu-active .menu-bar {
 
 .query-field-item {
     display: table-cell;
+    vertical-align: middle;
     position: relative;
 }
 
@@ -1962,6 +1971,25 @@ a.menu-active .menu-bar {
 
 .query-double-datepicker .entry-combine:nth-child(2) {
     text-align: center;
+}
+
+.query-field-note {
+    width: 65px;
+}
+
+.query-field-note span {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-left: 2px;
+    letter-spacing: -1px;
+}
+
+.query-field-note span::before {
+    content: "(";
+}
+
+.query-field-note span::after {
+    content: ")";
 }
 
 /* END: query */
