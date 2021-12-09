@@ -1013,6 +1013,55 @@ a.menu-active .menu-bar {
     border-top-left-radius: 10px;
 }
 
+.card-table,
+.card-data {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.card-data {
+    width: 265px;
+    padding: 0 0 0 5px;
+}
+
+.card-data-inner {
+    border: #eee solid 1px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.card-data-row {
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.card-data-row:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.data-row-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    background: #F5F0E8;
+}
+
+.data-row-title,
+.data-row-content {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    padding: 5px;
+}
+
+.data-row-title {
+    width: 70px;
+    color: #026D93;
+    font-weight: bold;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -2263,7 +2312,7 @@ a.menu-active .menu-bar {
 .customize-form {
     border: #aaa solid 1px;
     border-radius: 4px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-bottom: 5px;
 }
 
