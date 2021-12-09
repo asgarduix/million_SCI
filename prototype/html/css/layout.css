@@ -1062,6 +1062,27 @@ a.menu-active .menu-bar {
     font-weight: bold;
 }
 
+.data-row-content[attr="money"] {
+    text-align: right;
+}
+
+.datal-total-row .data-row-inner {
+    background: none;
+}
+
+.datal-total-row span {
+    font-size: 0.875rem;
+}
+
+.datal-total-row span::before {
+    font-family: 'Material Icons';
+    content: "local_atm";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #026D93;
+    margin-right: 3px;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
