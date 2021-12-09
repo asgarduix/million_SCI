@@ -2840,6 +2840,24 @@ a.menu-active .menu-bar {
     line-height: 1;
 }
 
+/* 刪除sub表格 */
+.customize-form-field-delete {
+    padding: 2px 4px;
+}
+
+.customize-form-field-delete button {
+    background: #E60012;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.customize-form-field-delete button:hover {
+    background: #b50210;
+}
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
