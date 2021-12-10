@@ -1430,6 +1430,10 @@ a.menu-active .menu-bar {
     vertical-align: bottom;
 }
 
+.content-table input {
+    border-radius: 3px;
+}
+
 .table-footer {
     border: #ccc solid 1px;
     border-bottom-left-radius: 4px;
@@ -2326,6 +2330,11 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
     color: #015478;
     font-weight: bold;
+}
+
+/* table */
+.dialog-content .detail-board {
+    padding: 5px;
 }
 
 /* END: popup */
