@@ -242,53 +242,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- data -->
-                            <div class="card-detail card-data">
-                                <div class="card-data-inner">
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">銀行代號</div>
-                                            <div class="data-row-content">0081061</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">銀行簡稱</div>
-                                            <div class="data-row-content">華銀中山</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">銀行帳號</div>
-                                            <div class="data-row-content">106100285822</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">性質</div>
-                                            <div class="data-row-content">活存</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">借貸</div>
-                                            <div class="data-row-content">C</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">金額</div>
-                                            <div class="data-row-content" attr="money">24,398</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row datal-total-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title"><span>合計</span></div>
-                                            <div class="data-row-content" attr="money">24,398</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
@@ -472,37 +425,29 @@ let table01Data = [{
         id: "a1",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
-        類別: "賣出",
-        票券單號: "10A060",
-        成本到期: "成本值",
-        金額: "49,953,402",
+        調度日期: "110/12/10",
+        序號: "10A060",
     },
     {
         id: "a2",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
-        類別: "買入",
-        票券單號: "10A056",
-        成本到期: "到期值",
-        金額: "49,924,300",
+        調度日期: "110/12/10",
+        序號: "10A060",
     },
     {
         id: "a3",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
-        類別: "賣出",
-        票券單號: "10A061",
-        成本到期: "成本值",
-        金額: "19,985,255",
+        調度日期: "110/12/10",
+        序號: "10A060",
     },
     {
         id: "a4",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
-        類別: "買入",
-        票券單號: "10A057",
-        成本到期: "到期值",
-        金額: "19,989,959",
+        調度日期: "110/12/10",
+        序號: "10A060",
     },
 ]
 
@@ -532,10 +477,8 @@ var table = new Tabulator("#table01", {
         },
         { title: "票券商代號", field: "票券商代號" },
         { title: "票券商名稱", field: "票券商名稱" },
-        { title: "類別", field: "類別" },
-        { title: "票券單號", field: "票券單號" },
-        { title: "成本/到期", field: "成本到期" },
-        { title: "金額", field: "金額", hozAlign: "right" },
+        { title: "調度日期", field: "調度日期" },
+        { title: "序號", field: "序號" },
     ],
 });
 // 選擇預設勾選row
