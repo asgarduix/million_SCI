@@ -414,6 +414,47 @@
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <!-- 調度日期/序號/票券商代號/票券商名稱 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">調度日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="調度日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">序號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="序號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票券商代號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票券商代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票券商名稱</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票券商名稱" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                     <!-- label -->
                     <div class="card-detail">
                         <!-- card-detail >> board -->
@@ -440,20 +481,10 @@
                                         <div class="table-func">
                                             <div class="table-func-inner">
                                                 <div class="table-func-basic">
-                                                    <div class="func-basic-item func-download">
-                                                        <ul>
-                                                            <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
-                                                        </ul>
-                                                    </div>
                                                     <div class="func-basic-item func-count">
                                                         <ul>
                                                             <li class="count-total">4</li>
                                                         </ul>
-                                                    </div>
-                                                    <div class="func-basic-item func-filter">
-                                                        <div class="func-filter-inner">
-                                                            <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="table-func-page">頁碼</div>
@@ -619,8 +650,6 @@ table.selectRow("a1");
 <script>
 let table02Data = [{
         id: "a1",
-        票券商代號: "L019",
-        票券商名稱: "萬通票券",
         類別: "賣出",
         票券單號: "10A060",
         成本到期: "成本值",
@@ -628,8 +657,6 @@ let table02Data = [{
     },
     {
         id: "a2",
-        票券商代號: "L019",
-        票券商名稱: "萬通票券",
         類別: "買入",
         票券單號: "10A056",
         成本到期: "到期值",
@@ -649,16 +676,18 @@ var table = new Tabulator("#table02", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    columns: [
-        {
-            title: "票券商代號",
-            field: "票券商代號",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<input type='text'>";
-            },
-            // formatter: "link",
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
         },
-        { title: "票券商名稱", field: "票券商名稱" },
         { title: "類別", field: "類別" },
         { title: "票券單號", field: "票券單號" },
         { title: "成本/到期", field: "成本到期" },
@@ -670,4 +699,5 @@ var table = new Tabulator("#table02", {
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
+
 </html>
