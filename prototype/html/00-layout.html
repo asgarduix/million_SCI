@@ -453,6 +453,29 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- 跟隨tabulator_condition -->
+                                <div class="content-component content-condition">
+                                    <div class="condition-row">
+                                        <div class="condition-field condition-selector">
+                                            <div class="condition-field-inner">
+                                                <div class="condition-field-item condition-field-title">作業選擇</div>
+                                                <div class="condition-field-item condition-field-entry">
+                                                    <select name="作業選擇" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">兌現</option>
+                                                        <option value="">託收</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="condition-field condition-input">
+                                            <div class="condition-field-inner">
+                                                <div class="condition-field-item condition-field-title">總行代號</div>
+                                                <div class="condition-field-item condition-field-entry"><input type="text" placeholder="請輸入值" name="總行代號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- 跟隨tabulator_upload -->
                                 <div class="content-component content-upload">
                                     <form action="">
@@ -470,6 +493,38 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
+                                <!-- 跟隨tabulator_count -->
+                                <div class="content-component content-counter">
+                                    <div class="counter-inner">
+                                        <div class="counter-item">
+                                            <div class="counter-item-row">
+                                                <div class="counter-title">兌現張數</div>
+                                                <div class="counter-num">0</div>
+                                            </div>
+                                            <div class="counter-item-row">
+                                                <div class="counter-total"><span>0</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="counter-item counter-item-unusual">
+                                            <div class="counter-item-row">
+                                                <div class="counter-title">異常張數</div>
+                                                <div class="counter-num">0</div>
+                                            </div>
+                                            <div class="counter-item-row">
+                                                <div class="counter-total"><span>0</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="counter-item">
+                                            <div class="counter-item-row">
+                                                <div class="counter-title">正常張數</div>
+                                                <div class="counter-num">0</div>
+                                            </div>
+                                            <div class="counter-item-row">
+                                                <div class="counter-total"><span>0</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
