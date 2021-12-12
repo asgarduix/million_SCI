@@ -1473,6 +1473,121 @@ a.menu-active .menu-bar {
 }
 
 /* END: tabulator創立table */
+/* START: 跟隨tabulator_condition */
+.content-condition {
+    border-bottom: #eee solid 1px;
+    margin: 0;
+}
+
+.condition-row {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.condition-field {
+    width: 25%;
+    float: left;
+    vertical-align: middle;
+    font-size: 0.875rem;
+}
+
+.condition-field-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    padding-right: 10px;
+}
+
+.condition-field-item {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 0 0 4px;
+}
+
+.condition-field-title {
+    width: 64px;
+    font-size: 0.875rem;
+    color: #026D93;
+}
+
+.condition-field-entry input,
+.condition-field-entry select {
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.875rem;
+    height: 24px;
+}
+
+/* END: 跟隨tabulator_condition */
+/* START: 跟隨tabulator_count */
+.content-counter {
+    padding: 10px;
+    margin: 0;
+}
+
+.counter-inner {
+    overflow: hidden;
+}
+
+.counter-item {
+    width: 25%;
+    float: left;
+    vertical-align: middle;
+    border-right: #eee solid 1px;
+    padding: 0 10px;
+}
+
+.counter-item-row {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: #aaa dotted 1px;
+    padding: 4px;
+}
+
+.counter-item-row:nth-last-child(1) {
+    border: none;
+}
+
+.counter-title,
+.counter-num {
+    display: table-cell;
+    vertical-align: top;
+    font-size: 0.875rem;
+}
+
+.counter-title {
+    width: 65px;
+}
+
+.counter-num {
+    text-align: right;
+}
+
+.counter-total {
+    text-align: right;
+}
+
+.counter-total span {
+    font-size: 0.875rem;
+}
+
+.counter-total span::before {
+    content: '＄';
+    color: #777;
+    margin-right: 1px;
+}
+
+.counter-item-unusual .counter-title,
+.counter-item-unusual .counter-num,
+.counter-item-unusual .counter-total {
+    color: #E60012;
+}
+
+/* END: 跟隨tabulator_count */
 /* START: 跟隨tabulator_upload */
 .content-upload {
     border-bottom: #eee solid 1px;
