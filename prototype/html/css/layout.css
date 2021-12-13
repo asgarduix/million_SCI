@@ -1013,6 +1013,12 @@ a.menu-active .menu-bar {
     border-top-left-radius: 10px;
 }
 
+.card-multiple-container {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
 .card-table,
 .card-data {
     display: table-cell;
@@ -1025,7 +1031,7 @@ a.menu-active .menu-bar {
 }
 
 .card-data-inner {
-    border: #eee solid 1px;
+    border: #eee solid 2px;
     background: #fff;
     border-radius: 4px;
     padding: 5px;
@@ -1081,6 +1087,106 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #026D93;
     margin-right: 3px;
+}
+
+.card-data-left {
+    width: 265px;
+    padding: 0 5px 0 0;
+}
+
+.card-data-left .card-data-inner {
+    padding: 0;
+}
+
+.card-data-radio {
+    border-bottom: #eee solid 1px;
+    padding: 4px 10px;
+    background: rgba(3, 140, 199, .05);
+}
+
+.card-data-radio ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.card-data-radio ul::before {
+    content: "作業身份";
+    font-size: 0.875rem;
+    line-height: 1;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 4px;
+    color: #026D93;
+    font-weight: bold;
+}
+
+.card-data-radio li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.card-data-radio input[type="radio"] {
+    height: inherit;
+}
+
+.card-data-radio label {
+    margin-left: 1px;
+    font-size: 0.875rem;
+    vertical-align: text-bottom;
+}
+
+.card-data-section-name {
+    font-size: 0.875rem;
+    color: #026D93;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+.card-data-section {
+    padding: 8px 5px;
+}
+
+.card-data-section ul {
+    background: #f9f9f9;
+    border: #eee solid 1px;
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-data-section li {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: #ccc dotted 1px;
+    padding: 5px;
+}
+
+.card-data-section li:nth-last-child(1) {
+    border: none;
+}
+
+.card-data-section li span {
+    font-size: 0.875rem;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.card-data-section li span:nth-child(1) {
+    color: #008b8b;
+    width: 85px;
+}
+
+.card-data-section li span:nth-last-child(1) {
+    text-align: right;
+}
+
+.card-data-section-name~.card-data-section {
+    padding-top: 0;
 }
 
 /* END: card */
@@ -1671,6 +1777,7 @@ a.menu-active .menu-bar {
     margin-right: 1px;
     font-size: 0.875rem;
 }
+
 /* END: 跟隨tabulator_accordion */
 /* START: 跟隨tabulator_upload */
 .content-upload {
@@ -2568,7 +2675,7 @@ a.menu-active .menu-bar {
 .dialog-content-tab a:active {
     border: #038CC7 solid 1px;
     color: #fff;
-    background: #038CC7;    
+    background: #038CC7;
 }
 
 .dialog-content-tab a.tab-active {
