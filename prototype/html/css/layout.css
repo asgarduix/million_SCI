@@ -1449,6 +1449,7 @@ a.menu-active .menu-bar {
     background: #EAF9FF;
     border-right: #aaa solid 1px;
     border-top: #aaa solid 1px;
+    border-bottom: #aaa solid 1px;
 }
 
 .table-btn-switch {
@@ -1461,6 +1462,7 @@ a.menu-active .menu-bar {
     line-height: 15px;
     padding: 0;
     border-radius: 40px;
+    margin-top: 4px;
 }
 
 .table-subtable-container .tabulator .tabulator-header {
