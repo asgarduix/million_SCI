@@ -2536,12 +2536,53 @@ a.menu-active .menu-bar {
     padding: 5px;
 }
 
+/* 跳窗頁籤 */
+.dialog-content-tab {
+    padding: 0 0 8px 0;
+}
+
+.dialog-content-tab ul {
+    line-height: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dialog-content-tab li {
+    display: inline-block;
+}
+
+.dialog-content-tab a {
+    font-size: 0.875rem;
+    border: #aaa solid 1px;
+    color: #333;
+    background: #fff;
+    border-radius: 4px;
+    line-height: 1;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dialog-content-tab a:hover,
+.dialog-content-tab a:focus,
+.dialog-content-tab a:active {
+    border: #038CC7 solid 1px;
+    color: #fff;
+    background: #038CC7;    
+}
+
+.dialog-content-tab a.tab-active {
+    border: #038CC7 solid 1px;
+    color: #fff;
+    background: #038CC7;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
     border: #aaa solid 1px;
     border-radius: 4px;
-    /*overflow: hidden;*/
+    overflow: hidden;
     margin-bottom: 5px;
 }
 
