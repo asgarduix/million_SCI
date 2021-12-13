@@ -1594,12 +1594,18 @@ a.menu-active .menu-bar {
     margin: 0;
 }
 
+.accordion-row {
+    padding: 5px 0 7px 0;
+}
+
 .content-accordion-btn {
     background: none;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 .content-accordion-btn span {
@@ -1607,24 +1613,62 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+.content-accordion-btn span:hover {
+    color: #025F86;
+}
+
 .content-accordion-panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
+    padding: 5px 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    display: block;
     overflow: hidden;
+    border: #eee solid 1px;
+}
+
+.content-accordion-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-accordion-panel li {
+    border-bottom: #aaa dotted 1px;
+}
+
+.content-accordion-panel li:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.content-accordion-panel li span {
+    font-size: 0.875rem;
+}
+
+.content-accordion-panel li span:nth-child(1) {
+    width: 70px;
+    display: inline-block;
+    color: #aaa;
 }
 
 .content-accordion-btn span::before {
-    content: '\02795';
-    font-size: 0.875rem;
+    font-family: 'Material Icons';
+    content: "add_circle_outline";
+    font-feature-settings: 'liga';
+    vertical-align: text-top;
     color: #038CC7;
-    margin-right: 2px;
+    margin-right: 1px;
+    font-size: 0.875rem;
 }
 
 .accordion-active span::before {
-    content: "\2796";
+    font-family: 'Material Icons';
+    content: "remove_circle_outline";
+    font-feature-settings: 'liga';
+    vertical-align: text-top;
+    color: #038CC7;
+    margin-right: 1px;
+    font-size: 0.875rem;
 }
-
 /* END: 跟隨tabulator_accordion */
 /* START: 跟隨tabulator_upload */
 .content-upload {

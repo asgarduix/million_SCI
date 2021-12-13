@@ -308,9 +308,16 @@
                                 <!-- 跟隨tabulator_accordion -->
                                 <div class="content-component content-accordion">
                                     <div class="accordion-row">
-                                        <button class="content-accordion-btn"><span>使用作業程式 (點擊顯示/收合)</span></button>
+                                        <button class="content-accordion-btn accordion-active"><span>使用作業程式 (點擊顯示/收合)</span></button>
                                         <div class="content-accordion-panel">
-                                            <p>Lorem ipsum...</p>
+                                            <ul>
+                                                <li><span>1212</span><span>應收票據-催收款</span></li>
+                                                <li><span>121001</span><span>應收票據-託收保費</span></li>
+                                                <li><span>121002</span><span>應收票據-託收其他</span></li>
+                                                <li><span>121004</span><span>應收票據-外幣票據</span></li>
+                                                <li><span>121005</span><span>應收票據-強制險(純保費)</span></li>
+                                                <li><span>285006</span><span>應收票據-保費票據</span></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -318,15 +325,21 @@
                                 <div class="content-component content-hint">
                                     <ul>
                                         <li class="hint-bad">異常</li>
+                                        <li class="hint-good">正常</li>
                                     </ul>
                                 </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
                                             <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">1</li>
+                                                        <li class="count-total">4</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -522,19 +535,46 @@
 <script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-    id: "a1",
-    燈號: "異常",
-    銷帳單位: "設計",
-    票據號碼: "設計",
-    到期日: "設計",
-    託收日: "設計",
-    銷帳日: "設計",
-    序號: "設計",
-    票據金額: "設計",
-    託收帳號: "設計",
-    付款行別: "設計",
-    異常原因: "設計",
-}, ]
+        id: "a1",
+        燈號: "異常",
+        公司: "S02",
+        會計: "催收款",
+        差異數: "設計",
+        差異金額: "設計",
+        財務: "撤退票轉催收",
+        狀態: "不符合",
+    },
+    {
+        id: "a2",
+        燈號: "正常",
+        公司: "S02",
+        會計: "暫收款(保費)",
+        差異數: "設計",
+        差異金額: "設計",
+        財務: "已託收未入帳(保費)",
+        狀態: "符合",
+    },
+    {
+        id: "a3",
+        燈號: "正常",
+        公司: "S02",
+        會計: "暫收款(其他)",
+        差異數: "設計",
+        差異金額: "設計",
+        財務: "已託收未入帳(非保費)",
+        狀態: "符合",
+    },
+    {
+        id: "a4",
+        燈號: "正常",
+        公司: "S02",
+        會計: "應收票據",
+        差異數: "設計",
+        差異金額: "設計",
+        財務: "已託收未入帳(非保費)+已入帳託收-中期放款",
+        狀態: "符合",
+    },
+]
 
 var table = new Tabulator("#table01", {
     data: table01Data,
@@ -559,20 +599,18 @@ var table = new Tabulator("#table01", {
                 let hintData = cell.getValue();
                 if (hintData === "異常") {
                     return "<span class='hint-bad'></span>";
+                } else if (hintData === "正常") {
+                    return "<span class='hint-good'></span>";
                 }
             },
             // formatter: "link",
         },
-        { title: "銷帳單位", field: "銷帳單位" },
-        { title: "票據號碼", field: "票據號碼" },
-        { title: "到期日", field: "到期日" },
-        { title: "託收日", field: "託收日" },
-        { title: "銷帳日", field: "銷帳日" },
-        { title: "序號", field: "序號" },
-        { title: "票據金額", field: "票據金額" },
-        { title: "託收帳號", field: "託收帳號" },
-        { title: "付款行別", field: "付款行別" },
-        { title: "異常原因", field: "異常原因" },
+        { title: "公司", field: "公司" },
+        { title: "會計", field: "會計" },
+        { title: "差異數(本月/上月)", field: "差異數" },
+        { title: "差異金額(本月/上月)", field: "差異金額", hozAlign: "right" },
+        { title: "財務", field: "財務"},
+        { title: "狀態(符合/不符合)", field: "狀態" },
     ],
 });
 // 選擇預設勾選row
@@ -594,10 +632,10 @@ for (i = 0; i < acc.length; i++) {
 
         /* Toggle between hiding and showing the active panel */
         var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
+        if (panel.style.display === "none") {
             panel.style.display = "block";
+        } else {
+            panel.style.display = "none";
         }
     });
 }

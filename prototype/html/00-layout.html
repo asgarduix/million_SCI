@@ -526,6 +526,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- 跟隨tabulator_accordion -->
+                                <div class="content-component content-accordion">
+                                    <div class="accordion-row">
+                                        <button class="content-accordion-btn accordion-active"><span>使用作業程式 (點擊顯示/收合)</span></button>
+                                        <div class="content-accordion-panel">
+                                            <ul>
+                                                <li><span>1212</span><span>應收票據-催收款</span></li>
+                                                <li><span>121001</span><span>應收票據-託收保費</span></li>
+                                                <li><span>121002</span><span>應收票據-託收其他</span></li>
+                                                <li><span>121004</span><span>應收票據-外幣票據</span></li>
+                                                <li><span>121005</span><span>應收票據-強制險(純保費)</span></li>
+                                                <li><span>285006</span><span>應收票據-保費票據</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -1239,5 +1255,27 @@ var table = new Tabulator("#table04", {
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
+<!-- accordion -->
+<script>
+var acc = document.getElementsByClassName("content-accordion-btn");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("accordion-active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "none") {
+            panel.style.display = "block";
+        } else {
+            panel.style.display = "none";
+        }
+    });
+}
+</script>
+
 
 </html>
