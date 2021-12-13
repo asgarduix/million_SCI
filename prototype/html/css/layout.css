@@ -1588,6 +1588,44 @@ a.menu-active .menu-bar {
 }
 
 /* END: 跟隨tabulator_count */
+/* START: 跟隨tabulator_accordion */
+.content-accordion {
+    border-bottom: #eee solid 1px;
+    margin: 0;
+}
+
+.content-accordion-btn {
+    background: none;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.content-accordion-btn span {
+    color: #038CC7;
+    font-size: 0.875rem;
+}
+
+.content-accordion-panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.content-accordion-btn span::before {
+    content: '\02795';
+    font-size: 0.875rem;
+    color: #038CC7;
+    margin-right: 2px;
+}
+
+.accordion-active span::before {
+    content: "\2796";
+}
+
+/* END: 跟隨tabulator_accordion */
 /* START: 跟隨tabulator_upload */
 .content-upload {
     border-bottom: #eee solid 1px;
