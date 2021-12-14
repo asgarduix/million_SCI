@@ -1189,6 +1189,11 @@ a.menu-active .menu-bar {
     padding-top: 0;
 }
 
+.card-data-section input {
+    height: 24px;
+    border-radius: 4px;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
