@@ -152,18 +152,18 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票券單號/賣出單號/起訖日 -->
+                                    <!-- 票券商代號/賣出單號/起訖日 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">票券單號</div>
+                                                <div class="query-field-item query-field-title">票券商代號</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-3">
-                                                            <input type="text" name="票券單號" value="L026" title="L026" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="票券商代號" value="L026" title="L026" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-7">
-                                                            <input type="text" name="票券單號" value="台灣票券" title="台灣票券" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="票券商代號" value="台灣票券" title="台灣票券" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -457,6 +457,10 @@
                                         <div class="label-title">合計金額</div>
                                         <div class="label-content label-content-counter">0.00</div>
                                     </div>
+                                    <div class="label-item">
+                                        <div class="label-title">票券商總合計金額</div>
+                                        <div class="label-content label-content-counter">0.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -468,7 +472,7 @@
                                 <span>短期票券維護</span>
                             </div>
                         </div>
-                        <!-- 票券代號/賣出單號/券戶代號/起訖日 -->
+                        <!-- 票券代號/賣出單號/券戶代號 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -502,6 +506,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- 起日/迄日/共計/買入到期調度日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">起日</div>
@@ -510,11 +519,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 訖日/共計/利息(年息%)/幣別-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">訖日</div>
@@ -527,32 +531,11 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">共計</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="共計" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="共計" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             <span></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">利息(年息%)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="利息(年息%)" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">幣別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="幣別" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 買入到期調度日/稅額/利息所得/投資型態 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">買入到期調度日</div>
@@ -561,33 +544,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">稅額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">利息所得</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">投資型態</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="投資型態" value="短期投資" title="短期投資" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <!-- 付息方式/保管情形-->
+                        <!-- 付息方式/利率(年息%)/利息所得/稅額 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -609,6 +568,35 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
+                                        <div class="customize-form-title">利率(年息%)</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="利率(年息%)" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">利息所得</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">稅額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 保管情形/投資型態/幣別/ -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
                                         <div class="customize-form-title">保管情形</div>
                                         <div class="customize-form-entry">
                                             <select name="保管情形" id="" value="" title="" data-toggle="tooltip" data-placement="left">
@@ -618,6 +606,22 @@
                                                 <option value="">美林證券</option>
                                                 <option value="">其他</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">投資型態</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="投資型態" value="短期投資" title="短期投資" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="幣別" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -1057,7 +1061,7 @@
 let table01Data = [{
         id: "a1",
         筆數: "4",
-        票券代號: "設計",
+        票券商代號: "設計",
         賣出單號: "設計",
         起訖日: "設計",
         成本值: "設計",
@@ -1066,7 +1070,7 @@ let table01Data = [{
     {
         id: "a2",
         筆數: "3",
-        票券代號: "設計",
+        票券商代號: "設計",
         賣出單號: "設計",
         起訖日: "設計",
         成本值: "設計",
@@ -1116,8 +1120,8 @@ var table = new Tabulator("#table01", {
             // formatter: "link",
         },
         {
-            title: "票券代號",
-            field: "票券代號",
+            title: "票券商代號",
+            field: "票券商代號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='#'>" + cell.getValue() + "</a>"
             },

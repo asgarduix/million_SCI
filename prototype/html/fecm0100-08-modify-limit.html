@@ -152,18 +152,18 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票券單號/賣出單號/起訖日 -->
+                                    <!-- 票券商代號/賣出單號/起訖日 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">票券單號</div>
+                                                <div class="query-field-item query-field-title">票券商代號</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-3">
-                                                            <input type="text" name="票券單號" value="L026" title="L026" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="票券商代號" value="L026" title="L026" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-7">
-                                                            <input type="text" name="票券單號" value="台灣票券" title="台灣票券" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="票券商代號" value="台灣票券" title="台灣票券" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -214,25 +214,6 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">現在筆數</div>
-                                            <div class="label-content label-content-counter">1</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">合計金額</div>
-                                            <div class="label-content label-content-counter">49,948,490.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -452,7 +433,7 @@
 let table01Data = [{
         id: "a1",
         筆數: "4",
-        票券代號: "設計",
+        票券商代號: "設計",
         賣出單號: "設計",
         起訖日: "設計",
         成本值: "設計",
@@ -461,7 +442,7 @@ let table01Data = [{
     {
         id: "a2",
         筆數: "3",
-        票券代號: "設計",
+        票券商代號: "設計",
         賣出單號: "設計",
         起訖日: "設計",
         成本值: "設計",
@@ -511,8 +492,8 @@ var table = new Tabulator("#table01", {
             // formatter: "link",
         },
         {
-            title: "票券代號",
-            field: "票券代號",
+            title: "票券商代號",
+            field: "票券商代號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='#'>" + cell.getValue() + "</a>"
             },
