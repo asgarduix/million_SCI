@@ -2684,6 +2684,11 @@ a.menu-active .menu-bar {
     background: #038CC7;
 }
 
+/* 有燈號的table */
+.content-hint~.dialog-content {
+    padding: 0 5px 10px;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
@@ -2875,7 +2880,7 @@ a.menu-active .menu-bar {
 
 .customize-form-entry li {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 2px;
 }
 
 .customize-form-entry input[type="radio"],
