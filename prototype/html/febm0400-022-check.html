@@ -310,14 +310,14 @@
                                     <div class="card-data-inner">
                                         <div class="card-data-radio">
                                             <ul>
-                                                <li><input type="radio" id="rd01" name="借調"><label for="rd01">借方</label></li>
+                                                <li><input type="radio" id="rd01" name="借調" checked=""><label for="rd01">借方</label></li>
                                                 <li><input type="radio" id="rd02" name="借調"><label for="rd02">調方</label></li>
                                             </ul>
                                         </div>
                                         <!-- <div class="card-data-section-name">資金借調（資調人）</div> -->
                                         <div class="card-data-section">
                                             <ul>
-                                                <li><span class="hint-good">試算金額</span><span>1,300</span></li>
+                                                <!-- <li><span class="hint-good">試算金額</span><span>1,300</span></li> -->
                                                 <li><span>調度金額</span><span>3,300</span></li>
                                             </ul>
                                         </div>
@@ -353,6 +353,7 @@
                                                         <div class="func-basic-item func-count">
                                                             <ul>
                                                                 <li class="count-total">4</li>
+                                                                <li class="count-check">1</li>
                                                             </ul>
                                                         </div>
                                                         <div class="func-basic-item func-filter">
@@ -550,6 +551,7 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
+        id: "a1",
         銀行: "004-台灣銀行",
         帳戶餘額: "20,000,000",
         調度金額: "100,000,000",
@@ -558,6 +560,7 @@ var table01Data = [{
         人員: "A0816899"
     },
     {
+        id: "a2",
         銀行: "008-華南銀行",
         帳戶餘額: "15,150,000",
         調度金額: "8,000,000",
@@ -566,10 +569,20 @@ var table01Data = [{
         人員: "A0816899"
     },
     {
+        id: "a3",
         銀行: "800-中華郵政",
         帳戶餘額: "20,000,000",
         調度金額: "23,000",
         試算餘額: "977,000",
+        試算調度日: "110/09/11",
+        人員: "A0816899"
+    },
+    {
+        id: "a4",
+        銀行: "004-台灣銀行",
+        帳戶餘額: "20,000,000",
+        調度金額: "100,000,000",
+        試算餘額: "100,000,000",
         試算調度日: "110/09/11",
         人員: "A0816899"
     },
@@ -616,6 +629,10 @@ var table01 = new Tabulator("#table01", {
         { title: "人員", field: "人員" },
     ],
 });
+// 選擇預設勾選row
+table01.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
