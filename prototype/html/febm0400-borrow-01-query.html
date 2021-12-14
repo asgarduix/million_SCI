@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="febm0400-query">
+<body id="canvas" class="febm0400-borrow-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -284,8 +284,8 @@
                                     </div>
                                     <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third"><span>試算</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>還原</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-third"><span>試算</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>還原</span></button></li> -->
                                             <li><button class="content-btn-item btn-third"><span>資金調度</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>兌現</span></button></li>
                                         </ul>
@@ -310,8 +310,8 @@
                                     <div class="card-data-inner">
                                         <div class="card-data-radio">
                                             <ul>
-                                                <li><input type="radio" id="rd01" name="借調"><label for="rd01">借方</label></li>
-                                                <li><input type="radio" id="rd02" name="借調" checked=""><label for="rd02">調方</label></li>
+                                                <li><input type="radio" id="rd01" name="借調" checked=""><label for="rd01">借方</label></li>
+                                                <li><input type="radio" id="rd02" name="借調"><label for="rd02">調方</label></li>
                                             </ul>
                                         </div>
                                         <!-- <div class="card-data-section-name">資金借調（資調人）</div> -->
@@ -330,9 +330,9 @@
                                                 <li><span>幣別</span><span>NTD</span></li>
                                                 <li><span>匯率</span><span>1.00</span></li>
                                                 <li><span>外幣兌換台幣</span><span></span></li>
-                                                <li><span>帳戶餘額</span><span><input type="text" placeholder="請輸入值" title="50,000,000" value="50,000,000" attr="money" onkeypress="return onlyNumberKey(event)" ></span></li>
-                                                <li><span>資金水平(低)</span><span><input type="text" placeholder="請輸入值" title="1,100,000" value="1,100,000" attr="money" onkeypress="return onlyNumberKey(event)" ></span></li>
-                                                <li><span>資金水平(高)</span><span><input type="text" placeholder="請輸入值" title="1,100,000" value="1,300,000" attr="money" onkeypress="return onlyNumberKey(event)" ></span></li>
+                                                <li><span>帳戶餘額</span><span>50,000,000</span></li>
+                                                <li><span>資金水平(低)</span><span>1,100,000</span></li>
+                                                <li><span>資金水平(高)</span><span>1,300,000</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -550,7 +550,6 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
-        id: "a1",
         銀行: "004-台灣銀行",
         帳戶餘額: "20,000,000",
         調度金額: "100,000,000",
@@ -559,7 +558,6 @@ var table01Data = [{
         人員: "A0816899"
     },
     {
-        id: "a2",
         銀行: "008-華南銀行",
         帳戶餘額: "15,150,000",
         調度金額: "8,000,000",
@@ -568,7 +566,6 @@ var table01Data = [{
         人員: "A0816899"
     },
     {
-        id: "a3",
         銀行: "800-中華郵政",
         帳戶餘額: "20,000,000",
         調度金額: "23,000",
@@ -577,7 +574,6 @@ var table01Data = [{
         人員: "A0816899"
     },
     {
-        id: "a4",
         銀行: "004-台灣銀行",
         帳戶餘額: "20,000,000",
         調度金額: "100,000,000",
@@ -628,10 +624,6 @@ var table01 = new Tabulator("#table01", {
         { title: "人員", field: "人員" },
     ],
 });
-// 選擇預設勾選row
-// table01.selectRow("a1");
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>

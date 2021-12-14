@@ -2789,6 +2789,7 @@ a.menu-active .menu-bar {
 
 .customize-form-inner {
     overflow: hidden;
+    background: #f7f7f7;
 }
 
 .customize-form-field {
@@ -2872,10 +2873,6 @@ a.menu-active .menu-bar {
     padding: 2px 4px;
     font-size: 0.75rem;
 }
-
-/*.customize-form-entry input[attr="money"] {
-    text-align: right;
-}*/
 
 .customize-form-entry ul {
     list-style: none;
@@ -3258,16 +3255,16 @@ a.menu-active .menu-bar {
     border-color: #018dcd;
 }
 
-.customize-form-serial-number a > span {
+.customize-form-serial-number a>span {
     font-size: 0.875rem;
 }
 
-.customize-form-serial-number a > span::before {
+.customize-form-serial-number a>span::before {
     content: "($";
     margin-left: 2px;
 }
 
-.customize-form-serial-number a > span::after {
+.customize-form-serial-number a>span::after {
     content: ")";
 }
 
@@ -3310,6 +3307,137 @@ a.menu-active .menu-bar {
     background: #b50210;
 }
 
+/* 左右排版 */
+.left-right-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.left-right-item {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.left-right-item div,
+.left-right-item li,
+.left-right-item a,
+.left-right-item span,
+.left-right-item button {
+    font-size: 0.75rem;
+}
+
+.left-item {
+    width: 15%;
+    border-right: #aaa solid 1px;
+}
+
+.left-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left-right-item li {
+    border-bottom: #aaa dotted 1px;
+}
+
+.left-right-item li:nth-last-child(1) {
+    border: none;
+}
+
+.left-right-item a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.left-title {    
+    background: #F2EDE6;
+    line-height: 32px;
+    padding: 0 5px;
+    border-bottom: #aaa solid 1px;
+}
+
+.left-content {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.left-content a {
+    color: #333;
+}
+
+.left-content a:hover,
+.left-content a:focus,
+.left-content a:active {
+    background: #d7e6ed;
+    color: #333;
+}
+
+.left-content a.left-content-active {
+    background: #d7e6ed;
+    color: #333;
+}
+
+.left-content span {
+    display: block;
+    padding-left: 10px;
+}
+
+.left-content span::before {
+    content: "》$";
+    margin-left: 2px;
+}
+
+.left-content .error {
+    color: #F33349;
+}
+
+.left-title-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.left-title-name,
+.left-title-btn {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.left-title-name span::before {
+    content: "(共";
+    margin-left: 1px;
+}
+
+.left-title-name span::after {
+    content: "項)";
+}
+
+.left-title-btn {
+    text-align: right;
+}
+
+.left-title-btn button {
+    background: #018dcd;
+    color: #fff;
+    border-radius: 4px;
+    padding: 3px 10px;
+    line-height: 1;
+}
+
+.left-title-btn button:hover {
+    background: #23abe9;
+}
+
+.right-item {
+    background: #ccc;
+}
+
+.right-item .customize-form-row:nth-last-child(1) {
+    border-bottom: #aaa solid 1px;
+}
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
