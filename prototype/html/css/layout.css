@@ -2881,6 +2881,7 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
+    margin-bottom: 2px;
 }
 
 .customize-form-entry input[type="radio"],
@@ -3232,7 +3233,7 @@ a.menu-active .menu-bar {
     border-radius: 3px;
     border: #027DB4 solid 1px;
     background: #fff;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 1;
     padding: 4px 10px 4px 5px;
     text-decoration: none;
@@ -3250,6 +3251,19 @@ a.menu-active .menu-bar {
     background: #018dcd;
     color: #fff;
     border-color: #018dcd;
+}
+
+.customize-form-serial-number a > span {
+    font-size: 0.875rem;
+}
+
+.customize-form-serial-number a > span::before {
+    content: "($";
+    margin-left: 2px;
+}
+
+.customize-form-serial-number a > span::after {
+    content: ")";
 }
 
 .page-customize-form {
