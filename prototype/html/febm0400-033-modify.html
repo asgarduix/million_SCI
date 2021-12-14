@@ -535,7 +535,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">修改</div>
+                        <div class="dialog-header-item dialog-title">銀行<span>004-台灣銀行</span></div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -654,7 +654,7 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="銀行代號" value="0081501" title="0081501" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行代號" value="0081501" title="0081501" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-7">
                                                     <input type="text" name="銀行代號" value="華銀基隆" title="華銀基隆" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
@@ -667,7 +667,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">帳號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="帳號" value="11520987654" title="11520987654" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                            <input type="text" name="帳號" value="11520987654" title="11520987654" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -675,9 +675,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">狀態</div>
                                         <div class="customize-form-entry">
-                                            <select name="狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">活存</option>
+                                                <option value="" selected="">活存</option>
                                                 <option value="">支存</option>
                                             </select>
                                         </div>
@@ -694,7 +694,7 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-7">
                                                     <input type="text" name="幣別" value="台幣" title="台幣" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
@@ -707,7 +707,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">帳戶餘額</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="帳戶餘額" value="1,000,000" title="1,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="帳戶餘額" value="1,000,000" title="1,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -715,7 +715,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">常駐金</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="常駐金" value="2,000,000" title="2,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="常駐金" value="2,000,000" title="2,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -728,7 +728,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">資金水平(低)</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="資金水平(低)" value="300,000" title="300,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="資金水平(低)" value="300,000" title="300,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -736,7 +736,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">資金水平(高)</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="資金水平(高)" value="500,000" title="500,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="資金水平(高)" value="500,000" title="500,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -744,7 +744,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">試算金額</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="試算金額" value="5,000,000" title="5,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="試算金額" value="5,000,000" title="5,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -757,7 +757,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">匯率</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="匯率" value="1" title="1" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="匯率" value="1" title="1" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -765,7 +765,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">外幣兌換台幣</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="外幣兌換台幣" value="500,000" title="500,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="外幣兌換台幣" value="500,000" title="500,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -781,7 +781,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">試算餘額</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="試算餘額" value="5,000,000" title="5,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="試算餘額" value="5,000,000" title="5,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>

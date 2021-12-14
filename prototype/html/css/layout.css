@@ -3234,20 +3234,22 @@ a.menu-active .menu-bar {
     background: #fff;
     font-size: 0.75rem;
     line-height: 1;
-    padding: 4px 10px;
+    padding: 4px 10px 4px 5px;
     text-decoration: none;
 }
 
 .customize-form-serial-number a:hover,
 .customize-form-serial-number a:focus,
 .customize-form-serial-number a:active {
-    background: #027DB4;
+    background: #018dcd;
     color: #fff;
+    border-color: #018dcd;
 }
 
 .customize-form-serial-number a.serial-number-active {
-    background: #027DB4;
+    background: #018dcd;
     color: #fff;
+    border-color: #018dcd;
 }
 
 .page-customize-form {
@@ -3317,7 +3319,7 @@ a.menu-active .menu-bar {
     border-radius: 30px;
     margin-right: 2px;
     background: #75BD0E;
-    border: rgba(255, 255, 255, .2) solid 1px;
+    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 .hint-normal::before {
@@ -3328,7 +3330,7 @@ a.menu-active .menu-bar {
     border-radius: 30px;
     margin-right: 2px;
     background: #FFA225;
-    border: rgba(255, 255, 255, .2) solid 1px;
+    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 .hint-bad::before {
@@ -3339,7 +3341,7 @@ a.menu-active .menu-bar {
     border-radius: 30px;
     margin-right: 2px;
     background: #F33349;
-    border: rgba(255, 255, 255, .2) solid 1px;
+    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 /* END:  燈號 */
