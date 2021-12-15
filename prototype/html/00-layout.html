@@ -387,7 +387,7 @@
                             <div class="detail-board detail-board-btn">
                                 <!-- btn -->
                                 <div class="content-component content-btn">
-                                    <div class="content-btn-basic">
+                                    <!-- <div class="content-btn-basic">
                                         <ul>
                                             <li><button class="content-btn-item btn-basic btn-prime"><span>主要確定</span></button></li>
                                             <li><button class="content-btn-item btn-basic btn-outline"><span>主要確定</span></button></li>
@@ -395,7 +395,7 @@
                                             <li><button class="content-btn-item btn-basic btn-disable"><span>無效</span></button></li>
                                             <li><button class="content-btn-item btn-basic btn-warn"><span>警告</span></button></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
@@ -641,6 +641,42 @@
                                         </div>
                                     </div>
                                     <div id="table03"></div>
+                                    <div class="table-footer">footer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabulator創立table：tabulator header上下排呈現 -->
+                        <div class="card-detail card-table">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func-rows">
+                                        <div class="table-func-rows-inner">
+                                            <div class="table-func-rows-top">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">2</li>
+                                                        <li class="count-check">2</li>
+                                                        <li class="count-error">修改上限不得超過一筆!</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-rows-bottom">
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                                <div class="table-func-page">頁碼</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="table05"></div>
                                     <div class="table-footer">footer</div>
                                 </div>
                             </div>
@@ -1276,6 +1312,63 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 </script>
-
+<!-- tabulator header變更為上下兩排呈現 -->
+<script>
+let table05Data = [{
+    id: "b1",
+    總行代碼: "設計文字",
+    分行代碼: "設計文字",
+    名稱: "設計文字",
+    簡稱: "設計文字",
+    地址: "設計文字",
+    銀行統編: "設計文字",
+    電話號碼: "設計文字",
+    建檔日期: "設計文字",
+    更新日期: "設計文字",
+    作業人員: "設計文字"
+}, ];
+var table05 = new Tabulator("#table05", {
+    data: table05Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "總行代碼", field: "總行代碼" },
+        { title: "分行代碼", field: "分行代碼" },
+        { title: "名稱", field: "名稱" },
+        { title: "簡稱", field: "簡稱" },
+        { title: "地址", field: "地址" },
+        { title: "銀行統編", field: "銀行統編" },
+        { title: "電話號碼", field: "電話號碼" },
+        { title: "建檔日期", field: "建檔日期" },
+        { title: "更新日期", field: "更新日期" },
+        { title: "作業人員", field: "作業人員" },
+    ],
+});
+// 選擇預設勾選row
+table05.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
 
 </html>

@@ -1348,6 +1348,14 @@ a.menu-active .menu-bar {
     overflow: hidden;
 }
 
+.table-func-rows {
+    border: #ccc solid 1px;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;    
+}
+
 .table-func-inner {
     width: 100%;
     display: table;
@@ -1475,6 +1483,21 @@ a.menu-active .menu-bar {
     background: #f7f7f7;
     font-size: 0.875rem;
     padding: 0 5px;
+}
+
+.table-func-rows-top {
+    border-bottom: #ccc solid 1px;
+}
+
+.table-func-rows-bottom {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.table-func-rows-bottom .func-filter {
+    width: 180px;
+    padding: 6px 5px;
 }
 
 .content-table .tabulator {
