@@ -611,8 +611,8 @@ var popupOperationTable = new Tabulator("#popup-operation-table01", {
             title: "利率別",
             field: "利率別",
             formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("custom-class");
-                return "<div class='table-input'><div class='table-input-inner'>" + cell.getValue() + "</div></div>"
+                cell.getElement().classList.add("table-input");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
             },
             // formatter: "link",
             editor: "input",

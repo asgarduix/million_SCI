@@ -1616,6 +1616,7 @@ a.menu-active .menu-bar {
 .table-input-inner input {
     border: #eee solid 1px;
     margin: 5px;
+    background: #fff;
 }
 
 /* END: tabulator創立table */
@@ -2734,7 +2735,7 @@ a.menu-active .menu-bar {
 .customize-form {
     border: #aaa solid 1px;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: 5px;
 }
 
