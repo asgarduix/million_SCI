@@ -1608,6 +1608,16 @@ a.menu-active .menu-bar {
     background: #F7F2EB;
 }
 
+.table-input-inner {
+    border: #eee solid 1px;
+    border-radius: 4px;
+}
+
+.table-input-inner input {
+    border: #eee solid 1px;
+    margin: 5px;
+}
+
 /* END: tabulator創立table */
 /* START: 跟隨tabulator_condition */
 .content-condition {
@@ -2484,7 +2494,7 @@ a.menu-active .menu-bar {
     display: table;
     background: #f9f9f9;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     border: #eee solid 1px;
     margin: 60px auto 40px;
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
@@ -2630,6 +2640,8 @@ a.menu-active .menu-bar {
 
 .popup-dialog-add .dialog-header {
     background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .popup-dialog-add .content-table {
