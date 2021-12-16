@@ -1609,14 +1609,36 @@ a.menu-active .menu-bar {
 }
 
 .table-input-inner {
-    border: #eee solid 1px;
+    border: #aaa solid 1px;
     border-radius: 4px;
+    background: #fff;
+    outline-color: #aaa;
+    padding: 0 4px;
 }
 
-.table-input-inner input {
-    border: #eee solid 1px;
-    margin: 5px;
+.tabulator-row .tabulator-cell.table-input.tabulator-editing {
+    border: none;
+    padding: 4px;
+}
+
+.tabulator-row .tabulator-cell.table-input.tabulator-editing input {
+    border: #aaa solid 1px;
     background: #fff;
+    border-radius: 4px;
+    outline-color: #aaa;
+    padding: 0 4px;
+}
+
+.table-input-unit .table-input-inner {
+    width: 100px;
+    display: inline-block;
+}
+
+.table-input-unit .input-unit-text {
+    width: 20px;
+    padding-left: 3px;
+    display: inline-block;
+    font-size: 0.875rem;
 }
 
 /* END: tabulator創立table */

@@ -614,18 +614,33 @@ var popupOperationTable = new Tabulator("#popup-operation-table01", {
                 cell.getElement().classList.add("table-input");
                 return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
             },
-            // formatter: "link",
             editor: "input",
         },
-        { title: "領息別", field: "領息別" },
-        { title: "期間", field: "期間" },
+        {
+            title: "領息別",
+            field: "領息別",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+        },
+        {
+            title: "期間",
+            field: "期間",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "table-input-unit");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>" + "<span class='input-unit-text'>天</span>"
+            },
+            editor: "input",
+        },
         { title: "定存銀行", field: "定存銀行" },
         { title: "存單起迄日", field: "存單起迄日" },
         { title: "定存金額", field: "定存金額", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row
-popupOperationTable.selectRow("a1");
+//popupOperationTable.selectRow("a1");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
