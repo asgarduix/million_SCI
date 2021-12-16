@@ -839,25 +839,48 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    票據號碼: "設計文字",
-    到期日: "設計文字",
-    票據金額: "設計文字",
-    序號: "設計文字",
-    開票人: "設計文字",
-    建檔日: "設計文字",
-    備註: "設計文字",
-    簽收人: "設計文字",
-    簽收日: "設計文字",
-    入帳日: "設計文字",
-    銷帳日: "設計文字",
-    入帳人員: "設計文字",
-    狀態: "設計文字"
-}, ];
-var table01 = new Tabulator("#table01", {
+let table01Data = [{
+        id: "a1",
+        票據號碼: "設計文字",
+        到期日: "設計文字",
+        票據金額: "設計文字",
+        付款行: "設計文字",
+        發票人帳號: "設計文字",
+        開票人: "設計文字",
+        建檔日: "設計文字",
+        銀行代號: "設計文字",
+        託收銀行帳號: "設計文字",
+        備註: "設計文字",
+        簽收人: "設計文字",
+        簽收日: "設計文字",
+        入帳日: "設計文字",
+        銷帳日: "設計文字",
+        銷帳序號: "設計文字",
+        入帳人員: "入帳人員",
+    },
+    {
+        id: "a2",
+        票據號碼: "設計文字",
+        到期日: "設計文字",
+        付款行: "設計文字",
+        票據金額: "設計文字",
+        發票人帳號: "設計文字",
+        開票人: "設計文字",
+        建檔日: "設計文字",
+        銀行代號: "設計文字",
+        託收銀行帳號: "設計文字",
+        備註: "設計文字",
+        簽收人: "設計文字",
+        簽收日: "設計文字",
+        入帳日: "設計文字",
+        銷帳日: "設計文字",
+        銷帳序號: "設計文字",
+        入帳人員: "入帳人員",
+    },
+]
+
+var table = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -868,24 +891,40 @@ var table01 = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "票據號碼", field: "票據號碼" },
-        { title: "到期日", field: "到期日" },
+        { title: "到期日", field: "到期日" },        
+        { title: "付款行", field: "付款行" },
         { title: "票據金額", field: "票據金額" },
-        { title: "序號", field: "序號" },
+        { title: "發票人帳號", field: "發票人帳號" },
         { title: "開票人", field: "開票人" },
         { title: "建檔日", field: "建檔日" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "託收銀行帳號", field: "託收銀行帳號" },
         { title: "備註", field: "備註" },
         { title: "簽收人", field: "簽收人" },
         { title: "簽收日", field: "簽收日" },
         { title: "入帳日", field: "入帳日" },
         { title: "銷帳日", field: "銷帳日" },
+        { title: "銷帳序號", field: "銷帳序號" },
         { title: "入帳人員", field: "入帳人員" },
-        { title: "狀態", field: "狀態" },
     ],
 });
+// 選擇預設勾選row
+table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
