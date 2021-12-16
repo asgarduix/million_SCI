@@ -1353,7 +1353,7 @@ a.menu-active .menu-bar {
     border-bottom: none;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .table-func-inner {
@@ -3297,19 +3297,13 @@ a.menu-active .menu-bar {
     border: #bbb solid 2px;
 }
 
-.field-account-day .customize-form-entry input {
+.field-with-text .customize-form-entry input {
     width: 70px;
 }
 
-.field-account-day .customize-form-entry span {
+.field-with-text .customize-form-entry span {
     line-height: 1;
-}
-
-.field-account-day .customize-form-entry span::after {
-    content: "天";
-    display: inline-block;
     font-size: 0.75rem;
-    line-height: 1;
 }
 
 /* 刪除sub表格 */
@@ -3375,7 +3369,7 @@ a.menu-active .menu-bar {
     padding: 5px;
 }
 
-.left-title {    
+.left-title {
     background: #F2EDE6;
     line-height: 32px;
     padding: 0 5px;
@@ -3461,6 +3455,7 @@ a.menu-active .menu-bar {
 .right-item .customize-form-row:nth-last-child(1) {
     border-bottom: #aaa solid 1px;
 }
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
