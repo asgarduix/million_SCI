@@ -241,7 +241,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 地區/託收銀行/票據號碼 -->
+                                    <!-- 地區/銀行代號/託收銀行帳號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -249,7 +249,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-3">
-                                                            <input type="text" name="地區" value="008" title="008" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="地區" value="008" title="008" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
                                                         </div>
                                                         <div class="entry-combine entry-7">
                                                             <input type="text" name="地區" value="台北總公司" title="台北總公司" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
@@ -260,32 +260,36 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">託收銀行</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-3">
-                                                            <input type="text" name="託收銀行" value="012" title="012" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-7">
-                                                            <input type="text" name="託收銀行" value="台北富邦銀行" title="台北富邦銀行" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="query-field-item query-field-title">銀行代號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="銀行代號" title="0081061" value="0081061" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">票據號碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="" id="" name="票據號碼" title="012" value="012" disabled="" data-toggle="tooltip" data-placement="top" attr="readonly"></div>
+                                                <div class="query-field-item query-field-title">託收銀行帳號</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="託收銀行帳號" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">110223766</option>
+                                                        <option value="">110220995</option>
+                                                        <option value="">110067751</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 到期日/票據金額/帳號 -->
+                                    <!-- 票據號碼/到期日/票據金額 -->
                                     <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">票據號碼</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票據號碼" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">到期日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
@@ -294,31 +298,31 @@
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票據金額" attr='money' onkeypress="return onlyNumberKey(event)" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 發票人帳號/付款別 -->
+                                    <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">帳號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="帳號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">發票人帳號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="發票人帳號" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 付款別 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-datepicker">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">付款別</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine">
-                                                            <input type="text" name="付款別" value="123" title="123" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="付款別" value="123" title="123" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
                                                         </div>
                                                         <div class="entry-combine">
-                                                            <input type="text" name="付款別" value="456" title="456" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="付款別" value="456" title="456" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
                                                         </div>
                                                         <div class="entry-combine">
-                                                            <input type="text" name="付款別" value="789" title="789" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="付款別" value="789" title="789" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
                                                         </div>
                                                         <div class="entry-combine">
-                                                            <input type="text" name="付款別" value="123" title="123" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="付款別" value="123" title="123" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -583,7 +587,7 @@
 <script>
 let table01Data = [{
         id: "a1",
-        票據號碼: "設計文字",
+        票據號碼: "11047223-1",
         到期日: "設計文字",
         票據金額: "設計文字",
         付款行: "設計文字",
@@ -602,7 +606,7 @@ let table01Data = [{
     },
     {
         id: "a2",
-        票據號碼: "設計文字",
+        票據號碼: "11047223-2",
         到期日: "設計文字",
         付款行: "設計文字",
         票據金額: "設計文字",
