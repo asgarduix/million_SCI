@@ -2211,6 +2211,15 @@ a.menu-active .menu-bar {
     color: #8C7457;
 }
 
+.btn-signed span::before {
+    font-family: 'Material Icons';
+    content: "check_circle";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #8C7457;
+    margin-right: 1px;
+}
+
 .btn-reject span::before {
     font-family: 'Material Icons';
     content: "report_problem";
@@ -2671,6 +2680,8 @@ a.menu-active .menu-bar {
 
 .popup-dialog-confirm .dialog-header {
     background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* 刪除 */
