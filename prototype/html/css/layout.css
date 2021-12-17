@@ -1194,6 +1194,44 @@ a.menu-active .menu-bar {
     border-radius: 4px;
 }
 
+.card-data-section li.card-data-section-send {
+    background: #eee;
+    padding-top: 10px;
+}
+
+.card-data-section-send button {
+    font-size: 0.875rem;
+    line-height: 1;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-right: 4px;
+}
+
+.card-data-section-send button:hover {
+    opacity: .5;
+}
+
+.card-data-section-send ul {
+    background: none;
+}
+
+.card-data-modify {
+    background: #02A7F0;
+    border: #02A7F0 solid 1px;
+    color: #fff;
+}
+
+.card-data-save {
+    background: #1f8113;
+    border: #1f8113 solid 1px;
+    color: #fff;
+}
+
+.card-data-cancel {
+    background: #f7f7f7;
+    border: #aaa solid 1px;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -2720,6 +2758,7 @@ a.menu-active .menu-bar {
 
 .dialog-content-tab li {
     display: inline-block;
+    margin-right: 2px;
 }
 
 .dialog-content-tab a {
