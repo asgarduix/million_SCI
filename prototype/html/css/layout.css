@@ -2803,6 +2803,86 @@ a.menu-active .menu-bar {
     padding: 0 5px 10px;
 }
 
+/* 駁回 */
+.popup-dialog-reject {
+    width: 525px;
+    max-width: 525px;
+}
+
+.popup-dialog-reject .dialog-header {
+    background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-dialog-reject .dialog-content {
+    padding: 10px;
+}
+
+.reject-section {
+    padding: 10px 0;
+    border-bottom: #ccc solid 1px;
+}
+
+.popup-dialog-reject ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reject-section-tab li {
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.reject-section-tab a {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 2px 10px;
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+}
+
+.reject-section-tab a:hover,
+.reject-section-tab a:focus,
+.reject-section-tab a:active {
+    border: #027DB4 solid 1px;
+    background: #027DB4;
+    color: #fff;
+}
+
+.reject-section-tab a.reject-tab-active {
+    border: #027DB4 solid 1px;
+    background: #027DB4;
+    color: #fff;
+}
+
+.reject-section-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.reject-section-content li {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.reject-section-content li input {
+    margin-right: 2px;
+}
+
+.reject-section-content li label {
+    font-size: 0.875rem;
+}
+
+.reject-section-content textarea {
+    font-size: 0.875rem;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
