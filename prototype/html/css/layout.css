@@ -3622,6 +3622,29 @@ a.menu-active .menu-bar {
     border-bottom: #aaa solid 1px;
 }
 
+/* 欄位上下排版 */
+.up-down-form-row {
+    border-bottom: #aaa solid 1px;
+}
+
+.up-down-form-row:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.up-down-form-row .customize-field-inner {
+    border-bottom: #aaa solid 1px;
+}
+
+.up-down-form-row .customize-field-inner:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.up-down-form-field-title {
+    background: rgba(3, 140, 199, .05);
+    text-align: center;
+    font-size: 0.875rem;
+}
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
