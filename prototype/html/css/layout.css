@@ -3700,6 +3700,79 @@ a.menu-active .menu-bar {
 
 /* END:  燈號 */
 
+/* START: info-block */
+.detail-board-info-block {
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0 0 3px 0;
+}
+
+.content-info-block {
+    padding: 0;
+    margin: 0;
+}
+
+.info-block-item {
+    display: inline-block;
+    border-radius: 6px;
+    overflow: hidden;
+    border: #ccc solid 1px;
+}
+
+.info-block-item-top {
+    padding: 5px 10px;
+    background: #fff;
+}
+
+.info-block-item-bottom {
+    padding: 2px 10px;
+    background: #f9fafb;
+    text-align: right;
+}
+
+.info-block-obj span {
+    display: block;
+}
+
+.info-block-obj span:nth-child(2)::before {
+    content: "$";
+}
+
+.info-block-item-top {
+    display: table;
+    table-layout: fixed;
+}
+
+.info-block-item-top .info-block-obj {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.info-block-item-top .info-block-obj:nth-child(2) {
+    padding: 6px;
+    font-weight: bold;
+}
+
+.info-block-item-top .info-block-obj span:nth-child(1) {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.info-block-item-bottom .info-block-obj span:nth-child(1) {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.info-block-item .info-block-obj span:nth-child(2) {
+    font-weight: bold;
+}
+
+.total-minus {
+    color: #FF3149;
+}
+
+/* END: info-block */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
