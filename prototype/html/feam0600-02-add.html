@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="feam0600-query">
+<body id="canvas" class="feam0600-add">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -415,7 +415,130 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-add -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-add">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>強制險特別準備金維護</span>
+                            </div>
+                        </div>
+                        <!-- 原單種類/用途種類/銀行代號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">原單種類</div>
+                                        <div class="customize-form-entry">
+                                            <select name="帳戶性質" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">強制非</option>
+                                                <option value="">強制</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">用途種類</div>
+                                        <div class="customize-form-entry">
+                                            <select name="帳戶性質" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">強制非</option>
+                                                <option value="">強制</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行代號</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-3">
+                                                    <input type="text" name="銀行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-7">
+                                                    <input type="text" name="銀行代號" value="" placeholder="" data-toggle="tooltip" data-placement="left" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 存單號碼/定存金額/定存利率 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">存單號碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="存單號碼" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">定存金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="定存金額" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">定存利率</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="定存利率" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 定存期間-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2 customize-form-fromend">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">定存期間</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="date" name="定存期間" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="date" name="定存期間" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
