@@ -3775,6 +3775,43 @@ a.menu-active .menu-bar {
 }
 
 /* END: info-block */
+/* START: tab-link */
+.content-tab-link {
+    padding: 5px 10px;
+    margin-right: 0;
+}
+
+.content-tab-link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-tab-link li {
+    display: inline-block;
+}
+
+.content-tab-link li a {
+    font-size: 0.875rem;
+    color: #555;
+    text-decoration: none;
+    line-height: 1;
+    padding: 2px 12px;
+    border-radius: 3px;
+}
+
+.content-tab-link li a:hover {
+    background: #e0ecff;
+    color: #483dcc;    
+}
+
+.content-tab-link li a.tab-link-active {
+    background: #e0ecff;
+    color: #483dcc;
+}
+
+
+/* END: tab-link */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */

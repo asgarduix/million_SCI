@@ -350,6 +350,13 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="#" class="tab-link-active">利息</a></li>
+                                        <li><a href="#">非利息</a></li>
+                                    </ul>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -361,7 +368,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">3</li>
+                                                        <li class="count-total">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -557,24 +564,23 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    列帳公司: "設計文字",
-    銀行代號: "設計文字",
-    銀行簡稱: "設計文字",
-    帳號: "設計文字",
-    狀態: "設計文字",
-    入息年月: "設計文字",
-    幣別: "設計文字",
-    匯率: "設計文字",
-    利息收入: "設計文字",
-    預付款: "設計文字",
-    銀行存款: "設計文字"
+let table01Data = [{
+    id: "a1",
+    列帳公司: "列帳公司",
+    銀行代號: "銀行代號",
+    銀行簡稱: "銀行簡稱",
+    帳號: "帳號",
+    狀態: "狀態",
+    入息年月: "入息年月",
+    幣別: "幣別",
+    匯率: "匯率",
+    利息收入: "利息收入",
+    預付款: "預付款",
+    銀行存款: "銀行存款"
 }, ];
-
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
+    //autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -586,8 +592,18 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "列帳公司", field: "列帳公司" },
         { title: "銀行代號", field: "銀行代號" },
         { title: "銀行簡稱", field: "銀行簡稱" },
@@ -601,7 +617,9 @@ var table01 = new Tabulator("#table01", {
         { title: "銀行存款", field: "銀行存款" },
     ],
 });
-
+// 選擇預設勾選row
+// table01.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
-
 </html>
