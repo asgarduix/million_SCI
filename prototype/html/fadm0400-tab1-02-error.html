@@ -265,6 +265,81 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
+                        <!-- label -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-label">
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
+                                        <div class="label-item">
+                                            <div class="label-title">應收保費合計</div>
+                                            <div class="label-content label-content-counter" attr="money">100</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">現金合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">票據合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">信用卡合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">銀行存款合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">暫收款合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">台幣合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">外幣合計</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">延遲繳費說明書</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">要保人聲明書</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">現金確認書</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">收費憑證</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">簽收回條</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">洗錢防制評估報告書</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">收款證明</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">溢款</div>
+                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- 巢狀結構tabulator -->
                         <!-- tabulator創立table -->
                         <div class="card-detail">
@@ -474,38 +549,39 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let nestedData = [/*{
-        id: "a1",
-        製表日: "製表日",
-        繳款批號: "繳款批號",
-        憑證: "憑證",
-        金額: "金額",
-        收費日: "收費日",
-        收費來源: "收費來源",
-        票據到期日: "票據到期日",
-        開票人: "開票人",
-        票據付款行: "票據付款行",
-        發票人帳號: "發票人帳號",
-        ntTable: [
-            { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
-        ]
-    },
-    {
-        id: "a2",
-        製表日: "製表日",
-        繳款批號: "繳款批號",
-        憑證: "憑證",
-        金額: "金額",
-        收費日: "收費日",
-        收費來源: "收費來源",
-        票據到期日: "票據到期日",
-        開票人: "開票人",
-        票據付款行: "票據付款行",
-        發票人帳號: "發票人帳號",
-        ntTable: [
-            { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
-        ]
-    },*/
+let nestedData = [
+    /*{
+            id: "a1",
+            製表日: "製表日",
+            繳款批號: "繳款批號",
+            憑證: "憑證",
+            金額: "金額",
+            收費日: "收費日",
+            收費來源: "收費來源",
+            票據到期日: "票據到期日",
+            開票人: "開票人",
+            票據付款行: "票據付款行",
+            發票人帳號: "發票人帳號",
+            ntTable: [
+                { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
+            ]
+        },
+        {
+            id: "a2",
+            製表日: "製表日",
+            繳款批號: "繳款批號",
+            憑證: "憑證",
+            金額: "金額",
+            收費日: "收費日",
+            收費來源: "收費來源",
+            票據到期日: "票據到期日",
+            開票人: "開票人",
+            票據付款行: "票據付款行",
+            發票人帳號: "發票人帳號",
+            ntTable: [
+                { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
+            ]
+        },*/
 ]
 
 var table = new Tabulator("#table01", {

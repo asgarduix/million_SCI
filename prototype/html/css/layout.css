@@ -2496,10 +2496,10 @@ a.menu-active .menu-bar {
 }
 
 .label-item {
-    width: 130px;
+    width: 125px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 4px;
+    margin: 0 4px 4px 0;
     border: #6A8EC3 solid 1px;
     border-left: #6A8EC3 solid 3px;
     border-radius: 4px;
@@ -2544,6 +2544,10 @@ a.menu-active .menu-bar {
     display: block;
     font-size: 0.75rem;
     border-top: #E60012 solid 1px;
+}
+
+.label-content-counter[attr="money"]::before {
+    content: "$";
 }
 
 /* END: label */
