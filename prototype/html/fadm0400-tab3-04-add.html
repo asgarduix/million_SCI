@@ -168,7 +168,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="信評機構" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">保單資料</option>
+                                                        <option value="" selected="">保單資料</option>
                                                         <option value="">現金資料</option>
                                                         <option value="">票據資料</option>
                                                     </select>
@@ -521,7 +521,7 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let nestedData = [{
+let tableData = [{
         id: "a1",
         要保號碼: "要保號碼",
         原保單號碼: "原保單號碼",
@@ -544,8 +544,11 @@ let nestedData = [{
 var table = new Tabulator("#table01", {
     height: "100%",
     layout: "fitColumns",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
     movableColumns: true,
-    data: nestedData,
+    data: tableData,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
