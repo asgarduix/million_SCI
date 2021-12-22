@@ -2893,6 +2893,22 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+/* 跳窗內容加入按鈕 */
+.content-popup .detail-board-btn {
+    border: none;
+    background: none;
+    padding: 0 5px;
+}
+
+.content-popup .detail-board-btn .content-btn-main {
+    border: none;
+}
+
+/* 跳窗內的label */
+.content-popup .detail-board-label {
+    padding: 0;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
@@ -2989,6 +3005,7 @@ a.menu-active .menu-bar {
 .customize-form-inner {
     overflow: hidden;
     background: #f7f7f7;
+    border-radius: 4px;
 }
 
 .customize-form-field {
@@ -3030,6 +3047,11 @@ a.menu-active .menu-bar {
 
 .customize-form-field-4 {
     width: 100%;
+}
+
+.customize-form-field:nth-child(1) .customize-form-title {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .customize-field-inner {
@@ -3206,6 +3228,47 @@ a.menu-active .menu-bar {
 .customize-form-multiple-row:hover .customize-form-row-control,
 .customize-form-row:hover .customize-form-row-control {
     opacity: 1;
+}
+
+.customize-form-row-btn .customize-form-inner {
+    overflow: initial;
+}
+
+.customize-form-row-btn .customize-form-field {
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.customize-form-row-btn .customize-form-field:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.customize-form-row-btn .customize-form-field:nth-last-child(1) {
+    width: 60px;
+    position: relative;
+}
+
+.customize-form-row-btn .customize-form-field button {
+    width: 100%;
+    display: block;
+    background: #026D93;
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: none;
+}
+
+.customize-form-row-btn .customize-form-field button:hover,
+.customize-form-row-btn .customize-form-field button:focus,
+.customize-form-row-btn .customize-form-field button:active {
+    opacity: 0.9;
 }
 
 /* customize-form > 電話 */
@@ -3810,7 +3873,7 @@ a.menu-active .menu-bar {
 
 .content-tab-link li a:hover {
     background: #e0ecff;
-    color: #483dcc;    
+    color: #483dcc;
 }
 
 .content-tab-link li a.tab-link-active {
