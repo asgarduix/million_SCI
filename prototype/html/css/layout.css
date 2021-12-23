@@ -3880,9 +3880,32 @@ a.menu-active .menu-bar {
     background: #e0ecff;
     color: #483dcc;
 }
-
-
 /* END: tab-link */
+/* START: msg */
+.single-msg-block {
+    padding: 5px;
+    border-radius: 0;
+    background: none;
+    border: none;
+    margin-bottom: 2px;
+}
+
+.single-msg-block p {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #FF3149;
+    margin-bottom: 0;
+}
+
+.single-msg-block p::before {
+    font-family: 'Material Icons';
+    content: "error_outline";
+    font-feature-settings: 'liga';
+    vertical-align: text-top;
+    color: #FF3149;
+    margin-right: 3px;
+}
+/* END: msg */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
