@@ -3867,12 +3867,11 @@ a.menu-active .menu-bar {
 /* 月份 */
 .content-info-date ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 5px 0;
     padding: 0;
     border: #027DB4 solid 1px;
     overflow: hidden;
     border-radius: 4px;
-    margin-bottom: 10px;
 }
 
 .content-info-date li {
