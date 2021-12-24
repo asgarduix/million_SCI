@@ -2222,6 +2222,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-reject span::before {
@@ -2231,6 +2233,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-print span::before {
@@ -2240,6 +2244,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-insert span::before {
@@ -2249,6 +2255,19 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
+}
+
+.btn-save span::before {
+    font-family: 'Material Icons';
+    content: "save";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #8C7457;
+    margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-third {

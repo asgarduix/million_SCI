@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="feam0500-add">
+<body id="canvas" class="feam0500-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -193,11 +193,9 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-secondary">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -393,13 +391,13 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-modify -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">修改</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -422,10 +420,10 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="銀行代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行代號" value="0508539" title="0508539" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="銀行代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                    <input type="text" name="銀行代號" value="臺企前鎮" title="臺企前鎮" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
                                                 </div>
                                             </div>
                                         </div>
@@ -437,10 +435,10 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="幣別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="幣別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                    <input type="text" name="幣別" value="台幣" title="台幣" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
                                                 </div>
                                             </div>
                                         </div>
@@ -459,13 +457,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利息收入" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="利息收入" value="2,5540.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利息收入" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="利息收入" value="2554.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -477,13 +475,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="預付款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="預付款" value="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="預付款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="預付款" value="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -495,13 +493,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行存款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="銀行存款" value="2,524.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行存款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="銀行存款" value="2,524.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -513,13 +511,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="匯費" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="匯費" value="30.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="匯費" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="匯費" value="30.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -535,13 +533,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利息收入折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="利息收入折台" value="2,5540.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利息收入折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="利息收入折台" value="2554.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -553,13 +551,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="預付款折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="預付款折台" value="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="預付款折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="預付款折台" value="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -571,13 +569,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行存款折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="銀行存款折台" value="2,524.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行存款折台" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="銀行存款折台" value="2,524.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
@@ -589,13 +587,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">原來</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="兌換率" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="兌換率" value="30.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更正</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="兌換率" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="兌換率" value="30.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
                                         </div>
                                     </div>
                                 </div>
