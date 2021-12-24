@@ -3864,6 +3864,50 @@ a.menu-active .menu-bar {
     color: #FF3149;
 }
 
+/* 月份 */
+.content-info-date ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: #027DB4 solid 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.content-info-date li {
+    width: 16.66666%;
+    float: left;
+    border-right: #027DB4 solid 1px;
+}
+
+.content-info-date li:nth-child(6),
+.content-info-date li:nth-child(12) {
+    border-right: none;
+}
+
+.content-info-date span {
+    font-size: 0.875rem;
+    display: block;
+}
+
+.content-info-date span:nth-child(1) {
+    font-weight: bold;
+    background: rgba(206, 226, 255, .6);
+    padding: 0 4px;
+    color: #027DB4;
+}
+
+.content-info-date span[attr="money"] {
+    background: #fff;
+    padding: 2px;
+    text-align: right;
+}
+
+.content-info-date span[attr="money"]::before {
+    content: "$";
+}
+
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
@@ -3899,6 +3943,7 @@ a.menu-active .menu-bar {
     background: #e0ecff;
     color: #483dcc;
 }
+
 /* END: tab-link */
 /* START: msg */
 .single-msg-block {
@@ -3924,6 +3969,7 @@ a.menu-active .menu-bar {
     color: #FF3149;
     margin-right: 3px;
 }
+
 /* END: msg */
 @media only screen and (max-width: 1280px) {
 
