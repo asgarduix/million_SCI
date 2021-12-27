@@ -3131,8 +3131,10 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry li {
-    display: inline-block;
-    margin-right: 7px;
+    /*display: inline-block;*/
+    display: table-cell;
+    /*margin-right: 7px;*/
+    padding-right: 7px;
     /*margin-bottom: 2px;*/
 }
 
@@ -3789,6 +3791,10 @@ a.menu-active .menu-bar {
     color: #777;
     text-align: left;
     display: table-cell;
+}
+
+.customize-form-input input[type='text'] {
+    width: 180px;
 }
 
 /* END: customize-form */
