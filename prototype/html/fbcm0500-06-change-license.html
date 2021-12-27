@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbcm0500-detail">
+<body id="canvas" class="fbcm0500-change-license">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -292,6 +292,7 @@
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">2</li>
+                                                        <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -465,309 +466,25 @@
             </main>
         </div>
     </div>
-    <!-- popup-detail -->
+    <!-- popup-confirm -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-add">
+        <div class="popup-dialog popup-dialog-confirm">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">票據號碼<span>123345</span></div>
+                        <div class="dialog-header-item dialog-title">換憑證</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>票據號碼資料維護</span>
-                            </div>
-                        </div>
-                        <!-- 調存單位/託收日/到期日/銀行託收日 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">調存單位</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="調存單位" value="504" title="504" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">託收日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="託收日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">到期日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="到期日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行託收日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="銀行託收日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 銷帳日/銷帳序號/票據金額/所屬地區-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銷帳日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="銷帳日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銷帳序號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銷帳序號" value="1234" title="1234" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">票據金額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="票據金額" value="1000" title="1000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">所屬地區</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="所屬地區" value="台北" title="台北" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 託收銀行/付款行別/核准日/核准人/註-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">託收銀行</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="託收銀行" value="012" title="012" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="託收銀行" value="台北總公司" title="台北總公司" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">付款行別</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-2-5">
-                                                    <input type="text" name="付款行別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-2-5">
-                                                    <input type="text" name="付款行別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-2-5">
-                                                    <input type="text" name="付款行別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-2-5">
-                                                    <input type="text" name="付款行別" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">核准日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="核准日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">核准人/註</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="核准人註" value="012" title="012" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="核准人註" value="資料不齊全" title="資料不齊全" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 票據狀態/發票人帳號/非保費種類/操作者代號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">票據狀態</div>
-                                        <div class="customize-form-entry">
-                                            <select name="票據狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left" disabled="" attr="readonly">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">退票</option>
-                                                <option value="">撤票</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">發票人帳號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="發票人帳號" value="030001030" title="030001030" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">非保費種類</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="非保費種類" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">操作者代號</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="操作者代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="操作者代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 原票據狀態/原退票日/原處理日/原換現金 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原票據狀態</div>
-                                        <div class="customize-form-entry">
-                                            <select name="原票據狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left" disabled="" attr="readonly">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">退票</option>
-                                                <option value="">撤票</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原退票日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="原退票日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原處理日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="原處理日" value="2021-02-24 17:54:00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原換現金</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="原換現金" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 原換憑證/原退票原因/原備註/原關係 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原換憑證</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="原換憑證" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原退票原因</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="原退票原因" value="28" title="28" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="原退票原因" value="存款不足" title="存款不足" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原備註</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="原備註" value="012" title="012" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">原關係</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="原關係" value="012" title="012" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="原關係" value="台北總公司" title="台北總公司" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>是否執行換憑證?<br />換憑證<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button class="btn-prime">關閉</button></li>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -855,7 +572,7 @@ var table = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-// table.selectRow("a1");
+table.selectRow("a1");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
