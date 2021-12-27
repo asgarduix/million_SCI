@@ -268,8 +268,7 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-third"><span>撤票</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>退票</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>終止契約</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>換憑證</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>結案</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -645,6 +644,7 @@
 <script>
 let table01Data = [{
         id: "a1",
+        申請單號: "申請單號",
         票據號碼: "票據號碼",
         票據金額: "票據金額",
         託收日: "託收日",
@@ -655,6 +655,7 @@ let table01Data = [{
     },
     {
         id: "a2",
+        申請單號: "申請單號",
         票據號碼: "票據號碼",
         票據金額: "票據金額",
         託收日: "託收日",
@@ -689,6 +690,7 @@ var table = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
+        { title: "申請單號", field: "申請單號" },
         {
             title: "票據號碼",
             field: "票據號碼",
