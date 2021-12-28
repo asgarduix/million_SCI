@@ -922,7 +922,7 @@
                                         <div class="customize-form-entry customize-form-input">
                                             <ul>
                                                 <li><input type="checkbox" id="add-ck09" name="處理方式"><label for="add-ck09">更正支票</label><span><input type="text" placeholder="請輸入更正說明"></span></li>
-                                                <li><input type="checkbox" id="add-ck10" name="處理方式"><label for="add-ck10">重新開立支票</label></li>
+                                                <li><input type="checkbox" id="add-ck10" name="處理方式"><label for="add-ck10">重新開立支票</label><span><input type="text" placeholder="請輸入支票號碼"></span></li>
                                             </ul>
                                             <ul>
                                                 <li><input type="checkbox" id="add-ck11" name="處理方式"><label for="add-ck11">改其他繳費憑證(註3)：</label>
@@ -959,12 +959,17 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- customize-form-tooltip-content -->
-                    <div class="tooltip-container">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero tenetur non laborum dolorem laboriosam quo quibusdam assumenda dolores eveniet. Ipsum?
-                    </div>
                 </div>
                 <div class="dialog-btn">
+                    <!-- customize-form-tooltip-content -->
+                    <div style="text-align: right;">
+                    <span class="tp"><a href="#">Tooltip1</a></span>
+                    <span class="tp"><a href="#">Tooltip2</a></span>
+                    <span class="tp"><a href="#">Tooltip3</a></span>
+                    </div>
+                    <div class="tp-container">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero tenetur non laborum dolorem laboriosam quo quibusdam assumenda dolores eveniet. Ipsum?
+                    </div>
                     <ul>
                         <li><button class="btn-prime">確定</button></li>
                         <li><button class="btn-outline">取消</button></li>
@@ -1086,23 +1091,69 @@ var table = new Tabulator("#table01", {
 </script>
 <!-- customize-form-tooltip -->
 <script>
-const tooltips= Array.from(document.querySelectorAll(".tooltipss"));
-const tooltipContainer = document.querySelector(".tooltip-container");
+// const tooltips = Array.from(document.querySelectorAll(".tp>a"));
+// const tooltipContainer = document.querySelector(".tp-container");
 
-tooltips.forEach((tp) => {
-  tp.addEventListener("mouseenter", (e) => {
+// function getPosition(element) {
+//     let x = 0;
+//     let y = 0;
+//     while (element) {
+//         x += element.offsetLeft - element.scrollLeft + element.clientLeft;
+//         y += element.offsetTop - element.scrollLeft + element.clientTop;
+//         element = element.offsetParent;
+//     }
+//     return { x: x, y: y };
+// }
 
+// tooltips.forEach((tooltip) => {
+//     tooltip.addEventListener("mouseenter", (e) => {
+
+//         tooltipContainer.classList.add("fade-in");
+//         var test = getPosition(e.target);
+//         tooltipContainer.style.left = `${test.x+30}px`;
+//         tooltipContainer.style.top = `${test.y+30}px`;
+
+        
+//         console.log(test, e.pageX, e.pageY);
+
+//     });
+
+//     tooltip.addEventListener("mouseout", () => {
+//         tooltipContainer.classList.remove("fade-in");
+//     });
+// });
+const tooltips = Array.from(document.querySelectorAll(".tp"));
+const tooltipContainer = document.querySelector(".tp-container");
+
+
+
+
+tooltips.forEach((tooltip) => {
+  tooltip.addEventListener("mouseenter", (e) => {
+
+    
     tooltipContainer.classList.add("fade-in");
     tooltipContainer.style.left = `${e.pageX}px`;
     tooltipContainer.style.top = `${e.pageY}px`;
+    
 
   });
 
-  tp.addEventListener("mouseout", () => {
+  tooltip.addEventListener("mouseout", (e) => {
     tooltipContainer.classList.remove("fade-in");
   });
 });
 
+tooltipContainer.addEventListener('mouseenter', () => {
+
+    tooltipContainer.classList.add("fade-in");
+
+})
+tooltipContainer.addEventListener('mouseout', () => {
+    
+    tooltipContainer.classList.remove("fade-in");
+
+})
 
 </script>
 
