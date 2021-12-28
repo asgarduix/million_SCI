@@ -610,7 +610,18 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "定存單號", field: "定存單號" },
         { title: "利率別", field: "利率別" },
         { title: "領息別", field: "領息別" },
