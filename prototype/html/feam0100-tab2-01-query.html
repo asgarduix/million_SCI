@@ -232,14 +232,12 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third"><span>整批續作</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>續存</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>解約</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -455,32 +453,50 @@
 <script src="js/pg.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
+{ title: "定存單號", field: "定存單號" },
+{ title: "定存銀行", field: "定存銀行" },
+{ title: "調度日期", field: "調度日期" },
+{ title: "流水號", field: "流水號" },
+{ title: "存單起日", field: "存單起日" },
+{ title: "存單迄日", field: "存單迄日" },
+{ title: "幣別", field: "幣別" },
+{ title: "定存金額", field: "定存金額", hozAlign: "right" },
+{ title: "作業", field: "作業" },
 <script>
 let table01Data = [{
         id: "a1",
         定存單號: "KL1743313",
         定存銀行: "臺企台北",
-        調度日期: "110/2/17 | 14",
-        存單起迄日: "109/08/26~110/02/26",
-        定存金額: "NTD | 200,000.00",
+        調度日期: "110/2/17",
+        流水號: "14",
+        存單起日: "109/08/26",
+        存單迄日: "110/02/26",
+        幣別: "NTD",
+        定存金額: "200,000.00",
         作業: "續存",
     },
     {
         id: "a2",
         定存單號: "KL1527991",
         定存銀行: "臺企蘇澳",
-        調度日期: "110/2/17 | 15",
-        存單起迄日: "109/02/26~110/02/26",
-        定存金額: "NTD | 300,000.00",
+        調度日期: "110/2/17",
+        流水號: "15",
+        存單起日: "109/02/26",
+        存單迄日: "110/02/26",
+        幣別: "NTD",
+        定存金額: "300,000.00",
         作業: "續存",
     },
     {
         id: "a3",
         定存單號: "KL1655124",
         定存銀行: "臺企嘉義",
-        調度日期: "110/2/17 | 25",
-        存單起迄日: "110/01/26~110/02/26",
-        定存金額: "NTD | 200,000.00",
+        調度日期: "110/2/17",
+        流水號: "25",
+        存單起日: "109/01/26",
+        存單迄日: "110/01/26",
+        幣別: "NTD",
+        定存金額: "200,000.00",
         作業: "續存",
     },
 ];
@@ -510,17 +526,13 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        {
-            title: "定存單號",
-            field: "定存單號",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
-            },
-            // formatter: "link",
-        },
+        { title: "定存單號", field: "定存單號" },
         { title: "定存銀行", field: "定存銀行" },
         { title: "調度日期", field: "調度日期" },
-        { title: "存單起迄日", field: "存單起迄日" },
+        { title: "流水號", field: "流水號" },
+        { title: "存單起日", field: "存單起日" },
+        { title: "存單迄日", field: "存單迄日" },
+        { title: "幣別", field: "幣別" },
         { title: "定存金額", field: "定存金額", hozAlign: "right" },
         { title: "作業", field: "作業" },
     ],

@@ -719,11 +719,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-form-field customize-form-field-1 customize-form-field-icon">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">保/批單號碼</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                <div class="customize-form-entry-container">
+                                                    <div class="customize-form-entry-col customize-form-entry-8">
+                                                        <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-2">
+                                                        <!-- <div class="customize-form-icon">
+                                                            <span class="material-icons">info</span>
+                                                        </div> -->
+                                                        <span class="tooltipss"><a href="#">Tooltip1</a></span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -949,6 +959,10 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- customize-form-tooltip-content -->
+                    <div class="tooltip-container">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero tenetur non laborum dolorem laboriosam quo quibusdam assumenda dolores eveniet. Ipsum?
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -1070,11 +1084,26 @@ var table = new Tabulator("#table01", {
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
-<!-- 勾選checkbox後input有效 -->
-<!-- <script>
-document.querySelectorAll("input").onclick = function() {
-    document.querySelectorAll('input').disabled = !this.checked;
-};
-</script> -->
+<!-- customize-form-tooltip -->
+<script>
+const tooltips= Array.from(document.querySelectorAll(".tooltipss"));
+const tooltipContainer = document.querySelector(".tooltip-container");
+
+tooltips.forEach((tp) => {
+  tp.addEventListener("mouseenter", (e) => {
+
+    tooltipContainer.classList.add("fade-in");
+    tooltipContainer.style.left = `${e.pageX}px`;
+    tooltipContainer.style.top = `${e.pageY}px`;
+
+  });
+
+  tp.addEventListener("mouseout", () => {
+    tooltipContainer.classList.remove("fade-in");
+  });
+});
+
+
+</script>
 
 </html>
