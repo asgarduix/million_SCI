@@ -916,7 +916,7 @@
                                             </ul>
                                             <ul>
                                                 <li><input type="checkbox" id="add-ck11" name="處理方式"><label for="add-ck11">改其他繳費憑證(註3)：</label>
-                                                    <span><input type="checkbox" id="add-ck11-1" name="改其他繳費憑證"><label for="add-ck11-1">現金</label></span><span><input type="text" placeholder="請輸入金額" disabled></span>
+                                                    <span><input type="checkbox" id="add-ck11-1" name="改其他繳費憑證"><label for="add-ck11-1">現金</label></span><span><input type="text" placeholder="請輸入金額"></span>
                                                     <span><input type="checkbox" id="add-ck11-2" name="改其他繳費憑證"><label for="add-ck11-2">現金轉銀存</label></span><span><input type="text" placeholder="請輸入帳號"></span>
                                                     <span><input type="checkbox" id="add-ck11-3" name="改其他繳費憑證"><label for="add-ck11-3">信用卡</label></span><span><input type="text" placeholder="請輸入訂單號碼"></span>
                                                     <span><input type="checkbox" id="add-ck11-4" name="改其他繳費憑證"><label for="add-ck11-4">匯款</label></span><span><input type="text" placeholder="請輸入帳號"></span>
@@ -1071,11 +1071,10 @@ var table = new Tabulator("#table01", {
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
 <!-- 勾選checkbox後input有效 -->
-<script>
+<!-- <script>
 document.querySelectorAll("input").onclick = function() {
-    //document.getElementById('yourText').disabled = !this.checked;
-    console.log('check');
+    document.querySelectorAll('input').disabled = !this.checked;
 };
-</script>
+</script> -->
 
 </html>
