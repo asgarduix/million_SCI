@@ -1321,6 +1321,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="customize-form-field customize-form-field-1 customize-form-field-icon">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">保/批單號碼</div>
+                                            <div class="customize-form-entry">
+                                                <div class="customize-form-entry-container">
+                                                    <div class="customize-form-entry-col customize-form-entry-8">
+                                                        <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-2">
+                                                        <span class="tp"><span class="material-icons">info</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1486,9 +1501,15 @@
                         <!-- 備註 -->
                         <div class="customize-form-row customize-form-row-note">
                             <ul>
-                                <li><span>註1</span><p>各單位如有撤退票情形發生時，應出具撤退票申請表，並附上相關證明文件(含該筆支票銷帳時之繳費日報表)，經單位主管簽准後，送交總公司財務部用印，並取回該票據留存備查，轉列催收款。</p></li>
-                                <li><span>註2</span><p>撤退票據應由總公司/分公司財務人員保管，保戶領回該票據，應提供等同該筆撤退票據金額之現金、匯款或信用卡付款。但以票據交換者， 本票應由銀行擔當付款人。到期日應等於或早於原撤退票據之到期日；支票發票日應等於或早於原撤退票之到期日。</p></li>
-                                <li><span>註3</span><p>依據汽車保險收費出單承保作業程序及應注意事項規定，以支票繳費，如欲改以其他方式繳交，須重啟要保程序。故車險申請撤票者，不得改其他方式繳費。</p></li>
+                                <li><span>註1</span>
+                                    <p>各單位如有撤退票情形發生時，應出具撤退票申請表，並附上相關證明文件(含該筆支票銷帳時之繳費日報表)，經單位主管簽准後，送交總公司財務部用印，並取回該票據留存備查，轉列催收款。</p>
+                                </li>
+                                <li><span>註2</span>
+                                    <p>撤退票據應由總公司/分公司財務人員保管，保戶領回該票據，應提供等同該筆撤退票據金額之現金、匯款或信用卡付款。但以票據交換者， 本票應由銀行擔當付款人。到期日應等於或早於原撤退票據之到期日；支票發票日應等於或早於原撤退票之到期日。</p>
+                                </li>
+                                <li><span>註3</span>
+                                    <p>依據汽車保險收費出單承保作業程序及應注意事項規定，以支票繳費，如欲改以其他方式繳交，須重啟要保程序。故車險申請撤票者，不得改其他方式繳費。</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1531,6 +1552,8 @@
                 </div>
             </form>
         </div>
+        <!-- customize-form-tooltip-content -->
+        <div class="tp-container">批單號碼：123456<br>批單號碼：246802<br>批單號碼：135791</div>
     </div>
 </body>
 <!-- jQuery_3.5.1  -->
@@ -1638,6 +1661,67 @@ var popupOperationTable = new Tabulator("#popup-operation-table01", {
 //popupOperationTable.selectRow("a1");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+</script>
+<!-- customize-form-tooltip -->
+<script>
+// const tooltips = Array.from(document.querySelectorAll(".tp>a"));
+// const tooltipContainer = document.querySelector(".tp-container");
+
+function getPosition(element) {
+    let x = 0;
+    let y = 0;
+    while (element) {
+        x += element.offsetLeft - element.scrollLeft + element.clientLeft;
+        y += element.offsetTop - element.scrollLeft + element.clientTop;
+        element = element.offsetParent;
+    }
+    return { x: x, y: y };
+}
+
+
+// tooltips.forEach((tooltip) => {
+//     tooltip.addEventListener("mouseenter", (e) => {
+
+//         tooltipContainer.classList.add("fade-in");
+//         var test = getPosition(e.target);
+//         tooltipContainer.style.left = `${test.x+30}px`;
+//         tooltipContainer.style.top = `${test.y+30}px`;
+
+
+//         console.log(test, e.pageX, e.pageY);
+
+//     });
+
+//     tooltip.addEventListener("mouseout", () => {
+//         tooltipContainer.classList.remove("fade-in");
+//     });
+// });
+///////////////////////////////////////////////////////////////
+const tooltips = Array.from(document.querySelectorAll(".tp"));
+const tooltipContainer = document.querySelector(".tp-container");
+
+tooltips.forEach(function(tooltip) {
+    tooltip.addEventListener("mouseenter", function(e) {
+        tooltipContainer.classList.add("fade-in");
+        var mousePosition = getPosition(e.target);
+        tooltipContainer.style.left = `${e.pageX}px`;
+        tooltipContainer.style.top = `${mousePosition.y+e.offsetY}px`;
+        console.log(e, e.offsetY);
+    });
+
+    tooltip.addEventListener("mouseout", function(e) {
+        tooltipContainer.classList.remove("fade-in");
+    })
+});
+
+tooltipContainer.addEventListener('mouseenter', function() {
+    tooltipContainer.classList.add("fade-in");
+});
+
+tooltipContainer.addEventListener('mouseout', function() {
+    tooltipContainer.classList.remove("fade-in");
+});
+
 </script>
 
 </html>
