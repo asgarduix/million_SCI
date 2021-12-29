@@ -3806,13 +3806,14 @@ a.menu-active .menu-bar {
 .tp-container {
     padding: 5px 10px;
     font-size: 0.875rem;
-    color: #333;
+    color: #555;
     background: #fff;
-    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.4);
     position: absolute;
     z-index: 1000;
     display: none;
     opacity: 0;
+    border-radius: 2px;
 }
 
 span.tp {
@@ -3820,6 +3821,12 @@ span.tp {
     color: #ff8c00;
     cursor: default;
     line-height: 1;
+    padding: 0 3px;
+}
+
+.customize-form-entry span.tp,
+.customize-form-entry span.tp>span {
+    font-size: 1.3125rem;
 }
 
 .fade-in {

@@ -576,8 +576,6 @@
     </div>
     <!-- popup-add -->
     <div class="content-component content-popup">
-        <!-- customize-form-tooltip-content -->
-        <div class="tp-container">保單號碼：123456<br>保單號碼：246802<br>保單號碼：135791</div>
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
@@ -967,6 +965,8 @@
                 </div>
             </form>
         </div>
+        <!-- customize-form-tooltip-content -->
+        <div class="tp-container">批單號碼：123456<br>批單號碼：246802<br>批單號碼：135791</div>
     </div>
 </body>
 <!-- jQuery_3.5.1  -->
@@ -1120,21 +1120,10 @@ const tooltipContainer = document.querySelector(".tp-container");
 tooltips.forEach(function(tooltip) {
     tooltip.addEventListener("mouseenter", function(e) {
         tooltipContainer.classList.add("fade-in");
-        // var test = getPosition(e.target);
-        // tooltipContainer.style.left = `${test.x+20}px`;
-        // tooltipContainer.style.top = `${test.y+20}px`;
-        var test = getPosition(e.target);
+        var mousePosition = getPosition(e.target);
         tooltipContainer.style.left = `${e.pageX}px`;
-        tooltipContainer.style.top = `${test.y+e.offsetY}px`;
+        tooltipContainer.style.top = `${mousePosition.y+e.offsetY}px`;
         console.log(e, e.offsetY);
-        if (e.clientY<50) {
-            console.log("top!");
-        }
-        // if (test.y == e.clientY) {
-        //     tooltipContainer.style.top = `${test.y+20}px`;
-        // } else {
-        //     tooltipContainer.style.top = `${test.y+20}px`;
-        // }
     });
 
     tooltip.addEventListener("mouseout", function(e) {
