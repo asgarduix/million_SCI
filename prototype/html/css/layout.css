@@ -3818,6 +3818,8 @@ a.menu-active .menu-bar {
 span.tp {
     position: absolute;
     color: #ff8c00;
+    cursor: default;
+    line-height: 1;
 }
 
 .fade-in {
@@ -4029,16 +4031,19 @@ span.tp {
     line-height: 1;
     padding: 2px 12px;
     border-radius: 3px;
+    border: #ccc solid 1px;
 }
 
 .content-tab-link li a:hover {
     background: #e0ecff;
     color: #483dcc;
+    border-color: #e0ecff;
 }
 
 .content-tab-link li a.tab-link-active {
     background: #e0ecff;
     color: #483dcc;
+    border-color: #e0ecff;
 }
 
 /* END: tab-link */
