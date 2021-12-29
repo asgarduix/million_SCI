@@ -167,7 +167,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="報表名稱" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">未到期定存單統計報表</option>
+                                                        <option value="">未到期定存單統計報表</option>
                                                         <option value="">每月到期定存業績統計表</option>
                                                         <option value="">每月到期定存單通知表-地區</option>
                                                         <option value="">定存單轉檔日報表</option>
@@ -176,7 +176,7 @@
                                                         <option value="">定存利息統計表</option>
                                                         <option value="">定存利息更正日報</option>
                                                         <option value="">定存單存入核對明細表</option>
-                                                        <option value="">存單到期郵寄明細表</option>
+                                                        <option value="" selected="">存單到期郵寄明細表</option>
                                                         <option value="">定存到期統計表</option>
                                                         <option value="">應收利息統計報表</option>
                                                     </select>
@@ -184,59 +184,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 作業選擇/統計截至日/存單種類 -->
+                                    <!-- 存單到期日起迄 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業選擇</div>
+                                                <div class="query-field-item query-field-title">存單到期日起迄</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="作業選擇" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">明細表</option>
-                                                        <option value="" selected="">總表</option>
-                                                        <option value="">財務表</option>
-                                                        <option value="">地區業績</option>
-                                                        <option value="">兌換損益明細</option>
-                                                        <option value="">業績統計</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">統計截止日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="統計截止日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">存單種類</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="存單種類" title="一般定存單" value="一般定存單" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 存款類別/利率別 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">存款類別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="存款類別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">全部</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">利率別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="利率別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">全部</option>
-                                                        <option value="">固定</option>
-                                                    </select>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="存單到期日起迄" value="2021-02-17" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="存單到期日起迄" value="2021-02-17" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

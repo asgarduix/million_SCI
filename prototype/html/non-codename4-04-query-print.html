@@ -184,7 +184,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 作業選擇/統計截至日/存單種類 -->
+                                    <!-- 作業選擇/統計截至日/地區代號 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -193,9 +193,9 @@
                                                     <select name="作業選擇" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
                                                         <option value="">明細表</option>
-                                                        <option value="" selected="">總表</option>
+                                                        <option value="">總表</option>
                                                         <option value="">財務表</option>
-                                                        <option value="">地區業績</option>
+                                                        <option value="" selected="">地區業績</option>
                                                         <option value="">兌換損益明細</option>
                                                         <option value="">業績統計</option>
                                                     </select>
@@ -205,29 +205,18 @@
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">統計截止日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="統計截止日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="統計截止日" title="" value="2021-02-28" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">存單種類</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="存單種類" title="一般定存單" value="一般定存單" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">地區代號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="地區代號" title="05" value="05" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 存款類別/利率別 -->
+                                    <!-- 利率別/所屬通訊處 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">存款類別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="存款類別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">全部</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">利率別</div>
@@ -237,6 +226,16 @@
                                                         <option value="" selected="">全部</option>
                                                         <option value="">固定</option>
                                                     </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-checkbox">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">所屬通訊處</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="checkbox" id="cb01" name="所屬通訊處"><label for="cb01">所屬通訊處</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
