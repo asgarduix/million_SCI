@@ -728,10 +728,7 @@
                                                         <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                     </div>
                                                     <div class="customize-form-entry-col customize-form-entry-2">
-                                                        <!-- <div class="customize-form-icon">
-                                                            <span class="material-icons">info</span>
-                                                        </div> -->
-                                                        <span class="tooltipss"><a href="#">Tooltip1</a></span>
+                                                        <span class="tp"><span class="material-icons">info</span></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -959,17 +956,10 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- customize-form-tooltip-content -->
+                    <div class="tp-container">保單號碼：123456<br>保單號碼：246802<br>保單號碼：135791</div>
                 </div>
                 <div class="dialog-btn">
-                    <!-- customize-form-tooltip-content -->
-                    <div style="text-align: right;">
-                    <span class="tp"><a href="#">Tooltip1</a></span>
-                    <span class="tp"><a href="#">Tooltip2</a></span>
-                    <span class="tp"><a href="#">Tooltip3</a></span>
-                    </div>
-                    <div class="tp-container">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero tenetur non laborum dolorem laboriosam quo quibusdam assumenda dolores eveniet. Ipsum?
-                    </div>
                     <ul>
                         <li><button class="btn-prime">確定</button></li>
                         <li><button class="btn-outline">取消</button></li>
@@ -1113,7 +1103,7 @@ var table = new Tabulator("#table01", {
 //         tooltipContainer.style.left = `${test.x+30}px`;
 //         tooltipContainer.style.top = `${test.y+30}px`;
 
-        
+
 //         console.log(test, e.pageX, e.pageY);
 
 //     });
@@ -1122,38 +1112,29 @@ var table = new Tabulator("#table01", {
 //         tooltipContainer.classList.remove("fade-in");
 //     });
 // });
+///////////////////////////////////////////////////////////////
 const tooltips = Array.from(document.querySelectorAll(".tp"));
 const tooltipContainer = document.querySelector(".tp-container");
 
+tooltips.forEach(function(tooltip) {
+    tooltip.addEventListener("mouseenter", function(e) {
+        tooltipContainer.classList.add("fade-in");
+        tooltipContainer.style.left = `${e.pageX}px`;
+        tooltipContainer.style.top = `${e.pageY}px`;
+    });
 
-
-
-tooltips.forEach((tooltip) => {
-  tooltip.addEventListener("mouseenter", (e) => {
-
-    
-    tooltipContainer.classList.add("fade-in");
-    tooltipContainer.style.left = `${e.pageX}px`;
-    tooltipContainer.style.top = `${e.pageY}px`;
-    
-
-  });
-
-  tooltip.addEventListener("mouseout", (e) => {
-    tooltipContainer.classList.remove("fade-in");
-  });
+    tooltip.addEventListener("mouseout", function(e) {
+        tooltipContainer.classList.remove("fade-in");
+    })
 });
 
-tooltipContainer.addEventListener('mouseenter', () => {
-
+tooltipContainer.addEventListener('mouseenter', function() {
     tooltipContainer.classList.add("fade-in");
+});
 
-})
-tooltipContainer.addEventListener('mouseout', () => {
-    
+tooltipContainer.addEventListener('mouseout', function() {
     tooltipContainer.classList.remove("fade-in");
-
-})
+});
 
 </script>
 
