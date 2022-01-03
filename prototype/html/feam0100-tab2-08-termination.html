@@ -451,7 +451,7 @@
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>定存單到期解約</span>
+                                <span>定存單到期解約 (舊定存單)</span>
                             </div>
                         </div>
                         <!-- 定存單號 -->
@@ -479,7 +479,7 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="銀行代號" value="0500500" title="0500500" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                    <input type="text" name="銀行代號" value="0500500" title="0500500" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-7">
                                                     <input type="text" name="銀行代號" value="臺企台北" title="臺企台北" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
@@ -492,7 +492,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">定存單號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="定存單號" value="KL1655124" title="KL1655124" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="定存單號" value="KL1655124" title="KL1655124" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -500,13 +500,161 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">存單種類</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="定存單號" value="一般" title="一般" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="定存單號" value="一般" title="一般" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 利率別/幣別/存款金額-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">利率別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="利率別" value="固定" title="固定" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="幣別" value="NTD" title="NTD" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">存款金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="存款金額" value="2,000,000.00" title="2,000,000.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 開始日/到期日/領息別 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">開始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="開始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">到期日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="到期日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">領息別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="領息別" value="到期領息" title="到期領息" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 入息行碼/入息帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">入息行碼</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-3">
+                                                    <input type="text" name="投資限額" value="0500500" title="0500500" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" attr="readonly" disabled="">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-7">
+                                                    <input type="text" name="投資限額" value="臺企台北" title="臺企台北" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">入息帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="入息帳號" value="05012077809" title="05012077809" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 用途類別/用途 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">用途類別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="用途類別" value="一般" title="一般" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">用途</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="用途" value="固定" title="固定" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>定存單到期作業 (新定存單)</span>
+                            </div>
+                        </div>
+                        <!-- 到期擬作/調度日期/存單種類 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">到期擬作</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="到期擬作" value="解約" title="解約" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">調度日期</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-5">
+                                                    <input type="date" name="調度日期" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" data-original-title="">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-5">
+                                                    <input type="text" name="調度日期" value="14" title="14" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly" data-original-title="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">存單種類</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="存單種類" value="一般" title="一般" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 利率別/幣別/存款金額 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
