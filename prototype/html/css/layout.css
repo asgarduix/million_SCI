@@ -1698,7 +1698,7 @@ a.menu-active .menu-bar {
     background: #fff;
 }
 
-.table-select-inner {
+.tabulator-select-editable .table-select-inner {
     border-radius: 2px;
     padding: 0 2px;
     position: relative;
@@ -3191,8 +3191,8 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry li {
-    display: table-cell;
-    padding-right: 10px;
+    display: inline-block;
+    margin-right: 2px;
 }
 
 .customize-form-entry input[type="radio"],
@@ -3221,13 +3221,20 @@ a.menu-active .menu-bar {
     padding-left: 2px;
 }
 
-.customize-form-entry li>div {
+.customize-form-entry li div {
+    display: table;
+    table-layout: fixed;
+    padding-right: 10px;
     border: #f00 solid 1px;
 }
 
-.customize-form-entry li>div label,
-.customize-form-entry li>div span {
-    display: inline-block;
+.customize-form-entry li div label,
+.customize-form-entry li div span {
+    display: table-cell;
+}
+
+.customize-form-entry li>div label {
+    padding-left: 3px;
 }
 
 .customize-form-entry-container {

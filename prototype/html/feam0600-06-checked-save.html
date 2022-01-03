@@ -517,7 +517,7 @@ var table01 = new Tabulator("#table01", {
             title: "用途種類",
             field: "用途種類",
             formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-select");
+                cell.getElement().classList.add("table-select","tabulator-select-editable");
                 return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
             },
             editor: "select",
