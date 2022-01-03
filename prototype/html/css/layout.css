@@ -1706,7 +1706,7 @@ a.menu-active .menu-bar {
     border: #eee solid 1px;
 }
 
-.table-select-inner::after {
+.tabulator-select-editable .table-select-inner::after {
     font-family: 'Material Icons';
     content: "arrow_drop_down";
     font-feature-settings: 'liga';
