@@ -835,11 +835,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-form-field customize-form-field-1 customize-form-field-icon">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">保/批單號碼</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="保批單號碼" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                <div class="customize-form-entry-container">
+                                                    <div class="customize-form-entry-col customize-form-entry-8">
+                                                        <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-2">
+                                                        <span class="tp"><span class="material-icons">info</span></span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -894,7 +901,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-entry customize-form-input">
                                             <ul>
-                                                <li><input type="checkbox" id="add-ck03" name="理由"><label for="add-ck03">換票(銀行尚未託收)</label></li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck03" name="理由"><label for="add-ck03">換票(銀行尚未託收)</label></div>
+                                                </li>
                                                 <li><input type="checkbox" id="add-ck04" name="理由"><label for="add-ck04">支票抬頭或金額等開立錯誤</label></li>
                                                 <li><input type="checkbox" id="add-ck05" name="理由"><label for="add-ck05">票期不符合收費出單規定</label></li>
                                                 <li><input type="checkbox" id="add-ck06" name="理由"><label for="add-ck06">支票遭銀行通知存款不足</label></li>
