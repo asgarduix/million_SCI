@@ -3193,6 +3193,7 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
+    vertical-align: text-top;
 }
 
 .customize-form-entry input[type="radio"],
@@ -3225,7 +3226,6 @@ a.menu-active .menu-bar {
     display: table;
     table-layout: fixed;
     padding-right: 10px;
-    border: #f00 solid 1px;
 }
 
 .customize-form-entry li div label,
