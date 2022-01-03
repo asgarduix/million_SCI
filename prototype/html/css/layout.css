@@ -1242,11 +1242,15 @@ a.menu-active .menu-bar {
 }
 
 .card-scroll-fixed {
-    width: calc(100% - 55px);
+    width: 100%;
     position: fixed;
     top: 40px;
-    z-index: 99;
+    z-index: 4;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
+
 /* END: card-detail >> board */
 /* START: copyright */
 .content-copyright {
@@ -3894,6 +3898,15 @@ span.tp {
 
 /* customize-form-input-upload */
 .customize-form-input-upload .content-upload {
+    padding: 0;
+    border: none;
+}
+
+.customize-form-input-upload .content-upload .upload-inner {
+    padding: 0;
+}
+
+.dialog-content .customize-form-input-upload .content-upload p {
     padding: 0;
 }
 
