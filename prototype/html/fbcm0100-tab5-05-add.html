@@ -955,11 +955,15 @@
                                             <div class="content-component content-upload">
                                                 <form action="">
                                                     <div class="upload-inner">
-                                                        <div class="upload-item upload-field"><input type="text"></div>
                                                         <div class="upload-item upload-btn">
                                                             <ul>
                                                                 <li><button>瀏覽</button></li>
+                                                                <li><button disabled="">上傳</button></li>
+                                                                <li><button disabled="">清除</button></li>
                                                             </ul>
+                                                        </div>
+                                                        <div class="upload-item upload-error">
+                                                            <p>上傳檔案已存在!!</p>
                                                         </div>
                                                         <div class="upload-item upload-note">
                                                             <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
@@ -970,6 +974,10 @@
                                             <div class="content-file-list">
                                                 <div class="content-file-list-inner">
                                                     <ul>
+                                                        <li>
+                                                            <span>檔案名稱.clv</span>
+                                                            <span class="material-icons">cancel</span>
+                                                        </li>
                                                         <li>
                                                             <span>檔案名稱.clv</span>
                                                             <span class="material-icons">cancel</span>

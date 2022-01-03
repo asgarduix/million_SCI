@@ -3919,7 +3919,7 @@ span.tp {
 }
 
 .content-file-list-inner {
-    padding: 7px 2px;
+    padding: 7px 2px 0;
     background: #f7f7f7;
     border: #eee solid 1px;
 }
@@ -3927,17 +3927,28 @@ span.tp {
 .customize-form-entry .content-file-list li {
     border: #aaa solid 1px;
     display: inline-block;
-    margin-right: 2px;
+    margin-right: 3px;
     border-radius: 4px;
     background: #fff;
     line-height: 1;
     padding: 4px 2px;
 }
 
+.customize-form-entry .content-file-list li:hover {
+    border-color: #026D93;
+}
+
 .customize-form-entry .content-file-list li span {
-    line-height: 1;
+    line-height: 1.1;
     vertical-align: middle;
     font-size: 0.875rem;
+    display: table-cell;
+    vertical-align: top;
+    color: #026D93;
+}
+
+.customize-form-entry .content-file-list li span:nth-child(1) {
+    padding-top: 1px;
 }
 
 .customize-form-entry .content-file-list li span:nth-last-child(1) {
@@ -3946,7 +3957,11 @@ span.tp {
 }
 
 .customize-form-entry .content-file-list li span:nth-last-child(1):hover {
-    color: #aaa;
+    opacity: .6;
+}
+
+.customize-form-input-upload .upload-error p {
+    color: #E60012;
 }
 
 /* END: customize-form */
