@@ -1241,6 +1241,12 @@ a.menu-active .menu-bar {
     padding: 5px 0;
 }
 
+.card-scroll-fixed {
+    width: calc(100% - 55px);
+    position: fixed;
+    top: 40px;
+    z-index: 99;
+}
 /* END: card-detail >> board */
 /* START: copyright */
 .content-copyright {
@@ -3884,6 +3890,11 @@ span.tp {
     100% {
         opacity: 1;
     }
+}
+
+/* customize-form-input-upload */
+.customize-form-input-upload .content-upload {
+    padding: 0;
 }
 
 /* END: customize-form */
