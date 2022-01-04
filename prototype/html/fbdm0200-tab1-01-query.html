@@ -161,34 +161,91 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 銷帳單位/票號/流水號 -->
+                                    <!-- 銷帳單位/銷帳日/銷帳序號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">地區</div>
+                                                <div class="query-field-item query-field-title">銷帳單位</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-3">
-                                                            <input type="text" name="地區" value="008" title="008" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="銷帳單位" placeholder="請輸入值" value="00" title="00" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-7">
-                                                            <input type="text" name="地區" value="台北總公司" title="台北總公司" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="銷帳單位" value="台北總公司" title="台北總公司" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">票號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="票號" title="" value="" data-toggle="tooltip" data-placement="top" attr=""></div>
+                                                <div class="query-field-item query-field-title">銷帳日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="銷帳日" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">流水號
+                                                <div class="query-field-item query-field-title">銷帳序號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="銷帳序號" placeholder="請輸入值" title="" value="" data-toggle="tooltip" data-placement="top" attr=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 繳款單位/繳款人/繳款日 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款單位</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="繳款單位" placeholder="請輸入值" value="00" title="00" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="繳款單位" value="台北總公司" title="台北總公司" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="流水號" title="" value="" data-toggle="tooltip" data-placement="top" attr=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款人</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="繳款人" placeholder="請輸入值" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="繳款人" placeholder="請輸入值" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="繳款日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 繳款批號起訖 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-double-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款批號起訖</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4-5">
+                                                            <input type="text" name="繳款批號起訖" placeholder="請輸入值" value="12345678" title="12345678" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4-5">
+                                                            <input type="text" name="繳款批號起訖" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

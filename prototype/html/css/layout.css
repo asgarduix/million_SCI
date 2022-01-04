@@ -2533,7 +2533,8 @@ a.menu-active .menu-bar {
     color: #E60012;
 }
 
-.query-double-datepicker .entry-combine:nth-child(2) {
+.query-double-datepicker .entry-combine:nth-child(2),
+.query-double-input .entry-combine:nth-child(2) {
     text-align: center;
 }
 
@@ -3646,7 +3647,7 @@ a.menu-active .menu-bar {
 .page-customize-form {
     background: #fff;
     margin-bottom: 10px;
-    border: #bbb solid 2px;
+    border: #bbb solid 1px;
 }
 
 .field-with-text .customize-form-entry input {
