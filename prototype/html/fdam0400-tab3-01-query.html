@@ -171,9 +171,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="#" class="unittab-active">維護</a></li>
+                                        <li><a href="#">維護</a></li>
                                         <li><a href="#">訴訟報表</a></li>
-                                        <li><a href="#">收回</a></li>
+                                        <li><a href="#" class="unittab-active">收回</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -191,106 +191,38 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 出單起訖日/經手人代號/險別 -->
+                                    <!-- 作業選項-->
                                     <div class="query-row">
-                                        <div class="query-field query-double-datepicker">
+                                        <div class="query-field query-radio">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">出單起訖日</div>
+                                                <div class="query-field-item query-field-title">作業選項</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="出單起訖日" value="2019-01-01" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="出單起訖日" value="2020-10-14" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">經手人代號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="經手人代號" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" name="經手人代號" isabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">險別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="險別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">水險</option>
-                                                    </select>
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="作業選項" checked=""><label for="rd01">維護</label></li>
+                                                        <li><input type="radio" id="rd02" name="作業選項"><label for="rd02">報表</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 業務來源/訴訟起始日/債務人ID -->
+                                    <!-- 債務人ID/債務人姓名/次數 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">業務來源</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="業務來源" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" name="業務來源" isabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-double-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">訴訟起始日</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="訴訟起始日" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="訴訟起始日" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">債務人ID</div>
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="債務人ID" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 業務人ID -->
-                                    <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">業務人ID</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="業務人ID" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" name="業務人ID" isabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="query-field-item query-field-title">債務人姓名</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="" name="債務人姓名" title="" data-toggle="tooltip" data-placement="top" attr="readonly" disabled=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">次數</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="次數" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -311,38 +243,10 @@
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                         </ul>
                                     </div>
-                                    <div class="content-btn-secondary">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-reject"><span>駁回</span></button></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">應收保費</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">撤退票額</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">件數</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -553,45 +457,24 @@
 <script>
 let table01Data = [{
         id: "a1",
-        出單單位: "00",
-        保單號碼: "AH0108000301",
-        批單號碼: "AHE108000306",
-        序號: "0",
-        期別: "4",
-        保費: "374,129",
-        收費註: "未收",
-        被保險人: "AVANTI AVIATION C",
-        業務來源: "C000010/華南銀行保險代理",
-        經手人: "000756/許佳音",
-        備註: "逾期催收款轉訴訟程序",
+        序號: "01",
+        回收日期: "98/12/14",
+        金額: "110,000",
+        回收別: "應收票據",
     },
     {
         id: "a2",
-        出單單位: "00",
-        保單號碼: "AH0108000301",
-        批單號碼: "AHE108000306",
-        序號: "0",
-        期別: "3",
-        保費: "374,129",
-        收費註: "未收",
-        被保險人: "AVANTI AVIATION C",
-        業務來源: "C000010/華南銀行保險代理",
-        經手人: "000756/許佳音",
-        備註: "逾期催收款轉訴訟程序",
+        序號: "02",
+        回收日期: "100/12/14",
+        金額: "4,256",
+        回收別: "應收保費",
     },
     {
         id: "a3",
-        出單單位: "00",
-        保單號碼: "AH0108000302",
-        批單號碼: "AHE108000306",
-        序號: "0",
-        期別: "3",
-        保費: "71,772",
-        收費註: "未收",
-        被保險人: "AVANTI AVIATION C",
-        業務來源: "C000010/華南銀行保險代理",
-        經手人: "000756/許佳音",
-        備註: "逾期催收款轉訴訟程序",
+        序號: "03",
+        回收日期: "102/06/24",
+        金額: "191,068",
+        回收別: "應收票據",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -620,17 +503,10 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "出單單位", field: "出單單位" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
         { title: "序號", field: "序號" },
-        { title: "期別", field: "期別" },
-        { title: "保費", field: "保費", hozAlign: "right" },
-        { title: "收費註", field: "收費註" },
-        { title: "被保險人", field: "被保險人" },
-        { title: "業務來源", field: "業務來源" },
-        { title: "經手人", field: "經手人" },
-        { title: "備註", field: "備註" },
+        { title: "回收日期", field: "回收日期" },
+        { title: "金額", field: "金額", hozAlign: "right" },
+        { title: "回收別", field: "回收別" },
     ],
 });
 // 選擇預設勾選row
