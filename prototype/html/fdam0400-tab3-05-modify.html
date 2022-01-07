@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fdam0400-tab3-error">
+<body id="canvas" class="fdam0400-tab3-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -262,8 +262,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">0</li>
-                                                        <li class="count-error">查無資料</li>
+                                                        <li class="count-total">3</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -437,7 +436,77 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-add -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-add">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>訴訟保單資料</span>
+                            </div>
+                        </div>
+                        <!-- 序號/訴訟起始日/金額/回收別 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">序號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="序號" placeholder="請輸入值" value="1" title="1" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">訴訟起始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="訴訟起始日" value="2007-12-14" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="金額" value="110,000" title="110,000" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" onkeypress="return onlyNumberKey(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">回收別</div>
+                                        <div class="customize-form-entry">
+                                            <ul>
+                                                <li><input type="radio" id="frd01" name="回收別" checked=""><label for="frd01">應收保費</label></li>
+                                                <li><input type="radio" id="frd02" name="回收別"><label for="frd02">應收票據</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <li><button class="btn-outline">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -456,7 +525,7 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table01Data = [/*{
+let table01Data = [{
         id: "a1",
         序號: "1",
         回收日期: "98/12/14",
@@ -476,7 +545,7 @@ let table01Data = [/*{
         回收日期: "102/06/24",
         金額: "191,068",
         回收別: "應收票據",
-    },*/
+    },
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
