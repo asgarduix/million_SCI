@@ -1112,6 +1112,73 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 表格內下拉選單 -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">1</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table08"></div>
+                                    <div class="table-footer">footer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- 固定第一行column表格 -->
+                        <!-- tabulator創立table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">3</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <!-- <div class="table-func-page">頁碼</div> -->
+                                        </div>
+                                    </div>
+                                    <div id="table09" class="fixed-table"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -1902,6 +1969,206 @@ var table07 = new Tabulator("#table07", {
         { title: "試算餘額", field: "試算餘額", hozAlign: "right" },
         { title: "試算調度日", field: "試算調度日" },
         { title: "人員", field: "人員" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
+<!-- 表格內下拉選單 -->
+<script>
+let table08Data = [{
+        id: "a1",
+        原單種類: "強制非",
+        用途種類: "強制特",
+        銀行代號: "1470156",
+        銀行名稱: "三信銀彰化",
+        定存號碼: "1184043",
+        定存金額: "10,900.000",
+        定存利率: "0.770%",
+        定存期間: "109/06/27 ~ 110/06/27",
+    },
+    {
+        id: "a2",
+        原單種類: "強制非",
+        用途種類: "強制特",
+        銀行代號: "0506708",
+        銀行名稱: "臺企北港",
+        定存號碼: "KL 1664103",
+        定存金額: "2,900.000",
+        定存利率: "0.400%",
+        定存期間: "110/01/17 ~ 110/06/17",
+    },
+];
+var table08 = new Tabulator("#table08", {
+    data: table08Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    // height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "原單種類", field: "原單種類" },
+        {
+            title: "用途種類",
+            field: "用途種類",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "一般": "一般",
+                "強制特": "強制特",
+                "強制非特": "強制非特",
+            }
+        },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        {
+            title: "定存號碼",
+            field: "定存號碼",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+        },
+        { title: "定存金額", field: "定存金額", hozAlign: "right" },
+        { title: "定存利率", field: "定存利率" },
+        { title: "定存期間", field: "定存期間" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow(["a1","a2"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
+<!-- 固定第一行column表格 -->
+<script>
+let table09Data = [{
+        id: "a1",
+        固定表頭: "第一次",
+        預計寄發日: "110/03/04",
+        範圍起始日: "110/01/01",
+        範圍截止日: "110/01/15",
+        寄發檔案: "Ｙ",
+        寄發日: "110/03/04",
+        檔案筆數: "1,806",
+        地址錯誤: "Ｙ",
+        檔案筆數: "6",
+    },
+    {
+        id: "a2",
+        固定表頭: "旅責險",
+        預計寄發日: "  /  /  ",
+        範圍起始日: "  /  /  ",
+        範圍截止日: "  /  /  ",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a3",
+        固定表頭: "水險",
+        預計寄發日: "110/03/04",
+        範圍起始日: "110/01/01",
+        範圍截止日: "110/01/15",
+        寄發檔案: "Y",
+        寄發日: "  /  /  ",
+        檔案筆數: "1,008",
+        地址錯誤: "Ｙ",
+        檔案筆數: "1",
+    },
+    {
+        id: "a4",
+        固定表頭: "第二次",
+        預計寄發日: "110/03/16",
+        範圍起始日: "110/01/16",
+        範圍截止日: "110/01/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a5",
+        固定表頭: "旅責險",
+        預計寄發日: "110/03/16",
+        範圍起始日: "109/12/01",
+        範圍截止日: "109/12/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a6",
+        固定表頭: "水險",
+        預計寄發日: "110/03/16",
+        範圍起始日: "110/01/16",
+        範圍截止日: "110/01/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+];
+var table09 = new Tabulator("#table09", {
+    data: table09Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: false,
+    resizableRows: false,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: false,
+    headerSort: false,
+    columns: [{
+            title: "",
+            field: "固定表頭",
+            maxWidth: 60,
+            minWidth: 60,
+            formatter: function(cell) {
+                cell.getElement().classList.add("tabulator-first-col");
+                return cell.getValue();
+            },
+        },
+        { title: "預計寄發日", field: "預計寄發日" },
+        { title: "範圍起始日", field: "範圍起始日" },
+        { title: "範圍截止日", field: "範圍截止日" },
+        { title: "寄發檔案", field: "寄發檔案" },
+        { title: "寄發日", field: "寄發日" },
+        { title: "檔案筆數", field: "檔案筆數" },
+        { title: "地址錯誤", field: "地址錯誤" },
+        { title: "檔案筆數", field: "檔案筆數" },
     ],
 });
 // 選擇預設勾選row

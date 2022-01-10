@@ -1727,6 +1727,29 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+/* 第一行固定table */
+.tabulator-row:nth-child(odd) .tabulator-first-col {
+    background: #fff;
+}
+
+.tabulator-row:nth-child(even) .tabulator-first-col  {
+    background: #F7F2EB;
+}
+
+.fixed-table.tabulator .tabulator-header {
+    border-bottom: none;
+}
+
+.fixed-table.tabulator .tabulator-header .tabulator-col {
+    border-bottom: 1px solid #aaa;;
+}
+
+.fixed-table.tabulator .tabulator-header .tabulator-col[tabulator-field="固定表頭"] {
+    background: #F7F2EB;
+    border-bottom-color: transparent;
+    color: #333;
+}
+
 /* END: tabulator創立table */
 /* START: 跟隨tabulator_condition */
 .content-condition {
