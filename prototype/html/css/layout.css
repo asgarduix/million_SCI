@@ -2395,14 +2395,14 @@ a.menu-active .menu-bar {
 
 .query-field-item {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     position: relative;
 }
 
 .query-field-title {
     width: 110px;
     text-align: right;
-    padding: 0 3px;
+    padding: 2px 3px 0;
     color: #015478;
     font-size: 0.875rem;
     font-weight: bold;
@@ -2555,6 +2555,11 @@ a.menu-active .menu-bar {
 
 .query-field-note span::after {
     content: ")";
+}
+
+.query-field-under-note .query-field-note {
+    width: 100%;
+    display: block;
 }
 
 /* END: query */
