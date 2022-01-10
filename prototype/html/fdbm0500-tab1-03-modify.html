@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FEAM0100-定存維護作業</title>
+    <title>華南產物保險-FDBM0500-函證預計寄發日期維護作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="feam0100-tab1-modify">
+<body id="canvas" class="fdam0500-tab1-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -42,31 +42,43 @@
                     <div class="menu-filter">
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
-                    <div class="menu-pgName"><span>定存管理</span></div>
+                    <div class="menu-pgName"><span>催收管理</span></div>
                     <div class="menu-list">
                         <ul>
                             <li>
+                                <a href="#">
+                                    <span>FBAM0400</span>
+                                    <span>訴訟保單維護作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FDAM0500</span>
+                                    <span>公點經手人未收查詢設定作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FDAM0800</span>
+                                    <span>未收特殊案件維護作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FDBM0200</span>
+                                    <span>函證維護作業</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#" class="menu-list-active">
-                                    <span>FEAM0100</span>
-                                    <span>定存維護作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FEAM0500</span>
-                                    <span>定存利息更正作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FEAM0600</span>
-                                    <span>強制險準備金統計維護作業</span>
+                                    <span>FDBM0500</span>
+                                    <span>函證預計寄發日期維護作業</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <span></span>
-                                    <span>定存單報表作業</span>
+                                    <span>催收管理報表</span>
                                 </a>
                             </li>
                         </ul>
@@ -137,9 +149,8 @@
                     <div class="content-component content-breadcrumb">
                         <ul>
                             <li><a href="#">財務</a></li>
-                            <li><a href="#">資金運用</a></li>
-                            <li><a href="#">定存管理</a></li>
-                            <li><a href="#">定存維護作業</a></li>
+                            <li><a href="#">催收管理</a></li>
+                            <li><a href="#">函證預計寄發日期維護作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -147,7 +158,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">定存維護作業</div>
+                                <div class="unitname-item unitname-title">函證預計寄發日期維護作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -160,9 +171,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="#" class="unittab-active">定存單維護</a></li>
-                                        <li><a href="#">定存單到期</a></li>
-                                        <li></li>
+                                        <li><a href="#" class="unittab-active">維護</a></li>
+                                        <li><a href="#">發函查詢報表</a></li>
+                                        <li><a href="#">地址錯誤作業</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -180,24 +191,12 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 定存單號/調度日期/序號 -->
+                                    <!-- 預計寄發年月 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">定存單號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="定存單號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">調度日期</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="調度日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">序號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="序號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">預計寄發年月</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="預計寄發年月" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -214,15 +213,7 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third"><span>新增定存利息</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>維護定存利息</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -233,6 +224,13 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="#" class="tab-link-active">專函</a></li>
+                                        <li><a href="#">催繳函</a></li>
+                                    </ul>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -242,22 +240,22 @@
                                                         <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="func-basic-item func-count">
+                                                <!-- <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">1</li>
+                                                        <li class="count-total">3</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
                                                     <div class="func-filter-inner">
                                                         <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
-                                            <div class="table-func-page">頁碼</div>
+                                            <!-- <div class="table-func-page">頁碼</div> -->
                                         </div>
                                     </div>
-                                    <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div id="table01" class="fixed-table"></div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -435,166 +433,51 @@
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>定存單基本資料維護</span>
+                                <span>第一次</span>
                             </div>
                         </div>
-                        <!-- 銀行代號/調度日期 -->
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預計寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍起始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍截止日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行代號</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="銀行代號" value="0051194" title="0051194" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="銀行代號" value="土銀烏日" title="土銀烏日" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">調度日期</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="date" name="調度日期" value="2021-05-11" placeholder="" data-toggle="tooltip" data-placement="left">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="調度日期" value="1" title="1" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 定存單號/存單種類/用途種類-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">定存單號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="定存單號" value="LB0082209" title="LB0082209" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">存單種類</div>
-                                        <div class="customize-form-entry">
-                                            <select name="存單種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">一般</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">用途種類</div>
-                                        <div class="customize-form-entry">
-                                            <select name="用途種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">一般</option>
-                                                <option value="">質押</option>
-                                                <option value="">強制險(特)</option>
-                                                <option value="">強制險(非特)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 用途 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-4">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">用途</div>
-                                        <div class="customize-form-entry"><input type="text" name="用途" value="" title="" placeholder="請輸入值"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 開始日/到期日/期間 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">開始日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="開始日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">到期日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="到期日" value="2021-02-24" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1 field-with-text">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">期間</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="期間" value="12" title="12" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            <span>/月</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 利率/利率別/銀行帳號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1 field-with-text">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">利率</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="利率" value="0.8150" title="0.8150" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            <span>%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">利率別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="利率別" value="機動" title="機動" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行帳號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀行帳號" value="119014000787" title="119014000787" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 存單地區/幣別/存款金額 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">存單地區</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="存單地區" value="39" title="39" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="存單地區" value="民權" title="民權" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -602,35 +485,35 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-title">檔案筆數</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="幣別" value="台幣" title="台幣" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="檔案筆數" value="1,806" title="1,806" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">存款金額</div>
+                                        <div class="customize-form-title">寄發日</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="存款金額" value="2,000,000.00" title="2,000,000.00" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 入息行碼/領息別 -->
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">入息行碼</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="入息行碼" value="8050034" title="8050034" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="入息行碼" value="遠銀台北逸仙" title="遠銀台北逸仙" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -638,99 +521,61 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">領息別</div>
+                                        <div class="customize-form-title">檔案筆數</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="領息別" value="到期領息" title="到期領息" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="檔案筆數" value="6" title="6" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 入息地區/作帳日/入息帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>旅責險</span>
+                            </div>
+                        </div>
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">入息地區</div>
+                                        <div class="customize-form-title">預計寄發日</div>
                                         <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="入息地區" value="00" title="00" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="入息地區" value="總公司" title="總公司" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">作帳日</div>
+                                        <div class="customize-form-title">範圍起始日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="作帳日" value="2021-02-26" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">入息帳號</div>
+                                        <div class="customize-form-title">範圍截止日</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="入息帳號" value="00300100016296" title="00300100016296" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 匯款銀行/匯款帳號 -->
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">匯款銀行</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <input type="text" name="匯款銀行" value="0051194" title="0051194" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="匯款銀行" value="土銀烏日" title="土銀烏日" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">匯款帳號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="匯款帳號" value="119014000787" title="119014000787" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 當保證金/經手人1/經手人2 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">當保證金</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="當保證金" value="否" title="否" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">經手人1</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="經手人1" value="039853" title="039853" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-6">
-                                                    <input type="text" name="經手人1" value="財務部1" title="財務部1" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -738,69 +583,437 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">經手人2</div>
+                                        <div class="customize-form-title">檔案筆數</div>
                                         <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="經手人2" value="050211" title="050211" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                            <input type="text" name="檔案筆數" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-6">
-                                                    <input type="text" name="經手人2" value="陳柏蒼" title="陳柏蒼" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 原有印鑑/印鑑日期/到期註 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">原有印鑑</div>
+                                        <div class="customize-form-title">檔案筆數</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="原有印鑑" value="四選三" title="四選三" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">印鑑日期</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="印鑑日期" value="2021-12-07" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">到期註</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="到期註" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="檔案筆數" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 存款類別/支援註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>水險</span>
+                            </div>
+                        </div>
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">存款類別</div>
+                                        <div class="customize-form-title">預計寄發日</div>
                                         <div class="customize-form-entry">
-                                            <select name="存款類別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">一般存款</option>
-                                            </select>
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">支援註</div>
+                                        <div class="customize-form-title">範圍起始日</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="支援註" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍截止日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1,008" title="1,008" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1" title="1" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>第二次</span>
+                            </div>
+                        </div>
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預計寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍起始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍截止日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1,008" title="1,008" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1" title="1" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>旅責險</span>
+                            </div>
+                        </div>
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預計寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍起始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍截止日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1,008" title="1,008" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1" title="1" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>水險</span>
+                            </div>
+                        </div>
+                        <!-- 預計寄發日/範圍起始日/範圍截止日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預計寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="預計寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍起始日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍起始日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">範圍截止日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="範圍截止日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上傳檔案/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">上傳檔案</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="上傳檔案" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1,008" title="1,008" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">寄發日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="寄發日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 地址錯誤/檔案筆數/寄發日-->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">地址錯誤</div>
+                                        <div class="customize-form-entry customize-form-entry-upload">
+                                            <div class="customize-form-entry-upload-inner">
+                                                <div class="customize-form-entry-upload-item">
+                                                    <input type="text" name="地址錯誤" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                                <div class="customize-form-entry-upload-item">
+                                                    <button>瀏覽</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">檔案筆數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="檔案筆數" value="1" title="1" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -834,59 +1047,113 @@
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
-<!-- pg使用 -->
-<script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-    id: "b1",
-    定存單號: "定存單號",
-    銀行代號: "銀行代號",
-    調度日期: "調度日期",
-    序號: "序號",
-    存單種類: "存單種類",
-    用途種類: "用途種類",
-    用途: "用途",
-}, ];
+        id: "a1",
+        固定表頭: "第一次",
+        預計寄發日: "110/03/04",
+        範圍起始日: "110/01/01",
+        範圍截止日: "110/01/15",
+        寄發檔案: "Ｙ",
+        寄發日: "110/03/04",
+        檔案筆數: "1,806",
+        地址錯誤: "Ｙ",
+        檔案筆數: "6",
+    },
+    {
+        id: "a2",
+        固定表頭: "旅責險",
+        預計寄發日: "  /  /  ",
+        範圍起始日: "  /  /  ",
+        範圍截止日: "  /  /  ",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a3",
+        固定表頭: "水險",
+        預計寄發日: "110/03/04",
+        範圍起始日: "110/01/01",
+        範圍截止日: "110/01/15",
+        寄發檔案: "Y",
+        寄發日: "  /  /  ",
+        檔案筆數: "1,008",
+        地址錯誤: "Ｙ",
+        檔案筆數: "1",
+    },
+    {
+        id: "a4",
+        固定表頭: "第二次",
+        預計寄發日: "110/03/16",
+        範圍起始日: "110/01/16",
+        範圍截止日: "110/01/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a5",
+        固定表頭: "旅責險",
+        預計寄發日: "110/03/16",
+        範圍起始日: "109/12/01",
+        範圍截止日: "109/12/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+    {
+        id: "a6",
+        固定表頭: "水險",
+        預計寄發日: "110/03/16",
+        範圍起始日: "110/01/16",
+        範圍截止日: "110/01/31",
+        寄發檔案: "N",
+        寄發日: "  /  /  ",
+        檔案筆數: "-",
+        地址錯誤: "N",
+        檔案筆數: "-",
+    },
+];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
     //autoColumns: true,
     layout: "fitColumns",
-    height: "255px",
+    height: "100%",
     pagination: "local",
     paginationSize: 5,
     paginationSizeSelector: [5, 10, 30, 50, true],
-    movableColumns: true,
-    resizableRows: true,
+    movableColumns: false,
+    resizableRows: false,
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
+    selectable: false,
+    headerSort: false,
     columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
-            }
-        },
-        {
-            title: "定存單號",
-            field: "定存單號",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
+            title: "",
+            field: "固定表頭",
+            maxWidth: 60,
+            minWidth: 60,
+            formatter: function(cell) {
+                cell.getElement().classList.add("tabulator-first-col");
+                return cell.getValue();
             },
-            // formatter: "link",
         },
-        { title: "銀行代號", field: "銀行代號" },
-        { title: "調度日期", field: "調度日期" },
-        { title: "序號", field: "序號" },
-        { title: "存單種類", field: "存單種類" },
-        { title: "用途種類", field: "用途種類" },
-        { title: "用途", field: "用途" },
+        { title: "預計寄發日", field: "預計寄發日" },
+        { title: "範圍起始日", field: "範圍起始日" },
+        { title: "範圍截止日", field: "範圍截止日" },
+        { title: "寄發檔案", field: "寄發檔案" },
+        { title: "寄發日", field: "寄發日" },
+        { title: "檔案筆數", field: "檔案筆數" },
+        { title: "地址錯誤", field: "地址錯誤" },
+        { title: "檔案筆數", field: "檔案筆數" },
     ],
 });
 // 選擇預設勾選row

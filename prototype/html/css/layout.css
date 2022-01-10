@@ -4019,6 +4019,30 @@ span.tp {
     color: #E60012;
 }
 
+/* 上傳檔案 */
+.customize-form-entry-upload-inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.customize-form-entry-upload-item {
+    display: table-cell;
+}
+
+.customize-form-entry-upload-item:nth-child(2) {
+    width: 60px;
+    padding: 0 5px;
+}
+
+.customize-form-entry-upload-item button {
+    width: 100%;
+    background: #026D93;
+    color: #fff;
+    height: 24px;
+    border-radius: 3px;
+}
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
