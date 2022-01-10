@@ -198,8 +198,8 @@
                                                 <div class="query-field-item query-field-title">作業項目</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="radio" id="rd01" name="作業項目" checked=""><label for="rd01">維護</label></li>
-                                                        <li><input type="radio" id="rd02" name="作業項目"><label for="rd02">函證多筆查詢</label></li>
+                                                        <li><input type="radio" id="rd01" name="作業項目"><label for="rd01">維護</label></li>
+                                                        <li><input type="radio" id="rd02" name="作業項目" checked=""><label for="rd02">函證多筆查詢</label></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -261,7 +261,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="險種" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">水險</option>
+                                                        <option value="" selected="">水險</option>
                                                         <option value="">火險</option>
                                                         <option value="">意外險</option>
                                                     </select>
@@ -274,7 +274,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="申請單位" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">全部</option>
+                                                        <option value="" selected="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -285,11 +285,11 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="停函起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="停函起訖日" value="2021-05-05" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-1">～</div>
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="停函起訖日" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="停函起訖日" value="2021-05-05" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -532,28 +532,34 @@ let table01Data = [{
         id: "a1",
         經手人: "經手人",
         業務來源: "業務來源",
+        要保人: "要保人",
         險種: "險種",
-        要保人ID: "要保人ID",
         申請單位: "申請單位",
         停函起訖日: "停函起訖日",
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
     },
     {
         id: "a2",
         經手人: "經手人",
         業務來源: "業務來源",
+        要保人: "要保人",
         險種: "險種",
-        要保人ID: "要保人ID",
         申請單位: "申請單位",
         停函起訖日: "停函起訖日",
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
     },
     {
         id: "a3",
         經手人: "經手人",
         業務來源: "業務來源",
+        要保人: "要保人",
         險種: "險種",
-        要保人ID: "要保人ID",
         申請單位: "申請單位",
         停函起訖日: "停函起訖日",
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -570,7 +576,7 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [{
+    columns: [/*{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
             headerHozAlign: "center",
@@ -581,13 +587,15 @@ var table01 = new Tabulator("#table01", {
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
             }
-        },
+        },*/
         { title: "經手人", field: "經手人" },
         { title: "業務來源", field: "業務來源" },
+        { title: "要保人", field: "要保人" },
         { title: "險種", field: "險種" },
-        { title: "要保人ID", field: "要保人ID" },
         { title: "申請單位", field: "申請單位" },
         { title: "停函起訖日", field: "停函起訖日" },
+        { title: "建檔日", field: "建檔日" },
+        { title: "建檔人員", field: "建檔人員" },
     ],
 });
 // 選擇預設勾選row
