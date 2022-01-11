@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fdam0500-tab2-query">
+<body id="canvas" class="fdam0500-tab2-error">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -320,7 +320,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">3</li>
+                                                        <li class="count-error">查無資料！</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -513,7 +513,7 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table01Data = [{
+let table01Data = [/*{
         id: "a1",
         險別: "險別",
         銷帳單位: "銷帳單位",
@@ -554,7 +554,7 @@ let table01Data = [{
         強制證號: "強制證號",
         強制保費: "強制保費",
         經手人: "經手人",
-    },
+    },*/
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
