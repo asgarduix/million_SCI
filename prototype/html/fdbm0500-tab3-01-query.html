@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fdam0500-tab2-query">
+<body id="canvas" class="fdam0500-tab3-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -172,8 +172,8 @@
                                 <div class="content-component content-unittab">
                                     <ul>
                                         <li><a href="#">維護</a></li>
-                                        <li><a href="#" class="unittab-active">發函查詢報表</a></li>
-                                        <li><a href="#">地址錯誤作業</a></li>
+                                        <li><a href="#">發函查詢報表</a></li>
+                                        <li><a href="#" class="unittab-active">地址錯誤作業</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -191,22 +191,8 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
+                                    <!-- 查詢條件 -->
                                     <div class="query-row">
-                                        <!-- 報表格式 -->
-                                        <div class="query-field query-radio">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表格式</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="報表格式" checked=""><label for="rd01">函證</label></li>
-                                                        <li><input type="radio" id="rd02" name="報表格式"><label for="rd02">催收函</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="query-row">
-                                        <!-- 查詢條件 -->
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">查詢條件</div>
@@ -223,20 +209,10 @@
                                     </div>
                                     <!-- 預計寄發年月/選擇/查詢銷帳日 -->
                                     <div class="query-row">
-                                        <div class="query-field query-double-datepicker">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">預計寄發年月</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="預計寄發年月" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="預計寄發年月" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="預計寄發年月" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
@@ -261,15 +237,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 銷帳狀態/項目 -->
+                                    <!-- 單位/銷帳狀態/項目 -->
                                     <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">單位</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="單位" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">全部</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">銷帳狀態</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="銷帳狀態" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">未銷帳</option>
+                                                        <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -280,7 +267,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="項目" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">一般件</option>
+                                                        <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -299,6 +286,11 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-third">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-third"><span>寄發Mail</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -515,45 +507,36 @@
 <script>
 let table01Data = [{
         id: "a1",
-        險別: "險別",
-        銷帳單位: "銷帳單位",
-        業績單位: "業績單位",
-        文號: "文號",
+        預計寄發日: "預計寄發日",
+        所屬單位: "所屬單位",
+        經手人: "經手人",
+        險種: "險種",
+        出單單位: "出單單位",
         保單號碼: "保單號碼",
-        保費: "保費",
         要保人: "要保人",
         被保險人: "被保險人",
-        強制證號: "強制證號",
-        強制保費: "強制保費",
-        經手人: "經手人",
     },
     {
         id: "a2",
-        險別: "險別",
-        銷帳單位: "銷帳單位",
-        業績單位: "業績單位",
-        文號: "文號",
+        預計寄發日: "預計寄發日",
+        所屬單位: "所屬單位",
+        經手人: "經手人",
+        險種: "險種",
+        出單單位: "出單單位",
         保單號碼: "保單號碼",
-        保費: "保費",
         要保人: "要保人",
         被保險人: "被保險人",
-        強制證號: "強制證號",
-        強制保費: "強制保費",
-        經手人: "經手人",
     },
     {
         id: "a3",
-        險別: "險別",
-        銷帳單位: "銷帳單位",
-        業績單位: "業績單位",
-        文號: "文號",
+        預計寄發日: "預計寄發日",
+        所屬單位: "所屬單位",
+        經手人: "經手人",
+        險種: "險種",
+        出單單位: "出單單位",
         保單號碼: "保單號碼",
-        保費: "保費",
         要保人: "要保人",
         被保險人: "被保險人",
-        強制證號: "強制證號",
-        強制保費: "強制保費",
-        經手人: "經手人",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -571,18 +554,26 @@ var table01 = new Tabulator("#table01", {
     tooltipGenerationMode: "hover",
     selectable: true,
     headerSort: true,
-    columns: [
-        { title: "險別", field: "險別" },
-        { title: "銷帳單位", field: "銷帳單位" },
-        { title: "業績單位", field: "業績單位" },
-        { title: "文號", field: "文號" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "預計寄發日", field: "預計寄發日" },
+        { title: "所屬單位", field: "所屬單位" },
+        { title: "經手人", field: "經手人" },
+        { title: "險種", field: "險種" },
+        { title: "出單單位", field: "出單單位" },
         { title: "保單號碼", field: "保單號碼" },
-        { title: "保費", field: "保費", hozAlign: "right" },
         { title: "要保人", field: "要保人" },
         { title: "被保險人", field: "被保險人" },
-        { title: "強制證號", field: "強制證號" },
-        { title: "強制保費", field: "強制保費" },
-        { title: "經手人", field: "經手人" },
     ],
 });
 // 選擇預設勾選row
