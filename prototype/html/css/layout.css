@@ -2411,6 +2411,10 @@ a.menu-active .menu-bar {
     width: 50%;
 }
 
+.query-input-all {
+    width: 100%;
+}
+
 .query-field-inner {
     width: 100%;
     display: table;
@@ -2588,6 +2592,19 @@ a.menu-active .menu-bar {
 .query-field-under-note .query-field-note {
     width: 100%;
     display: block;
+}
+
+.query-field-button {
+    width: 60px;
+    padding: 0 5px;
+}
+
+.query-field-button button {
+    width: 100%;
+    height: 24px;
+    background: #026D93;
+    color: #fff;
+    border-radius: 4px;
 }
 
 /* END: query */
