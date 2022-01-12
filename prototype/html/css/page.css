@@ -1,4 +1,32 @@
+/* START: login.html */
+.login {
+    height: 100%;
+}
 
+.login-inner {
+    height: 100%;
+    background: url('../img/login_bg.png') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: #E60012 5px solid;
+}
+
+.login-container {
+    border: #aaa solid 1px;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+/* END: login.html */
 
 @media only screen and (max-width: 1280px) {}
 

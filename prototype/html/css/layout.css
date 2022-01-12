@@ -1741,18 +1741,6 @@ a.menu-active .menu-bar {
     border-top: none;
 }
 
-/*.fixed-table .tabulator-row:nth-child(1) .tabulator-first-col {
-    border-top: #aaa solid 1px;
-}*/
-
-/*.fixed-table.tabulator .tabulator-header {
-    border-bottom: none;
-}*/
-
-/*.fixed-table.tabulator .tabulator-header .tabulator-col {
-    border-bottom: 1px solid #aaa;
-}*/
-
 .fixed-table.tabulator .tabulator-header .tabulator-col[tabulator-field="固定表頭"] {
     background: #F7F2EB;
     border-bottom-color: transparent;
