@@ -467,23 +467,78 @@
     </div>
     <!-- popup-confirm -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-confirm">
+        <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">退票</div>
+                        <div class="dialog-header-item dialog-title">撤退票結案維護</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行退票?<br />退票<span class="dialog-count">1</span></p>
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <!-- 票據號碼 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據號碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="新收費狀態" value="123456,246810,135790" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 新收費狀態/新撤退票日/撤退票原因 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">新收費狀態</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="新收費狀態" value="退票" title="退票" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">新撤退票日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="新撤退票日" value="2021-04-16" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">撤退票原因</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <select name="撤退票原因" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                        <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                        <option value="">01</option>
+                                                        <option value="" selected="">02</option>
+                                                        <option value="">03</option>
+                                                    </select>
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="撤退票原因" value="存款不足" title="存款不足" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button class="btn-prime">確定</button></li>
-                        <li><button class="btn-outline">取消</button></li>
+                        <li><button class="btn-prime">關閉</button></li>
                     </ul>
                 </div>
             </form>

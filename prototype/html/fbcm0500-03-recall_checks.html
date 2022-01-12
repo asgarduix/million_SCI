@@ -471,7 +471,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">票據號碼<span>123345</span></div>
+                        <div class="dialog-header-item dialog-title">撤退票結案維護</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -480,19 +480,27 @@
                 <div class="dialog-content">
                     <!-- customize-form -->
                     <div class="customize-form">
+                        <!-- 票據號碼 -->
                         <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>撤票資料維護</span>
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據號碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="新收費狀態" value="123456,246810,135790" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- 新收費狀態/新撤退票日/新票據種類/換現金 -->
+                        <!-- 新收費狀態/新撤退票日/撤退票原因 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">新收費狀態</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="新收費狀態" value="退票" title="退票" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="新收費狀態" value="撤票" title="撤票" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -500,113 +508,27 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">新撤退票日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="新撤退票日" value="2021-04-16" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="新撤退票日" value="2021-04-16" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">新票據種類</div>
-                                        <div class="customize-form-entry">
-                                            <select name="信評機構" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">其他</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">換現金</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="換現金" value="0" title="0" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" onkeypress="return onlyNumberKey(event)">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--憑證關聯/銀存關聯/信用卡關聯/還退票原因-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">憑證關聯</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="憑證關聯" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀存關聯</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀存關聯" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">信用卡關聯</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="信用卡關聯" value="012" title="012" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">還退票原因</div>
+                                        <div class="customize-form-title">撤退票原因</div>
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-3">
-                                                    <select name="還退票原因" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <select name="撤退票原因" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                         <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                        <option value="" selected="">028</option>
+                                                        <option value="">01</option>
+                                                        <option value="" selected="">02</option>
+                                                        <option value="">03</option>
                                                     </select>
                                                 </div>
-                                                <div class="customize-form-entry-col customize-form-entry-7">
-                                                    <input type="text" name="還退票原因" value="存款不足" title="存款不足" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="撤退票原因" value="存款不足" title="存款不足" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--關係別/關係別說明/責任歸屬/備註-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">關係別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="關係別" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">關係別說明</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="關係別說明" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">責任歸屬</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="責任歸屬" value="客戶" title="客戶" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">備註</div>
-                                        <div class="customize-form-entry">
-                                            <select name="信評機構" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">全部</option>
-                                            </select>
                                         </div>
                                     </div>
                                 </div>
