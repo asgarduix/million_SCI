@@ -185,7 +185,7 @@
                                 </div>
                             </div>
                         </div>
-<!-- query -->
+                        <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board detail-board-query">
@@ -312,13 +312,18 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li> -->
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-secondary">
                                         <ul>
                                             <li><button class="content-btn-item btn-secondary btn-reject"><span>駁回</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-third">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-third"><span>催收</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -537,7 +542,7 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-modify -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
@@ -555,6 +560,22 @@
                         <div class="customize-form-row">
                             <div class="customize-form-header">
                                 <span>基本資料維護</span>
+                            </div>
+                        </div>
+                        <!-- 保單號碼 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4 customize-form-serial-number">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-entry">
+                                            <ul>
+                                                <li><a href="#" class="serial-number-active">AH010800123</a></li>
+                                                <li><a href="#">AH010800992</a></li>
+                                                <li><a href="#">AH010800565</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- 債務人姓名/債務人ID -->
@@ -618,7 +639,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">票據金額</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="票據金額" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money" onkeypress="return onlyNumberKey(event)" >
+                                            <input type="text" name="票據金額" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money" onkeypress="return onlyNumberKey(event)">
                                         </div>
                                     </div>
                                 </div>
