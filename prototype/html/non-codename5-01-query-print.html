@@ -189,7 +189,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 報表格式/銷帳單位/險種 -->
+                                    <!-- 報表格式/銷帳單位/出單日期 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -197,10 +197,11 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="報表名稱" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">總表</option>
-                                                        <option value="">明細表</option>
-                                                        <option value="">台幣明細表</option>
-                                                        <option value="">外幣明細表</option>
+                                                        <option value="">統計A表</option>
+                                                        <option value="">統計B表</option>
+                                                        <option value="">未收明細表</option>
+                                                        <option value="">未兌明細表</option>
+                                                        <option value="">特殊案件（含訴訟件）明細表</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -211,57 +212,124 @@
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="公司代碼" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">險種</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="報表名稱" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">全部(含旅責險)</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 日期區間/選擇種類/幣別 -->
-                                    <div class="query-row">
                                         <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">日期區間</div>
+                                                <div class="query-field-item query-field-title">出單日期</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="日期區間" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="出單日期" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-1">～</div>
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="日期區間" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="出單日期" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 基準日/入帳期限/險別 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">基準日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="基準日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">入帳期限</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="入帳期限" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">險別</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="險別" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">全部</option>
+                                                        <option value="">車險</option>
+                                                        <option value="">水險</option>
+                                                        <option value="">火險</option>
+                                                        <option value="">新種險</option>
+                                                        <option value="">旅平險</option>
+                                                        <option value="">傷害險</option>
+                                                        <option value="">意外險</option>
+                                                        <option value="">全部(不含車強)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 選擇種類/業績單位/帳齡期間 -->
+                                    <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">選擇種類</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="選擇種類" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">全部</option>
+                                                        <option value="" selected="">經手人歸屬單位</option>
+                                                        <option value="" selected="">簽單人歸屬單位</option>
+                                                        <option value="" selected="">專案代號</option>
+                                                        <option value="" selected="">洽攬人</option>
+                                                        <option value="" selected="">帳齡基準月</option>
+                                                        <option value="" selected="">收費生效基準</option>
+                                                        <option value="" selected="">業務來源</option>
+                                                        <option value="" selected="">經手人</option>
+                                                        <option value="" selected="">出單單位</option>
+                                                        <option value="" selected="">營業所代號</option>
+                                                        <option value="" selected="">簽單人</option>
+                                                        <option value="" selected="">收費對象</option>
+                                                        <option value="" selected="">保險費金額</option>
+                                                        <option value="" selected="">業績單位</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
+                                                <div class="query-field-item query-field-title">業績單位</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="幣別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">台幣</option>
-                                                        <option value="">美金</option>
-                                                        <option value="">人民幣</option>
-                                                    </select>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="業績單位" placeholder="請輸入值" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" name="業績單位" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-double-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">帳齡期間</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="帳齡期間" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="帳齡期間" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 票據簽收日 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-checkbox">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">票據簽收日</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="checkbox" id="cb01" name="票據簽收日"><label for="cb01">票據簽收日</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

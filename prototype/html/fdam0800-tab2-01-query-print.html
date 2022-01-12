@@ -327,7 +327,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 序號/期別 -->
+                                    <!-- 序號/期別/簽准日 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -339,6 +339,37 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">期別</div>
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="期別" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">簽准日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="簽准日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 記註原因/資料範圍 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">記註原因</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="記註原因" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">記註原因</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">資料範圍</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="資料範圍" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">資料範圍</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -623,7 +654,7 @@ var table01 = new Tabulator("#table01", {
         { title: "批單號碼", field: "批單號碼" },
         { title: "批號", field: "批號" },
         { title: "期別", field: "期別" },
-        { title: "保費", field: "保費" },
+        { title: "保費", field: "保費", hozAlign: "right" },
         { title: "被保險人", field: "被保險人" },
         { title: "要保人", field: "要保人" },
         { title: "出單日", field: "出單日" },

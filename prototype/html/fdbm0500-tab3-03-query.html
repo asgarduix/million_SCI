@@ -199,26 +199,20 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="查詢條件" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">預計寄發年月</option>
+                                                        <option value="" selected="">預計寄發年月</option>
                                                         <option value="">預計寄發日</option>
-                                                        <option value="" selected="">保單號碼</option>
+                                                        <option value="">保單號碼</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 出單單位/保單號碼/選擇 -->
+                                    <!-- 預計寄發年月/選擇/查詢銷帳日 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">出單單位</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="出單單位" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">保單號碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="保單號碼" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">預計寄發年月</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="預計寄發年月" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
@@ -227,14 +221,13 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="選擇" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">專函</option>
+                                                        <option value="">催繳函</option>
                                                         <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 查詢銷帳日/銷帳狀態/項目 -->
-                                    <div class="query-row">
                                         <div class="query-field query-checkbox">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">查詢銷帳日</div>
@@ -245,13 +238,30 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 單位/銷帳狀態/項目 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">單位</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="單位" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">總公司</option>
+                                                        <option value="">分公司</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">銷帳狀態</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="銷帳狀態" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">已銷帳</option>
                                                         <option value="">未銷帳</option>
+                                                        <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -262,7 +272,9 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="項目" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">一般件</option>
+                                                        <option value="">一般險</option>
+                                                        <option value="">水險</option>
+                                                        <option value="">旅責險</option>
                                                     </select>
                                                 </div>
                                             </div>

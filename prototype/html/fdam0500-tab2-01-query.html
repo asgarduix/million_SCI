@@ -193,15 +193,10 @@
                                 <div class="content-component content-query">
                                     <!-- 種類/總公司窗口/公經手人 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">種類</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="種類" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">未收</option>
-                                                    </select>
-                                                </div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="種類" value="未收" title="未收" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
@@ -243,11 +238,20 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="銷帳單位" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">未設定</option>
+                                                        <option value="">總公司</option>
+                                                        <option value="">台北分公司</option>
+                                                        <option value="">桃園分公司</option>
+                                                        <option value="">新竹分公司</option>
+                                                        <option value="">台中分公司</option>
+                                                        <option value="">員林分公司</option>
+                                                        <option value="">台南分公司</option>
+                                                        <option value="">高雄分公司</option>
+                                                        <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">對應窗口</div>
@@ -270,6 +274,9 @@
                                                     <select name="選擇" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
                                                         <option value="">公經手人</option>
+                                                        <option value="">對應窗口</option>
+                                                        <option value="">窗口主管</option>
+                                                        <option value="">業務來源</option>
                                                     </select>
                                                     <div class="query-field-note"><span>報表根據”選擇”跳頁</span></div>
                                                 </div>

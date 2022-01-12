@@ -1728,27 +1728,39 @@ a.menu-active .menu-bar {
 }
 
 /* 第一行固定table */
-.tabulator-row:nth-child(odd) .tabulator-first-col {
+/*.tabulator-row:nth-child(odd) .tabulator-first-col {
     background: #fff;
 }
-
-.tabulator-row:nth-child(even) .tabulator-first-col {
+*/
+.fixed-table .tabulator-row {
     background: #F7F2EB;
+    border-top: #aaa solid 1px;
 }
 
-.fixed-table.tabulator .tabulator-header {
+.fixed-table .tabulator-row:nth-child(1) {
+    border-top: none;
+}
+
+/*.fixed-table .tabulator-row:nth-child(1) .tabulator-first-col {
+    border-top: #aaa solid 1px;
+}*/
+
+/*.fixed-table.tabulator .tabulator-header {
     border-bottom: none;
-}
+}*/
 
-.fixed-table.tabulator .tabulator-header .tabulator-col {
+/*.fixed-table.tabulator .tabulator-header .tabulator-col {
     border-bottom: 1px solid #aaa;
-    ;
-}
+}*/
 
 .fixed-table.tabulator .tabulator-header .tabulator-col[tabulator-field="固定表頭"] {
     background: #F7F2EB;
     border-bottom-color: transparent;
     color: #333;
+}
+
+.fixed-table.tabulator .tabulator-header .tabulator-col[tabulator-field="固定表頭"]:nth-child(1) {
+    border-bottom-color: #aaa;
 }
 
 /* END: tabulator創立table */

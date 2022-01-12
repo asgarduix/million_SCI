@@ -580,20 +580,23 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">業務來源</div>
+                                        <div class="customize-form-title">險種</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="業務來源" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <select name="險種" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="" selected="">水險</option>
+                                                <option value="" selected="">火險</option>
+                                                <option value="" selected="">意外險</option>
+                                                <option value="" selected="">A&H險</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">種類</div>
+                                        <div class="customize-form-title">業務來源</div>
                                         <div class="customize-form-entry">
-                                            <select name="種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">未收</option>
-                                            </select>
+                                            <input type="text" name="業務來源" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -645,7 +648,7 @@ let table01Data = [{
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
         業務來源: "業務來源",
-        種類: "種類",
+        險種: "險種",
         專案代號: "專案代號",
     },
     {
@@ -657,7 +660,7 @@ let table01Data = [{
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
         業務來源: "業務來源",
-        種類: "種類",
+        險種: "險種",
         專案代號: "專案代號",
     },
     {
@@ -669,7 +672,7 @@ let table01Data = [{
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
         業務來源: "業務來源",
-        種類: "種類",
+        險種: "險種",
         專案代號: "專案代號",
     },
 ];
@@ -706,7 +709,7 @@ var table01 = new Tabulator("#table01", {
         { title: "總公司對應窗口", field: "總公司對應窗口" },
         { title: "銷帳單位", field: "銷帳單位" },
         { title: "業務來源", field: "業務來源" },
-        { title: "種類", field: "種類" },
+        { title: "險種", field: "險種" },
         { title: "專案代號", field: "專案代號" },
     ],
 });
