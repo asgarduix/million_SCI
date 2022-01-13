@@ -3045,12 +3045,27 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-symmetry {
-    display: flex;
+    /*display: flex;
+    clear: both;
+    overflow: auto;*/
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: #aaa solid 1px;
+}
+
+.customize-form-symmetry:nth-last-child(1) {
+    border-bottom: none;
 }
 
 .customize-form-5 {
-    flex: 2;
+    /*flex: 2;
+    width: 50%;
+    float: left;*/
     border-right: #aaa solid 1px;
+    width: 50%;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .customize-form-5:nth-last-child(1) {
