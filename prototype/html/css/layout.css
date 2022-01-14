@@ -3139,11 +3139,11 @@ a.menu-active .menu-bar {
 }
 
 .sub-form {
-    border-bottom: #ccc solid 10px;
+    border-bottom: #bbb solid 8px;
 }
 
 .sub-form:nth-last-child(1) {
-    border-bottom: #ccc solid 10px;
+    border-bottom: none
 }
 
 .customize-form-inner {
