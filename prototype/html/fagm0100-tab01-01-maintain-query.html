@@ -553,7 +553,7 @@ var table = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
+    selectable: false,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -566,7 +566,13 @@ var table = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "申請單號", field: "申請單號" },
+                {
+            title: "申請單號",
+            field: "申請單號",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+        },
         { title: "銀行核印更新日", field: "銀行核印更新日" },
         { title: "帳戶名稱", field: "帳戶名稱" },
         { title: "保戶名稱", field: "保戶名稱" },
