@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbcm0150-02-verification-query">
+<body id="canvas" class="fbcm0150-06-verification-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -179,21 +179,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 作業選項 -->
-                                    <!-- <div class="query-row">
-                                        <div class="query-field query-radio query-input-all">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業選項</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="作業選項"><label for="rd01">約定扣款</label></li>
-                                                        <li><input type="radio" id="rd02" name="作業選項"><label for="rd02">終止扣款</label></li>
-                                                        <li><input type="radio" id="rd03" name="作業選項"><label for="rd03">變更扣款(郵件)</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                     <!-- 作業項目/作業選項/建檔起訖日 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
@@ -202,8 +187,8 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>產生核印檔</option>
-                                                        <option value="">回寫核印結果</option>
+                                                        <option value="">產生核印檔</option>
+                                                        <option value="" selected>回寫核印結果</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -214,26 +199,16 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>委託授權核印檔</option>
-                                                        <option value="">終止授權核印檔</option>
+                                                        <option value="" selected>委託授權核印結果回寫</option>
+                                                        <option value="">終止授權核印結果回寫</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-double-datepicker">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">建檔起訖日</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="建檔起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="建檔起訖日" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="query-field-item query-field-title">核印上傳日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="核印上傳日" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -262,14 +237,9 @@
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                         </ul>
                                     </div>
-                                    <!-- <div class="content-btn-secondary">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
-                                        </ul>
-                                    </div> -->
                                     <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third"><span>產生核印檔</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>回寫核印結果</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
