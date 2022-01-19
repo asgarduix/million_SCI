@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbcm0150-06-verification-query">
+<body id="canvas" class="fbcm0150-10-report-query-print">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -170,16 +170,16 @@
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
                                                         <option value="">維護</option>
-                                                        <option value="" selected>核印</option>
-                                                        <option value="">扣款</option>
-                                                        <option value="">報表</option>
+                                                        <option value="">核印</option>
+                                                        <option value="" >扣款</option>
+                                                        <option value=""selected>報表</option>
                                                         <option value="">查詢</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 作業項目 -->
+                                    <!-- 報表項目 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -187,56 +187,24 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">產生核印檔</option>
-                                                        <option value="" selected>回寫核印結果</option>
+                                                        <option value="">核印</option>
+                                                        <option value="" selected>扣款</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 作業選項/建檔起訖日/統編或ID -->
+                                    <!-- 報表名稱 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業選項</div>
+                                                <div class="query-field-item query-field-title">報表名稱</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>委託授權核印結果回寫</option>
-                                                        <option value="">終止授權核印結果回寫</option>
+                                                        <option value="" selected>約定扣款-總表</option>
+                                                        <option value="">約定扣款-明細表</option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">核印上傳日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="核印上傳日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">統編或ID</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="統編或ID" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 上傳檔案 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-double-input query-input-half query-input-upload">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">上傳檔案</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-8">
-                                                            <input type="text" name="上傳檔案" placeholder="請選擇檔案" value="12345678" title="12345678" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-2">
-                                                            <button>瀏覽</button>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,9 +223,9 @@
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                         </ul>
                                     </div>
-                                    <div class="content-btn-third">
+                                    <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third"><span>回寫核印結果</span></button></li>
+                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                         </ul>
                                     </div>
                                 </div>

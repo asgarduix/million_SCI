@@ -2607,6 +2607,19 @@ a.menu-active .menu-bar {
     border-radius: 4px;
 }
 
+.query-input-upload .entry-combine:nth-child(2) {
+    text-align: left;
+}
+
+.query-input-upload button {
+    height: 24px;
+    font-size: 0.875rem;
+    background: #026D93;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 12px;
+}
+
 /* END: query */
 /* START: label */
 .detail-board-label {
