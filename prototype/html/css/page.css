@@ -1,6 +1,15 @@
 /* START: login.html */
 .login {
     height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,e60012+100&0.5+0,0.1+100 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(230, 0, 18, 0.1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(230, 0, 18, 0.1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(230, 0, 18, 0.1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#1ae60012', GradientType=0);
+    /* IE6-9 */
 }
 
 .login-inner {
@@ -9,16 +18,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    border-bottom: #E60012 5px solid;
+    border-bottom: #E60012 3px solid;
 }
 
 .login-container {
-    border: #aaa solid 1px;
-    background: #fff;
     border-radius: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -26,6 +34,138 @@
     -o-transform: translate(-50%, -50%);
 }
 
+.login-container .login-container-inner {
+    min-width: 360px;
+    max-width: 360px;
+    background: #fff;
+    text-align: left;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 10px 21px 0px rgba(230, 0, 18, 0.1);
+    -moz-box-shadow: 5px 10px 21px 0px rgba(230, 0, 18, 0.1);
+    box-shadow: 5px 10px 21px 0px rgba(230, 0, 18, 0.1);
+    border-top: #E60012 solid 8px;
+}
+
+.login-note {
+    margin-bottom: 40px;
+}
+
+.login-note p {
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.login-copyright p {
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.login-title {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: #d7d7d7 solid 1px;
+}
+
+.login-title-cn {
+    font-size: 1.3125rem;
+    font-weight: bold;
+    color: #E60012;
+    letter-spacing: 0.5rem;
+}
+
+.login-title-en {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.login-form {
+    padding: 27px 30px 35px;
+}
+
+.login-form-item {
+    margin-bottom: 17px;
+}
+
+.login-form-item:nth-child(2) {
+    margin-bottom: 50px
+}
+
+.login-form-item:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.field-name {
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 3px 3px 1px 3px;
+}
+
+.field-entry {
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.field-entry input {
+    border: none;
+    height: 30px;
+    outline: none;
+}
+
+.field-entry-inner {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.field-entry-item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.field-entry-item:nth-child(2) {
+    width: 40px;
+}
+
+.field-entry-item button {
+    width: 40px;
+    background: none;
+    color: #555;
+}
+
+.field-entry-item button:hover {
+    opacity: 0.8;
+}
+
+.login-form-item-button {
+    text-align: center;
+}
+
+.login-form-item-button button {
+    padding: 10px 40px;
+    line-height: 1;
+    color: #fff;
+    border-radius: 4px;
+    background: #E60012;
+}
+
+.login-form-item-button button:hover,
+.login-form-item-button button:focus,
+.login-form-item-button button:active {
+    background: #f95a67;
+}
+
+.login-form-item-field-error .field-entry {
+    border-color: #f95a67;
+}
+
+.field-error {
+    font-size: 0.75rem;
+    color: #f95a67;
+    padding: 2px;
+}
 /* END: login.html */
 
 @media only screen and (max-width: 1280px) {}
