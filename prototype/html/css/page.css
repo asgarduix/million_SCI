@@ -126,6 +126,7 @@
 .field-entry-item {
     display: table-cell;
     vertical-align: middle;
+    background: #fff;
 }
 
 .field-entry-item:nth-child(2) {
@@ -160,7 +161,7 @@
     background: #f95a67;
 }
 
-.login-form-item-field-error .field-entry {
+.field-entry-error {
     border-color: #f95a67;
 }
 

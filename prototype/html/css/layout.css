@@ -4395,6 +4395,15 @@ span.tp {
     width: 150px;
 }
 /* END: logo */
+/* START: popup-token-disabled-login */
+.token-disabled {
+    overflow: hidden;
+}
+
+.token-disabled .frame {
+    filter: blur(4px);
+}
+/* END: popup-token-disabled-login */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
