@@ -1,6 +1,7 @@
 /* START: login.html */
 .login {
-    height: 100%;
+    width: 100%;
+    /*height: 100%;*/
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,e60012+100&0.5+0,0.1+100 */
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(230, 0, 18, 0.1) 100%);
     /* FF3.6-15 */
@@ -13,25 +14,22 @@
 }
 
 .login-inner {
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background: url('../img/login_bg.png') center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    border-bottom: #E60012 3px solid;
+    border-bottom: #E60012 4px solid;
+    padding: 60px 15px;
 }
 
 .login-container {
     border-radius: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .login-container .login-container-inner {
@@ -49,11 +47,16 @@
 
 .login-note {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .login-note p {
     font-size: 0.75rem;
     color: #fff;
+}
+
+.login-copyright {
+    text-align: center;
 }
 
 .login-copyright p {
@@ -166,6 +169,7 @@
     color: #f95a67;
     padding: 2px;
 }
+
 /* END: login.html */
 
 @media only screen and (max-width: 1280px) {}
