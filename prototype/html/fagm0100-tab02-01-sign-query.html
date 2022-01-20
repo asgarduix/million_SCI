@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fagm0100-09-report-query-print">
+<body id="canvas" class="fagm0100-tab02-01-sign-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -141,8 +141,8 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="#" class="unittab-active">車險</a></li>
-                                        <li><a href="#">火險</a></li>
+                                        <li><a href="#">車險</a></li>
+                                        <li><a href="#" class="unittab-active">火險</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -163,47 +163,82 @@
                                 <div class="content-component content-query">
                                     <!-- 作業種類 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">作業種類</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">維護</option>
+                                                        <option value="" selected>簽收</option>
                                                         <option value="">核印</option>
-                                                        <option value="" >扣款</option>
-                                                        <option value=""selected>報表</option>
-                                                        <option value="">查詢</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 報表項目 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>核印</option>
                                                         <option value="">扣款</option>
+                                                        <option value="">報表</option>
+                                                        <option value="">查詢</option>
+                                                        <option value="">Mail通知</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 報表名稱 -->
+                                    <!-- 險部文件備齊日/建檔單位/簽收狀態 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表名稱</div>
+                                                <div class="query-field-item query-field-title">險部文件備齊日</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="險部文件備齊日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="險部文件備齊日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">建檔單位</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>委託授權核印表</option>
-                                                        <option value="">終止授權核印表</option>
+                                                        <option value="">單位1</option>
+                                                        <option value="">單位2</option>
+                                                        <option value="">單位3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">簽收狀態</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">未簽收</option>
+                                                        <option value="">簽收駁回</option>
+                                                        <option value="">退件駁回</option>
+                                                        <option value="">未簽收-終止</option>
+                                                        <option value="">簽收駁回-終止</option>
+                                                        <option value="">退件駁回-終止</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 查詢條件 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">簽收狀態</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">帳戶統編/ID</option>
+                                                        <option value="">扣款帳號</option>
+                                                        <option value="">扣款帳號名稱</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -221,13 +256,172 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
                                         </ul>
                                     </div>
-                                    <div class="content-btn-secondary">
+                                    <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
-                                        </ul>
+                                            <li><button class="content-btn-item btn-third"><span>存檔</span></button></li>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- label -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-label">
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
+                                        <div class="label-item">
+                                            <div class="label-title">總簽收筆數</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">退件筆數</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <!-- customize-form -->
+                                    <div class="customize-form page-customize-form">
+                                        <div class="customize-form-row">
+                                            <div class="customize-form-header">
+                                                <span>核定資料</span>
+                                            </div>
+                                        </div>
+                                        <!-- 帳戶統編/ID -->
+                                        <div class="customize-form-row">
+                                            <div class="customize-form-inner">
+                                                <div class="customize-form-field customize-form-field-4">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">帳戶統編/ID</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="退件人員代號" value="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 退件日/退件人員代號/退件人員姓名 -->
+                                        <div class="customize-form-row">
+                                            <div class="customize-form-inner">
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">退件日</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="date" name="退件日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">退件人員代號</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="退件人員代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">退件人員姓名</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="退件人員姓名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 建檔日/建檔人員代號/建檔人員姓名 -->
+                                        <div class="customize-form-row">
+                                            <div class="customize-form-inner">
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">建檔日</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="date" name="建檔日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">建檔人員代號</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="建檔人員代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">建檔人員姓名</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="建檔人員姓名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 簽收日/簽收人員代號/簽收人員姓名 -->
+                                        <div class="customize-form-row">
+                                            <div class="customize-form-inner">
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">簽收日</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="date" name="簽收日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">簽收人員代號</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="簽收人員代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customize-form-field customize-form-field-1">
+                                                    <div class="customize-field-inner">
+                                                        <div class="customize-form-title">簽收人員姓名</div>
+                                                        <div class="customize-form-entry">
+                                                            <input type="text" name="簽收人員姓名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">3</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table01"></div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -406,5 +600,97 @@
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
+<script>
+let table01Data = [{
+        id: "a1",
+        帳戶統編ID: "帳戶統編/ID-1",
+        用戶編號: "用戶編號",
+        扣款帳號: "扣款帳號",
+        扣款帳號名稱: "扣款帳號名稱",
+        退件原因: "帳號錯誤",
+        退件說明: "退件說明",
+    },
+    {
+        id: "a2",
+        帳戶統編ID: "帳戶統編/ID-2",
+        用戶編號: "用戶編號",
+        扣款帳號: "扣款帳號",
+        扣款帳號名稱: "扣款帳號名稱",
+        退件原因: "統編/ID錯誤",
+        退件說明: "退件說明",
+    },
+    {
+        id: "a3",
+        帳戶統編ID: "帳戶統編/ID-3",
+        用戶編號: "用戶編號",
+        扣款帳號: "扣款帳號",
+        扣款帳號名稱: "扣款帳號名稱",
+        退件原因: "其它",
+        退件說明: "退件說明",
+    },
+]
+
+var table = new Tabulator("#table01", {
+    data: table01Data,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "帳戶統編/ID", field: "帳戶統編ID" },
+        { title: "用戶編號", field: "用戶編號" },
+        { title: "扣款帳號", field: "扣款帳號" },
+        { title: "扣款帳號名稱", field: "扣款帳號名稱" },
+        {
+            title: "退件原因",
+            field: "退件原因",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "帳號錯誤": "帳號錯誤",
+                "姓名錯誤": "姓名錯誤",
+                "統編/ID錯誤": "統編/ID錯誤",
+                "用戶編號錯誤": "用戶編號錯誤",
+                "帳戶留存印鑑空白": "帳戶留存印鑑空白",
+                "其它": "其它",
+            }
+        },
+        {
+            title: "退件說明",
+            field: "退件說明",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+        },
+    ],
+});
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
 
 </html>
