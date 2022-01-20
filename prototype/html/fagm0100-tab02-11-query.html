@@ -583,9 +583,16 @@ let nestedData = [{
     失敗說明: "失敗說明",
     扣款次數: "扣款次數",
     預計續扣日: "預計續扣日",
-    ntTable: [
-        { 總行代號: "總行代號", 分行代號: "分行代號", 銀行帳號: "銀行帳號", 扣款金額: "扣款金額", 出單單位: "出單單位", 保單號碼: "保單號碼", 出單日: "出單日", 火險建檔人員: "火險建檔人員" },
-    ]
+    ntTable: {
+        "總行代號": "總行代號",
+        "分行代號": "分行代號",
+        "銀行帳號": "銀行帳號",
+        "扣款金額": "扣款金額",
+        "出單單位": "出單單位",
+        "保單號碼": "保單號碼",
+        "出單日": "出單日",
+        "火險建檔人員": "火險建檔人員",
+    },
 }, ]
 
 var table = new Tabulator("#table01", {
@@ -623,7 +630,7 @@ var table = new Tabulator("#table01", {
         { title: "扣款類別", field: "扣款類別" },
         { title: "用戶編號", field: "用戶編號" },
         { title: "扣款狀態", field: "扣款狀態" },
-        { title: "帳戶統編ID", field: "帳戶統編/ID" },
+        { title: "帳戶統編/ID", field: "帳戶統編ID" },
         { title: "帳戶名稱", field: "帳戶名稱" },
         { title: "核印日", field: "核印日" },
         { title: "扣款日", field: "扣款日" },
@@ -639,25 +646,73 @@ var table = new Tabulator("#table01", {
         $(container).css("display", "none")
         elementsChangeClass(container, "add", "table-subtable-container")
         elementsChangeClass(subtable, "add", "table-subtable")
-        $(subtable).attr("id", row.getData().id)
+        subtable.innerHTML = `<div class="customize-form page-customize-form">
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">總行代號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="總行代號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">分行代號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="分行代號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">銀行帳號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="銀行帳號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">扣款金額</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly-money" disabled="" name="扣款金額"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">出單單位</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="出單單位"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">保單號碼</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="保單號碼"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">出單日</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="出單日"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">火險建檔人員</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly-money" disabled="" name="火險建檔人員"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
+        subtable.querySelectorAll(".customize-form-entry input").forEach((el) => {
+            let field = el.getAttribute("name");
+            el.value = row.getData().ntTable[field];
+        })
 
         container.appendChild(subtable);
         row.getElement().appendChild(container);
 
-        let subTable = new Tabulator("#" + row.getData().id, {
-            layout: "fitColumns",
-            data: row.getData().ntTable,
-            columns: [
-                { title: "總行代號", field: "總行代號" },
-                { title: "分行代號", field: "分行代號" },
-                { title: "銀行帳號", field: "銀行帳號" },
-                { title: "扣款金額", field: "扣款金額" },
-                { title: "出單單位", field: "出單單位" },
-                { title: "保單號碼", field: "保單號碼" },
-                { title: "出單日", field: "出單日" },
-                { title: "火險建檔人員", field: "火險建檔人員" },
-            ]
-        })
+
     },
 });
 
