@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fagm0100-tab02-10-query">
+<body id="canvas" class="fagm0100-tab02-13-mail-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -173,8 +173,8 @@
                                                         <option value="">核印</option>
                                                         <option value="">扣款</option>
                                                         <option value="">報表</option>
-                                                        <option value="" selected>查詢</option>
-                                                        <option value="">Mail通知</option>
+                                                        <option value="">查詢</option>
+                                                        <option value="" selected>Mail通知</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -187,91 +187,198 @@
                                                 <div class="query-field-item query-field-title">作業項目</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="radio" id="rd01" name="作業項目" checked=""><label for="rd01">核印狀態查詢</label></li>
-                                                        <li><input type="radio" id="rd02" name="作業項目"><label for="rd02">扣款內容查詢</label></li>
+                                                        <li><input type="radio" id="rd01" name="作業項目"><label for="rd01">核印狀態查詢</label></li>
+                                                        <li><input type="radio" id="rd02" name="作業項目" checked=""><label for="rd02">扣款內容查詢</label></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 公司別/查詢狀態 -->
+                                    <!-- 扣款/授權日期 /篩選條件 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-radio">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公司別</div>
+                                                <div class="query-field-item query-field-title">扣款方式</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="公司別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">全部</option>
-                                                        <option value="">總公司</option>
-                                                        <option value="">台北</option>
-                                                        <option value="">桃園</option>
-                                                        <option value="">新竹</option>
-                                                        <option value="">台中</option>
-                                                        <option value="">員林</option>
-                                                        <option value="">台南</option>
-                                                        <option value="">高雄</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">查詢狀態</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="查詢狀態" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">財務未簽收財務已簽收未上傳</option>
-                                                        <option value="">財務駁回</option>
-                                                        <option value="">上傳銀行處理中</option>
-                                                        <option value="">核印成功</option>
-                                                        <option value="">核印失敗</option>
-                                                        <option value="">權人關係未審核</option>
-                                                        <option value="">全部</option>
-                                                    </select>
+                                                    <ul>
+                                                        <li><input type="radio" id="rd03" name="作業項目"><label for="rd03">帳戶扣款</label></li>
+                                                        <li><input type="radio" id="rd04" name="作業項目" checked=""><label for="rd04">信用卡扣款</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 扣款帳戶ID/扣款帳號 -->
+                                    <!-- 出單日期/保單號碼/火險建檔人員 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">扣款帳戶ID</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="扣款帳戶ID" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-double-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">扣款帳號</div>
+                                                <div class="query-field-item query-field-title">出單日期</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine entry-2">
-                                                            <input type="text" name="扣款帳號" placeholder="請輸入值" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="出單日期" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
-                                                        <div class="entry-combine entry-2">
-                                                            <input type="text" name="扣款帳號" placeholder="請輸入值" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="出單日期" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">保單號碼</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="保單號碼" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="保單號碼" attr="" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">火險建檔人員</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="火險建檔人員" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
-                                                            <input type="text" name="扣款帳號" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="火險建檔人員" attr="" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 扣款帳戶名稱/用戶編號 -->
+                                    <!-- 要保人ID/要保人名稱 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">扣款帳戶名稱</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="扣款帳戶名稱" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">要保人ID</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="要保人ID" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">用戶編號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="用戶編號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">要保人名稱</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="要保人名稱" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 扣款人ID/扣款人名稱 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">扣款人ID</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="扣款人ID" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">扣款人名稱</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="扣款人名稱" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 扣款類別/扣款狀態 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">扣款類別</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="扣款類別" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">帳戶</option>
+                                                        <option value="">信用卡</option>
+                                                        <option value="">其他(第三方)</option>
+                                                        <option value="">全部</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">扣款狀態</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="扣款狀態" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">成功</option>
+                                                        <option value="">失敗</option>
+                                                        <option value="">財務放行中</option>
+                                                        <option value="">全部</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 授權日期/授權人員/訂單號碼 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-double-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">授權日期</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="授權日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="授權日期" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">授權人員</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="授權人員" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" name="授權人員" attr="" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">訂單號碼</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="訂單號碼" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 信用卡號 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-double-datepicker query-input-half ">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">信用卡號</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine">
+                                                            <input type="text" name="信用卡號" value="123" title="123" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine">
+                                                            <input type="text" name="信用卡號" value="456" title="456" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine">
+                                                            <input type="text" name="信用卡號" value="789" title="789" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine">
+                                                            <input type="text" name="信用卡號" value="123" title="123" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -309,7 +416,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">3</li>
+                                                        <li class="count-total">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -504,19 +611,28 @@
 <script>
 let nestedData = [{
     id: "a1",
-    申請項目: "申請項目",
+    扣款類別: "扣款類別",
     用戶編號: "用戶編號",
-    核印狀態: "核印狀態",
+    扣款狀態: "扣款狀態",
     帳戶統編ID: "帳戶統編/ID",
-    帳戶名稱: "帳戶名稱",
-    核印上傳日: "核印上傳日",
-    銀行核印日: "銀行核印日",
-    銀行核印回覆說明: "銀行核印回覆說明",
+    保戶名稱: "保戶名稱",
+    授權日: "授權日",
+    失敗碼: "失敗碼",
+    失敗說明: "失敗說明",
+    授權次數: "授權次數",
+    預計續扣日: "預計續扣日",
     ntTable: {
-        "總行代號": "總行代號",
-        "分行代號": "分行代號",
-        "銀行帳號": "銀行帳號",
+        "訂單號碼": "訂單號碼",
+        "卡號": "卡號",
+        "扣款金額": "扣款金額",
+        "出單單位": "出單單位",
+        "保單號碼": "保單號碼",
+        "出單日": "出單日",
+        "請款日": "請款日",
+        "列舉關係": "列舉關係",
+        "列舉關係其他說明": "列舉關係其他說明",
         "火險建檔人員": "火險建檔人員",
+        "授權人員": "授權人員",
     },
 }, ]
 
@@ -552,14 +668,16 @@ var table = new Tabulator("#table01", {
             maxWidth: 30,
             minWidth: 30
         },
-        { title: "申請項目", field: "申請項目" },
+        { title: "扣款類別", field: "扣款類別" },
         { title: "用戶編號", field: "用戶編號" },
-        { title: "核印狀態", field: "核印狀態" },
+        { title: "扣款狀態", field: "扣款狀態" },
         { title: "帳戶統編/ID", field: "帳戶統編ID" },
-        { title: "帳戶名稱", field: "帳戶名稱" },
-        { title: "核印上傳日", field: "核印上傳日" },
-        { title: "銀行核印日", field: "銀行核印日" },
-        { title: "銀行核印回覆說明", field: "銀行核印回覆說明" },
+        { title: "保戶名稱", field: "保戶名稱" },
+        { title: "授權日", field: "授權日" },
+        { title: "失敗碼", field: "失敗碼" },
+        { title: "失敗說明", field: "失敗說明" },
+        { title: "授權次數", field: "授權次數" },
+        { title: "預計續扣日", field: "預計續扣日" },
     ],
     rowFormatter: function(row) {
         let container = document.createElement("div");
@@ -573,26 +691,76 @@ var table = new Tabulator("#table01", {
             <div class="customize-form-inner">
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">總行代號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="總行代號"></div>
+                        <div class="customize-form-title">訂單號碼</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="訂單號碼"></div>
                     </div>
                 </div>
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">分行代號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="分行代號"></div>
+                        <div class="customize-form-title">卡號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="卡號"></div>
                     </div>
                 </div>
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">銀行帳號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="銀行帳號"></div>
+                        <div class="customize-form-title">扣款金額</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly-money" disabled="" name="扣款金額"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">出單單位</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="出單單位"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">保單號碼</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="保單號碼"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">出單日</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="出單日"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">請款日</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="請款日"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">列舉關係</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="列舉關係"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">列舉關係<br>其他說明</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="列舉關係其他說明"></div>
                     </div>
                 </div>
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
                         <div class="customize-form-title">火險建檔人員</div>
                         <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="火險建檔人員"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">授權人員</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="授權人員"></div>
                     </div>
                 </div>
             </div>
