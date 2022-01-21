@@ -4647,12 +4647,13 @@ span.tp {
 
 .query-datepicker-YMD-inner {
     width: 100%;
+    position: relative;
 }
 
 .query-datepicker-item {
-    width: 50px;
+    width: 45px;
     height: 22px;
-    display: inline-block;
+    display: table-cell;
     vertical-align: top;
     font-size: 0.875rem;
     overflow: hidden;
@@ -4675,7 +4676,7 @@ span.tp {
 .query-datepicker-item div::after {
     content: "/";
     position: absolute;
-    right: 5px;
+    right: 0;
     color: #555;
     font-size: 0.875rem;
 }
@@ -4686,10 +4687,14 @@ span.tp {
 
 .query-datepicker-item:nth-last-child(1) {
     width: 30px;
-    height: 20px;
+    height: 22px;
     cursor: pointer;
-    text-align: right;
-    float: right;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: 99;
 }
 
 .query-datepicker-item-icon {
@@ -4703,14 +4708,17 @@ span.tp {
     vertical-align: top;
     color: #555;
     font-size: 17px;
-    position: absolute;
+    line-height: 1;
+    display: block;
+    padding-top: 2px;
+   /* position: absolute;
     right: 3px;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    -o-transform: translateY(-50%);*/
 }
 
 /* END: default-datapicker */
