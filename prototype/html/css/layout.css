@@ -4651,12 +4651,20 @@ span.tp {
 }
 
 .query-datepicker-item {
-    width: 45px;
     height: 22px;
     display: table-cell;
     vertical-align: top;
     font-size: 0.875rem;
     overflow: hidden;
+}
+
+.query-datepicker-item.query-datepicker-item-y {
+    width: 40px;
+}
+
+.query-datepicker-item.query-datepicker-item-m,
+.query-datepicker-item.query-datepicker-item-d {
+    width: 30px;
 }
 
 .query-datepicker-item input {
@@ -4665,7 +4673,7 @@ span.tp {
     border: none;
     outline: none;
     padding: 0 4px;
-    vertical-align: text-top;
+    vertical-align: top;
 }
 
 .query-datepicker-item div {
@@ -4681,11 +4689,11 @@ span.tp {
     font-size: 0.875rem;
 }
 
-.query-datepicker-item:nth-last-child(2) div::after {
+.query-datepicker-item.query-datepicker-item-d div::after {
     content: "";
 }
 
-.query-datepicker-item:nth-last-child(1) {
+.query-datepicker-item.query-datepicker-item-icon {
     width: 30px;
     height: 22px;
     cursor: pointer;
@@ -4711,14 +4719,29 @@ span.tp {
     line-height: 1;
     display: block;
     padding-top: 2px;
-   /* position: absolute;
-    right: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);*/
+}
+
+.query-datepicker-YMD[attr="readonly"] {
+    background: #FFFEE1;
+}
+
+.query-datepicker-YMD[attr="readonly"] .query-datepicker-item.query-datepicker-item-icon {
+    background: none;
+}
+
+.required-empty .query-datepicker-YMD {
+    border-color: #E60012;
+}
+
+.required-empty .query-datepicker-YMD input,
+.required-empty .query-datepicker-item-icon {
+    background: none;
+}
+
+.required-empty .query-datepicker-YMD:focus-within {
+    box-shadow: none;
+    border-color: #E60012;
+    outline: none;
 }
 
 /* END: default-datapicker */
