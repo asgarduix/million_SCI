@@ -4659,12 +4659,12 @@ span.tp {
 }
 
 .query-datepicker-item.query-datepicker-item-y {
-    width: 40px;
+    width: 35px;
 }
 
 .query-datepicker-item.query-datepicker-item-m,
 .query-datepicker-item.query-datepicker-item-d {
-    width: 30px;
+    width: 35px;
 }
 
 .query-datepicker-item input {
@@ -4672,8 +4672,17 @@ span.tp {
     font-size: 0.875rem;
     border: none;
     outline: none;
-    padding: 0 4px;
+    padding: 0 0 0 4px;
     vertical-align: top;
+    text-align: center;
+}
+
+.query-datepicker-item input::placeholder {
+    text-align: center;
+}
+
+.query-datepicker-item input::-ms-input-placeholder {
+    text-align: center;
 }
 
 .query-datepicker-item div {
@@ -4681,12 +4690,16 @@ span.tp {
     height: 22px;
 }
 
-.query-datepicker-item div::after {
+.query-datepicker-item div::before {
     content: "/";
     position: absolute;
-    right: 0;
+    left: 0;
     color: #555;
     font-size: 0.875rem;
+}
+
+.query-datepicker-item.query-datepicker-item-y div::before {
+    content: "";
 }
 
 .query-datepicker-item.query-datepicker-item-d div::after {
