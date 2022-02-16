@@ -233,6 +233,12 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- 燈號 -->
+                                <div class="content-component content-hint">
+                                    <ul>
+                                        <li class="hint-bad">已刪除</li>
+                                    </ul>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -438,15 +444,28 @@
 <script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-    id: "b1",
-    定存單號: "定存單號",
-    銀行代號: "銀行代號",
-    調度日期: "調度日期",
-    序號: "序號",
-    存單種類: "存單種類",
-    用途種類: "用途種類",
-    用途: "用途",
-}, ];
+        id: "b1",
+        定存單號: "定存單號",
+        狀態: "已刪除",
+        銀行代號: "銀行代號",
+        調度日期: "調度日期",
+        序號: "序號",
+        存單種類: "存單種類",
+        用途種類: "用途種類",
+        用途: "用途",
+    },
+    {
+        id: "b2",
+        定存單號: "定存單號",
+        狀態: "",
+        銀行代號: "銀行代號",
+        調度日期: "調度日期",
+        序號: "序號",
+        存單種類: "存單種類",
+        用途種類: "用途種類",
+        用途: "用途",
+    },
+];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
     //autoColumns: true,
@@ -472,6 +491,23 @@ var table01 = new Tabulator("#table01", {
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
             }
+        },
+        {
+            title: "狀態",
+            field: "狀態",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 40,
+            minWidth: 40,
+            formatter: function(cell, formatterParams, onRendered) {
+                let hintData = cell.getValue();
+                if (hintData == "已刪除") {
+                    return "<span class='hint-bad'></span>";
+                } else {
+                    return;
+                }
+            },
+            // formatter: "link",
         },
         {
             title: "定存單號",
