@@ -482,13 +482,120 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">修改</div>
+                        <div class="dialog-header-item dialog-title">票號<span>ABC1234567</span></div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- customize-form-readonly -->
+                    <div class="customize-form">
+                        <!-- 票號/帳號/保費種類/金額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票號" value="00" title="00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="帳號" value="12345678" title="12345678" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">保費種類</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="保費種類" value="ABC123" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="金額" value="1.00" title="1.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" onkeypress="return onlyNumberKey(event)" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 到期日/付款行/託收日/票據關係 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">到期日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="到期日" value="2022-02-16" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">付款行</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="付款行" value="ABC123" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">託收日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="託收日" value="2022-02-16" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據關係</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據關係" value="票據關係" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 其他票據關係說明/開票人/會計入帳日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">其他票據<br>關係說明</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="其他票據關係說明" value="其他票據關係說明" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">開票人</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="開票人" value="ABC123456" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">會計入帳日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="會計入帳日" value="2022-02-16" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
