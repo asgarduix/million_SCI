@@ -1232,6 +1232,10 @@ a.menu-active .menu-bar {
     border: #aaa solid 1px;
 }
 
+.content-card-reload {
+    position: relative;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -3044,6 +3048,12 @@ a.menu-active .menu-bar {
     padding: 0;
 }
 
+.content-popup {
+    position: absolute;
+    border: #aaa solid 1px;
+    z-index: 5;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
@@ -4104,6 +4114,11 @@ span.tp {
     content: "";
     display: block;
     clear: both;
+}
+
+.popup-dialog-reaload {
+    width: 280px;
+    max-width: 280px;
 }
 /* END: customize-form */
 /* START:  燈號 */
