@@ -2112,6 +2112,10 @@ a.menu-active .menu-bar {
     background: #027bb3;
 }
 
+.btn-prime-disabled {
+    opacity: .3;
+}
+
 .btn-outline {
     border: #555 solid 1px;
     background: #fff;
@@ -2817,6 +2821,23 @@ a.menu-active .menu-bar {
     max-width: 100px;
     height: 30px;
     border-radius: 5px;
+}
+
+.dialog-btn-confirm {
+    padding: 0 5px 15px;
+}
+
+.confirm-checkbox {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #eee;
+}
+
+.confirm-checkbox label {
+    color: #018dcd;
+    padding-left: 3px;
+    font-size: 0.875rem;
+    vertical-align: text-bottom;
 }
 
 /* 確認 */
