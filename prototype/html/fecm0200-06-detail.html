@@ -152,7 +152,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票券商代號/調度日期/序號 -->
+                                    <!-- 票券商代號/調度日期/調度序號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -168,8 +168,8 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">序號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="序號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">調度序號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="調度序號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -407,7 +407,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">序號<span>10A060</span></div>
+                        <div class="dialog-header-item dialog-title">調度序號<span>10A060</span></div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -416,7 +416,7 @@
                 <div class="dialog-content">
                     <!-- customize-form -->
                     <div class="customize-form">
-                        <!-- 調度日期/序號/票券商代號/票券商名稱 -->
+                        <!-- 調度日期/調度序號/票券商代號/票券商名稱 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -429,9 +429,9 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">序號</div>
+                                        <div class="customize-form-title">調度序號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="序號" value="01" title="01" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="調度序號" value="01" title="01" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -491,7 +491,7 @@
                                             </div>
                                         </div>
                                         <div id="table02"></div>
-                                        <div class="table-footer">footer</div>
+                                        <div class="table-footer"></div>
                                     </div>
                                 </div>
                             </div>
@@ -678,7 +678,7 @@ var table = new Tabulator("#table02", {
     columns: [
         { title: "類別", field: "類別" },
         { title: "票券單號", field: "票券單號" },
-        { title: "成本/到期", field: "成本到期" },
+        { title: "成本/到期", field: "成本到期", hozAlign: "right" },
         { title: "金額", field: "金額", hozAlign: "right" },
     ],
 });

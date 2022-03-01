@@ -152,7 +152,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票券商代號/調度日期/序號 -->
+                                    <!-- 票券商代號/調度日期/調度序號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -168,8 +168,8 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">序號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="序號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">調度序號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="調度序號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -416,22 +416,22 @@
                 <div class="dialog-content">
                     <!-- customize-form -->
                     <div class="customize-form">
-                        <!-- 調度日期/序號/票券商代號/票券商名稱 -->
+                        <!-- 調度日期/調度序號/票券商代號/票券商名稱 -->
                         <div class="customize-form-row customize-form-row-btn">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">調度日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="調度日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="調度日期" value="2022-03-01" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">序號</div>
+                                        <div class="customize-form-title">調度序號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="序號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="調度序號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -494,7 +494,7 @@
                                             </div>
                                         </div>
                                         <div id="table02"></div>
-                                        <div class="table-footer">footer</div>
+                                        <div class="table-footer"></div>
                                     </div>
                                 </div>
                             </div>
@@ -582,28 +582,32 @@ let table01Data = [{
         票券商代號: "L019",
         票券商名稱: "萬通票券",
         調度日期: "110/12/10",
-        序號: "10A060",
+        調度序號: "10A060",
+        狀態: "狀態",
     },
     {
         id: "a2",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
         調度日期: "110/12/10",
-        序號: "10A060",
+        調度序號: "10A060",
+        狀態: "狀態",
     },
     {
         id: "a3",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
         調度日期: "110/12/10",
-        序號: "10A060",
+        調度序號: "10A060",
+        狀態: "狀態",
     },
     {
         id: "a4",
         票券商代號: "L019",
         票券商名稱: "萬通票券",
         調度日期: "110/12/10",
-        序號: "10A060",
+        調度序號: "10A060",
+        狀態: "狀態",
     },
 ]
 
@@ -635,13 +639,14 @@ var table = new Tabulator("#table01", {
         { title: "票券商名稱", field: "票券商名稱" },
         { title: "調度日期", field: "調度日期" },
         {
-            title: "序號",
-            field: "序號",
+            title: "調度序號",
+            field: "調度序號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='#'>" + cell.getValue() + "</a>"
             },
             // formatter: "link",
         },
+        { title: "狀態", field: "狀態" },
     ],
 });
 // 選擇預設勾選row
