@@ -152,7 +152,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票券商代號/賣出單號/起訖日 -->
+                                    <!-- 票券商代號/賣出單號/短票起訖區間 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -177,15 +177,15 @@
                                         </div>
                                         <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">起訖日</div>
+                                                <div class="query-field-item query-field-title">短票起訖區間</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="date" name="起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="短票起訖區間" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-1">～</div>
                                                         <div class="entry-combine entry-4">
-                                                            <input type="date" name="起訖日" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="短票起訖區間" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -240,7 +240,7 @@
                                 <!-- 燈號 -->
                                 <div class="content-component content-hint">
                                     <ul>
-                                        <li class="hint-bad">超過三筆</li>
+                                        <li class="hint-bad">超過一筆</li>
                                     </ul>
                                 </div>
                                 <div class="content-component content-table">
@@ -268,7 +268,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -516,22 +516,22 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 起日/迄日/共計/幣別 -->
+                        <!-- 短票起日/短票迄日/共計/幣別 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">起日</div>
+                                        <div class="customize-form-title">短票起日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="起日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="短票起日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">訖日</div>
+                                        <div class="customize-form-title">短票訖日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="訖日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="短票訖日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -1019,8 +1019,8 @@ let table01Data = [{
         筆數: "4",
         賣出單號: "賣出單號",
         票券商代號: "票券商代號",
-        起日: "起日",
-        訖日: "起日",
+        短票起日: "短票起日",
+        短票訖日: "短票訖日",
         成本值: "成本值",
         到期金額: "到期金額",
     },
@@ -1029,8 +1029,8 @@ let table01Data = [{
         筆數: "3",
         賣出單號: "賣出單號",
         票券商代號: "票券商代號",
-        起日: "起日",
-        訖日: "起日",
+        短票起日: "短票起日",
+        短票訖日: "短票訖日",
         成本值: "成本值",
         到期金額: "到期金額",
     },
@@ -1086,10 +1086,10 @@ var table = new Tabulator("#table01", {
             },
             // formatter: "link",
         },
-        { title: "起日", field: "起日" },
-        { title: "訖日", field: "訖日" },
-        { title: "成本值", field: "成本值" },
-        { title: "到期金額", field: "到期金額" },
+        { title: "短票起日", field: "短票起日" },
+        { title: "短票訖日", field: "短票訖日" },
+        { title: "成本值", field: "成本值", hozAlign: "right" },
+        { title: "到期金額", field: "到期金額", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row
