@@ -276,36 +276,29 @@
                                     <div class="label-inner">
                                         <div class="label-item">
                                             <div class="label-title">應收保費合計</div>
-                                            <div class="label-content label-content-counter" attr="money">100</div>
+                                            <div class="label-content label-content-counter" attr="money">0.00</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">現金合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                            <div class="label-content label-content-counter" attr="money">0.00</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">票據合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">信用卡合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">銀行存款合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">暫收款合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                            <div class="label-content label-content-counter" attr="money">0.00</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">台幣合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                            <div class="label-content label-content-counter" attr="money">0.00</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">外幣合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                            <div class="label-content label-content-counter" attr="money">0.00</div>
                                         </div>
+                                    </div>
+                                </div>
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
                                         <div class="label-item">
                                             <div class="label-title">延遲繳費說明書</div>
                                             <div class="label-content label-content-counter">0</div>
@@ -319,11 +312,7 @@
                                             <div class="label-content label-content-counter">0</div>
                                         </div>
                                         <div class="label-item">
-                                            <div class="label-title">收費憑證</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">簽收回條</div>
+                                            <div class="label-title">收費憑證/簽收回條</div>
                                             <div class="label-content label-content-counter">0</div>
                                         </div>
                                         <div class="label-item">
@@ -333,10 +322,6 @@
                                         <div class="label-item">
                                             <div class="label-title">收款證明</div>
                                             <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">溢款</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
                                         </div>
                                     </div>
                                 </div>
@@ -371,7 +356,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -554,7 +539,7 @@
 let nestedData = [
     /*{
             id: "a1",
-            製表日: "製表日",
+            繳款日: "繳款日",
             繳款批號: "繳款批號",
             憑證: "憑證",
             金額: "金額",
@@ -564,13 +549,10 @@ let nestedData = [
             開票人: "開票人",
             票據付款行: "票據付款行",
             發票人帳號: "發票人帳號",
-            ntTable: [
-                { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
-            ]
         },
         {
             id: "a2",
-            製表日: "製表日",
+            繳款日: "繳款日",
             繳款批號: "繳款批號",
             憑證: "憑證",
             金額: "金額",
@@ -580,9 +562,6 @@ let nestedData = [
             開票人: "開票人",
             票據付款行: "票據付款行",
             發票人帳號: "發票人帳號",
-            ntTable: [
-                { 已扣現金折扣: "已扣現金折扣", 關係: "關係", 收費憑證編號簽收回條: "收費憑證編號簽收回條", 訂單編號: "訂單編號", 延遲原因: "延遲原因", 幣別: "幣別", 存款日: "存款日", 洽攬人: "洽攬人", },
-            ]
         },*/
 ]
 
@@ -603,41 +582,7 @@ var table = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        {
-            formatter: (cell, formatterParams, onRendered) => {
-                let div = document.createElement('div');
-                let el = cell.getRow().getElement()
-                let btnName = ["＋", "–"]
-
-                btnName.forEach((name, index) => {
-                    let btn = document.createElement('button');
-                    $(btn).text(name)
-                    elementsChangeClass(btn, "add", "table-btn-switch")
-                    btn.addEventListener("click", (e) => {
-                        $(el).find(".table-btn-switch").toggle()
-                        $(el).find(".table-subtable-container").toggle()
-                    });
-                    if (index === 1) {
-                        $(btn).css("display", "none")
-                    }
-                    div.appendChild(btn)
-                })
-                return div
-            },
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30
-        },
-        // {
-        //     title: "批號",
-        //     field: "批號",
-        //     formatter: function(cell, formatterParams, onRendered) {
-        //         return "<a href='#'>" + cell.getValue() + "</a>"
-        //     },
-        // },
-        { title: "製表日", field: "製表日" },
+        { title: "繳款日", field: "繳款日" },
         { title: "繳款批號", field: "繳款批號" },
         { title: "憑證", field: "憑證" },
         { title: "金額", field: "金額", hozAlign: "right" },
@@ -648,46 +593,8 @@ var table = new Tabulator("#table01", {
         { title: "票據付款行", field: "票據付款行" },
         { title: "發票人帳號", field: "發票人帳號" },
     ],
-    rowFormatter: function(row) {
-        let container = document.createElement("div");
-        let subtable = document.createElement("div");
-
-        $(container).css("display", "none")
-        elementsChangeClass(container, "add", "table-subtable-container")
-        elementsChangeClass(subtable, "add", "table-subtable")
-        $(subtable).attr("id", row.getData().id)
-
-        container.appendChild(subtable);
-        row.getElement().appendChild(container);
-
-        let subTable = new Tabulator("#" + row.getData().id, {
-            layout: "fitColumns",
-            data: row.getData().ntTable,
-            columns: [
-                { title: "已扣現金折扣", field: "已扣現金折扣" },
-                { title: "關係", field: "關係" },
-                { title: "收費憑證編號/簽收回條", field: "收費憑證編號簽收回條" },
-                { title: "訂單編號", field: "訂單編號" },
-                { title: "延遲原因", field: "延遲原因" },
-                { title: "幣別", field: "幣別" },
-                { title: "存款日", field: "存款日" },
-                { title: "洽攬人", field: "洽攬人" },
-            ]
-        })
-    },
 });
 
-function elementsChangeClass(elements, behavior, classNames) {
-    if (behavior === "add") {
-        $(elements).each(function(index, element) {
-            $(element).addClass(classNames)
-        })
-    } else if (behavior === "remove") {
-        $(elements).each(function(index, element) {
-            $(element).removeClass(classNames)
-        })
-    }
-}
 </script>
 
 </html>
