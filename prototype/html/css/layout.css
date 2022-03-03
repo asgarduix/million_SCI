@@ -3841,7 +3841,7 @@ a.menu-active .menu-bar {
 }
 
 .left-content {
-    height: 200px;
+    max-height: 360px;
     overflow-y: auto;
 }
 
@@ -3913,7 +3913,8 @@ a.menu-active .menu-bar {
 }
 
 .right-item {
-    background: #ccc;
+    /*background: #ccc;*/
+    background: #f9f6f3;
 }
 
 .right-item .customize-form-row:nth-last-child(1) {
