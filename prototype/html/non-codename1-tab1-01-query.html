@@ -204,34 +204,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- query -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-query">
-                                <!-- query -->
-                                <div class="content-component content-query">
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">總行代號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="query-field-item query-field-entry">
-                                                        <div class="entry-inner">
-                                                            <div class="entry-combine entry-3">
-                                                                <input type="text" name="總行代號" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
-                                                            </div>
-                                                            <div class="entry-combine entry-7">
-                                                                <input type="text" name="總行代號" value="" title="" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- button -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -241,10 +213,10 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li> -->
                                         </ul>
                                     </div>
                                     <div class="content-btn-secondary">
@@ -279,6 +251,26 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- 跟隨tabulator_condition -->
+                                <div class="content-component content-condition">
+                                    <div class="condition-row">
+                                        <div class="condition-field condition-input condition-4">
+                                            <div class="condition-field-inner">
+                                                <div class="condition-field-item condition-field-title">總行代號</div>
+                                                <div class="condition-field-item condition-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="總行代號" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值" data-original-title="">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="總行代號" value="" title="" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top" data-original-title="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- 跟隨tabulator_upload -->
                                 <div class="content-component content-upload">
                                     <form action="">
@@ -321,7 +313,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -503,24 +495,25 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    銀行代號: "設計文字",
-    帳號: "設計文字",
-    交易日: "設計文字",
-    交易時間: "設計文字",
-    摘要: "設計文字",
-    櫃員代號: "設計文字",
-    金額: "設計文字",
-    帳上餘額: "設計文字",
-    收支: "設計文字",
-    備註: "設計文字"
-}, ];
+let table01Data = [{
+        id: "a1",
+        銀行代號: "銀行代號",
+        帳號: "帳號",
+        交易日: "交易日",
+        交易時間: "交易時間",
+        摘要: "摘要",
+        櫃員代號: "櫃員代號",
+        金額: "金額",
+        帳上餘額: "帳上餘額",
+        收支: "收支",
+        備註: "備註",
+    },
+];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
+    //autoColumns: true,
     layout: "fitColumns",
-    height: "255px",
+    // height: "255px",
     pagination: "local",
     paginationSize: 5,
     paginationSizeSelector: [5, 10, 30, 50, true],
@@ -530,8 +523,18 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "銀行代號", field: "銀行代號" },
         { title: "帳號", field: "帳號" },
         { title: "交易日", field: "交易日" },
@@ -544,6 +547,10 @@ var table01 = new Tabulator("#table01", {
         { title: "備註", field: "備註" },
     ],
 });
+// 選擇預設勾選row
+// table01.selectRow(["a1","a2"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
