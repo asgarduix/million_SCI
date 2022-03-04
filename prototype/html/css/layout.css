@@ -4237,6 +4237,16 @@ span.tp {
     /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
+.hint-empty::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 2px;
+    background: transparent;
+    /*border: rgba(255, 255, 255, .2) solid 1px;*/
+}
 /* END:  燈號 */
 
 /* START: info-block */
@@ -4836,6 +4846,19 @@ span.tp {
 }
 
 /* END: default-datapicker */
+/* START: status */
+.status-color-good {
+    color: #4baf9e !important;
+}
+
+.status-color-normal {
+    color: #333 !important;
+}
+
+.status-color-bad {
+    color: #F33349 !important;
+}
+/* START: status */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
