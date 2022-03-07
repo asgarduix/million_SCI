@@ -265,12 +265,13 @@
                                                 <div class="func-basic-item func-download">
                                                     <ul>
                                                         <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
-                                                        <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">0</li>
+                                                        <li class="count-total">1</li>
+                                                        <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -283,7 +284,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -911,22 +912,65 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    銀行代號: "設計文字",
-    分行代號: "設計文字",
-    名稱: "設計文字",
-    簡稱: "設計文字",
-    地址: "設計文字",
-    銀行統編: "設計文字",
-    電話號碼: "設計文字",
-    建檔日期: "設計文字",
-    更新日期: "設計文字",
-    作業人員: "設計文字"
-}, ];
+// var table01Data = [{
+//     checkbox: "checkbox",
+//     銀行代號: "設計文字",
+//     分行代號: "設計文字",
+//     名稱: "設計文字",
+//     簡稱: "設計文字",
+//     地址: "設計文字",
+//     銀行統編: "設計文字",
+//     電話號碼: "設計文字",
+//     建檔日期: "設計文字",
+//     更新日期: "設計文字",
+//     作業人員: "設計文字"
+// }, ];
+// var table01 = new Tabulator("#table01", {
+//     data: table01Data,
+//     autoColumns: true,
+//     layout: "fitColumns",
+//     height: "255px",
+//     pagination: "local",
+//     paginationSize: 5,
+//     paginationSizeSelector: [5, 10, 30, 50, true],
+//     movableColumns: true,
+//     resizableRows: true,
+//     tooltips: true,
+//     tooltipsHeader: true,
+//     tooltipGenerationMode: "hover",
+//     selectable: true,
+//     columns: [
+//         { title: "checkbox", field: "checkbox" },
+//         { title: "銀行代號", field: "銀行代號" },
+//         { title: "分行代號", field: "分行代號" },
+//         { title: "名稱", field: "名稱" },
+//         { title: "簡稱", field: "簡稱" },
+//         { title: "地址", field: "地址" },
+//         { title: "銀行統編", field: "銀行統編" },
+//         { title: "電話號碼", field: "電話號碼" },
+//         { title: "建檔日期", field: "建檔日期" },
+//         { title: "更新日期", field: "更新日期" },
+//         { title: "作業人員", field: "作業人員" },
+//     ],
+// });
+
+let table01Data = [{
+        id: "a1",
+        銀行代號: "銀行代號",
+        分行代號: "分行代號",
+        名稱: "賣名稱出",
+        簡稱: "簡稱",
+        地址: "地址",
+        銀行統編: "銀行統編",
+        電話號碼: "電話號碼",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        作業人員: "作業人員",
+    },
+]
+
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -937,9 +981,18 @@ var table01 = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "銀行代號", field: "銀行代號" },
         { title: "分行代號", field: "分行代號" },
         { title: "名稱", field: "名稱" },
@@ -952,6 +1005,10 @@ var table01 = new Tabulator("#table01", {
         { title: "作業人員", field: "作業人員" },
     ],
 });
+// 選擇預設勾選row
+table01.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
