@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0500-image">
+<body id="canvas" class="fedm0500-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -183,6 +183,27 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- unittab -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-unittab">
+                                <!-- unitTab -->
+                                <div class="content-component content-unittab">
+                                    <ul>
+                                        <li><a href="#" class="unittab-active">單顆印鑑維護</a></li>
+                                        <li><a href="#">印鑑群組設定</a></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -303,7 +324,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">0</li>
+                                                        <li class="count-total">2</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -316,7 +337,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -477,31 +498,7 @@
             </main>
         </div>
     </div>
-    <!-- popup-image -->
-    <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-confirm">
-            <form action="">
-                <div class="dialog-header">
-                    <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">印鑑：董事長</div>
-                        <div class="dialog-header-item dialog-cancel">
-                            <a href="#"><span class="material-icons">cancel</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dialog-content">
-                    <div class="dialog-content-image"><img src="img/seal.png" alt=""></div>
-                    <div class="dialog-content-desc"><p>印鑑檔描述</p></div>
-                </div>
-                <div class="dialog-btn">
-                    <ul>
-                        <li><button class="btn-prime">下載</button></li>
-                        <li><button class="btn-outline">取消</button></li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-    </div>
+    <!-- popup -->
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -522,24 +519,38 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    印鑑代號: "設計文字",
-    印鑑分類: "設計文字",
-    印鑑名稱: "設計文字",
-    英文名稱: "設計文字",
-    使用狀況: "設計文字",
-    生效日期: "設計文字",
-    停用日期: "設計文字",
-    建檔日期: "設計文字",
-    更新日期: "設計文字",
-    停用原因: "設計文字",
-    印鑑影像檔: "圖檔"
-}, ];
+let tableData = [{
+        id: "a1",
+        印鑑代號: "印鑑代號",
+        印鑑分類: "印鑑分類",
+        印鑑名稱: "印鑑名稱",
+        英文名稱: "英文名稱",
+        使用狀況: "使用狀況",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        停用原因: "停用原因",
+        印鑑影像檔: "圖檔"
+    },
+    {
+        id: "a2",
+        印鑑代號: "印鑑代號",
+        印鑑分類: "印鑑分類",
+        印鑑名稱: "印鑑名稱",
+        英文名稱: "英文名稱",
+        使用狀況: "使用狀況",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        停用原因: "停用原因",
+        印鑑影像檔: "圖檔"
+    },
+]
 
 var table01 = new Tabulator("#table01", {
-    data: table01Data,
-    autoColumns: true,
+    data: tableData,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -549,10 +560,20 @@ var table01 = new Tabulator("#table01", {
     resizableRows: true,
     tooltips: true,
     tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    tooltipGenerationMode: "hover",
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "印鑑代號", field: "印鑑代號" },
         { title: "印鑑分類", field: "印鑑分類" },
         { title: "印鑑名稱", field: "印鑑名稱" },
@@ -566,5 +587,10 @@ var table01 = new Tabulator("#table01", {
         { title: "印鑑影像檔", field: "圖檔" },
     ],
 });
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
+
 </html>

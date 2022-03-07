@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0500-modify">
+<body id="canvas" class="fedm0500-add">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -183,6 +183,27 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- unittab -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-unittab">
+                                <!-- unitTab -->
+                                <div class="content-component content-unittab">
+                                    <ul>
+                                        <li><a href="#" class="unittab-active">單顆印鑑維護</a></li>
+                                        <li><a href="#">印鑑群組設定</a></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -303,8 +324,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">3</li>
-                                                        <li class="count-check">1</li>
+                                                        <li class="count-total">2</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -484,7 +504,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">修改</div>
+                        <div class="dialog-header-item dialog-title">新增</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -505,7 +525,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">印鑑代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="印鑑代號" value="001" title="001" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="印鑑代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -514,9 +534,9 @@
                                         <div class="customize-form-title">印鑑分類</div>
                                         <div class="customize-form-entry">
                                             <select name="利息進位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="">請選擇</option>
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">公司章</option>
-                                                <option value="" selected="">董事長</option>
+                                                <option value="">董事長</option>
                                                 <option value="">總經理</option>
                                                 <option value="">合約章</option>
                                                 <option value="">發票章</option>
@@ -528,7 +548,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">印鑑名稱</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="印鑑名稱" value="華南董事長" title="華南董事長" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="印鑑名稱" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -536,7 +556,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">英文名稱</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="英文名稱" value="Chiefman" title="Chiefman" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="英文名稱" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -550,8 +570,8 @@
                                         <div class="customize-form-title">使用狀況</div>
                                         <div class="customize-form-entry">
                                             <select name="利息進位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="">請選擇</option>
-                                                <option value="" selected="">使用中</option>
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="">使用中</option>
                                                 <option value="">停用</option>
                                             </select>
                                         </div>
@@ -561,7 +581,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">生效日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="生效日期" value="2021/05/01" title="2021/05/01" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="生效日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -569,7 +589,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">停用日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="停用日期" value="2021/05/01" title="2021/05/01" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="停用日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -577,7 +597,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">建檔日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="建檔日期" value="2021/05/01" title="2021/05/01" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="建檔日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -590,14 +610,14 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">更新日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="更新日期" value="2021/05/01" title="2021/05/01" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="更新日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-3">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">停用原因</div>
-                                        <div class="customize-form-entry"><input type="text" name="停用原因" value="升遷" title="升遷" placeholder="請輸入值"></div>
+                                        <div class="customize-form-entry"><input type="text" name="停用原因" value="" title="" placeholder="請輸入值"></div>
                                     </div>
                                 </div>
                             </div>
@@ -616,7 +636,7 @@
                                         <div class="customize-form-upload-inner">
                                             <div class="customize-form-upload-item customize-form-upload-title">上傳檔案</div>
                                             <div class="customize-form-upload-item customize-form-upload-browse">
-                                                <div class="customize-form-upload-input"><input type="text" value="chidfman_seal.png"></div>
+                                                <div class="customize-form-upload-input"><input type="text"></div>
                                                 <div class="customize-form-upload-button"><button>瀏覽</button></div>
                                                 <div class="customize-form-upload-note"><p>(檔案格式：png / 建議尺寸：200px * 200px)</p></div>
                                             </div>
@@ -626,13 +646,13 @@
                                     <div class="customize-form-desc">
                                         <div class="customize-form-desc-inner">
                                             <div class="customize-form-desc-item customize-form-desc-title">印鑑檔描述</div>
-                                            <div class="customize-form-desc-item customize-form-desc-textarea"><textarea name="" id="" cols="30" rows="5" placeholder="請輸入值">印鑑檔描述</textarea></div>
+                                            <div class="customize-form-desc-item customize-form-desc-textarea"><textarea name="" id="" cols="30" rows="5"></textarea></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-form-thumbnail">
-                                        <div class="customize-form-thumbnail-image" attr=''><img src="img/seal.png" alt=""></div>
+                                        <div class="customize-form-thumbnail-image" attr='empty'><!-- <img src="img/seal.png" alt=""> --></div>
                                         <div class="customize-form-thumbnail-button">
                                             <ul>
                                                 <li><button class="thumbnail-confirm">確定上傳</button></li>
@@ -674,24 +694,38 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    印鑑代號: "設計文字",
-    印鑑分類: "設計文字",
-    印鑑名稱: "設計文字",
-    英文名稱: "設計文字",
-    使用狀況: "設計文字",
-    生效日期: "設計文字",
-    停用日期: "設計文字",
-    建檔日期: "設計文字",
-    更新日期: "設計文字",
-    停用原因: "設計文字",
-    印鑑影像檔: "圖檔"
-}, ];
+let tableData = [{
+        id: "a1",
+        印鑑代號: "印鑑代號",
+        印鑑分類: "印鑑分類",
+        印鑑名稱: "印鑑名稱",
+        英文名稱: "英文名稱",
+        使用狀況: "使用狀況",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        停用原因: "停用原因",
+        印鑑影像檔: "圖檔"
+    },
+    {
+        id: "a2",
+        印鑑代號: "印鑑代號",
+        印鑑分類: "印鑑分類",
+        印鑑名稱: "印鑑名稱",
+        英文名稱: "英文名稱",
+        使用狀況: "使用狀況",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        停用原因: "停用原因",
+        印鑑影像檔: "圖檔"
+    },
+]
 
 var table01 = new Tabulator("#table01", {
-    data: table01Data,
-    autoColumns: true,
+    data: tableData,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -701,10 +735,20 @@ var table01 = new Tabulator("#table01", {
     resizableRows: true,
     tooltips: true,
     tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    tooltipGenerationMode: "hover",
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "印鑑代號", field: "印鑑代號" },
         { title: "印鑑分類", field: "印鑑分類" },
         { title: "印鑑名稱", field: "印鑑名稱" },
@@ -718,6 +762,10 @@ var table01 = new Tabulator("#table01", {
         { title: "印鑑影像檔", field: "圖檔" },
     ],
 });
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>

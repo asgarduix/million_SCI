@@ -310,7 +310,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">0</li>
+                                                        <li class="count-total">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -323,7 +323,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -505,23 +505,22 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    公司代號: "設計文字",
-    公司名稱: "設計文字",
-    信評機構: "設計文字",
-    長期評等: "設計文字",
-    短期評等: "設計文字",
-    評等日期: "設計文字",
-    生效日期: "設計文字",
-    建檔日期: "設計文字",
-    更新日期: "設計文字",
-    作業人員: "設計文字"
-}, ];
+let table01Data = [{
+    id: "a1",
+    公司代號: "公司代號",
+    公司名稱: "公司名稱",
+    信評機構: "信評機構",
+    長期評等: "長期評等",
+    短期評等: "短期評等",
+    評等日期: "評等日期",
+    生效日期: "生效日期",
+    建檔日期: "建檔日期",
+    更新日期: "更新日期",
+    作業人員: "作業人員"
+}, ]
 
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -532,9 +531,18 @@ var table01 = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "公司代號", field: "公司代號" },
         { title: "公司名稱", field: "公司名稱" },
         { title: "信評機構", field: "信評機構" },
@@ -548,6 +556,10 @@ var table01 = new Tabulator("#table01", {
         { title: "作業人員", field: "作業人員" },
     ],
 });
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
