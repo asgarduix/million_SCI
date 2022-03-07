@@ -283,7 +283,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -465,22 +465,23 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    id: "a1",
-    銀行代號: "銀行代號",
-    分行代號: "分行代號",
-    名稱: "名稱",
-    簡稱: "簡稱",
-    地址: "地址",
-    銀行統編: "銀行統編",
-    電話號碼: "電話號碼",
-    建檔日期: "建檔日期",
-    更新日期: "更新日期",
-    作業人員: "作業人員"
-}, ];
+let table01Data = [{
+        id: "a1",
+        銀行代號: "銀行代號",
+        分行代號: "分行代號",
+        名稱: "賣名稱出",
+        簡稱: "簡稱",
+        地址: "地址",
+        銀行統編: "銀行統編",
+        電話號碼: "電話號碼",
+        建檔日期: "建檔日期",
+        更新日期: "更新日期",
+        作業人員: "作業人員",
+    },
+]
+
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -491,7 +492,6 @@ var table01 = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -516,6 +516,10 @@ var table01 = new Tabulator("#table01", {
         { title: "作業人員", field: "作業人員" },
     ],
 });
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
