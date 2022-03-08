@@ -227,6 +227,58 @@
                         <hr class="seperate-line">
                         <!-- tabulator創立table（上） -->
                         <div class="card-detail">
+                            <!-- customize-form -->
+                            <div class="customize-form page-customize-form">
+                                <!-- <div class="customize-form-row">
+                                    <div class="customize-form-header">
+                                        <span>列帳</span>
+                                    </div>
+                                </div> -->
+                                <!-- 列帳/調度日期/序號/作業別 -->
+                                <div class="customize-form-row">
+                                    <div class="customize-form-inner">
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">列帳</div>
+                                                <div class="customize-form-entry">
+                                                    <select name="列帳" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                        <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                        <option value="">總公司</option>
+                                                        <option value="">列帳2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">調度日期</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="date" name="調度日期" value="2022-03-08" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">序號</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="序號" value="1" title="1" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">作業別</div>
+                                                <div class="customize-form-entry">
+                                                    <select name="作業別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                        <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                        <option value="">網銀</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- card-detail >> board -->
                             <div class="detail-board">
                                 <!-- content-selector -->
@@ -576,7 +628,7 @@ var table02 = new Tabulator("#table02", {
             headerSort: false,
             maxWidth: 30,
             minWidth: 30,
-        }, 
+        },
         {
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
