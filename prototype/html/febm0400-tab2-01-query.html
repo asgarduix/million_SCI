@@ -361,8 +361,8 @@
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">2</li>
-                                                        <li class="count-check">2</li>
-                                                        <li class="count-money">1,200</li>
+                                                        <!-- <li class="count-check">2</li>
+                                                        <li class="count-money">1,200</li> -->
                                                     </ul>
                                                 </div>
                                                 <!-- <div class="func-basic-item func-filter">
@@ -559,12 +559,12 @@
 <script>
 var table01Data = [{
     借貸: "借",
-    銀行: "004-台灣銀行",
-    帳戶餘額: "20,000,000",
-    調度金額: "100,000,000",
-    試算餘額: "100,000,000",
-    試算調度日: "110/09/11",
-    人員: "A0816899"
+    銀行代號: "0081061",
+    銀行名稱: "華銀中山",
+    帳號: "106100285822",
+    狀態: "活存",
+    調度金額: "10,000,050.00",
+    匯費: "25.00"
 }, ];
 
 var table01 = new Tabulator("#table01", {
@@ -590,19 +590,12 @@ var table01 = new Tabulator("#table01", {
             maxWidth: 30,
             minWidth: 30,
         },
-        {
-            title: "銀行",
-            field: "銀行",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
-            },
-            // formatter: "link",
-        },
-        { title: "帳戶餘額", field: "帳戶餘額", hozAlign: "right" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "狀態", field: "狀態" },
         { title: "調度金額", field: "調度金額", hozAlign: "right" },
-        { title: "試算餘額", field: "試算餘額", hozAlign: "right" },
-        { title: "試算調度日", field: "試算調度日" },
-        { title: "人員", field: "人員" },
+        { title: "匯費", field: "匯費", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row
@@ -614,36 +607,27 @@ var table02Data = [{
         id: "a1",
         借貸: "貸",
         燈號: "不良",
-        銀行: "004-台灣銀行",
-        帳戶餘額: "20,000,000",
-        調度金額: "100,000,000",
-        試算餘額: "100,000,000",
-        試算調度日: "110/09/11",
-        人員: "A0816899"
+        銀行代號: "0060855",
+        銀行名稱: "合庫仁愛",
+        帳號: "0855717326151",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
     },
     {
         id: "a2",
         借貸: "貸",
         燈號: "正常",
-        銀行: "008-華南銀行",
-        帳戶餘額: "15,150,000",
-        調度金額: "8,000,000",
-        試算餘額: "7,150,000",
-        試算調度日: "110/09/11",
-        人員: "A0816899"
-    },
-    {
-        id: "a3",
-        借貸: "貸",
-        燈號: "良好",
-        銀行: "800-中華郵政",
-        帳戶餘額: "20,000,000",
-        調度金額: "23,000",
-        試算餘額: "977,000",
-        試算調度日: "110/09/11",
-        人員: "A0816899"
+        銀行代號: "8221252",
+        銀行名稱: "中信銀信義",
+        帳號: "252890002163",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
     },
 ];
+
+
 
 var table02 = new Tabulator("#table02", {
     data: table02Data,
@@ -667,7 +651,8 @@ var table02 = new Tabulator("#table02", {
             headerSort: false,
             maxWidth: 30,
             minWidth: 30,
-        }, {
+        },
+        {
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
             headerHozAlign: "center",
@@ -698,15 +683,10 @@ var table02 = new Tabulator("#table02", {
             },
             // formatter: "link",
         },
-        {
-            title: "銀行",
-            field: "銀行",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
-            },
-            // formatter: "link",
-        },
-        { title: "帳戶餘額", field: "帳戶餘額", hozAlign: "right" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "狀態", field: "狀態" },
         {
             title: "調度金額",
             field: "調度金額",
@@ -717,13 +697,20 @@ var table02 = new Tabulator("#table02", {
             editor: "input",
             hozAlign: "right",
         },
-        { title: "試算餘額", field: "試算餘額", hozAlign: "right" },
-        { title: "試算調度日", field: "試算調度日" },
-        { title: "人員", field: "人員" },
+        {
+            title: "匯費",
+            field: "匯費",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
     ],
 });
 // 選擇預設勾選row
-// table01.selectRow("a1");
+// table02.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
