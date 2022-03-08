@@ -1475,6 +1475,44 @@ a.menu-active .menu-bar {
     background: #b90211;
 }
 
+.func-data-modify {
+    border-right: #ccc solid 1px;
+}
+
+.func-data-modify ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.func-data-modify li {
+    display: inline-block;
+}
+
+.func-data-modify a {
+    width: 45px;
+    font-size: 0.625rem;
+    display: block;
+    border-radius: 2px;
+    line-height: 1;
+    padding: 2px 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.func-data-modify a.table-data-modify {
+    background: #909399;
+    color: #fff;
+    border: #909399 solid 1px;
+}
+
+.func-data-modify a.table-data-modify:hover,
+.func-data-modify a.table-data-modify:active,
+.func-data-modify a.table-data-modify:focus {
+    background: #585a5e;
+}
+
+
 .func-count ul {
     list-style: none;
     padding: 0;
@@ -1512,6 +1550,16 @@ a.menu-active .menu-bar {
 .count-check::after {
     content: "筆";
     margin-left: 3px;
+}
+
+.count-money::before {
+    content: "合計";
+    margin-right: 3px;  
+}
+
+.count-money::after {
+    content: "元";
+    margin-left: 3px;  
 }
 
 .func-filter {
@@ -4859,6 +4907,24 @@ span.tp {
     color: #F33349 !important;
 }
 /* START: status */
+/* START: content-selector */
+.content-selector {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.content-selector select {
+    width: auto;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.content-selector label {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #027DB4;
+}
+/* END: content-selector */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
