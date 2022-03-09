@@ -361,8 +361,9 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-third"><span>開戶</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>銷戶</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>印鑑更換</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>印鑑批次變更</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>變更印鑑群組</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-third"><span>印鑑更換</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>印鑑批次變更</span></button></li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -603,23 +604,23 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
-    checkbox: "checkbox",
-    管理單位: "設計文字",
-    地區代號: "設計文字",
-    帳號: "設計文字",
-    存款別: "設計文字",
-    幣別: "設計文字",
-    帳戶性質: "設計文字",
-    原留印鑑: "設計文字",
-    保管人: "設計文字"
+    id: "a1",
+    管理單位: "管理單位",
+    地區代號: "地區代號",
+    帳號: "帳號",
+    存款別: "存款別",
+    幣別: "幣別",
+    帳戶性質: "帳戶性質",
+    印鑑組合: "印鑑組合",
+    保管人: "保管人"
 }, ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
+    //autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
-    paginationSize: 5,
+    paginationSize: 10,
     paginationSizeSelector: [5, 10, 30, 50, true],
     movableColumns: true,
     resizableRows: true,
@@ -627,18 +628,32 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "管理單位", field: "管理單位" },
         { title: "地區代號", field: "地區代號" },
         { title: "帳號", field: "帳號" },
         { title: "存款別", field: "存款別" },
         { title: "幣別", field: "幣別" },
         { title: "帳戶性質", field: "帳戶性質" },
-        { title: "原留印鑑", field: "原留印鑑" },
+        { title: "印鑑組合", field: "印鑑組合" },
         { title: "保管人", field: "保管人" },
     ],
 });
+// 選擇預設勾選row
+// table01.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
