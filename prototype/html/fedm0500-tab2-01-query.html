@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0500-query">
+<body id="canvas" class="fedm0500-tab2-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -191,7 +191,7 @@
                                 <div class="content-component content-unittab">
                                     <ul>
                                         <li><a href="#">單顆印鑑維護</a></li>
-                                        <li><a href="#" class="unittab-active">印鑑群組設定</a></li>
+                                        <li><a href="#" class="unittab-active">印鑑組合設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -210,13 +210,13 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 印鑑群組/印鑑代碼/印鑑分類 -->
+                                    <!-- 印鑑組合/印鑑分類/使用狀況 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">印鑑群組</div>
+                                                <div class="query-field-item query-field-title">印鑑組合</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="印鑑群組" id="">
+                                                    <select name="印鑑組合" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
                                                         <option value="">五選三</option>
                                                         <option value="">四選三A</option>
@@ -224,12 +224,6 @@
                                                         <option value="">二選二</option>
                                                     </select>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">印鑑代碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="印鑑代碼" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
@@ -247,21 +241,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 印鑑名稱/英文名稱/使用狀況 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">印鑑名稱</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="印鑑名稱" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">英文名稱</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="英文名稱" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">使用狀況</div>
@@ -276,7 +255,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 生效日期/停用日期/停用原因 -->
+                                    <!-- 生效日期/停用日期 -->
                                     <div class="query-row">
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
@@ -288,19 +267,6 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">停用日期</div>
                                                 <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="停用日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">停用原因</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="使用狀況" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">升遷</option>
-                                                        <option value="">離職</option>
-                                                        <option value="">借調</option>
-                                                    </select>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -538,19 +504,21 @@
 <script>
 let tableData = [{
         id: "a1",
-        印鑑群組: "印鑑群組",
+        印鑑組合: "印鑑組合",
         使用狀況: "使用狀況",
         建檔日期: "建檔日期",
-        印鑑變更日: "印鑑變更日",
-        停用原因: "停用原因",
+        印鑑組合變更日: "印鑑組合變更日",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
     },
     {
         id: "a2",
-        印鑑群組: "印鑑群組",
+        印鑑組合: "印鑑組合",
         使用狀況: "使用狀況",
         建檔日期: "建檔日期",
-        印鑑變更日: "印鑑變更日",
-        停用原因: "停用原因",
+        印鑑組合變更日: "印鑑組合變更日",
+        生效日期: "生效日期",
+        停用日期: "停用日期",
     },
 ]
 
@@ -579,11 +547,12 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "印鑑群組", field: "印鑑群組" },
+        { title: "印鑑組合", field: "印鑑組合" },
         { title: "使用狀況", field: "使用狀況" },
         { title: "建檔日期", field: "建檔日期" },
-        { title: "印鑑變更日", field: "印鑑變更日" },
-        { title: "停用原因", field: "停用原因" },
+        { title: "印鑑組合變更日", field: "印鑑組合變更日" },
+        { title: "生效日期", field: "生效日期" },
+        { title: "停用日期", field: "停用日期" },
     ],
 });
 // 選擇預設勾選row
