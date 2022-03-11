@@ -501,7 +501,7 @@
                                 <span>新增印鑑組合名稱</span>
                             </div>
                         </div>
-                        <!-- 印鑑組合名稱-->
+                        <!-- 印鑑組合名稱/印鑑組合 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
@@ -514,14 +514,35 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">印鑑選擇</div>
+                                        <div class="customize-form-title">印鑑組合</div>
                                         <div class="customize-form-entry">
-                                            <select name="印鑑選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="印鑑組合" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">六選五</option>
                                                 <option value="">四選三</option>
                                                 <option value="">二選二</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 印鑑組合生效日/印鑑組合停用日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">印鑑組合生效日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="印鑑組合生效日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">印鑑組合停用日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="印鑑組合停用日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -656,10 +677,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
     {
         id: "a2",
@@ -668,10 +685,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
     {
         id: "a3",
@@ -680,10 +693,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
     {
         id: "a4",
@@ -692,10 +701,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
     {
         id: "a5",
@@ -704,10 +709,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
     {
         id: "a6",
@@ -716,10 +717,6 @@ let table02Data = [{
         英文名稱: "英文名稱",
         使用狀況: "使用狀況",
         生效日期: "生效日期",
-        停用日期: "停用日期",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        停用原因: "停用原因",
     },
 ]
 
@@ -753,10 +750,6 @@ var table02 = new Tabulator("#table02", {
         { title: "英文名稱", field: "英文名稱" },
         { title: "使用狀況", field: "使用狀況" },
         { title: "生效日期", field: "生效日期" },
-        { title: "停用日期", field: "停用日期" },
-        { title: "建檔日期", field: "建檔日期" },
-        { title: "更新日期", field: "更新日期" },
-        { title: "停用原因", field: "停用原因" },
     ],
 });
 // 選擇預設勾選row
