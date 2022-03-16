@@ -426,7 +426,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -648,7 +648,7 @@ let table01Data = [{
     備註: "設計",
 }, ]
 
-var table = new Tabulator("#table01", {
+var table01 = new Tabulator("#table01", {
     data: table01Data,
     layout: "fitColumns",
     height: "255px",
@@ -680,7 +680,7 @@ var table = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-table.selectRow("a1,a2");
+table01.selectRow(["a1","a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 
