@@ -511,14 +511,14 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">轉入資料庫</div>
+                        <div class="dialog-header-item dialog-title">入帳</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行轉入資料庫?<br />轉入檔案<span class="dialog-count">1</span></p>
+                    <p>是否執行入帳?<br />入帳檔案<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -577,6 +577,8 @@ var table = new Tabulator("#table01", {
             headerHozAlign: "center",
             hozAlign: "center",
             headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
             }
@@ -604,7 +606,9 @@ var table = new Tabulator("#table01", {
             },
             headerHozAlign: "center",
             hozAlign: "center",
-            headerSort: false
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30
         },
         { title: "批號", field: "批號" },
         { title: "賠案號碼", field: "賠案號碼" },

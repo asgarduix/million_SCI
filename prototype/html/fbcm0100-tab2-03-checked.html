@@ -344,7 +344,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
@@ -554,6 +554,8 @@ var table = new Tabulator("#table01", {
             headerHozAlign: "center",
             hozAlign: "center",
             headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
             }
@@ -581,7 +583,9 @@ var table = new Tabulator("#table01", {
             },
             headerHozAlign: "center",
             hozAlign: "center",
-            headerSort: false
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30
         },
         { title: "批號", field: "批號" },
         { title: "賠案號碼", field: "賠案號碼" },
