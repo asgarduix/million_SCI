@@ -4352,7 +4352,7 @@ span.tp {
 
 .info-block-item li span[icon]::after {
     content: attr(icon);
-    padding: 0 10px;
+    /*padding: 0 10px;*/
     display: inline-block;
     color: #777;
 }
