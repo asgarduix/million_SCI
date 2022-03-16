@@ -3393,7 +3393,7 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
-    vertical-align: text-top;
+    vertical-align: top;
 }
 
 .customize-form-entry input[type="radio"],
@@ -4298,7 +4298,7 @@ span.tp {
 /* END:  燈號 */
 
 /* START: info-block */
-.detail-board-info-block {
+.dialog-content .detail-board-info-block {
     padding: 0;
     background: none;
     border: none;
@@ -4328,20 +4328,24 @@ span.tp {
 
 .info-block-item-inner {
     border-radius: 6px;
-    border: #ccc solid 1px;
+    border: #8cb6db solid 1px;
     padding: 5px 10px;
-    background: #f9fafb;
+    background: #ecf6ff;
 }
 
 .info-block-item ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: table;
+    table-layout: fixed;
 }
 
 .info-block-item li {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: table-cell;
     vertical-align: top;
+    padding: 0 4px;
 }
 
 .info-block-item li span:nth-child(1) {}
@@ -4363,6 +4367,10 @@ span.tp {
     padding-left: 2px;
     color: #696968;
     font-weight: normal;
+}
+
+.info-block-item li span:nth-child(2) {
+    padding: 0 2px;
 }
 
 .info-block-item li span:nth-child(2)::before {
@@ -4451,10 +4459,15 @@ span.tp {
     content: "$";
 }
 
+/* 費用計算 */
+.content-info-cash-1 .info-block-item ul {
+    width: 100%;
+}
+
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
-    padding: 5px 10px;
+    padding: 0 0 8px;
     margin-right: 0;
 }
 

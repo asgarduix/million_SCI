@@ -485,7 +485,153 @@
                                 <span>撤退票結案維護</span>
                             </div>
                         </div>
-                        <!-- 新收費狀態/新撤退票日/新票據種類 -->
+                        <!-- 申請單號/申請單位/申請日期/申請項目 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請單號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="申請單號" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請單位</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="申請單位" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="申請日期" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請項目</div>
+                                        <div class="customize-form-entry">
+                                            <ul>
+                                                <li><input type="radio" id="frd01" name="申請項目"><label for="frd01">報表</label></li>
+                                                <li><input type="radio" id="frd02" name="申請項目"><label for="frd02">維護</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 責任歸屬/結案狀態 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">責任歸屬</div>
+                                        <div class="customize-form-entry">
+                                            <ul>
+                                                <li><input type="radio" id="frd03" name="責任歸屬"><label for="frd03">客戶</label></li>
+                                                <li><input type="radio" id="frd04" name="責任歸屬"><label for="frd04">公司</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">結案狀態</div>
+                                        <div class="customize-form-entry">
+                                            <select name="結案狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                <option value="" selected="">待結案</option>
+                                                <option value="">已結案</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 票據號碼/到期日/票據金額/發票人帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據號碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據號碼" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">到期日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="到期日" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據金額" value="" title="" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" onkeypress="return onlyNumberKey(event)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">發票人帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="發票人帳號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 付款別/開票人 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">付款別</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">開票人</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-6">
+                                                    <input type="text" name="開票人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 新收費狀態/新撤退票日/新票據種類/預計打呆 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -515,19 +661,21 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 暫收款關聯/退票原因/預計打呆/結案狀態 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">暫收款關聯</div>
+                                        <div class="customize-form-title">預計打呆</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="暫收款關聯" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <ul>
+                                                <li><input type="checkbox" id="close-ck1" name="預計打呆"><label for="close-ck1">是</label></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- 退票原因/關係別/關係別說明/備註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">退票原因</div>
@@ -548,32 +696,6 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">預計打呆</div>
-                                        <div class="customize-form-entry">
-                                            <ul>
-                                                <li><input type="checkbox" id="close-ck1" name="預計打呆"><label for="close-ck1">是</label></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">結案狀態</div>
-                                        <div class="customize-form-entry">
-                                            <select name="結案狀態" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="" selected="">待結案</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 關係別/關係別說明/責任歸屬/備註-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
                                         <div class="customize-form-title">關係別</div>
                                         <div class="customize-form-entry">
                                             <input type="text" name="關係別" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
@@ -590,14 +712,6 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">責任歸屬</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="責任歸屬" value="客戶" title="客戶" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
                                         <div class="customize-form-title">備註</div>
                                         <div class="customize-form-entry">
                                             <select name="信評機構" id="" value="" title="" data-toggle="tooltip" data-placement="left">
@@ -607,6 +721,75 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="seperate-line">
+                    <!-- 資訊磚 -->
+                    <div class="card-detail">
+                        <!-- card-detail >> board -->
+                        <div class="detail-board detail-board-info-block">
+                            <!-- info-block  -->
+                            <div class="content-component content-info-block content-info-cash content-info-cash-1">
+                                <div class="content-info-block-inner">
+                                    <div class="info-block-item">
+                                        <div class="info-block-item-inner">
+                                            <ul>
+                                                <li><span>元票據金額</span><span icon="－">0.00</span></li>
+                                                <li><span>票據合計</span><span icon="－">0.00</span></li>
+                                                <li><span>現金合計</span><span icon="－">0.00</span></li>
+                                                <li><span>現金轉銀存合計</span><span icon="－">0.00</span></li>
+                                                <li><span>信用卡合計</span><span icon="－">0.00</span></li>
+                                                <li><span>銀行存款合計</span><span icon="－">0.00</span></li>
+                                                <li><span>暫收款合計</span><span icon="＝">0.00</span></li>
+                                                <li><span>借貸金額</span><span>0.00</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <!-- card-detail >> board -->
+                        <div class="detail-board">
+                            <!-- tab-link -->
+                            <div class="content-component content-tab-link">
+                                <ul>
+                                    <li><a href="#" class="tab-link-active">支票</a></li>
+                                    <li><a href="#">現金</a></li>
+                                    <li><a href="#">現金轉銀存</a></li>
+                                    <li><a href="#">信用卡</a></li>
+                                    <li><a href="#">銀行存款</a></li>
+                                    <li><a href="#">暫收款</a></li>
+                                </ul>
+                            </div>
+                            <div class="content-component content-table">
+                                <div class="table-func">
+                                    <div class="table-func-inner">
+                                        <div class="table-func-basic">
+                                            <div class="func-basic-item func-download">
+                                                <ul>
+                                                    <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="func-basic-item func-count">
+                                                <ul>
+                                                    <li class="count-total">2</li>
+                                                    <li class="count-check">1</li>
+                                                </ul>
+                                            </div>
+                                            <div class="func-basic-item func-filter">
+                                                <div class="func-filter-inner">
+                                                    <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-func-page">頁碼</div>
+                                    </div>
+                                </div>
+                                <div id="table02"></div>
+                                <div class="table-footer"></div>
                             </div>
                         </div>
                     </div>
@@ -663,7 +846,7 @@ let table01Data = [{
     },
 ]
 
-var table = new Tabulator("#table01", {
+var table01 = new Tabulator("#table01", {
     data: table01Data,
     layout: "fitColumns",
     height: "255px",
@@ -704,7 +887,76 @@ var table = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-table.selectRow("a1");
+table01.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+////////////////////////////////////////////////////////
+let table02Data = [{
+        id: "a1",
+        申請單號: "申請單號",
+        票據號碼: "票據號碼",
+        票據金額: "票據金額",
+        託收日: "託收日",
+        到期日: "到期日",
+        發票人帳號: "發票人帳號",
+        票據狀態: "票據狀態",
+        核准日: "核准日",
+    },
+    {
+        id: "a2",
+        申請單號: "申請單號",
+        票據號碼: "票據號碼",
+        票據金額: "票據金額",
+        託收日: "託收日",
+        到期日: "到期日",
+        發票人帳號: "發票人帳號",
+        票據狀態: "票據狀態",
+        核准日: "核准日",
+    },
+]
+
+var table02 = new Tabulator("#table02", {
+    data: table02Data,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "申請單號", field: "申請單號" },
+        {
+            title: "票據號碼",
+            field: "票據號碼",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+        },
+        { title: "票據金額", field: "票據金額" },
+        { title: "託收日", field: "託收日" },
+        { title: "到期日", field: "到期日" },
+        { title: "發票人帳號", field: "發票人帳號" },
+        { title: "票據狀態", field: "票據狀態" },
+        { title: "核准日", field: "核准日" },
+    ],
+});
+// 選擇預設勾選row
+table02.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
