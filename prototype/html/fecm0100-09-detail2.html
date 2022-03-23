@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fecm0100-add">
+<body id="canvas" class="fecm0100-detail">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -429,13 +429,13 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-detail -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">票券代號<span>ABC123456</span></div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -451,11 +451,11 @@
                                 <div class="label-inner">
                                     <div class="label-item">
                                         <div class="label-title">現在筆數</div>
-                                        <div class="label-content label-content-counter">0</div>
+                                        <div class="label-content label-content-counter">1</div>
                                     </div>
                                     <div class="label-item">
                                         <div class="label-title">合計金額</div>
-                                        <div class="label-content label-content-counter">0.00</div>
+                                        <div class="label-content label-content-counter">49,948,490.00</div>
                                     </div>
                                     <div class="label-item">
                                         <div class="label-title">票券商總合計金額</div>
@@ -481,10 +481,10 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="">
+                                                    <input type="text" name="票券代號" value="L026" title="L026" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="" attr="readonly" disabled="">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-6">
-                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
+                                                    <input type="text" name="票券代號" value="台灣票券" title="台灣票券" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
                                                 </div>
                                             </div>
                                         </div>
@@ -494,7 +494,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">賣出單號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="賣出單號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="賣出單號" value="10A012" title="10A012" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -504,10 +504,10 @@
                                         <div class="customize-form-entry">
                                             <div class="customize-form-entry-container">
                                                 <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
+                                                    <input type="text" name="票券代號" value="0081061" title="0081061" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
                                                 </div>
                                                 <div class="customize-form-entry-col customize-form-entry-6">
-                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
+                                                    <input type="text" name="票券代號" value="券戶代號" title="券戶代號" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
                                                 </div>
                                             </div>
                                         </div>
@@ -530,7 +530,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">短票起日</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="短票起日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="短票起日" value="111/3/29" title="111/3/29" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -538,7 +538,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">短票訖日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="短票訖日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="短票訖日" value="111/3/9" title="111/3/9" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -546,7 +546,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">共計</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="共計" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="共計" value="11" title="11" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             <span>天</span>
                                         </div>
                                     </div>
@@ -555,9 +555,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">幣別</div>
                                         <div class="customize-form-entry">
-                                            <select name="幣別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="幣別" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">NTD</option>
+                                                <option value="" selected="">NTD</option>
                                                 <option value="">USD</option>
                                                 <option value="">HKD</option>
                                                 <option value="">EUR</option>
@@ -574,7 +574,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">付息方式</div>
                                         <div class="customize-form-entry">
-                                            <select name="付息方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="付息方式" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">二年</option>
                                                 <option value="">一年</option>
@@ -582,7 +582,7 @@
                                                 <option value="">每季</option>
                                                 <option value="">每月</option>
                                                 <option value="">不付息</option>
-                                                <option value="">其他</option>
+                                                <option value="" selected="">其他</option>
                                             </select>
                                         </div>
                                     </div>
@@ -591,7 +591,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">利率(年息%)</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="共計" value="0.0000" title="0.0000" placeholder="" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="共計" value="0.1800" title="0.1800" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             <span>%</span>
                                         </div>
                                     </div>
@@ -600,7 +600,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">利息所得</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="" value="0.00" title="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
+                                            <input type="text" name="" value="2439.00" title="2439.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -621,9 +621,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">保管情形</div>
                                         <div class="customize-form-entry">
-                                            <select name="保管情形" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="保管情形" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">集保</option>
+                                                <option value="" selected="">集保</option>
                                                 <option value="">遠銀保管</option>
                                                 <option value="">其他</option>
                                             </select>
@@ -634,9 +634,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">投資型態</div>
                                         <div class="customize-form-entry">
-                                            <select name="投資型態" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="投資型態" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">短期投資</option>
+                                                <option value="" selected="">短期投資</option>
                                                 <option value="">長期投資</option>
                                             </select>
                                         </div>
@@ -651,10 +651,10 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">票類</div>
                                         <div class="customize-form-entry">
-                                            <select name="票類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="票類" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">BA</option>
-                                                <option value="">CP2</option>
+                                                <option value="" selected="">CP2</option>
                                                 <option value="">NCD</option>
                                                 <option value="">TB</option>
                                                 <option value="">GB</option>
@@ -666,9 +666,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">交易種類</div>
                                         <div class="customize-form-entry">
-                                            <select name="交易種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="交易種類" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">上市</option>
+                                                <option value="" selected="">上市</option>
                                                 <option value="">上櫃</option>
                                                 <option value="">興櫃</option>
                                                 <option value="">其他</option>
@@ -680,9 +680,9 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">募集方式</div>
                                         <div class="customize-form-entry">
-                                            <select name="募集方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                            <select name="募集方式" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">公開募集</option>
+                                                <option value="" selected="">公開募集</option>
                                                 <option value="">私募</option>
                                                 <option value="">其他</option>
                                             </select>
@@ -706,7 +706,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">保證機構代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="保證機構代號" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="保證機構代號" value="L019" title="L019" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -714,7 +714,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">保證機構</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="保證機構" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="保證機構" value="萬通票券" title="萬通票券" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -722,7 +722,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">發票人信評機構</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="發票人信評機構" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="發票人信評機構" value="發票人信評機構" title="發票人信評機構" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -730,7 +730,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">信評等級</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="信評等級" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <input type="text" name="信評等級" value="信評等級" title="信評等級" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -741,15 +741,10 @@
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <div class="add-sub-form"><button>新增票券</button></div>
+                                <span>票券清單</span>
                             </div>
                         </div>
                         <div class="sub-form">
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>刪除</button></div>
-                                </div>
-                            </div>
                             <!-- 票券批號/票券面額 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
@@ -757,7 +752,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票券批號</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="票券批號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                <input type="text" name="票券批號" value="065001006965000" title="065001006965000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -765,7 +760,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票券面額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="票券面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="票券面額" value="50,000,000" title="50,000,000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -778,7 +773,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">成本金額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="成本金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="成本金額" value="49,948,490" title="49,948,490" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -786,7 +781,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">到期金額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="到期金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="到期金額" value="49,950,929" title="49,950,929" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -799,7 +794,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">稅額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="稅額" value="271" title="271" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -807,7 +802,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">利息所得</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="利息所得" value="2,439" title="2,439" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -815,7 +810,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">發票代號</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="發票代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                                <input type="text" name="發票代號" value="97071677" title="97071677" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -823,7 +818,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">發票人</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="發票人" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                                <input type="text" name="發票人" value="毅錩金屬" title="毅錩金屬" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -836,9 +831,9 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">關係人註</div>
                                             <div class="customize-form-entry">
-                                                <select name="關係人註" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <select name="關係人註" id="" value="" title="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                                     <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                    <option value="">子母公司關係人</option>
+                                                    <option value="" selected="">子母公司關係人</option>
                                                     <option value="">非子母公司關係人</option>
                                                     <option value="">非關係人</option>
                                                     <option value="">其他</option>
@@ -855,7 +850,7 @@
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">信評等級</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="信評等級" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                                <input type="text" name="信評等級" value="信評等級" title="信評等級" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                             </div>
                                         </div>
                                     </div>
