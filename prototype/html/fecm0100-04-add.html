@@ -472,10 +472,10 @@
                                 <span>短期票券維護</span>
                             </div>
                         </div>
-                        <!-- 票券代號/賣出單號/券戶代號/券戶中文名稱 -->
+                        <!-- 票券代號/賣出單號/券戶代號/買入到期調度日/券戶中文名稱 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-1 required-field">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">票券代號</div>
                                         <div class="customize-form-entry">
@@ -490,7 +490,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-1 required-field">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">賣出單號</div>
                                         <div class="customize-form-entry">
@@ -502,36 +502,43 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">券戶代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="券戶代號" value="0081061" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-6">
+                                                    <input type="text" name="票券代號" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" maxlength="" disabled="" attr="readonly">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
+                                <!-- <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">券戶中文名稱</div>
                                         <div class="customize-form-entry">
                                             <input type="text" name="券戶中文名稱" value="華銀中山" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 買入到期調度日/短票起日/短票迄日/共計-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
+                                </div> -->
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">買入到期調度日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="買入到期調度日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="買入到期調度日" value="111/3/23" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- 短票起日/短票迄日/共計/幣別 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">短票起日</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="短票起日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="短票起日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -552,11 +559,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 幣別/付息方式/利率(年息%)/利息所得 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">幣別</div>
@@ -571,6 +573,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- 付息方式/利率(年息%)/利息所得/稅額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">付息方式</div>
@@ -588,11 +595,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-1 field-with-text">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">利率(年息%)</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利率(年息%)" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="共計" value="0.0000" title="0.0000" placeholder="" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <span>%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -600,23 +608,23 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">利息所得</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            <input type="text" name="" value="0.00" title="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">稅額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="稅額" value="0.00" title="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 稅額/保管情形/投資型態 -->
+                        <!-- 保管情形/投資型態 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">稅額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">保管情形</div>
@@ -644,7 +652,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 票類/債券順位/交易種類/募集方式 -->
+                        <!-- 票類/交易種類/募集方式/債券順位 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -659,14 +667,6 @@
                                                 <option value="">TB</option>
                                                 <option value="">GB</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">債券順位</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="債券順位" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -697,6 +697,51 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">債券順位</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="債券順位" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 保證機構代號/保證機構/發票人信評機構/信評等級 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">保證機構代號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="保證機構代號" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">保證機構</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="保證機構" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">發票人信評機構</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="發票人信評機構" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">信評等級</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="信評等級" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -716,7 +761,7 @@
                             <!-- 票券批號/票券面額 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-form-field customize-form-field-1 required-field">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票券批號</div>
                                             <div class="customize-form-entry">
@@ -755,22 +800,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 利息所得/稅額/發票代號/發票人 -->
+                            <!-- 稅額/利息所得/發票代號/發票人 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">利息所得</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">稅額</div>
                                             <div class="customize-form-entry">
                                                 <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">利息所得</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
                                             </div>
                                         </div>
                                     </div>
@@ -792,7 +837,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 關係人註/保證機構代號/保證機構/發票人信評機構 -->
+                            <!-- 關係人註 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
                                     <div class="customize-form-field customize-form-field-1">
@@ -806,172 +851,6 @@
                                                     <option value="">非關係人</option>
                                                     <option value="">其他</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">保證機構代號</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="保證機構代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">保證機構</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="保證機構" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">發票人信評機構</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="發票人信評機構" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 信評等級 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">信評等級</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="信評等級" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sub-form">
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>刪除</button></div>
-                                </div>
-                            </div>
-                            <!-- 票券批號/票券面額 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">票券批號</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="票券批號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">票券面額</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="票券面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 成本金額/到期金額 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">成本金額</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="成本金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">到期金額</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="到期金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 利息所得/稅額/發票代號/發票人 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">利息所得</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">稅額</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">發票代號</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="發票代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">發票人</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="發票人" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 關係人註/保證機構代號/保證機構/發票人信評機構 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">關係人註</div>
-                                            <div class="customize-form-entry">
-                                                <select name="關係人註" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                    <option value="">子母公司關係人</option>
-                                                    <option value="">非子母公司關係人</option>
-                                                    <option value="">非關係人</option>
-                                                    <option value="">其他</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">保證機構代號</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="保證機構代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">保證機構</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="保證機構" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">發票人信評機構</div>
-                                            <div class="customize-form-entry">
-                                                <input type="text" name="發票人信評機構" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
                                             </div>
                                         </div>
                                     </div>
