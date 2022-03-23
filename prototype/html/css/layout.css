@@ -1554,12 +1554,12 @@ a.menu-active .menu-bar {
 
 .count-money::before {
     content: "合計";
-    margin-right: 3px;  
+    margin-right: 3px;
 }
 
 .count-money::after {
     content: "元";
-    margin-left: 3px;  
+    margin-left: 3px;
 }
 
 .func-filter {
@@ -4232,6 +4232,7 @@ span.tp {
     width: 280px;
     max-width: 280px;
 }
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
@@ -4295,6 +4296,7 @@ span.tp {
     background: transparent;
     /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
+
 /* END:  燈號 */
 
 /* START: info-block */
@@ -4342,13 +4344,10 @@ span.tp {
 }
 
 .info-block-item li {
-    /*display: inline-block;*/
     display: table-cell;
     vertical-align: top;
     padding: 0 4px;
 }
-
-.info-block-item li span:nth-child(1) {}
 
 .info-block-item li span[icon]::after {
     content: attr(icon);
@@ -4462,6 +4461,30 @@ span.tp {
 /* 費用計算 */
 .content-info-cash-1 .info-block-item ul {
     width: 100%;
+    padding: 4px 0;
+    border-top: rgba(140, 182, 219, .7) solid 1px;
+}
+
+.content-info-cash-1 .info-block-item ul:nth-child(1) {
+    border-top: none;
+}
+
+.content-info-cash-1 .info-block-item li.group-title {
+    width: 35px;
+    position: relative;
+}
+
+.content-info-cash-1 .info-block-item li.group-title span {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 3px;
+    font-weight: normal;
+    background-color: #026D93;
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 3px;
 }
 
 /* END: info-block */
@@ -4919,6 +4942,7 @@ span.tp {
 .status-color-bad {
     color: #F33349 !important;
 }
+
 /* START: status */
 /* START: content-selector */
 .content-selector {
@@ -4937,6 +4961,7 @@ span.tp {
     font-weight: bold;
     color: #027DB4;
 }
+
 /* END: content-selector */
 @media only screen and (max-width: 1280px) {
 
