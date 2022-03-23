@@ -269,10 +269,24 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="condition-field condition-input">
+                                        <div class="condition-field condition-input condition-4">
                                             <div class="condition-field-inner">
                                                 <div class="condition-field-item condition-field-title">總行代號</div>
-                                                <div class="condition-field-item condition-field-entry"><input type="text" placeholder="請輸入值" name="總行代號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="condition-field-item condition-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <select name="作業選擇" id="">
+                                                                <option value="" disabled selected hidden>請選擇</option>
+                                                                <option value="">012345</option>
+                                                                <option value="">135790</option>
+                                                                <option value="">246802</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" placeholder="" name="總行名稱" title="" data-toggle="tooltip" data-placement="top" disabled="" attr="readonly">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -535,20 +549,19 @@
 <script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-        id: "a1",
-        燈號: "異常",
-        銷帳單位: "設計",
-        票據號碼: "設計",
-        到期日: "設計",
-        託收日: "設計",
-        銷帳日: "設計",
-        序號: "設計",
-        票據金額: "設計",
-        託收帳號: "設計",
-        付款行別: "設計",
-        異常原因: "設計",
-    },
-]
+    id: "a1",
+    燈號: "異常",
+    銷帳單位: "設計",
+    票據號碼: "設計",
+    到期日: "設計",
+    託收日: "設計",
+    銷帳日: "設計",
+    序號: "設計",
+    票據金額: "設計",
+    託收帳號: "設計",
+    付款行別: "設計",
+    異常原因: "設計",
+}, ]
 
 var table = new Tabulator("#table01", {
     data: table01Data,

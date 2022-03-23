@@ -1849,7 +1849,6 @@ a.menu-active .menu-bar {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.875rem;
-    height: 24px;
 }
 
 .condition-1 {
@@ -2579,11 +2578,16 @@ a.menu-active .menu-bar {
 
 .entry-combine {
     display: table-cell;
+    vertical-align: top;
     padding-right: 3px;
 }
 
 .entry-combine:nth-last-child(1) {
     padding-right: 0;
+}
+
+.hack {
+    height: 0;
 }
 
 .entry-center {
