@@ -3652,8 +3652,12 @@ a.menu-active .menu-bar {
 }
 
 /* 圖像上傳 */
-.customize-form-upload {
+/*.customize-form-upload {
     border-bottom: #aaa solid 1px;
+}*/
+
+.customize-form-desc {
+    border-top: #aaa solid 1px;
 }
 
 .customize-form-upload-inner {
@@ -3668,6 +3672,10 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
     color: #026D93;
 }
+
+.dialog-content .customize-form-upload-item p {
+    padding: 0;
+} 
 
 .customize-form-upload-title {
     padding-right: 10px;
