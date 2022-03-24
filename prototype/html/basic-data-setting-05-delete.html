@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="basic-data-setting-04-detail">
+<body id="canvas" class="basic-data-setting-05-delete">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -395,101 +395,29 @@
             </main>
         </div>
     </div>
-    <!-- popup-detail -->
+    <!-- popup-delete -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-add">
+        <div class="popup-dialog popup-dialog-delete">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">AUD</div>
+                        <div class="dialog-header-item dialog-title">刪除</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>主檔資料維護</span>
-                            </div>
-                        </div>
-                        <!-- 主檔代號/主檔名稱 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1 required-field">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">主檔代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="主檔代號" value="C" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">主檔名稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="主檔代號" value="幣別" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>主檔明細</span>
-                            </div>
-                        </div>
-                        <!-- 排序/代號/中文名稱/英文名稱 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">排序</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="排序" value="10" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="代號" value="AUD" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">中文名稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="中文名稱" value="澳幣" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">英文名稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="英文名稱" value="AUD" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dialog-btn">
-                        <ul>
-                            <li><button class="btn-prime" onclick="location.href='basic-data-setting-01-query.html'" type="button">確定</button></li>
-                            <li><button class="btn-outline" onclick="location.href='basic-data-setting-01-query.html'" type="button">取消</button></li>
-                        </ul>
-                    </div>
+                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-warn" onclick="location.href='basic-data-setting-01-query.html'" type="button">確定</button></li>
+                        <li><button class="btn-outline" onclick="location.href='basic-data-setting-01-query.html'" type="button">取消</button></li>
+                    </ul>
                 </div>
             </form>
         </div>
-        <!-- customize-form-tooltip-content -->
-        <div class="tp-container">批單號碼：123456<br>批單號碼：246802<br>批單號碼：135791</div>
     </div>
 </body>
 <!-- jQuery_3.5.1  -->
