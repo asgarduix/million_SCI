@@ -399,36 +399,46 @@
 <script>
 let table01Data = [{
         id: "a1",
-        主檔代號: "ASI001",
+        主檔代號: "C",
         主檔名稱: "幣別",
-        ntTable: [
-            { 明細: "NTD / USD / CNY / RMB" },
-        ]
+        排序: "10",
+        代號: "AUD",
+        中文名稱: "澳幣",
+        英文名稱: "AUD"
     },
     {
         id: "a2",
-        主檔代號: "ASI002",
-        主檔名稱: "分行代碼",
-        ntTable: [
-            { 明細: "008123 / 008246 / 008135 / 008012" },
-        ]
+        主檔代號: "C",
+        主檔名稱: "幣別",
+        排序: "24",
+        代號: "BRD",
+        中文名稱: "文萊",
+        英文名稱: "BRD"
     },
     {
-        id: "a3",
-        主檔代號: "ASI003",
-        主檔名稱: "分行名稱",
-        ntTable: [
-            { 明細: "華銀-中山分行 / 華銀-信義分行 / 華銀-中正分行 / 華銀-松山分行" },
-        ]
+        id: "a2",
+        主檔代號: "C",
+        主檔名稱: "幣別",
+        排序: "11",
+        代號: "CAD",
+        中文名稱: "加拿大幣",
+        英文名稱: "CAD"
     },
 ];
-
 var table01 = new Tabulator("#table01", {
-    height: "100%",
-    layout: "fitColumns",
-    movableColumns: true,
     data: table01Data,
-    //selectable: true,
+    //autoColumns: true,
+    layout: "fitColumns",
+    // height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -441,80 +451,18 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        {
-            formatter: (cell, formatterParams, onRendered) => {
-                let div = document.createElement('div');
-                let el = cell.getRow().getElement()
-                let btnName = ["＋", "–"]
-
-                btnName.forEach((name, index) => {
-                    let btn = document.createElement('button');
-                    $(btn).text(name)
-                    elementsChangeClass(btn, "add", "table-btn-switch")
-                    btn.addEventListener("click", (e) => {
-                        $(el).find(".table-btn-switch").toggle()
-                        $(el).find(".table-subtable-container").toggle()
-                    });
-                    if (index === 1) {
-                        $(btn).css("display", "none")
-                    }
-                    div.appendChild(btn)
-                })
-                return div
-            },
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30
-        },
-        // {
-        //     title: "主檔代號",
-        //     field: "主檔代號",
-        //     formatter: function(cell, formatterParams, onRendered) {
-        //         return "<a href='#'>" + cell.getValue() + "</a>"
-        //     },
-        // },
         { title: "主檔代號", field: "主檔代號" },
         { title: "主檔名稱", field: "主檔名稱" },
+        { title: "排序", field: "排序" },
+        { title: "代號", field: "代號" },
+        { title: "中文名稱", field: "中文名稱" },
+        { title: "英文名稱", field: "英文名稱" },
     ],
-    rowFormatter: function(row) {
-        let container = document.createElement("div");
-        let subtable = document.createElement("div");
-
-        $(container).css("display", "none")
-        elementsChangeClass(container, "add", "table-subtable-container")
-        elementsChangeClass(subtable, "add", "table-subtable")
-        $(subtable).attr("id", row.getData().id)
-
-        container.appendChild(subtable);
-        row.getElement().appendChild(container);
-
-        let subTable = new Tabulator("#" + row.getData().id, {
-            layout: "fitColumns",
-            data: row.getData().ntTable,
-            columns: [
-                { title: "明細", field: "明細", headerSort: false, },
-            ]
-        })
-    },
 });
-
-function elementsChangeClass(elements, behavior, classNames) {
-    if (behavior === "add") {
-        $(elements).each(function(index, element) {
-            $(element).addClass(classNames)
-        })
-    } else if (behavior === "remove") {
-        $(elements).each(function(index, element) {
-            $(element).removeClass(classNames)
-        })
-    }
-}
 // 選擇預設勾選row
-// table01.selectRow(["b1"]);
+// table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
-// table.selectRow(table.setFilter("id","=","a1"));
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
