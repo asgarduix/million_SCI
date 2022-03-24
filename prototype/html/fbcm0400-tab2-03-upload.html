@@ -220,7 +220,7 @@
                                 <div class="content-component content-unittab">
                                     <ul>
                                         <li><a href="#">整批兌現</a></li>
-                                        <li><a href="#" class="unittab-active">一般兌現</a></li>
+                                        <li><a href="#" class="unittab-active">單筆兌現</a></li>
                                         <li><a href="#">兌現駁回</a></li>
                                         <li></li>
                                         <li></li>
@@ -241,7 +241,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 銷帳單位/託收帳號/兌現日 -->
+                                    <!-- 銷帳單位/託收帳號/託收日 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -275,33 +275,33 @@
                                         </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">兌現日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="兌現日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 託收日/到期日 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">託收日</div>
                                                 <div class="query-field-item query-field-entry"><input type="date" id="" name="託收日" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 到期起訖日/票據號碼 -->
+                                    <div class="query-row">
                                         <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">交易起訖日</div>
+                                                <div class="query-field-item query-field-title">到期起訖日</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="date" name="交易起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="到期起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-1">～</div>
                                                         <div class="entry-combine entry-4">
-                                                            <input type="date" name="交易起訖日" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="到期起訖日" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">票據號碼</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" id="" name="票據號碼" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -554,8 +554,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="dialog-content">
+                <!-- <div class="dialog-content">
                     <p>是否執行兌現票據?<br />兌現票據<span class="dialog-count">1</span></p>
+                </div> -->
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>票據兌現<span class="num-counter">1</span></span>
+                            </div>
+                        </div>
+                        <!-- 調度日期 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4 customize-form-serial-number">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">調度日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="到期日" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -587,16 +610,28 @@
 <script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-    id: "a1",
-    票號: "設計",
-    到期日: "設計",
-    託收日: "設計",
-    銷帳日: "設計",
-    序號: "設計",
-    票據金額: "設計",
-    帳號: "設計",
-    付款行別: "設計",
-}, ]
+        id: "a1",
+        票號: "票號",
+        到期日: "到期日",
+        託收日: "託收日",
+        銷帳日: "銷帳日",
+        序號: "序號",
+        票據金額: "票據金額",
+        帳號: "帳號",
+        付款行別: "付款行別",
+    },
+    {
+        id: "a2",
+        票號: "票號",
+        到期日: "到期日",
+        託收日: "託收日",
+        銷帳日: "銷帳日",
+        序號: "序號",
+        票據金額: "票據金額",
+        帳號: "帳號",
+        付款行別: "付款行別",
+    },
+]
 
 var table = new Tabulator("#table01", {
     data: table01Data,

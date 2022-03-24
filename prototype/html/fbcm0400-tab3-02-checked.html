@@ -220,7 +220,7 @@
                                 <div class="content-component content-unittab">
                                     <ul>
                                         <li><a href="#">整批兌現</a></li>
-                                        <li><a href="#">一般兌現</a></li>
+                                        <li><a href="#">單筆兌現</a></li>
                                         <li><a href="#" class="unittab-active">兌現駁回</a></li>
                                         <li></li>
                                         <li></li>
@@ -241,18 +241,18 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 票據單位/票號 -->
+                                    <!-- 銷帳單位/票號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">票據單位</div>
+                                                <div class="query-field-item query-field-title">銷帳單位</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="text" name="票據單位" value="008" title="008" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="銷帳單位" value="008" title="008" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
-                                                            <input type="text" name="票據單位" value="台北總公司" title="台北總公司" data-toggle="tooltip" data-placement="top" disabled="" attr="readonly">
+                                                            <input type="text" name="銷帳單位" value="台北總公司" title="台北總公司" data-toggle="tooltip" data-placement="top" disabled="" attr="readonly">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -502,7 +502,7 @@
 <script>
 let table01Data = [{
     id: "a1",
-    票據單位: "設計",
+    銷帳單位: "設計",
     票號: "設計",
     入帳日: "設計",
     銷帳日: "設計",
@@ -519,7 +519,7 @@ let table01Data = [{
 }, 
 {
     id: "a2",
-    票據單位: "設計",
+    銷帳單位: "設計",
     票號: "設計",
     入帳日: "設計",
     銷帳日: "設計",
@@ -559,7 +559,7 @@ var table = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "票據單位", field: "票據單位" },
+        { title: "銷帳單位", field: "銷帳單位" },
         { title: "票號", field: "票號" },
         { title: "入帳日", field: "入帳日" },
         { title: "銷帳日", field: "銷帳日" },
