@@ -658,7 +658,14 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "印鑑組合", field: "印鑑組合" },
+        {
+            title: "印鑑組合",
+            field: "印鑑組合",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+            // formatter: "link",
+        },
         { title: "使用狀況", field: "使用狀況" },
         { title: "建檔日期", field: "建檔日期" },
         { title: "印鑑組合變更日", field: "印鑑組合變更日" },

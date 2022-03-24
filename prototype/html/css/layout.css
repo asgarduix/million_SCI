@@ -1601,7 +1601,7 @@ a.menu-active .menu-bar {
 }
 
 .content-table .tabulator {
-    border: #aaa solid 1px;
+    /*border: #aaa solid 1px;*/
     border-right: none;
     background: #aaa;
 }
@@ -1683,11 +1683,16 @@ a.menu-active .menu-bar {
 
 /* nest table */
 .table-subtable-container {
-    padding: 5px 5px 10px;
+    /*padding: 5px 5px 10px;*/
+    /*padding: 0 0 7px;*/
     background: #EAF9FF;
-    border-right: #aaa solid 1px;
-    border-top: #aaa solid 1px;
-    border-bottom: #b2a38c solid 3px;
+    border: none;
+    border-bottom: #aaa solid 3px;
+    padding-bottom: ;
+    /*border-right: #777 solid 4px;
+    border-left: #777 solid 4px;
+    border-top: #aaa solid 5px;
+    border-bottom: #aaa solid 5px;*/
 }
 
 .table-btn-switch {
@@ -1704,7 +1709,8 @@ a.menu-active .menu-bar {
 }
 
 .table-subtable-container .tabulator .tabulator-header {
-    background: #F7F2EB;
+    background: #f0ebf7;
+    /*background: #F7F2EB;*/
     color: #111;
 }
 
@@ -2955,6 +2961,18 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
+/* 預覽圖檔 */
+.popup-dialog-image {
+    width: 720px;
+    max-width: 720px;
+}
+
+.popup-dialog-image .dialog-header {
+    background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 /* 上傳異常 */
 /* 刪除 */
 .popup-dialog-error {
@@ -3166,6 +3184,21 @@ a.menu-active .menu-bar {
     position: absolute;
     border: #aaa solid 1px;
     z-index: 5;
+}
+
+/* 圖片清單 */
+.dialog-image-list {
+    border-left: #aaa solid 1px;
+    border-top: #aaa solid 1px;
+    overflow: auto;
+}
+
+.dialog-image-item {
+    border-right: #aaa solid 1px;
+    border-bottom: #aaa solid 1px;
+    width: 33.33333%;
+    float: left;
+    padding: 4px;
 }
 
 /* END: popup */
@@ -4492,7 +4525,8 @@ span.tp {
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
-    padding: 0 0 8px;
+    /*padding: 0 0 8px;*/
+    padding: 0 10px;
     margin-right: 0;
 }
 
