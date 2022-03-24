@@ -612,28 +612,6 @@ let table01Data = [{
         id: "a1",
         主檔代號: "C",
         主檔名稱: "幣別",
-        排序: "10",
-        代號: "AUD",
-        中文名稱: "澳幣",
-        英文名稱: "AUD"
-    },
-    {
-        id: "a2",
-        主檔代號: "C",
-        主檔名稱: "幣別",
-        排序: "24",
-        代號: "BRD",
-        中文名稱: "文萊",
-        英文名稱: "BRD"
-    },
-    {
-        id: "a2",
-        主檔代號: "C",
-        主檔名稱: "幣別",
-        排序: "11",
-        代號: "CAD",
-        中文名稱: "加拿大幣",
-        英文名稱: "CAD"
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -663,11 +641,14 @@ var table01 = new Tabulator("#table01", {
             }
         },
         { title: "主檔代號", field: "主檔代號" },
-        { title: "主檔名稱", field: "主檔名稱" },
-        { title: "排序", field: "排序" },
-        { title: "代號", field: "代號" },
-        { title: "中文名稱", field: "中文名稱" },
-        { title: "英文名稱", field: "英文名稱" },
+        {
+            title: "主檔名稱",
+            field: "主檔名稱",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='basic-data-setting-04-detail.html'>" + cell.getValue() + "</a>"
+            },
+            // formatter: "link",
+        },
     ],
 });
 // 選擇預設勾選row
