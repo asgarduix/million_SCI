@@ -417,8 +417,8 @@
                                 <!-- 燈號 -->
                                 <div class="content-component content-hint">
                                     <ul>
-                                        <li class="hint-bad">異常</li>
-                                        <li class="hint-good">正常</li>
+                                        <li class="hint-bad">未結案</li>
+                                        <li class="hint-good">已結案</li>
                                     </ul>
                                 </div>
                                 <div class="content-component content-table">
@@ -663,7 +663,7 @@
 <script>
 let nestedData = [{
         id: "a1",
-        燈號: "正常",
+        燈號: "已結案",
         單位: "01",
         票號: "PD4448549",
         開票人: "聯豐企業股份有限公司",
@@ -705,7 +705,7 @@ let nestedData = [{
     },
     {
         id: "a2",
-        燈號: "異常",
+        燈號: "未結案",
         單位: "01",
         票號: "PD4448549",
         開票人: "聯豐企業股份有限公司",
@@ -747,9 +747,9 @@ var table = new Tabulator("#table01", {
             minWidth: 30,
             formatter: function(cell, formatterParams, onRendered) {
                 let hintData = cell.getValue();
-                if (hintData === "異常") {
+                if (hintData === "未結案") {
                     return "<span class='hint-bad'></span>";
-                } else if (hintData === "正常") {
+                } else if (hintData === "已結案") {
                     return "<span class='hint-good'></span>";
                 }
             },
