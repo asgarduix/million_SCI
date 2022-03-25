@@ -900,12 +900,14 @@ table01.selectRow(["a1"]);
 let table02Data = [{
         id: "a1",
         暫收款號: "暫收款號1",
-        金額: "1,000,000",
+        暫收款金額: "1,000,000",
+        沖銷金額: "0",
     },
     {
         id: "a2",
         暫收款號: "暫收款號2",
-        金額: "2,000,000",
+        暫收款金額: "2,000,000",
+        沖銷金額: "0",
     },
 ]
 
@@ -935,7 +937,17 @@ var table02 = new Tabulator("#table02", {
             }
         },
         { title: "暫收款號", field: "暫收款號" },
-        { title: "金額", field: "金額", hozAlign: "right" },
+        { title: "暫收款金額", field: "暫收款金額", hozAlign: "right" },
+        {
+            title: "沖銷金額",
+            field: "沖銷金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
 
     ],
 });
