@@ -768,7 +768,7 @@
                             <div class="content-component content-table">
                                 <!-- customize-form -->
                                 <div class="customize-form">
-                                    <!-- 訂單號碼/收單銀行 -->
+                                    <!-- 訂單號碼 -->
                                     <div class="customize-form-row customize-form-row-btn">
                                         <div class="customize-form-inner">
                                             <div class="customize-form-field customize-form-field-2">
@@ -776,14 +776,6 @@
                                                     <div class="customize-form-title">訂單號碼</div>
                                                     <div class="customize-form-entry">
                                                         <input type="text" name="訂單號碼" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="customize-form-field customize-form-field-2">
-                                                <div class="customize-field-inner">
-                                                    <div class="customize-form-title">收單銀行</div>
-                                                    <div class="customize-form-entry">
-                                                        <input type="text" name="收單銀行" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                                     </div>
                                                 </div>
                                             </div>
@@ -907,21 +899,19 @@ table01.selectRow(["a1"]);
 ////////////////////////////////////////////////////////
 let table02Data = [{
         id: "a1",
-        銀行分行代號: "銀行分行代號",
-        銀行分行名稱: "銀行分行名稱",
-        帳號: "帳號1",
-        金額: "1,000,000",
-        匯款日期: "匯款日期",
-        匯款人: "匯款人",
+        訂單號碼: "訂單號碼",
+        收單銀行: "收單銀行",
+        刷卡金額: "1,000,000",
+        請款日: "請款日",
+        入帳日: "入帳日",
     },
     {
         id: "a2",
-        銀行分行代號: "銀行分行代號",
-        銀行分行名稱: "銀行分行名稱",
-        帳號: "帳號2",
-        金額: "2,000,000",
-        匯款日期: "匯款日期",
-        匯款人: "匯款人",
+        訂單號碼: "訂單號碼",
+        收單銀行: "收單銀行",
+        刷卡金額: "2,000,000",
+        請款日: "請款日",
+        入帳日: "入帳日",
     },
 ]
 
@@ -950,12 +940,11 @@ var table02 = new Tabulator("#table02", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "銀行分行代號", field: "銀行分行代號" },
-        { title: "銀行分行名稱", field: "銀行分行名稱" },
-        { title: "帳號", field: "帳號" },
-        { title: "金額", field: "金額", hozAlign: "right" },
-        { title: "匯款日期", field: "匯款日期" },
-        { title: "匯款人", field: "匯款人" },
+        { title: "訂單號碼", field: "訂單號碼" },
+        { title: "收單銀行", field: "收單銀行" },
+        { title: "刷卡金額", field: "刷卡金額", hozAlign: "right" },
+        { title: "請款日", field: "請款日" },
+        { title: "入帳日", field: "入帳日" },
     ],
 });
 // 選擇預設勾選row
