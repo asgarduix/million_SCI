@@ -3265,7 +3265,7 @@ a.menu-active .menu-bar {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 /* END: popup */
@@ -3666,6 +3666,7 @@ a.menu-active .menu-bar {
 .customize-form-row-btn .customize-form-field:nth-last-child(1) {
     width: 60px;
     position: relative;
+    border: none;
 }
 
 .customize-form-row-btn .customize-form-field button.field-btn {
@@ -3742,7 +3743,7 @@ a.menu-active .menu-bar {
 
 .dialog-content .customize-form-upload-item p {
     padding: 0;
-} 
+}
 
 .customize-form-upload-title {
     padding-right: 10px;
@@ -4636,6 +4637,23 @@ span.tp {
     background: #e0ecff;
     color: #483dcc;
     border-color: #e0ecff;
+}
+
+.content-tab-link a span {
+    font-size: 0.875rem;
+}
+
+.content-tab-link a span::before {
+    content: "(";
+    font-size: 0.875rem;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.content-tab-link a span::after {
+    content: ")";
+    font-size: 0.875rem;
+    margin-left: 1px;
 }
 
 /* END: tab-link */

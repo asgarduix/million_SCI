@@ -184,6 +184,12 @@ hr.seperate-line {
     border-top: 1px solid rgba(0, 0, 0, .05);
 }
 
+hr.seperate-line-tiny {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+}
+
 @media only screen and (max-width: 1280px) {}
 
 @media only screen and (max-width: 1299px) {}
