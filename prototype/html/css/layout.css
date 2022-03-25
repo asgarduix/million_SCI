@@ -3226,10 +3226,12 @@ a.menu-active .menu-bar {
     font-size: 0.45rem;
     line-height: 1.1;
     color: #777;
+    padding: 0 1px;
 }
 
 .dialog-image-item-name {
     font-weight: bold;
+    padding: 0 1px;
 }
 
 .dialog-image-item-print {
