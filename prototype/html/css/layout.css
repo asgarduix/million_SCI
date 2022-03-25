@@ -1688,7 +1688,6 @@ a.menu-active .menu-bar {
     background: #EAF9FF;
     border: none;
     border-bottom: #aaa solid 3px;
-    padding-bottom: ;
     /*border-right: #777 solid 4px;
     border-left: #777 solid 4px;
     border-top: #aaa solid 5px;
@@ -2998,9 +2997,9 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
-.popup-dialog-add .content-table {
+/*.popup-dialog-add .content-table {
     padding: 0;
-}
+}*/
 
 /* 有輸入的跳窗 */
 .dialog-entry {
@@ -3033,9 +3032,9 @@ a.menu-active .menu-bar {
 }
 
 /* table */
-.dialog-content .detail-board {
+/*.dialog-content .detail-board {
     padding: 5px;
-}
+}*/
 
 /* 跳窗頁籤 */
 .dialog-content-tab {

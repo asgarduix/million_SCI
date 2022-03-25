@@ -735,14 +735,14 @@
                                     <div class="info-block-item">
                                         <div class="info-block-item-inner">
                                             <ul>
-                                                <li><span>原票據金額</span><span icon="－">1,000,000</span></li>
-                                                <li><span>票據合計</span><span icon="－">100,000</span></li>
-                                                <li><span>現金合計</span><span icon="－">100,000</span></li>
-                                                <li><span>現金轉銀存合計</span><span icon="－">100,000</span></li>
-                                                <li><span>信用卡合計</span><span icon="－">100,000</span></li>
-                                                <li><span>銀行存款合計</span><span icon="－">100,000</span></li>
-                                                <li><span>暫收款合計</span><span icon="＝">100,000</span></li>
-                                                <li><span>借貸金額</span><span>400,000</span></li>
+                                                <li><span>原票據金額</span><span icon-before="$" icon-after="－">1,000,000</span></li>
+                                                <li><span>票據合計</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                <li><span>現金合計</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                <li><span>現金轉銀存合計</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                <li><span>信用卡合計</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                <li><span>銀行存款合計</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                <li><span>暫收款合計</span><span icon-before="$" icon-after="=">100,000</span></li>
+                                                <li><span >借貸金額</span><span icon-before="$">400,000</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -927,6 +927,7 @@ var table02 = new Tabulator("#table02", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
+    selectable: true,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
