@@ -3193,12 +3193,78 @@ a.menu-active .menu-bar {
     overflow: auto;
 }
 
+.dialog-image-title {
+    padding: 0 0 4px 0;
+    color: #333;
+}
+
+.dialog-image-title span {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.dialog-image-title span::before {
+    font-family: 'Material Icons';
+    content: "arrow_right";
+    font-feature-settings: 'liga';
+    vertical-align: top;
+    color: #018dcd;
+    text-align: left;
+    width: 18px;
+    display: inline-block;
+}
+
 .dialog-image-item {
     border-right: #aaa solid 1px;
     border-bottom: #aaa solid 1px;
     width: 33.33333%;
     float: left;
     padding: 4px;
+}
+
+.dialog-image-item-id {
+    font-size: 0.45rem;
+    line-height: 1.1;
+    color: #777;
+}
+
+.dialog-image-item-name {
+    font-weight: bold;
+}
+
+.dialog-image-item-print {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: #ddd solid 1px;
+    border-radius: 2px;
+}
+
+.dialog-image-item-print span {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    border: #eee solid 1px;
+}
+
+.dialog-image-item-print span::after {
+    content: attr(text);
+    display: block;
+    width: 80%;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* END: popup */
