@@ -3268,6 +3268,20 @@ a.menu-active .menu-bar {
     transform: translate(-50%, -50%);
 }
 
+.dialog-image-title button {
+    border: #aaa solid 1px;
+    margin-left: 5px;
+    line-height: 1;
+    border-radius: 4px;
+    padding: 2px 4px;
+    letter-spacing: 0.1rem;
+    vertical-align: text-top;
+}
+
+.dialog-image-title button:hover {
+    background: #ccc;
+}
+
 /* END: popup */
 /* START: customize-form */
 .customize-form {
