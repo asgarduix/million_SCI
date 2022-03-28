@@ -84,7 +84,7 @@
                             <li>
                                 <a href="#" class="menu-list-active">
                                     <span>FEBM0400</span>
-                                    <span>資金調度及銀行存款餘額查詢</span>
+                                    <span>資金調度</span>
                                 </a>
                             </li>
                             <li>
@@ -274,26 +274,26 @@
                                         <span>列帳</span>
                                     </div>
                                 </div> -->
-                                <!-- 列帳/調度日期/序號/作業別 -->
+                                <!-- 調度日期/列帳/序號/作業別 -->
                                 <div class="customize-form-row">
                                     <div class="customize-form-inner">
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">調度日期</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="date" name="調度日期" value="2022-03-08" placeholder="" data-toggle="tooltip" data-placement="left">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="customize-form-field customize-form-field-1">
                                             <div class="customize-field-inner">
                                                 <div class="customize-form-title">列帳</div>
                                                 <div class="customize-form-entry">
                                                     <select name="列帳" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                         <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                        <option value="">總公司</option>
+                                                        <option value="" selected="">總公司</option>
                                                         <option value="">列帳2</option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="customize-form-field customize-form-field-1">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">調度日期</div>
-                                                <div class="customize-form-entry">
-                                                    <input type="date" name="調度日期" value="2022-03-08" placeholder="" data-toggle="tooltip" data-placement="left">
                                                 </div>
                                             </div>
                                         </div>
@@ -311,7 +311,7 @@
                                                 <div class="customize-form-entry">
                                                     <select name="作業別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                         <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                        <option value="">網銀</option>
+                                                        <option value="" selected="">網銀</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -336,13 +336,13 @@
                         </div>
                         <hr class="seperate-line">
                         <!-- 燈號 -->
-                        <div class="content-component content-hint">
+                        <!-- <div class="content-component content-hint">
                             <ul>
                                 <li class="hint-good">良好</li>
                                 <li class="hint-normal">正常</li>
                                 <li class="hint-bad">不良</li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!-- tabulator創立table（下） -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -606,33 +606,42 @@ var table01 = new Tabulator("#table01", {
 var table02Data = [{
         id: "a1",
         借貸: "貸",
-        燈號: "不良",
+        // 燈號: "不良",
         銀行代號: "0060855",
         銀行名稱: "合庫仁愛",
         帳號: "0855717326151",
         狀態: "活存",
+        資金水平高: "2,000,000",
+        資金水平低: "50,000",
+        常駐金: "1,000,000",
         調度金額: "5,000,000.00",
         匯費: "25.00"
     },
     {
         id: "a2",
         借貸: "貸",
-        燈號: "正常",
+        // 燈號: "正常",
         銀行代號: "8221252",
         銀行名稱: "中信銀信義",
         帳號: "252890002163",
         狀態: "活存",
+        資金水平高: "2,000,000",
+        資金水平低: "50,000",
+        常駐金: "1,000,000",
         調度金額: "5,000,000.00",
         匯費: "25.00"
     },
     {
         id: "a3",
         借貸: "貸",
-        燈號: "不良",
+        // 燈號: "不良",
         銀行代號: "0060855",
         銀行名稱: "合庫仁愛",
         帳號: "0855717326151",
         狀態: "活存",
+        資金水平高: "2,000,000",
+        資金水平低: "50,000",
+        常駐金: "1,000,000",
         調度金額: "5,000,000.00",
         匯費: "25.00"
     },
@@ -675,29 +684,31 @@ var table02 = new Tabulator("#table02", {
                 cell.getRow().toggleSelect();
             }
         },
-        {
-            title: "",
-            field: "燈號",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            formatter: function(cell, formatterParams, onRendered) {
-                let hintData = cell.getValue();
-                if (hintData === "不良") {
-                    return "<span class='hint-bad'></span>";
-                } else if (hintData === "正常") {
-                    return "<span class='hint-normal'></span>";
-                } else if (hintData === "良好") {
-                    return "<span class='hint-good'></span>";
-                }
-            },
-            // formatter: "link",
-        },
+        // {
+        //     title: "",
+        //     field: "燈號",
+        //     hozAlign: "center",
+        //     headerSort: false,
+        //     maxWidth: 30,
+        //     minWidth: 30,
+        //     formatter: function(cell, formatterParams, onRendered) {
+        //         let hintData = cell.getValue();
+        //         if (hintData === "不良") {
+        //             return "<span class='hint-bad'></span>";
+        //         } else if (hintData === "正常") {
+        //             return "<span class='hint-normal'></span>";
+        //         } else if (hintData === "良好") {
+        //             return "<span class='hint-good'></span>";
+        //         }
+        //     },
+        // },
         { title: "銀行代號", field: "銀行代號" },
         { title: "銀行名稱", field: "銀行名稱" },
         { title: "帳號", field: "帳號" },
         { title: "狀態", field: "狀態" },
+        { title: "資金水平(高)", field: "資金水平高",hozAlign: "right" },
+        { title: "資金水平(低)", field: "資金水平低",hozAlign: "right" },
+        { title: "常駐金", field: "常駐金",hozAlign: "right" },
         {
             title: "調度金額",
             field: "調度金額",

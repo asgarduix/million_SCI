@@ -47,7 +47,8 @@ $(document).ready(function() {
         $(this).attr('data-placement', 'left');
     });
     $('[data-toggle="tooltip"]').tooltip({
-        trigger: 'hover'
+        trigger: 'hover',
+        html: true
     });
 });
 

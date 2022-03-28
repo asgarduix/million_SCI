@@ -84,7 +84,7 @@
                             <li>
                                 <a href="#">
                                     <span>FEBM0400</span>
-                                    <span>資金調度及銀行存款餘額查詢</span>
+                                    <span>資金調度</span>
                                 </a>
                             </li>
                             <li>
@@ -753,7 +753,13 @@ var table02 = new Tabulator("#table02", {
             }
         },
         { title: "印鑑分類", field: "印鑑分類" },
-        { title: "印鑑名稱", field: "印鑑名稱" },
+        {
+            title: "印鑑名稱",
+            field: "印鑑名稱",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+        },
         { title: "英文名稱", field: "英文名稱" },
         { title: "使用狀況", field: "使用狀況" },
         { title: "生效日期", field: "生效日期" },
