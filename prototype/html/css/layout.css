@@ -2800,6 +2800,7 @@ a.menu-active .menu-bar {
 .seperate-line-tiny~.content-label {
     padding: 5px 10px 0;
 }
+
 /* END: label */
 /* START: popup */
 .content-popup {
@@ -2813,9 +2814,6 @@ a.menu-active .menu-bar {
     left: 0;
     bottom: 0;
     right: 0;
-    /* 設定列印開啟背景圖 */
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
 }
 
 .popup-dialog {
@@ -5121,7 +5119,27 @@ span.tp {
     background: none;
     border: none;
 }
+
 /* END: 資訊磚 */
+/* START: 設定頁面列印 */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .section-to-print,
+    .section-to-print * {
+        visibility: visible;
+    }
+
+    .section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* END: 設定頁面列印 */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
