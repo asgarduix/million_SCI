@@ -2813,6 +2813,9 @@ a.menu-active .menu-bar {
     left: 0;
     bottom: 0;
     right: 0;
+    /* 設定列印開啟背景圖 */
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
 }
 
 .popup-dialog {
