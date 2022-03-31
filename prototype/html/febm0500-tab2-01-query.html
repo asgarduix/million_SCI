@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="non-codename1-tab2-checked">
+<body id="canvas" class="non-codename1-tab2-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -89,7 +89,7 @@
                             </li>
                             <li>
                                 <a href="#" class="menu-list-active">
-                                    <span></span>
+                                    <span>FEBM0500</span>
                                     <span>銀行存款資料匯入作業</span>
                                 </a>
                             </li>
@@ -192,7 +192,7 @@
                                     <ul>
                                         <li><a href="#">銀行存款轉入</a></li>
                                         <li><a href="#" class="unittab-active">銀行存款存摺明細維護</a></li>
-                                        <li><a href="#">銀行存款使用維護</a></li>
+                                        <li></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -344,7 +344,7 @@
                                     <form action="">
                                         <div class="upload-inner">
                                             <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text" value=""></div>
+                                            <div class="upload-item upload-field"><input type="text"></div>
                                             <div class="upload-item upload-btn">
                                                 <ul>
                                                     <li><button>瀏覽</button></li>
@@ -368,8 +368,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">10</li>
-                                                        <li class="count-check">1</li>
+                                                        <li class="count-total">0</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -565,56 +564,15 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "2,428.00",
-        餘額: "2,642,525.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "56,933.00",
-        餘額: "2,699,478.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "9,424.00",
-        餘額: "2,708,902.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/17",
-        支出: ".00",
-        收入: "4,104.00",
-        餘額: "2,699,478.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/17",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/17",
-        支出: ".00",
-        收入: "20,140.00",
-        餘額: "2,708,902.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/17",
-        銷帳日: ""
-    },
-];
+    checkbox: "checkbox",
+    交易日期: "設計文字",
+    支出: "設計文字",
+    收入: "設計文字",
+    餘額: "設計文字",
+    說明: "設計文字",
+    入帳日: "設計文字",
+    銷帳日: "設計文字"
+}, ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
     autoColumns: true,

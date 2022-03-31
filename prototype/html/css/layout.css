@@ -3376,21 +3376,19 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-header .add-sub-form {
-    display: table-cell;
+    display: inline-block;
     padding: 2px 4px;
 }
 
 .customize-form-header .add-sub-form button {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1;
     background: #018dcd;
     border: #f7f7f7 solid 1px;
     color: #fff;
-    border-radius: 4px;
-    width: 100%;
-    height: 100%;
     padding: 3px 10px;
-    display: table;
+    border-radius: 4px;
+    vertical-align: text-bottom;
 }
 
 .customize-form-header .add-sub-form button:hover {
@@ -3999,17 +3997,18 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-field-delete button {
-    background: #E60012;
-    color: #fff;
-    font-size: 0.875rem;
+    border: #E60012 solid 1px;
+    color: #E60012;
+    background: #fff;
+    font-size: 0.75rem;
     line-height: 1;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 4px;
-    vertical-align: text-bottom;
 }
 
 .customize-form-field-delete button:hover {
-    background: #b50210;
+    background: #E60012;
+    color: #fff;
 }
 
 /* 左右排版 */

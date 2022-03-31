@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="non-codename1-tab2-upload">
+<body id="canvas" class="non-codename1-tab3-upload">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -88,8 +88,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="menu-list-active">
-                                    <span></span>
+                                <a href="#">
+                                    <span>FEBM0500</span>
                                     <span>銀行存款資料匯入作業</span>
                                 </a>
                             </li>
@@ -97,6 +97,12 @@
                                 <a href="#">
                                     <span>FEBM0300</span>
                                     <span>利息建檔與查詢</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-list-active">
+                                    <span>FEBM0600</span>
+                                    <span>銀行存款使用維護</span>
                                 </a>
                             </li>
                         </ul>
@@ -183,34 +189,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- unittab -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
-                                <div class="content-component content-unittab">
-                                    <ul>
-                                        <li><a href="#">銀行存款轉入</a></li>
-                                        <li><a href="#" class="unittab-active">銀行存款存摺明細維護</a></li>
-                                        <li><a href="#">銀行存款使用維護</a></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 銀行代號/帳號 -->
+                                    <!-- 銀行代號/帳號/存摺保管單位 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -235,75 +220,81 @@
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="帳號" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 幣別/管理單位/交易日 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">幣別</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="幣別" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">NTD</option>
-                                                        <option value="">USD</option>
-                                                        <option value="">CNY</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">管理單位</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="管理單位" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-double-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">交易日</div>
+                                                <div class="query-field-item query-field-title">存摺保管單位</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="date" name="交易日" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="date" name="交易日" data-toggle="tooltip" data-placement="top">
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-4">
+                                                                <input type="text" name="存摺保管單位" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
+                                                            </div>
+                                                            <div class="entry-combine entry-6">
+                                                                <input type="text" name="存摺保管單位" value="" title="" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 網路銀行/金額/可載入銀行列表 -->
+                                    <!-- 交易起訖日/交易選擇 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">網路銀行</div>
+                                                <div class="query-field-item query-field-title">交易起訖日</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="網路銀行" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">華南網銀</option>
-                                                        <option value="">彰銀網銀</option>
-                                                        <option value="">中國信託網銀</option>
-                                                    </select>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">金額</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="金額q" attr='money' onkeypress="return onlyNumberKey(event)" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">交易選擇</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="交易選擇"><label for="rd01">收入</label></li>
+                                                        <li><input type="radio" id="rd02" name="交易選擇"><label for="rd02">支出</label></li>
+                                                        <li><input type="radio" id="rd03" name="交易選擇"><label for="rd03">兩者</label></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-double-datepicker">
+                                    </div>
+                                    <!-- 入帳日/銷帳日/入帳人員 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">可載入銀行列表</div>
+                                                <div class="query-field-item query-field-title">入帳日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="入帳日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">銷帳日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="銷帳日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">入帳人員</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="可載入銀行列表" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">華南網銀</option>
-                                                        <option value="">中國信託網銀</option>
-                                                    </select>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="入帳人員" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" name="入帳人員" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -335,16 +326,35 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
+                        <!-- label -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-label">
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
+                                        <div class="label-item">
+                                            <div class="label-title">存入合計</div>
+                                            <div class="label-content label-content-counter">0.00</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">支出合計</div>
+                                            <div class="label-content label-content-counter">751,572.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
                                 <!-- 跟隨tabulator_upload -->
-                                <div class="content-component content-upload">
+                                <!-- <div class="content-component content-upload">
                                     <form action="">
                                         <div class="upload-inner">
                                             <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text" value=""></div>
+                                            <div class="upload-item upload-field"><input type="text"></div>
                                             <div class="upload-item upload-btn">
                                                 <ul>
                                                     <li><button>瀏覽</button></li>
@@ -356,7 +366,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                </div>
+                                </div> -->
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -368,7 +378,7 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">10</li>
+                                                        <li class="count-total">2</li>
                                                         <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
@@ -588,59 +598,33 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "2,428.00",
-        餘額: "2,642,525.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
+        id: "a1",
+        銷帳序號: "銷帳序號",
+        暫收序號: "暫收序號",
+        銷帳日: "銷帳日",
+        入帳日: "入帳日",
+        交易日: "交易日",
+        存入: "存入",
+        支出: "支出",
+        結餘: "結餘",
+        時間: "時間"
     },
     {
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "56,933.00",
-        餘額: "2,699,478.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/16",
-        支出: ".00",
-        收入: "9,424.00",
-        餘額: "2,708,902.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/18",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/17",
-        支出: ".00",
-        收入: "4,104.00",
-        餘額: "2,699,478.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/17",
-        銷帳日: ""
-    },
-    {
-        checkbox: "checkbox",
-        交易日期: "110/06/17",
-        支出: ".00",
-        收入: "20,140.00",
-        餘額: "2,708,902.00",
-        說明: "本次異動說明",
-        入帳日: "110/06/17",
-        銷帳日: ""
+        id: "a2",
+        銷帳序號: "銷帳序號",
+        暫收序號: "暫收序號",
+        銷帳日: "銷帳日",
+        入帳日: "入帳日",
+        交易日: "交易日",
+        存入: "存入",
+        支出: "支出",
+        結餘: "結餘",
+        時間: "時間"
     },
 ];
+
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -652,17 +636,33 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
-        { title: "交易日期", field: "交易日期" },
-        { title: "支出", field: "支出" },
-        { title: "收入", field: "收入" },
-        { title: "餘額", field: "餘額" },
-        { title: "說明", field: "說明" },
-        { title: "入帳日", field: "入帳日" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "銷帳序號", field: "銷帳序號" },
+        { title: "暫收序號", field: "暫收序號" },
         { title: "銷帳日", field: "銷帳日" },
+        { title: "入帳日", field: "入帳日" },
+        { title: "交易日", field: "交易日" },
+        { title: "存入", field: "存入", hozAlign: "right" },
+        { title: "支出", field: "支出", hozAlign: "right" },
+        { title: "結餘", field: "結餘", hozAlign: "right" },
+        { title: "時間", field: "時間" },
     ],
 });
-</script>
 
+// 選擇預設勾選row
+// table.selectRow(["a1","a2"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
 </html>
