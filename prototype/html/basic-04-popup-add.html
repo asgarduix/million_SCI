@@ -1641,6 +1641,24 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <!-- tabulator創立table(可編輯table) -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>未收查詢設定</span><a class="add-sub-form"><button type="button">新增</button></a>
+                            </div>
+                        </div>
+                        <!-- tabulator創立table -->
+                        <div class="card-detail card-detail-editable">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div id="table02"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -1818,6 +1836,162 @@ tooltipContainer.addEventListener('mouseenter', function() {
 
 tooltipContainer.addEventListener('mouseout', function() {
     tooltipContainer.classList.remove("fade-in");
+});
+////////////////////////////////////////////////////////
+let table02Data = [{
+        id: "a1",
+        公點經手人: "經手人",
+        比照公點: "公點",
+        對應窗口: "窗口",
+        總公司對應窗口: "窗口",
+        銷帳單位: "出納",
+        險種: "火險",
+        業務來源: "來源",
+        專案代號: "代號",
+    },
+    {
+        id: "a2",
+        公點經手人: "經手人",
+        比照公點: "公點",
+        對應窗口: "窗口",
+        總公司對應窗口: "窗口",
+        銷帳單位: "出納",
+        險種: "火險",
+        業務來源: "來源",
+        專案代號: "代號",
+    },
+];
+let table02 = new Tabulator("#table02", {
+    data: table02Data,
+    height: "100%",
+    layout: "fitColumns",
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    headerSort: false,
+    movableColumns: false,
+    resizableRows: false,
+    columns: [{
+            title: "",
+            field: "del",
+            minWidth: 50,
+            width: 50,
+            formatter: (cell) => {
+                let row = cell.getRow()
+                let table = cell.getTable()
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                span.classList.add("customize-form-field-delete")
+                cell.getElement().classList.add("tabulator-input-editable-btn");
+                btn.setAttribute("type", "button")
+                btn.innerText = "刪除"
+                btn.addEventListener("click", e => {
+                    e.stopPropagation()
+                    if (table.getDataCount() > 1) {
+                        row.delete()
+                    } else {
+                        alert("至少保留一筆")
+                    }
+                })
+                span.appendChild(btn)
+                return span
+            }
+        },
+        {
+            title: "公點經手人",
+            field: "公點經手人",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "比照公點",
+            field: "比照公點",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "對應窗口",
+            field: "對應窗口",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "總公司對應窗口",
+            field: "總公司對應窗口",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "銷帳單位",
+            field: "銷帳單位",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "出納": "出納",
+                "會計": "會計",
+                "保費": "保費",
+            }
+        },
+        {
+            title: "險種",
+            field: "險種",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "車險": "車險",
+                "火險": "火險",
+                "水險": "水險",
+            }
+        },
+        {
+            title: "業務來源",
+            field: "業務來源",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "專案代號",
+            field: "專案代號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+
+    ],
+    tabEndNewRow: true,
+    tabEndNewRow: function(row) {
+        let rowData = row.getData();
+        return { ...rowData };
+    }
 });
 </script>
 
