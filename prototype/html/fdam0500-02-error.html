@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fdam0500-tab1-query">
+<body id="canvas" class="fdam0500-error">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -164,45 +164,24 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- unittab -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
-                                <div class="content-component content-unittab">
-                                    <ul>
-                                        <li><a href="#" class="unittab-active">維護</a></li>
-                                        <li><a href="#">查詢</a></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 公點經手人/比照公點/對應窗口 -->
+                                    <!-- 總公司窗口/公經手人/銷帳單位 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公點經手人</div>
+                                                <div class="query-field-item query-field-title">總公司窗口</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="text" name="公點經手人" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="總公司窗口" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
-                                                            <input type="text" name="公點經手人" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="總公司窗口" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -210,19 +189,41 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">比照公點</div>
+                                                <div class="query-field-item query-field-title">公經手人</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="text" name="比照公點" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="公經手人" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
-                                                            <input type="text" name="比照公點" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="公經手人" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">銷帳單位</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="銷帳單位" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">總公司</option>
+                                                        <option value="">台北分公司</option>
+                                                        <option value="">桃園分公司</option>
+                                                        <option value="">新竹分公司</option>
+                                                        <option value="">台中分公司</option>
+                                                        <option value="">員林分公司</option>
+                                                        <option value="">台南分公司</option>
+                                                        <option value="">高雄分公司</option>
+                                                        <option value="">全部</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 對應窗口/選擇 -->
+                                    <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">對應窗口</div>
@@ -238,32 +239,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 單位督導主管/銷帳單位 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-selector query-field-under-note">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">單位督導主管</div>
+                                                <div class="query-field-item query-field-title">選擇</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="單位督導主管" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" name="單位督導主管" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">銷帳單位</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="銷帳單位" id="">
+                                                    <select name="選擇" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">未設定</option>
+                                                        <option value="">公經手人</option>
+                                                        <option value="">對應窗口</option>
+                                                        <option value="">窗口主管</option>
+                                                        <option value="">業務來源</option>
                                                     </select>
+                                                    <div class="query-field-note"><span>報表根據”選擇”跳頁</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,7 +292,8 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">3</li>
+                                                        <!-- <li class="count-total">3</li> -->
+                                                        <li class="count-error">查無資料！</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -498,42 +486,123 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table01Data = [{
+// let table01Data = [{
+//         id: "a1",
+//         公點經手人: "公點經手人",
+//         比照公點: "比照公點",
+//         對應窗口: "對應窗口",
+//         單位督導主管: "單位督導主管",
+//         總公司對應窗口: "總公司對應窗口",
+//         銷帳單位: "銷帳單位",
+//         業務來源: "業務來源",
+//         險種: "險種",
+//         專案代號: "專案代號",
+//     },
+//     {
+//         id: "a2",
+//         公點經手人: "公點經手人",
+//         比照公點: "比照公點",
+//         對應窗口: "對應窗口",
+//         單位督導主管: "單位督導主管",
+//         總公司對應窗口: "總公司對應窗口",
+//         銷帳單位: "銷帳單位",
+//         業務來源: "業務來源",
+//         險種: "險種",
+//         專案代號: "專案代號",
+//     },
+//     {
+//         id: "a3",
+//         公點經手人: "公點經手人",
+//         比照公點: "比照公點",
+//         對應窗口: "對應窗口",
+//         單位督導主管: "單位督導主管",
+//         總公司對應窗口: "總公司對應窗口",
+//         銷帳單位: "銷帳單位",
+//         業務來源: "業務來源",
+//         險種: "險種",
+//         專案代號: "專案代號",
+//     },
+// ];
+// var table01 = new Tabulator("#table01", {
+//     data: table01Data,
+//     layout: "fitColumns",
+//     height: "255px",
+//     pagination: "local",
+//     paginationSize: 5,
+//     paginationSizeSelector: [5, 10, 30, 50, true],
+//     movableColumns: true,
+//     resizableRows: true,
+//     tooltips: true,
+//     tooltipsHeader: true,
+//     tooltipGenerationMode: "hover",
+//     selectable: true,
+//     columns: [{
+//             formatter: "rowSelection",
+//             titleFormatter: "rowSelection",
+//             headerHozAlign: "center",
+//             hozAlign: "center",
+//             headerSort: false,
+//             maxWidth: 30,
+//             minWidth: 30,
+//             cellClick: function(e, cell) {
+//                 cell.getRow().toggleSelect();
+//             }
+//         },
+//         { title: "公點經手人", field: "公點經手人" },
+//         { title: "比照公點", field: "比照公點" },
+//         { title: "對應窗口", field: "對應窗口" },
+//         { title: "單位督導主管", field: "單位督導主管" },
+//         { title: "總公司對應窗口", field: "總公司對應窗口" },
+//         { title: "銷帳單位", field: "銷帳單位" },
+//         { title: "業務來源", field: "業務來源" },
+//         { title: "險種", field: "險種" },
+//         { title: "專案代號", field: "專案代號" },
+//     ],
+// });
+// 選擇預設勾選row
+// table01.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+///////////////////////////////////////////////////
+let table01Data = [/*{
         id: "a1",
         公點經手人: "公點經手人",
-        比照公點: "比照公點",
-        對應窗口: "對應窗口",
+        服務窗口: "服務窗口",
         單位督導主管: "單位督導主管",
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
-        業務來源: "業務來源",
         險種: "險種",
+        業務來源: "業務來源",
         專案代號: "專案代號",
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
     },
     {
         id: "a2",
         公點經手人: "公點經手人",
-        比照公點: "比照公點",
-        對應窗口: "對應窗口",
+        服務窗口: "服務窗口",
         單位督導主管: "單位督導主管",
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
-        業務來源: "業務來源",
         險種: "險種",
+        業務來源: "業務來源",
         專案代號: "專案代號",
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
     },
     {
         id: "a3",
         公點經手人: "公點經手人",
-        比照公點: "比照公點",
-        對應窗口: "對應窗口",
+        服務窗口: "服務窗口",
         單位督導主管: "單位督導主管",
         總公司對應窗口: "總公司對應窗口",
         銷帳單位: "銷帳單位",
-        業務來源: "業務來源",
         險種: "險種",
+        業務來源: "業務來源",
         專案代號: "專案代號",
-    },
+        建檔日: "建檔日",
+        建檔人員: "建檔人員",
+    },*/
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
@@ -562,14 +631,15 @@ var table01 = new Tabulator("#table01", {
             }
         },
         { title: "公點經手人", field: "公點經手人" },
-        { title: "比照公點", field: "比照公點" },
-        { title: "對應窗口", field: "對應窗口" },
+        { title: "服務窗口", field: "服務窗口" },
         { title: "單位督導主管", field: "單位督導主管" },
         { title: "總公司對應窗口", field: "總公司對應窗口" },
         { title: "銷帳單位", field: "銷帳單位" },
-        { title: "業務來源", field: "業務來源" },
         { title: "險種", field: "險種" },
+        { title: "業務來源", field: "業務來源" },
         { title: "專案代號", field: "專案代號" },
+        { title: "建檔日", field: "建檔日" },
+        { title: "建檔人員", field: "建檔人員" },
     ],
 });
 // 選擇預設勾選row

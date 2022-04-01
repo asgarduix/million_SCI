@@ -1255,6 +1255,14 @@ a.menu-active .menu-bar {
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+.card-detail-editable .detail-board {
+    border: none;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden;
+}
+
 /* END: card-detail >> board */
 /* START: copyright */
 .content-copyright {
@@ -1390,6 +1398,10 @@ a.menu-active .menu-bar {
 .content-table {
     margin: 0;
     padding: 5px 10px;
+}
+
+.card-detail-editable .content-table {
+    padding: 0;
 }
 
 .table-func {
@@ -1723,6 +1735,8 @@ a.menu-active .menu-bar {
     background: #fff;
     outline-color: #aaa;
     padding: 0 4px;
+    height: 23px;
+    overflow: hidden;
 }
 
 .tabulator-row .tabulator-cell.table-input.tabulator-editing {
@@ -1806,6 +1820,19 @@ a.menu-active .menu-bar {
 
 .fixed-table.tabulator .tabulator-header .tabulator-col[tabulator-field="固定表頭"]:nth-child(1) {
     border-bottom-color: #aaa;
+}
+
+.card-detail-editable .content-table .tabulator {
+    border: none;
+}
+
+.card-detail-editable .content-table .tabulator .tabulator-header .tabulator-col:nth-last-child(1),
+.card-detail-editable .content-table .tabulator-row .tabulator-cell:nth-last-child(1) {
+    border-right: none;
+}
+
+.tabulator-row .tabulator-cell.tabulator-input-editable-btn {
+    padding: 0;
 }
 
 /* END: tabulator創立table */
@@ -4002,8 +4029,9 @@ a.menu-active .menu-bar {
     background: #fff;
     font-size: 0.75rem;
     line-height: 1;
-    padding: 2px 8px;
+    padding: 2px 7px;
     border-radius: 4px;
+    vertical-align: middle;
 }
 
 .customize-form-field-delete button:hover {
