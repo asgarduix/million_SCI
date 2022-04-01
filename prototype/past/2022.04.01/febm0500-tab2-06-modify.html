@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="febm0500-tab2-modify">
+<body id="canvas" class="non-codename1-tab2-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -543,13 +543,13 @@
             </main>
         </div>
     </div>
-    <!-- popup-modify -->
+    <!-- popup-add -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">修改</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -593,8 +593,8 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">幣別</div>
                                         <div class="customize-form-entry">
-                                            <select name="幣別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                            <select name="幣別" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="">請選擇</option>
                                                 <option value="" selected="">NTD</option>
                                                 <option value="">USD</option>
                                                 <option value="">CYN</option>
@@ -611,8 +611,8 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">管理單位</div>
                                         <div class="customize-form-entry">
-                                            <select name="管理單位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                            <select name="管理單位" id=""  value="" title="" data-toggle="tooltip" data-placement="left">
+                                                <option value="" disabled="" hidden="" >請選擇</option>
                                                 <option value="" selected="">00</option>
                                                 <option value="">01</option>
                                                 <option value="">02</option>
@@ -627,12 +627,69 @@
                                 <span>銀行存款存摺明細維護</span>
                             </div>
                         </div>
-                        <!-- tabulator創立table(可編輯table) -->
-                        <div class="card-detail card-detail-editable">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board">
-                                <div class="content-component content-table">
-                                    <div id="table02"></div>
+                        <!-- 交易日期/支出/支出/餘額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">交易日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="交易日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">支出</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="支出" value="110/06/16" title="110/06/16" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">支出</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="支出" value="0.00" title="0.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">餘額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="餘額" value="2,428.00" title="2,428.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" onkeypress="return onlyNumberKey(event)" disabled="" attr="readonly-money">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 說明 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">說明</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="說明" value="本次存款存摺明細維護說明" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">入帳日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="入帳日" value="110/06/18" title="110/06/18" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">出帳日</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="出帳日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -668,7 +725,7 @@
 <script src="js/pg.js"></script>
 <script>
 var table01Data = [{
-        id: "a1",
+        checkbox: "checkbox",
         交易日期: "110/06/16",
         支出: ".00",
         收入: "2,428.00",
@@ -678,7 +735,7 @@ var table01Data = [{
         銷帳日: ""
     },
     {
-        id: "a2",
+        checkbox: "checkbox",
         交易日期: "110/06/16",
         支出: ".00",
         收入: "56,933.00",
@@ -688,7 +745,7 @@ var table01Data = [{
         銷帳日: ""
     },
     {
-        id: "a3",
+        checkbox: "checkbox",
         交易日期: "110/06/16",
         支出: ".00",
         收入: "9,424.00",
@@ -698,7 +755,7 @@ var table01Data = [{
         銷帳日: ""
     },
     {
-        id: "a4",
+        checkbox: "checkbox",
         交易日期: "110/06/17",
         支出: ".00",
         收入: "4,104.00",
@@ -708,7 +765,7 @@ var table01Data = [{
         銷帳日: ""
     },
     {
-        id: "a5",
+        checkbox: "checkbox",
         交易日期: "110/06/17",
         支出: ".00",
         收入: "20,140.00",
@@ -720,7 +777,7 @@ var table01Data = [{
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    //autoColumns: true,
+    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -732,18 +789,8 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
-            }
-        },
+    columns: [
+        { title: "checkbox", field: "checkbox" },
         { title: "交易日期", field: "交易日期" },
         { title: "支出", field: "支出" },
         { title: "收入", field: "收入" },
@@ -752,149 +799,6 @@ var table01 = new Tabulator("#table01", {
         { title: "入帳日", field: "入帳日" },
         { title: "銷帳日", field: "銷帳日" },
     ],
-});
-// 選擇預設勾選row
-// table01.selectRow(["a1"]);
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
-///////////////////////////////////////////////////////////////////////////
-let table02Data = [{
-        id: "a1",
-        交易日期: "111/3/31",
-        收入: "1,000,000",
-        支出: "2,000,000",
-        餘額: "3,000,000",
-        說明: "說明文字敘述",
-        入帳日: "111/3/31",
-        出帳日: "111/4/1",
-    },
-    {
-        id: "a2",
-        交易日期: "111/4/1",
-        收入: "3,000,000",
-        支出: "1,000,000",
-        餘額: "2,000,000",
-        說明: "說明文字敘述2",
-        入帳日: "111/3/31",
-        出帳日: "111/4/1",
-    },
-];
-let table02 = new Tabulator("#table02", {
-    data: table02Data,
-    height: "100%",
-    layout: "fitColumns",
-    tooltips: true,
-    tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
-    headerSort: false,
-    movableColumns: false,
-    resizableRows: false,
-    columns: [{
-            title: "",
-            field: "del",
-            minWidth: 50,
-            width: 50,
-            formatter: (cell) => {
-                let row = cell.getRow()
-                let table = cell.getTable()
-                let btn = document.createElement("button")
-                let span = document.createElement("span")
-                span.classList.add("customize-form-field-delete")
-                cell.getElement().classList.add("tabulator-input-editable-btn");
-                btn.setAttribute("type", "button")
-                btn.innerText = "刪除"
-                btn.addEventListener("click", e => {
-                    e.stopPropagation()
-                    if (table.getDataCount() > 1) {
-                        row.delete()
-                    } else {
-                        alert("至少保留一筆")
-                    }
-                })
-                span.appendChild(btn)
-                return span
-            }
-        },
-        {
-            title: "交易日期",
-            field: "交易日期",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-        },
-        {
-            title: "收入",
-            field: "收入",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-            hozAlign: "right"
-        },
-        {
-            title: "支出",
-            field: "支出",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-            hozAlign: "right"
-        },
-        {
-            title: "餘額",
-            field: "餘額",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-            hozAlign: "right"
-        },
-        {
-            title: "說明",
-            field: "說明",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-        },
-        {
-            title: "入帳日",
-            field: "入帳日",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-        },
-        {
-            title: "出帳日",
-            field: "出帳日",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            editable: true,
-        },
-
-    ],
-    tabEndNewRow: true,
-    tabEndNewRow: function(row) {
-        let rowData = row.getData();
-        return { ...rowData };
-    }
 });
 </script>
 

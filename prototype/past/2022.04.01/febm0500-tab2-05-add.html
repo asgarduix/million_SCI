@@ -627,31 +627,12 @@
                                 <span>銀行存款存摺明細維護</span><a class="add-sub-form"><button>新增</button></a>
                             </div>
                         </div>
-                        <!-- tabulator創立table(tabulator欄位變更為input並可修改) -->
-                        <!-- tabulator創立table -->
-                        <div class="card-detail">
+                        <!-- tabulator創立table(可編輯table) -->
+                        <div class="card-detail card-detail-editable">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
                                 <div class="content-component content-table">
-                                    <div class="table-func">
-                                        <div class="table-func-inner">
-                                            <div class="table-func-basic">
-                                                <div class="func-basic-item func-count">
-                                                    <ul>
-                                                        <li class="count-total">3</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="func-basic-item func-filter">
-                                                    <div class="func-filter-inner">
-                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="table-func-page">頁碼</div>
-                                        </div>
-                                    </div>
                                     <div id="table02"></div>
-                                    <div class="table-footer">footer</div>
                                 </div>
                             </div>
                         </div>
@@ -765,76 +746,131 @@ var table01 = new Tabulator("#table01", {
 ///////////////////////////////////////////////////////////////////////////
 let table02Data = [{
     id: "a1",
-    定存單號: "LB0077252",
-    利率別: "機動",
-    領息別: "到期領息",
-    期間: "12",
-    定存銀行: "0050223 | 土銀豐原",
-    存單起迄日: "109/03/08~110/03/08",
-    定存金額: "NTD | 1,000,000.00",
+    交易日期: "111/4/1",
+    收入: "1,000,000",
+    支出: "2,000,000",
+    餘額: "3,000,000",
+    說明: "說明文字敘述",
+    入帳日: "111/3/31",
+    出帳日: "111/4/1",
 }, ];
-var table02 = new Tabulator("#table02", {
+let table02 = new Tabulator("#table02", {
     data: table02Data,
+    height: "100%",
     layout: "fitColumns",
-    height: "255px",
-    pagination: "local",
-    paginationSize: 5,
-    paginationSizeSelector: [5, 10, 30, 50, true],
-    movableColumns: true,
-    resizableRows: true,
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
+    headerSort: false,
+    movableColumns: false,
+    resizableRows: false,
     columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
+            title: "",
+            field: "del",
+            minWidth: 50,
+            width: 50,
+            formatter: (cell) => {
+                let row = cell.getRow()
+                let table = cell.getTable()
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                span.classList.add("customize-form-field-delete")
+                cell.getElement().classList.add("tabulator-input-editable-btn");
+                btn.setAttribute("type", "button")
+                btn.innerText = "刪除"
+                btn.addEventListener("click", e => {
+                    e.stopPropagation()
+                    if (table.getDataCount() > 1) {
+                        row.delete()
+                    } else {
+                        alert("至少保留一筆")
+                    }
+                })
+                span.appendChild(btn)
+                return span
             }
         },
-        { title: "定存單號", field: "定存單號" },
         {
-            title: "利率別",
-            field: "利率別",
+            title: "交易日期",
+            field: "交易日期",
             formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input");
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
                 return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
             },
             editor: "input",
+            editable: true,
         },
         {
-            title: "領息別",
-            field: "領息別",
+            title: "收入",
+            field: "收入",
             formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input");
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
                 return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
             },
             editor: "input",
+            editable: true,
+            hozAlign: "right"
         },
         {
-            title: "期間",
-            field: "期間",
+            title: "支出",
+            field: "支出",
             formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "table-input-unit");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>" + "<span class='input-unit-text'>天</span>"
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
             },
             editor: "input",
+            editable: true,
+            hozAlign: "right"
         },
-        { title: "定存銀行", field: "定存銀行" },
-        { title: "存單起迄日", field: "存單起迄日" },
-        { title: "定存金額", field: "定存金額", hozAlign: "right" },
+        {
+            title: "餘額",
+            field: "餘額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+            hozAlign: "right"
+        },
+        {
+            title: "說明",
+            field: "說明",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "入帳日",
+            field: "入帳日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "出帳日",
+            field: "出帳日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+
     ],
+    tabEndNewRow: true,
+    tabEndNewRow: function(row) {
+        let rowData = row.getData();
+        return { ...rowData };
+    }
 });
-// 選擇預設勾選row
-// table01.selectRow(["a1","a2"]);
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
