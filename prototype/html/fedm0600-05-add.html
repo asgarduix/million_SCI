@@ -189,27 +189,53 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
+                                    <!-- 公司代碼/銀行代碼/發行人代號 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">公司代碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="公司代碼" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="公司代碼" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="公司代碼" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">銀行名稱</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="" id="" name="銀行名稱" title="" data-toggle="tooltip" data-placement="top" disabled="" attr="readonly"></div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-3">
+                                                            <input type="text" name="銀行名稱" value="" title="" data-toggle="tooltip" data-placement="top" placeholder="請輸入值">
+                                                        </div>
+                                                        <div class="entry-combine entry-7">
+                                                            <input type="text" name="銀行名稱" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">發行人代號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="發行人代號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 評等日期/信評機構/長期評等 -->
+                                    <div class="query-row">
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">評等日期</div>
                                                 <div class="query-field-item query-field-entry"><input type="date" id="credit_rating_date" name="評等日期" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">信評機構</div>
@@ -229,14 +255,15 @@
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="長期評等" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 長期展望/短期評等/生效日期 -->
+                                    <div class="query-row">
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">長期展望</div>
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="長期展望" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">短期評等</div>
