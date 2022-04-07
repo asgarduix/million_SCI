@@ -5265,6 +5265,9 @@ span.tp {
     .section-to-print,
     .section-to-print * {
         visibility: visible;
+        /* 設定列印開啟背景圖 */
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
     }
 
     .section-to-print {
