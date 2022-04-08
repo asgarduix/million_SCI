@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbbm0100-01-query-detail">
+<body id="canvas" class="fbbm0100-01-query-creditcard-license">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -819,11 +819,11 @@
                                             <!-- tab-link -->
                                             <div class="content-component content-tab-link">
                                                 <ul>
-                                                    <li><a href="fbbm0100-01-query-detail.html" class="tab-link-active">保單明細</a></li>
+                                                    <li><a href="fbbm0100-01-query-detail.html">保單明細</a></li>
                                                     <li><a href="fbbm0100-01-query-negotiable-license.html">票據憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-savings.html">銀行存款</a></li>
                                                     <li><a href="fbbm0100-01-query-cash-license.html">現金憑證</a></li>
-                                                    <li><a href="fbbm0100-01-query-creditcard-license.html">信用卡憑證</a></li>
+                                                    <li><a href="fbbm0100-01-query-creditcard-license.html" class="tab-link-active">信用卡憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-barcode-license.html">條碼憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-history.html">暫收歷史紀錄</a></li>
                                                 </ul>
@@ -1033,31 +1033,27 @@
 <script>
 let table01Data = [{
         id: "a1",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        保險費: "NTD"+"1,000,000",
+        件數: "件數",
+        訂單號碼: "訂單號碼",
+        關係人: "關係人",
+        金額: "10,000,000",
+        授權碼: "授權碼",
+        請款日: "請款日",
+        立帳日: "立帳日",
+        入帳日: "入帳日",
+        簽帳日: "簽帳日",
     },
     {
         id: "a2",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        保險費: "NTD"+"1,000,000",
+        件數: "件數",
+        訂單號碼: "訂單號碼",
+        關係人: "關係人",
+        金額: "20,000,000",
+        授權碼: "授權碼",
+        請款日: "請款日",
+        立帳日: "立帳日",
+        入帳日: "入帳日",
+        簽帳日: "簽帳日",
     },
 ]
 
@@ -1086,17 +1082,15 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "險種", field: "險種" },
-        { title: "要保號碼", field: "要保號碼" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "序號", field: "序號" },
-        { title: "期別", field: "期別" },
-        { title: "要保人ID", field: "要保人ID" },
-        { title: "要保人姓名", field: "要保人姓名" },
-        { title: "被保險人ID", field: "被保險人ID" },
-        { title: "被保人姓名", field: "被保人姓名" },
-        { title: "保險費", field: "保險費", hozAlign: "right" },
+        { title: "件數", field: "件數" },
+        { title: "訂單號碼", field: "訂單號碼" },
+        { title: "關係人", field: "關係人" },
+        { title: "金額", field: "金額", hozAlign: "right" },
+        { title: "授權碼", field: "授權碼" },
+        { title: "請款日", field: "請款日" },
+        { title: "立帳日", field: "立帳日" },
+        { title: "入帳日", field: "入帳日" },
+        { title: "簽帳日", field: "簽帳日" },
     ],
 });
 // 選擇預設勾選row

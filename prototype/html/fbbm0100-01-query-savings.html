@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbbm0100-01-query-detail">
+<body id="canvas" class="fbbm0100-01-query-savings">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -819,9 +819,9 @@
                                             <!-- tab-link -->
                                             <div class="content-component content-tab-link">
                                                 <ul>
-                                                    <li><a href="fbbm0100-01-query-detail.html" class="tab-link-active">保單明細</a></li>
+                                                    <li><a href="fbbm0100-01-query-detail.html">保單明細</a></li>
                                                     <li><a href="fbbm0100-01-query-negotiable-license.html">票據憑證</a></li>
-                                                    <li><a href="fbbm0100-01-query-savings.html">銀行存款</a></li>
+                                                    <li><a href="fbbm0100-01-query-savings.html" class="tab-link-active">銀行存款</a></li>
                                                     <li><a href="fbbm0100-01-query-cash-license.html">現金憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-creditcard-license.html">信用卡憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-barcode-license.html">條碼憑證</a></li>
@@ -847,7 +847,7 @@
                                                         <div class="table-func-page">頁碼</div>
                                                     </div>
                                                 </div>
-                                                <div id="table01"></div>
+                                                <div id="table02"></div>
                                                 <div class="table-footer"></div>
                                             </div>
                                         </div>
@@ -1031,38 +1031,164 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table01Data = [{
+let nestedData = [{
+    id: "a1",
+    申請項目: "申請項目",
+    用戶編號: "用戶編號",
+    核印狀態: "核印狀態",
+    帳戶統編ID: "帳戶統編/ID",
+    帳戶名稱: "帳戶名稱",
+    核印上傳日: "核印上傳日",
+    銀行核印日: "銀行核印日",
+    銀行核印回覆說明: "銀行核印回覆說明",
+    ntTable: {
+        "總行代號": "總行代號",
+        "分行代號": "分行代號",
+        "銀行帳號": "銀行帳號",
+        "火險建檔人員": "火險建檔人員",
+    },
+}, ]
+
+var table = new Tabulator("#table01", {
+    height: "100%",
+    layout: "fitColumns",
+    movableColumns: true,
+    data: nestedData,
+    columns: [{
+            formatter: (cell, formatterParams, onRendered) => {
+                let div = document.createElement('div');
+                let el = cell.getRow().getElement()
+                let btnName = ["＋", "–"]
+
+                btnName.forEach((name, index) => {
+                    let btn = document.createElement('button');
+                    $(btn).text(name)
+                    elementsChangeClass(btn, "add", "table-btn-switch")
+                    btn.addEventListener("click", (e) => {
+                        $(el).find(".table-btn-switch").toggle()
+                        $(el).find(".table-subtable-container").toggle()
+                    });
+                    if (index === 1) {
+                        $(btn).css("display", "none")
+                    }
+                    div.appendChild(btn)
+                })
+                return div
+            },
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30
+        },
+        { title: "申請項目", field: "申請項目" },
+        { title: "用戶編號", field: "用戶編號" },
+        { title: "核印狀態", field: "核印狀態" },
+        { title: "帳戶統編/ID", field: "帳戶統編ID" },
+        { title: "帳戶名稱", field: "帳戶名稱" },
+        { title: "核印上傳日", field: "核印上傳日" },
+        { title: "銀行核印日", field: "銀行核印日" },
+        { title: "銀行核印回覆說明", field: "銀行核印回覆說明" },
+    ],
+    rowFormatter: function(row) {
+        let container = document.createElement("div");
+        let subtable = document.createElement("div");
+
+        $(container).css("display", "none")
+        elementsChangeClass(container, "add", "table-subtable-container")
+        elementsChangeClass(subtable, "add", "table-subtable")
+        subtable.innerHTML = `<div class="customize-form page-customize-form">
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">總行代號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="總行代號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">分行代號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="分行代號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">銀行帳號</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="銀行帳號"></div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">火險建檔人員</div>
+                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="火險建檔人員"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
+        subtable.querySelectorAll(".customize-form-entry input").forEach((el) => {
+            let field = el.getAttribute("name");
+            el.value = row.getData().ntTable[field];
+        })
+
+        container.appendChild(subtable);
+        row.getElement().appendChild(container);
+
+
+    },
+});
+
+function elementsChangeClass(elements, behavior, classNames) {
+    if (behavior === "add") {
+        $(elements).each(function(index, element) {
+            $(element).addClass(classNames)
+        })
+    } else if (behavior === "remove") {
+        $(elements).each(function(index, element) {
+            $(element).removeClass(classNames)
+        })
+    }
+}
+////////////////////////////////////////////////////////
+let table02Data = [{
         id: "a1",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        保險費: "NTD"+"1,000,000",
+        銀行來源: "銀行來源",
+        帳號: "帳號",
+        使用單位: "使用單位",
+        銀行作帳單位: "銀行作帳單位",
+        票據原幣金額: "票據原幣金額",
+        存款銀行: "存款銀行",
+        交易日: "交易日",
+        交易時間: "交易時間",
+        摘要: "摘要",
+        櫃員代號: "櫃員代號",
+        收入金額: "100,000",
+        支出金額: "20,000",
+        幣別: "幣別",
+        餘額: "20,000",
     },
     {
         id: "a2",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        保險費: "NTD"+"1,000,000",
+        銀行來源: "銀行來源",
+        帳號: "帳號",
+        使用單位: "使用單位",
+        銀行作帳單位: "銀行作帳單位",
+        票據原幣金額: "票據原幣金額",
+        存款銀行: "存款銀行",
+        交易日: "交易日",
+        交易時間: "交易時間",
+        摘要: "摘要",
+        櫃員代號: "櫃員代號",
+        收入金額: "100,000",
+        支出金額: "20,000",
+        幣別: "幣別",
+        餘額: "20,000",
     },
 ]
 
-var table01 = new Tabulator("#table01", {
-    data: table01Data,
+var table02 = new Tabulator("#table02", {
+    data: table02Data,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -1086,21 +1212,23 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "險種", field: "險種" },
-        { title: "要保號碼", field: "要保號碼" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "序號", field: "序號" },
-        { title: "期別", field: "期別" },
-        { title: "要保人ID", field: "要保人ID" },
-        { title: "要保人姓名", field: "要保人姓名" },
-        { title: "被保險人ID", field: "被保險人ID" },
-        { title: "被保人姓名", field: "被保人姓名" },
-        { title: "保險費", field: "保險費", hozAlign: "right" },
+        { title: "銀行來源", field: "銀行來源" },
+        { title: "帳號", field: "帳號" },
+        { title: "使用單位", field: "使用單位" },
+        { title: "銀行作帳單位", field: "銀行作帳單位" },
+        { title: "存款銀行", field: "存款銀行" },
+        { title: "交易日", field: "交易日" },
+        { title: "交易時間", field: "交易時間" },
+        { title: "摘要", field: "摘要" },
+        { title: "櫃員代號", field: "櫃員代號" },
+        { title: "收入金額", field: "收入金額", hozAlign: "right" },
+        { title: "支出金額", field: "支出金額", hozAlign: "right" },
+        { title: "幣別", field: "幣別" },
+        { title: "餘額", field: "餘額", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row
-table01.selectRow(["a1"]);
+table02.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
