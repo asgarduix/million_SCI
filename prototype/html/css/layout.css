@@ -3637,6 +3637,10 @@ a.menu-active .menu-bar {
     padding-top: 2px;
 }
 
+.customize-form-entry span input[type='text'] {
+    margin-bottom: 0;
+}
+
 .customize-form-entry li div {
     display: table;
     table-layout: fixed;
