@@ -3611,7 +3611,7 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
-    vertical-align: top;
+    vertical-align: sub;
 }
 
 .customize-form-entry input[type="radio"],
