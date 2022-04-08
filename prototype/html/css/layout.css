@@ -1094,6 +1094,10 @@ a.menu-active .menu-bar {
     margin-right: 3px;
 }
 
+.datal-total-row .data-row-content {
+    font-weight: bold;
+}
+
 .card-data-left {
     width: 265px;
     padding: 0 5px 0 0;
@@ -1299,6 +1303,7 @@ a.menu-active .menu-bar {
     width: 215px;
     height: 255px;
 }
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
