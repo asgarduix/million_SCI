@@ -1295,6 +1295,10 @@ a.menu-active .menu-bar {
     position: relative;
 }
 
+.card-data-small {
+    width: 215px;
+    height: 255px;
+}
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -3485,6 +3489,12 @@ a.menu-active .menu-bar {
     background: #027bb3;
 }
 
+.customize-form-header-multiple span span:nth-child(1)::after {
+    content: "|";
+    margin: 0 4px;
+    vertical-align: text-bottom;
+}
+
 .sub-form {
     border-bottom: #bbb solid 8px;
 }
@@ -4465,6 +4475,7 @@ span.tp {
 /* 左右排版樣式：左側連結/右側塊狀資訊 */
 .page-customize-form-double .card-data-inner {
     border: #bbb solid 1px;
+    height: 100%;
 }
 
 .page-customize-form-double .card-data-left {
@@ -4508,7 +4519,6 @@ span.tp {
 .page-customize-form-double .customize-form-field-delete {
     background: #f4fcf7;
 }
-
 
 /* END: customize-form */
 /* START:  燈號 */
