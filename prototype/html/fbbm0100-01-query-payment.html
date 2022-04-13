@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbbm0100-01-query-barcode-license">
+<body id="canvas" class="fbbm0100-01-query-payment">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -934,12 +934,64 @@
                                                     <li><a href="fbbm0100-01-query-savings.html">銀行存款</a></li>
                                                     <li><a href="fbbm0100-01-query-cash-license.html">現金憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-creditcard-license.html">信用卡憑證</a></li>
-                                                    <li><a href="fbbm0100-01-query-barcode-license.html" class="tab-link-active">條碼憑證</a></li>
+                                                    <li><a href="fbbm0100-01-query-barcode-license.html">條碼憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-history.html">暫收歷史紀錄</a></li>
-                                                    <li><a href="fbbm0100-01-query-payment.html">暫收抵繳</a></li>
+                                                    <li><a href="fbbm0100-01-query-payment.html" class="tab-link-active">暫收抵繳</a></li>
                                                 </ul>
                                             </div>
                                             <div class="content-component content-table">
+                                                <!-- customize-form -->
+                                                <div class="customize-form page-customize-form">
+                                                    <div class="customize-form-row">
+                                                        <div class="customize-form-header">
+                                                            <span>繳費日報表</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 單位/繳款人/支票金額/繳款批號 -->
+                                                    <div class="customize-form-row">
+                                                        <div class="customize-form-inner">
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">單位</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="text" name="單位" value="00" title="00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款人</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <div class="customize-form-entry-container">
+                                                                            <div class="customize-form-entry-col customize-form-entry-4">
+                                                                                <input type="text" name="繳款人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                                            </div>
+                                                                            <div class="customize-form-entry-col customize-form-entry-6">
+                                                                                <input type="text" name="繳款人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款日</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="date" name="繳款日" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款批號</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="text" name="繳款批號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="table-func">
                                                     <div class="table-func-inner">
                                                         <div class="table-func-basic">
@@ -1144,27 +1196,43 @@
 <script>
 let table01Data = [{
         id: "a1",
-        件數: "件數",
-        收費序號: "收費序號",
-        交易日: "交易日",
-        交易金額: "1,000,000",
-        立帳日: "立帳日",
-        入帳日: "入帳日",
-        銷帳日: "銷帳日",
-        收費來源: "收費來源",
-        收費方式: "收費方式"
+        項次: "1",
+        險種: "險種",
+        要保號碼: "要保號碼",
+        保單號碼: "區碼" + "保單",
+        批單號碼: "批單號碼",
+        序號: "序號",
+        期別: "期別",
+        要保人ID: "要保人ID",
+        要保人姓名: "要保人姓名",
+        被保險人ID: "被保險人ID",
+        被保險人姓名: "被保險人姓名",
+        應收保費: "金額",
+        原幣保費: "幣別" + "金額",
+        經手人: "代號" + "中文",
+        保源: "代號" + "中文",
+        洽攬人: "代號" + "中文",
+        業務來源: "代號" + "中文",
     },
     {
         id: "a2",
-        件數: "件數",
-        收費序號: "收費序號",
-        交易日: "交易日",
-        交易金額: "2,000,000",
-        立帳日: "立帳日",
-        入帳日: "入帳日",
-        銷帳日: "銷帳日",
-        收費來源: "收費來源",
-        收費方式: "收費方式"
+        項次: "2",
+        險種: "險種",
+        要保號碼: "要保號碼",
+        保單號碼: "區碼" + "保單",
+        批單號碼: "批單號碼",
+        序號: "序號",
+        期別: "期別",
+        要保人ID: "要保人ID",
+        要保人姓名: "要保人姓名",
+        被保險人ID: "被保險人ID",
+        被保險人姓名: "被保險人姓名",
+        應收保費: "金額",
+        原幣保費: "幣別" + "金額",
+        經手人: "代號" + "中文",
+        保源: "代號" + "中文",
+        洽攬人: "代號" + "中文",
+        業務來源: "代號" + "中文",
     },
 ]
 
@@ -1181,16 +1249,29 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "件數", field: "件數" },
-        { title: "收費序號", field: "收費序號" },
-        { title: "交易日", field: "交易日" },
-        { title: "交易金額", field: "交易金額", hozAlign: "right" },
-        { title: "立帳日", field: "立帳日" },
-        { title: "入帳日", field: "入帳日" },
-        { title: "銷帳日", field: "銷帳日" },
-        { title: "收費來源", field: "收費來源" },
-        { title: "收費方式", field: "收費方式" },
+    columns: [{
+            title: "",
+            field: "項次",
+            maxWidth: 30,
+            minWidth: 30,
+            hozAlign: "center",
+        },
+        { title: "險種", field: "險種" },
+        { title: "要保號碼", field: "要保號碼" },
+        { title: "保單號碼", field: "保單號碼" },
+        { title: "批單號碼", field: "批單號碼" },
+        { title: "序號", field: "序號" },
+        { title: "期別", field: "期別" },
+        { title: "要保人ID", field: "要保人ID" },
+        { title: "要保人姓名", field: "要保人姓名" },
+        { title: "被保險人ID", field: "被保險人ID" },
+        { title: "被保險人姓名", field: "被保險人姓名" },
+        { title: "應收保費", field: "應收保費", hozAlign: "right" },
+        { title: "原幣保費", field: "原幣保費", hozAlign: "right" },
+        { title: "經手人", field: "經手人" },
+        { title: "保源", field: "保源" },
+        { title: "洽攬人", field: "洽攬人" },
+        { title: "業務來源", field: "業務來源" },
     ],
 });
 // 選擇預設勾選row
