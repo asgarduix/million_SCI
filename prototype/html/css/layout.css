@@ -3677,7 +3677,14 @@ a.menu-active .menu-bar {
 .customize-form-entry-col {
     float: left;
     padding: 0 3px;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.customize-form-entry-col span {
+    display: block;
+    height: 24px;
+    font-size: 0.875rem;
+    text-align: right;
 }
 
 .customize-form-entry-col:nth-child(1) {
