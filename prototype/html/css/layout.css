@@ -3513,6 +3513,9 @@ a.menu-active .menu-bar {
 .customize-form-inner {
     overflow: hidden;
     background: #f7f7f7;
+}
+
+.customize-form-row:nth-last-child(1) .customize-form-inner {
     border-radius: 4px;
 }
 
@@ -3557,10 +3560,10 @@ a.menu-active .menu-bar {
     width: 100%;
 }
 
-.customize-form-field:nth-child(1) .customize-form-title {
+/*.customize-form-field:nth-child(1) .customize-form-title {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-}
+}*/
 
 .customize-field-inner {
     width: 100%;
@@ -3696,6 +3699,10 @@ a.menu-active .menu-bar {
 
 .customize-form-entry-col:nth-last-child(1) {
     padding-right: 0;
+}
+
+.customize-form-entry-col .func-download {
+    border: none;
 }
 
 .customize-form-entry-inner {
@@ -4532,6 +4539,15 @@ span.tp {
 
 .page-customize-form-double .customize-form-field-delete {
     background: #f4fcf7;
+}
+
+.row-mark .customize-form-entry {
+    background: #bbfeb5;
+}
+
+.row-mark .customize-form-title {
+    font-weight: bold;
+    background: #81F677;
 }
 
 /* END: customize-form */
