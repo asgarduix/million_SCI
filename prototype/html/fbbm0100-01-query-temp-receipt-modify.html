@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbbm0100-01-query-savings">
+<body id="canvas" class="fbbm0100-01-query-temp-receipt">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -931,14 +931,14 @@
                                                 <ul>
                                                     <li><a href="fbbm0100-01-query-detail.html">保單明細</a></li>
                                                     <li><a href="fbbm0100-01-query-negotiable-license.html">票據憑證</a></li>
-                                                    <li><a href="fbbm0100-01-query-savings.html" class="tab-link-active">銀行存款</a></li>
+                                                    <li><a href="fbbm0100-01-query-savings.html">銀行存款</a></li>
                                                     <li><a href="fbbm0100-01-query-cash-license.html">現金憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-creditcard-license.html">信用卡憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-barcode-license.html">條碼憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-history.html">暫收歷史紀錄</a></li>
                                                     <li><a href="fbbm0100-01-query-payment.html">暫收抵繳</a></li>
                                                     <li><a href="fbbm0100-01-query-temp-receipt.html">暫收支付</a></li>
-                                                    <li><a href="fbbm0100-01-query-temp-receipt-modify.html">暫收支付修改</a></li>
+                                                    <li><a href="fbbm0100-01-query-temp-receipt-modify.html" class="tab-link-active">暫收支付修改</a></li>
                                                 </ul>
                                             </div>
                                             <div class="content-component content-table">
@@ -960,7 +960,7 @@
                                                         <div class="table-func-page">頁碼</div>
                                                     </div>
                                                 </div>
-                                                <div id="table02"></div>
+                                                <div id="table01"></div>
                                                 <div class="table-footer"></div>
                                             </div>
                                         </div>
@@ -1144,156 +1144,42 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let nestedData = [{
-    id: "a1",
-    申請項目: "申請項目",
-    用戶編號: "用戶編號",
-    核印狀態: "核印狀態",
-    帳戶統編ID: "帳戶統編/ID",
-    帳戶名稱: "帳戶名稱",
-    核印上傳日: "核印上傳日",
-    銀行核印日: "銀行核印日",
-    銀行核印回覆說明: "銀行核印回覆說明",
-    ntTable: {
-        "總行代號": "總行代號",
-        "分行代號": "分行代號",
-        "銀行帳號": "銀行帳號",
-        "火險建檔人員": "火險建檔人員",
-    },
-}, ]
-
-var table = new Tabulator("#table01", {
-    height: "100%",
-    layout: "fitColumns",
-    movableColumns: true,
-    data: nestedData,
-    columns: [{
-            formatter: (cell, formatterParams, onRendered) => {
-                let div = document.createElement('div');
-                let el = cell.getRow().getElement()
-                let btnName = ["＋", "–"]
-
-                btnName.forEach((name, index) => {
-                    let btn = document.createElement('button');
-                    $(btn).text(name)
-                    elementsChangeClass(btn, "add", "table-btn-switch")
-                    btn.addEventListener("click", (e) => {
-                        $(el).find(".table-btn-switch").toggle()
-                        $(el).find(".table-subtable-container").toggle()
-                    });
-                    if (index === 1) {
-                        $(btn).css("display", "none")
-                    }
-                    div.appendChild(btn)
-                })
-                return div
-            },
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30
-        },
-        { title: "申請項目", field: "申請項目" },
-        { title: "用戶編號", field: "用戶編號" },
-        { title: "核印狀態", field: "核印狀態" },
-        { title: "帳戶統編/ID", field: "帳戶統編ID" },
-        { title: "帳戶名稱", field: "帳戶名稱" },
-        { title: "核印上傳日", field: "核印上傳日" },
-        { title: "銀行核印日", field: "銀行核印日" },
-        { title: "銀行核印回覆說明", field: "銀行核印回覆說明" },
-    ],
-    rowFormatter: function(row) {
-        let container = document.createElement("div");
-        let subtable = document.createElement("div");
-
-        $(container).css("display", "none")
-        elementsChangeClass(container, "add", "table-subtable-container")
-        elementsChangeClass(subtable, "add", "table-subtable")
-        subtable.innerHTML = `<div class="customize-form page-customize-form">
-        <div class="customize-form-row">
-            <div class="customize-form-inner">
-                <div class="customize-form-field customize-form-field-1">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">總行代號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="總行代號"></div>
-                    </div>
-                </div>
-                <div class="customize-form-field customize-form-field-1">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">分行代號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="分行代號"></div>
-                    </div>
-                </div>
-                <div class="customize-form-field customize-form-field-1">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">銀行帳號</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="銀行帳號"></div>
-                    </div>
-                </div>
-                <div class="customize-form-field customize-form-field-1">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">火險建檔人員</div>
-                        <div class="customize-form-entry"><input type="text" value="" attr="readonly" disabled="" name="火險建檔人員"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>`
-        subtable.querySelectorAll(".customize-form-entry input").forEach((el) => {
-            let field = el.getAttribute("name");
-            el.value = row.getData().ntTable[field];
-        })
-
-        container.appendChild(subtable);
-        row.getElement().appendChild(container);
-
-
-    },
-});
-
-function elementsChangeClass(elements, behavior, classNames) {
-    if (behavior === "add") {
-        $(elements).each(function(index, element) {
-            $(element).addClass(classNames)
-        })
-    } else if (behavior === "remove") {
-        $(elements).each(function(index, element) {
-            $(element).removeClass(classNames)
-        })
-    }
-}
-////////////////////////////////////////////////////////
-let table02Data = [{
+let table01Data = [{
         id: "a1",
-        存摺地區: "區碼" + "名稱",
-        交易日: "交易日",
-        銀行代號: "代號"+"分行中文",
-        銀行帳號: "銀行帳號",
-        幣別: "幣別",
-        原幣收入: "原幣收入",
-        原幣支出: "原幣支出",
-        匯款人虛擬帳號ID: "匯款人虛擬帳號ID",
-        銀行摘要說明: "銀行摘要說明",
-        圖檔: "圖檔",
+        退回維護日: "退回維護日",
+        退款失敗原因: "失敗原因1",
+        銀行退回手續費: "銀行退回手續費",
+        付款行: "付款行",
+        付款帳號: "付款帳號",
+        票據郵寄日: "票據郵寄日",
+        票據狀態: "票據狀態",
+        票據狀態日: "票據狀態日",
+        票據兌現日: "票據兌現日",
+        更新日期: "更新日期",
+        建檔日期: "建檔日期",
+        操作人員: "操作人員",
+        新暫收號暫收日暫收序號: "新暫收號-暫收日-暫收序號",
     },
     {
         id: "a2",
-        存摺地區: "區碼"+"名稱",
-        交易日: "交易日",
-        銀行代號: "代號"+"分行中文",
-        銀行帳號: "銀行帳號",
-        幣別: "幣別",
-        原幣收入: "原幣收入",
-        原幣支出: "原幣支出",
-        匯款人虛擬帳號ID: "匯款人虛擬帳號ID",
-        銀行摘要說明: "銀行摘要說明",
-        圖檔: "圖檔",
+        退回維護日: "退回維護日",
+        退款失敗原因: "失敗原因2",
+        銀行退回手續費: "銀行退回手續費",
+        付款行: "付款行",
+        付款帳號: "付款帳號",
+        票據郵寄日: "票據郵寄日",
+        票據狀態: "票據狀態",
+        票據狀態日: "票據狀態日",
+        票據兌現日: "票據兌現日",
+        更新日期: "更新日期",
+        建檔日期: "建檔日期",
+        操作人員: "操作人員",
+        新暫收號暫收日暫收序號: "新暫收號-暫收日-暫收序號",
     },
 ]
 
-var table02 = new Tabulator("#table02", {
-    data: table02Data,
+var table01 = new Tabulator("#table01", {
+    data: table01Data,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -1306,27 +1192,36 @@ var table02 = new Tabulator("#table02", {
     tooltipGenerationMode: "hover",
     selectable: true,
     columns: [
-        { title: "存摺地區", field: "存摺地區" },
-        { title: "交易日", field: "交易日" },
-        { title: "銀行代號", field: "銀行代號" },
-        { title: "銀行帳號", field: "銀行帳號" },
-        { title: "幣別", field: "幣別" },
-        { title: "原幣收入", field: "原幣收入", hozAlign: "right" },
-        { title: "原幣支出", field: "原幣支出", hozAlign: "right" },
-        { title: "匯款人/虛擬帳號ID", field: "匯款人虛擬帳號ID" },
-        { title: "銀行摘要說明", field: "銀行摘要說明" },
+        { title: "退回維護日", field: "退回維護日" },
         {
-            title: "圖檔",
-            field: "圖檔",
+            title: "退款失敗原因",
+            field: "退款失敗原因",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
             },
-            formatter: "link",
+            editor: "select",
+            editorParams: {
+                "失敗原因1": "失敗原因1",
+                "失敗原因2": "失敗原因2",
+                "失敗原因3": "失敗原因3",
+            }
         },
+        { title: "銀行退回手續費", field: "銀行退回手續費" },
+        { title: "付款行", field: "付款行" },
+        { title: "付款帳號", field: "付款帳號" },
+        { title: "票據郵寄日", field: "票據郵寄日" },
+        { title: "票據狀態", field: "票據狀態" },
+        { title: "票據狀態日", field: "票據狀態日" },
+        { title: "票據兌現日", field: "票據兌現日" },
+        { title: "更新日期", field: "更新日期" },
+        { title: "建檔日期", field: "建檔日期" },
+        { title: "操作人員", field: "操作人員" },
+        { title: "新暫收號-暫收日-暫收序號", field: "新暫收號暫收日暫收序號" },
     ],
 });
 // 選擇預設勾選row
-table02.selectRow(["a1"]);
+table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
