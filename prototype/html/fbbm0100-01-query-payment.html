@@ -942,6 +942,58 @@
                                                 </ul>
                                             </div>
                                             <div class="content-component content-table">
+                                                 <!-- customize-form -->
+                                                <div class="customize-form page-customize-form">
+                                                    <div class="customize-form-row">
+                                                        <div class="customize-form-header">
+                                                            <span>繳費日報表</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 單位/繳款人/支票金額/繳款批號 -->
+                                                    <div class="customize-form-row">
+                                                        <div class="customize-form-inner">
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">單位</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="text" name="單位" value="00" title="00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款人</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <div class="customize-form-entry-container">
+                                                                            <div class="customize-form-entry-col customize-form-entry-4">
+                                                                                <input type="text" name="繳款人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                                            </div>
+                                                                            <div class="customize-form-entry-col customize-form-entry-6">
+                                                                                <input type="text" name="繳款人" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" attr="readonly" disabled="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款日</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="date" name="繳款日" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="customize-form-field customize-form-field-1">
+                                                                <div class="customize-field-inner">
+                                                                    <div class="customize-form-title">繳款批號</div>
+                                                                    <div class="customize-form-entry">
+                                                                        <input type="text" name="繳款批號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="table-func">
                                                     <div class="table-func-inner">
                                                         <div class="table-func-basic">
@@ -1147,32 +1199,42 @@
 let table01Data = [{
         id: "a1",
         項次: "1",
-        幣別: "美金",
-        原幣金額: "原幣金額",
-        兌換損益: "兌換損益",
-        金額: "金額",
-        支付對象: "支付對象",
-        ID統編: "ID/統編",
-        支付方式: "方法1",
-        電匯銀行: "代號"+"銀行中文",
-        帳號票號: "帳號/票號",
-        郵匯費: "郵匯費",
-        地址: "地址",
+        險種: "險種",
+        要保號碼: "要保號碼",
+        保單號碼: "區碼" + "保單",
+        批單號碼: "批單號碼",
+        序號: "序號",
+        期別: "期別",
+        要保人ID: "要保人ID",
+        要保人姓名: "要保人姓名",
+        被保險人ID: "被保險人ID",
+        被保險人姓名: "被保險人姓名",
+        應收保費: "金額",
+        原幣保費: "幣別" + "金額",
+        經手人: "代號" + "中文",
+        保源: "代號" + "中文",
+        洽攬人: "代號" + "中文",
+        業務來源: "代號" + "中文",
     },
     {
         id: "a2",
         項次: "2",
-        幣別: "台幣",
-        原幣金額: "原幣金額",
-        兌換損益: "兌換損益",
-        金額: "金額",
-        支付對象: "支付對象",
-        ID統編: "ID/統編",
-        支付方式: "方法3",
-        電匯銀行: "代號"+"銀行中文",
-        帳號票號: "帳號/票號",
-        郵匯費: "郵匯費",
-        地址: "地址",
+        險種: "險種",
+        要保號碼: "要保號碼",
+        保單號碼: "區碼" + "保單",
+        批單號碼: "批單號碼",
+        序號: "序號",
+        期別: "期別",
+        要保人ID: "要保人ID",
+        要保人姓名: "要保人姓名",
+        被保險人ID: "被保險人ID",
+        被保險人姓名: "被保險人姓名",
+        應收保費: "金額",
+        原幣保費: "幣別" + "金額",
+        經手人: "代號" + "中文",
+        保源: "代號" + "中文",
+        洽攬人: "代號" + "中文",
+        業務來源: "代號" + "中文",
     },
 ]
 
@@ -1196,43 +1258,22 @@ var table01 = new Tabulator("#table01", {
             minWidth: 30,
             hozAlign: "center",
         },
-        {
-            title: "幣別",
-            field: "幣別",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-select", "tabulator-select-editable");
-                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "select",
-            editorParams: {
-                "台幣": "台幣",
-                "美金": "美金",
-                "人民幣": "人民幣",
-            }
-        },
-        { title: "原幣金額", field: "原幣金額", hozAlign: "right" },
-        { title: "兌換損益", field: "兌換損益", hozAlign: "right" },
-        { title: "金額", field: "金額", hozAlign: "right" },
-        { title: "支付對象", field: "支付對象" },
-        { title: "ID/統編", field: "ID統編" },
-        {
-            title: "支付方式",
-            field: "支付方式",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-select", "tabulator-select-editable");
-                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "select",
-            editorParams: {
-                "方法1": "方法1",
-                "方法2": "方法2",
-                "方法3": "方法3",
-            }
-        },
-        { title: "電匯銀行", field: "電匯銀行" },
-        { title: "帳號/票號", field: "帳號票號" },
-        { title: "郵匯費", field: "郵匯費" },
-        { title: "地址", field: "地址" },
+        { title: "險種", field: "險種" },
+        { title: "要保號碼", field: "要保號碼" },
+        { title: "保單號碼", field: "保單號碼" },
+        { title: "批單號碼", field: "批單號碼" },
+        { title: "序號", field: "序號" },
+        { title: "期別", field: "期別" },
+        { title: "要保人ID", field: "要保人ID" },
+        { title: "要保人姓名", field: "要保人姓名" },
+        { title: "被保險人ID", field: "被保險人ID" },
+        { title: "被保險人姓名", field: "被保險人姓名" },
+        { title: "應收保費", field: "應收保費", hozAlign: "right" },
+        { title: "原幣保費", field: "原幣保費", hozAlign: "right" },
+        { title: "經手人", field: "經手人" },
+        { title: "保源", field: "保源" },
+        { title: "洽攬人", field: "洽攬人" },
+        { title: "業務來源", field: "業務來源" },
     ],
 });
 // 選擇預設勾選row
