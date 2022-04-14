@@ -1194,7 +1194,16 @@ var table01 = new Tabulator("#table01", {
             hozAlign: "center",
         },
         { title: "序號", field: "序號" },
-        { title: "現金金額", field: "現金金額", hozAlign: "right" },
+        {
+            title: "現金金額",
+            field: "現金金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
         { title: "更新日期", field: "更新日期" },
         { title: "建檔日期", field: "建檔日期" },
         { title: "建檔人員", field: "建檔人員" },

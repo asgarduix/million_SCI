@@ -1847,6 +1847,9 @@ a.menu-active .menu-bar {
     position: relative;
     background: #fff;
     border: #aaa solid 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .tabulator-select-editable .table-select-inner::after {

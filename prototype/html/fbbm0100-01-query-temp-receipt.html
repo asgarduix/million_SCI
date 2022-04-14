@@ -1146,7 +1146,7 @@
 let table01Data = [{
         id: "a1",
         退回維護日: "退回維護日",
-        退款失敗原因: "退款失敗原因",
+        退款失敗原因: "失敗原因1",
         銀行退回手續費: "銀行退回手續費",
         付款行: "付款行",
         付款帳號: "付款帳號",
@@ -1162,7 +1162,7 @@ let table01Data = [{
     {
         id: "a2",
         退回維護日: "退回維護日",
-        退款失敗原因: "退款失敗原因",
+        退款失敗原因: "失敗原因2",
         銀行退回手續費: "銀行退回手續費",
         付款行: "付款行",
         付款帳號: "付款帳號",
@@ -1192,7 +1192,20 @@ var table01 = new Tabulator("#table01", {
     selectable: true,
     columns: [
         { title: "退回維護日", field: "退回維護日" },
-        { title: "退款失敗原因", field: "退款失敗原因" },
+        {
+            title: "退款失敗原因",
+            field: "退款失敗原因",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "失敗原因1": "失敗原因1",
+                "失敗原因2": "失敗原因2",
+                "失敗原因3": "失敗原因3",
+            }
+        },
         { title: "銀行退回手續費", field: "銀行退回手續費" },
         { title: "付款行", field: "付款行" },
         { title: "付款帳號", field: "付款帳號" },
