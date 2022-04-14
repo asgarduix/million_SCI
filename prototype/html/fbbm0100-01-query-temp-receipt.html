@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbbm0100-01-query-detail">
+<body id="canvas" class="fbbm0100-01-query-temp-receipt">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -929,7 +929,7 @@
                                             <!-- tab-link -->
                                             <div class="content-component content-tab-link">
                                                 <ul>
-                                                    <li><a href="fbbm0100-01-query-detail.html" class="tab-link-active">保單明細</a></li>
+                                                    <li><a href="fbbm0100-01-query-detail.html">保單明細</a></li>
                                                     <li><a href="fbbm0100-01-query-negotiable-license.html">票據憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-savings.html">銀行存款</a></li>
                                                     <li><a href="fbbm0100-01-query-cash-license.html">現金憑證</a></li>
@@ -937,7 +937,7 @@
                                                     <li><a href="fbbm0100-01-query-barcode-license.html">條碼憑證</a></li>
                                                     <li><a href="fbbm0100-01-query-history.html">暫收歷史紀錄</a></li>
                                                     <li><a href="fbbm0100-01-query-payment.html">暫收抵繳</a></li>
-                                                    <li><a href="fbbm0100-01-query-temp-receipt.html">暫收支付修改</a></li>
+                                                    <li><a href="fbbm0100-01-query-temp-receipt.html" class="tab-link-active">暫收支付修改</a></li>
                                                 </ul>
                                             </div>
                                             <div class="content-component content-table">
@@ -1145,43 +1145,35 @@
 <script>
 let table01Data = [{
         id: "a1",
-        項次: "1",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "區碼" + "保單",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        應收保費: "1,000,000",
-        原幣保費: "NTD" + "1,000,000",
-        經手人: "代號" + "姓名",
-        保源: "代號" + "中文",
-        洽攬人: "代號" + "中文",
-        業務來源: "代號" + "中文",
+        退回維護日: "退回維護日",
+        退款失敗原因: "退款失敗原因",
+        銀行退回手續費: "銀行退回手續費",
+        付款行: "付款行",
+        付款帳號: "付款帳號",
+        票據郵寄日: "票據郵寄日",
+        票據狀態: "票據狀態",
+        票據狀態日: "票據狀態日",
+        票據兌現日: "票據兌現日",
+        更新日期: "更新日期",
+        建檔日期: "建檔日期",
+        操作人員: "操作人員",
+        新暫收號暫收日暫收序號: "新暫收號-暫收日-暫收序號",
     },
     {
         id: "a2",
-        項次: "2",
-        險種: "險種",
-        要保號碼: "要保號碼",
-        保單號碼: "區碼" + "保單",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        要保人ID: "要保人ID",
-        要保人姓名: "要保人姓名",
-        被保險人ID: "被保險人ID",
-        被保人姓名: "被保人姓名",
-        應收保費: "1,000,000",
-        原幣保費: "NTD" + "1,000,000",
-        經手人: "代號" + "姓名",
-        保源: "代號" + "中文",
-        洽攬人: "代號" + "中文",
-        業務來源: "代號" + "中文",
+        退回維護日: "退回維護日",
+        退款失敗原因: "退款失敗原因",
+        銀行退回手續費: "銀行退回手續費",
+        付款行: "付款行",
+        付款帳號: "付款帳號",
+        票據郵寄日: "票據郵寄日",
+        票據狀態: "票據狀態",
+        票據狀態日: "票據狀態日",
+        票據兌現日: "票據兌現日",
+        更新日期: "更新日期",
+        建檔日期: "建檔日期",
+        操作人員: "操作人員",
+        新暫收號暫收日暫收序號: "新暫收號-暫收日-暫收序號",
     },
 ]
 
@@ -1198,29 +1190,20 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [{
-            title: "",
-            field: "項次",
-            maxWidth: 30,
-            minWidth: 30,
-            hozAlign: "center",
-        },
-        { title: "險種", field: "險種" },
-        { title: "要保號碼", field: "要保號碼" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "序號", field: "序號" },
-        { title: "期別", field: "期別" },
-        { title: "要保人ID", field: "要保人ID" },
-        { title: "要保人姓名", field: "要保人姓名" },
-        { title: "被保險人ID", field: "被保險人ID" },
-        { title: "被保人姓名", field: "被保人姓名" },
-        { title: "應收保費", field: "應收保費", hozAlign: "right" },
-        { title: "原幣保費", field: "原幣保費", hozAlign: "right" },
-        { title: "經手人", field: "經手人" },
-        { title: "保源", field: "保源" },
-        { title: "洽攬人", field: "洽攬人" },
-        { title: "業務來源", field: "業務來源" },
+    columns: [
+        { title: "退回維護日", field: "退回維護日" },
+        { title: "退款失敗原因", field: "退款失敗原因" },
+        { title: "銀行退回手續費", field: "銀行退回手續費" },
+        { title: "付款行", field: "付款行" },
+        { title: "付款帳號", field: "付款帳號" },
+        { title: "票據郵寄日", field: "票據郵寄日" },
+        { title: "票據狀態", field: "票據狀態" },
+        { title: "票據狀態日", field: "票據狀態日" },
+        { title: "票據兌現日", field: "票據兌現日" },
+        { title: "更新日期", field: "更新日期" },
+        { title: "建檔日期", field: "建檔日期" },
+        { title: "操作人員", field: "操作人員" },
+        { title: "新暫收號-暫收日-暫收序號", field: "新暫收號暫收日暫收序號" },
     ],
 });
 // 選擇預設勾選row
