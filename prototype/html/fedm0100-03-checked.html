@@ -46,6 +46,62 @@
                     <div class="menu-list">
                         <ul>
                             <li>
+                                <a href="fedm0100-01-query.html" class="menu-list-active">
+                                    <span>FEDM0100</span>
+                                    <span>銀行檔查詢及維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fedm0500-tab1-01-query.html">
+                                    <span>FEDM0500</span>
+                                    <span>印鑑管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fedm0600-01-query.html">
+                                    <span>FEDM0600</span>
+                                    <span>銀行信評資料維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0100-tab1-01-query.html">
+                                    <span>FEBM0100</span>
+                                    <span>銀行帳戶管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0300-tab1-01-query.html">
+                                    <span>FEBM0300</span>
+                                    <span>利息建檔與查詢</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0400-tab1-01-manage.html">
+                                    <span>FEBM0400</span>
+                                    <span>資金調度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0500-tab1-01-query.html">
+                                    <span>FEBM0500</span>
+                                    <span>銀行存款資料匯入作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0600-01-query.html">
+                                    <span>FEBM0600</span>
+                                    <span>銀行存款使用維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fedm0800-tab1-01-query.html">
+                                    <span>FEDM0800</span>
+                                    <span>兌換率維護作業</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- <ul>
+                            <li>
                                 <a href="#" class="menu-list-active">
                                     <span>FEDM0100</span>
                                     <span>銀行檔查詢及維護</span>
@@ -105,7 +161,7 @@
                                     <span>銀行存款使用維護</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
@@ -473,19 +529,18 @@
 <script src="js/pg.js"></script>
 <script>
 let table01Data = [{
-        id: "a1",
-        銀行代號: "銀行代號",
-        分行代號: "分行代號",
-        銀行名稱: "銀行名稱",
-        銀行簡稱: "銀行簡稱",
-        地址: "地址",
-        銀行統編: "銀行統編",
-        電話號碼: "電話號碼",
-        建檔日期: "建檔日期",
-        更新日期: "更新日期",
-        作業人員: "作業人員",
-    },
-]
+    id: "a1",
+    銀行代號: "銀行代號",
+    分行代號: "分行代號",
+    銀行名稱: "銀行名稱",
+    銀行簡稱: "銀行簡稱",
+    地址: "地址",
+    銀行統編: "銀行統編",
+    電話號碼: "電話號碼",
+    建檔日期: "建檔日期",
+    更新日期: "更新日期",
+    作業人員: "作業人員",
+}, ]
 
 var table01 = new Tabulator("#table01", {
     data: table01Data,
