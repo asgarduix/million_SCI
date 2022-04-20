@@ -1695,6 +1695,7 @@ a.menu-active .menu-bar {
     color: #fff;
 }
 
+
 .content-table .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
     background: #027DB4;
 }
@@ -1702,6 +1703,11 @@ a.menu-active .menu-bar {
 .content-table .tabulator .tabulator-header .tabulator-col {
     background: none;
     font-weight: normal;
+}
+
+.form-content-table .tabulator .tabulator-header {
+    background: #F2EDE6;
+    color: #111;
 }
 
 .content-table .tabulator div,
