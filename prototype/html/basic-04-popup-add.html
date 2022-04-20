@@ -1659,6 +1659,100 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <!-- customize-form+tabulator -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>現金維護</span>
+                            </div>
+                        </div>
+                        <!-- 現金金額/票據張數/票據金額/聯絡電話 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">現金金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="現金金額" value="1,019" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據張數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據張數" value="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據金額" value="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">聯絡電話</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="聯絡電話" value="0227588400" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 繳款人/備註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">繳款人</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="繳款人" value="236820" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">備註</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="備註" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">EMAIL</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="EMAIL" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>支票維護</span><a class="add-sub-form"><button type="button">新增</button></a>
+                            </div>
+                        </div>
+                        <!-- tabulator創立table -->
+                        <div class="card-detail card-detail-editable">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table form-content-table">
+                                    <div id="table03"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -1978,6 +2072,155 @@ let table02 = new Tabulator("#table02", {
         {
             title: "專案代號",
             field: "專案代號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+
+    ],
+    tabEndNewRow: true,
+    tabEndNewRow: function(row) {
+        let rowData = row.getData();
+        return { ...rowData };
+    }
+});
+//////////////////////////////////////////////////////////////////////
+let table03Data = [{
+        id: "a1",
+        票號: "票號",
+        金額: "金額",
+        開票人: "開票人",
+        關係: "關係",
+        到期日: "到期日",
+        帳號: "帳號",
+        付款行: "付款行",
+        收費來源: "收費來源",
+    },
+    {
+        id: "a2",
+        票號: "票號",
+        金額: "金額",
+        開票人: "開票人",
+        關係: "關係",
+        到期日: "到期日",
+        帳號: "帳號",
+        付款行: "付款行",
+        收費來源: "收費來源",
+    },
+];
+let table03 = new Tabulator("#table03", {
+    data: table03Data,
+    height: "100%",
+    layout: "fitColumns",
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    headerSort: false,
+    movableColumns: false,
+    resizableRows: false,
+    columns: [{
+            title: "",
+            field: "del",
+            minWidth: 50,
+            width: 50,
+            formatter: (cell) => {
+                let row = cell.getRow()
+                let table = cell.getTable()
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                span.classList.add("customize-form-field-delete")
+                cell.getElement().classList.add("tabulator-input-editable-btn");
+                btn.setAttribute("type", "button")
+                btn.innerText = "移除"
+                btn.addEventListener("click", e => {
+                    e.stopPropagation()
+                    if (table.getDataCount() > 1) {
+                        row.delete()
+                    } else {
+                        alert("至少保留一筆")
+                    }
+                })
+                span.appendChild(btn)
+                return span
+            }
+        },
+        {
+            title: "票號",
+            field: "票號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "金額",
+            field: "金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+            hozAlign: "right",
+        },
+        {
+            title: "開票人",
+            field: "開票人",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "關係",
+            field: "關係",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "到期日",
+            field: "到期日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "帳號",
+            field: "帳號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "付款行",
+            field: "付款行",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "收費來源",
+            field: "收費來源",
             formatter: function(cell, formatterParams, onRendered) {
                 cell.getElement().classList.add("table-input", "tabulator-input-editable");
                 return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
