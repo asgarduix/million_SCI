@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbdm0600-tab1-query">
+<body id="canvas" class="fbdm0600-tab1-serial-num">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -539,7 +539,29 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-confirm -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-confirm">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">產生批號</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <p>本次上傳批號：<i after-icon="~">11006</i><i>11000</i></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime" type="button" onclick="location.href='fbdm0600-tab1-01-query.html'">關閉</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -626,7 +648,7 @@ var table = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-// table.selectRow("a1");
+table.selectRow(["a1","a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>

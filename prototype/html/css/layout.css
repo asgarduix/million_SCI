@@ -2988,6 +2988,16 @@ a.menu-active .menu-bar {
     content: "：";
 }
 
+.dialog-content p i {
+    font-size: 0.875rem;
+}
+
+.dialog-content p i::after {
+    content: attr(after-icon);
+    display: inline-block;
+    margin: 0 2px;
+}
+
 .dialog-content-image {
     border: #aaa solid 1px;
     text-align: center;
