@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fbdm0600-tab3-query">
+<body id="canvas" class="fbdm0600-tab4-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -173,8 +173,8 @@
                                     <ul>
                                         <li><a href="fbdm0600-tab1-01-query.html">資料匯入</a></li>
                                         <li><a href="fbdm0600-tab2-01-query.html">更新核帳日</a></li>
-                                        <li><a href="fbdm0600-tab3-01-query.html" class="unittab-active">更新付佣日</a></li>
-                                        <li><a href="fbdm0600-tab4-01-query.html">佣金異常</a></li>
+                                        <li><a href="fbdm0600-tab3-01-query.html">更新付佣日</a></li>
+                                        <li><a href="fbdm0600-tab4-01-query.html" class="unittab-active">佣金異常</a></li>
                                         <li><a href="#">列印業務明細</a></li>
                                         <li><a href="#">列印未銷明細</a></li>
                                         <li></li>
@@ -240,44 +240,21 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query" onclick="location.href='fbdm0600-tab2-01-query.html'"><span>查詢</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-query" onclick="location.href='fbdm0600-tab4-01-query.html'"><span>查詢</span></button></li>
                                             <!-- <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li> -->
                                         </ul>
                                     </div>
-                                    <div class="content-btn-third">
+                                    <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third" onclick="location.href='fbdm0600-tab3-02-update-pay-date.html'"><span>更新付佣日</span></button></li>
+                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">應收保費合計</div>
-                                            <div class="label-content label-content-counter">87,922</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">實收保費合計</div>
-                                            <div class="label-content label-content-counter">87,922</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">佣金合計</div>
-                                            <div class="label-content label-content-counter">13,409</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -488,31 +465,11 @@
 <script>
 let table01Data = [{
         id: "a1",
-        經銷商: "經銷商",
-        保代任意強制: "保代任意/強制",
-        出單: "出單",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        銷帳日: "銷帳日",
-        應收保費: "應收保費",
-        實收保費: "實收保費",
-        佣金: "佣金",
+        異常批號: "異常批號",
     },
     {
         id: "a2",
-        經銷商: "經銷商",
-        保代任意強制: "保代任意/強制",
-        出單: "出單",
-        保單號碼: "保單號碼",
-        批單號碼: "批單號碼",
-        序號: "序號",
-        期別: "期別",
-        銷帳日: "銷帳日",
-        應收保費: "應收保費",
-        實收保費: "實收保費",
-        佣金: "佣金",
+        異常批號: "異常批號",
     },
 ]
 
@@ -541,17 +498,7 @@ var table = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "經銷商", field: "經銷商" },
-        { title: "保代任意/強制", field: "保代任意強制" },
-        { title: "出單", field: "出單" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "序號", field: "序號" },
-        { title: "期別", field: "期別" },
-        { title: "銷帳日", field: "銷帳日" },
-        { title: "應收保費", field: "應收保費", hozAlign: "right" },
-        { title: "實收保費", field: "實收保費", hozAlign: "right" },
-        { title: "佣金", field: "佣金", hozAlign: "right" },
+        { title: "異常批號", field: "異常批號" },
     ],
 });
 // 選擇預設勾選row
