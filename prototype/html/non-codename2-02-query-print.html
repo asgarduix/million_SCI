@@ -158,14 +158,14 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">報表名稱</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="信評機構" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">短期票券結餘表</option>
-                                                        <option value="" selected>短期票券紀錄單</option>
-                                                        <option value="">短期票券轉帳傳票日報</option>
-                                                        <option value="">短期票券收益明細表</option>
-                                                        <option value="">短期票券應收收益明細表-會計</option>
-                                                        <option value="">短期票券週報表</option>
+                                                    <select name="信評機構" id="" onchange="location=this.value;">
+                                                        <!-- <option value="" disabled selected hidden>請選擇</option> -->
+                                                        <option value="non-codename2-01-query-print.html">短期票券結餘表</option>
+                                                        <option value="non-codename2-02-query-print.html" selected>短期票券紀錄單</option>
+                                                        <option value="non-codename2-04-query-print.html">短期票券轉帳傳票日報</option>
+                                                        <option value="non-codename2-05-query-print.html">短期票券收益明細表</option>
+                                                        <option value="non-codename2-06-query-print.html">短期票券應收收益明細表-會計</option>
+                                                        <option value="non-codename2-07-query-print.html">短期票券週報表</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -178,8 +178,8 @@
                                                 <div class="query-field-item query-field-title">列印方式</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="radio" id="rd01" name="調度日期" checked=""><label for="rd01">調度日期</label></li>
-                                                        <li><input type="radio" id="rd02" name="記錄單號"><label for="rd02">記錄單號</label></li>
+                                                        <li><input type="radio" id="rd01" name="列印方式" checked="" onchange="location='non-codename2-02-query-print.html'"><label for="rd01">調度日期</label></li>
+                                                        <li><input type="radio" id="rd02" name="列印方式" onchange="location='non-codename2-03-query-print.html'"><label for="rd02">記錄單號</label></li>
                                                     </ul>
                                                 </div>
                                             </div>
