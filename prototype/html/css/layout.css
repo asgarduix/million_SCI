@@ -5427,9 +5427,9 @@ span.tp {
 
     /* END: unittab */
     /* START: query */
-    .content-query {
+    /*.content-query {
         overflow: hidden;
-    }
+    }*/
 
     .query-row {
         background: none;
@@ -5442,8 +5442,12 @@ span.tp {
 
     .query-field {
         width: 50%;
-        border-top: #ccc dotted 1px;
+        /*border-top: #ccc dotted 1px;*/
         float: left;
+    }
+
+    .query-field:nth-last-child(1) {
+        float: none;
     }
 
     .query-row:nth-child(1) .query-field:nth-child(-n+2) {
