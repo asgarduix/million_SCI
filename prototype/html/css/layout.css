@@ -5656,6 +5656,35 @@ span.tp {
         border-bottom: none;
     }
 
+    .customize-form-row-btn .customize-form-field {
+        float: left;
+    }
+
+    .customize-form-row-btn .customize-form-field:nth-child(1),
+    .customize-form-row-btn .customize-form-field:nth-child(2) {
+        border-top: none;
+    }
+
+    
+
+    .customize-form-row-btn .customize-form-field:nth-last-child(1) {
+        width: 100% !important;
+        display: table;
+        padding: 10px;
+        float: none;
+        clear: both;
+        border-top: #aaa solid 1px;
+    }
+
+    .customize-form-row-btn .customize-form-field button.field-btn {
+        position: relative;
+        margin: 0 auto;
+        width: 120px;
+        border-radius: 3px;
+        padding: 4px;
+    }
+
+
     /* END: customize-form */
     /* START: 跟隨tabulator_condition */
     .condition-field {
@@ -5835,6 +5864,7 @@ span.tp {
 @media only screen and (min-width: 768px) {}
 
 @media only screen and (max-width: 767px) {
+
     /* START: header */
     .menu-btn {
         padding: 0 5px;
@@ -5843,6 +5873,7 @@ span.tp {
     .header-unit-item>a {
         padding: 0 7px;
     }
+
     /* END: header */
 }
 
