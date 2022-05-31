@@ -2248,6 +2248,7 @@ a.menu-active .menu-bar {
     border: #aaa solid 1px;
     display: inline-block;
     margin-right: 3px;
+    margin-bottom: 5px;
     border-radius: 4px;
     background: #fff;
     line-height: 1;
@@ -2275,6 +2276,10 @@ a.menu-active .menu-bar {
 
 .content-multiple-upload .content-file-list li span:nth-last-child(1):hover {
     opacity: .6;
+}
+
+.content-multiple-upload .content-file-list-inner {
+    padding: 7px 2px 0;
 }
 
 /* END: 多檔案上傳區+tabulator創建table */
