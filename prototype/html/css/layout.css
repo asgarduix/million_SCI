@@ -1013,12 +1013,6 @@ a.menu-active .menu-bar {
     border-top-left-radius: 10px;
 }
 
-/*.card-multiple-container {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-}*/
-
 .card-multiple-container {
     overflow: auto;
 }
@@ -1028,14 +1022,7 @@ a.menu-active .menu-bar {
     background: #ccc;
 }
 
-/*.card-table,
 .card-data {
-    display: table-cell;
-    vertical-align: top;
-}*/
-
-.card-data {
-    /*width: 265px;*/
     padding: 0 0 0 5px;
 }
 
@@ -1162,7 +1149,6 @@ a.menu-active .menu-bar {
     color: #026D93;
     font-weight: bold;
     padding: 4px 10px;
-    /*border-bottom: #aaa dotted 1px;*/
 }
 
 .card-data-section-name span {
@@ -1682,7 +1668,6 @@ a.menu-active .menu-bar {
 }
 
 .table-func-page {
-    /*width: 360px;*/
     text-align: right;
     background: #f7f7f7;
     font-size: 0.875rem;
@@ -1705,7 +1690,6 @@ a.menu-active .menu-bar {
 }
 
 .content-table .tabulator {
-    /*border: #aaa solid 1px;*/
     border-right: none;
     background: #aaa;
 }
@@ -1735,10 +1719,6 @@ a.menu-active .menu-bar {
 .content-table .tabulator p {
     font-size: 0.875rem;
 }
-
-/*.content-table .tabulator-row.tabulator-row-even {
-    background: #f7f7f7;
-}*/
 
 .content-table .tabulator-row.tabulator-row-even {
     background: #f7f7f7;
@@ -1793,15 +1773,9 @@ a.menu-active .menu-bar {
 
 /* nest table */
 .table-subtable-container {
-    /*padding: 5px 5px 10px;*/
-    /*padding: 0 0 7px;*/
     background: #EAF9FF;
     border: none;
     border-bottom: #aaa solid 3px;
-    /*border-right: #777 solid 4px;
-    border-left: #777 solid 4px;
-    border-top: #aaa solid 5px;
-    border-bottom: #aaa solid 5px;*/
 }
 
 .table-btn-switch {
@@ -1819,7 +1793,6 @@ a.menu-active .menu-bar {
 
 .table-subtable-container .tabulator .tabulator-header {
     background: #f0ebf7;
-    /*background: #F7F2EB;*/
     color: #111;
 }
 
@@ -1859,6 +1832,7 @@ a.menu-active .menu-bar {
     width: 20px;
     padding-left: 3px;
     display: inline-block;
+    vertical-align: top;
     font-size: 0.875rem;
 }
 
@@ -1900,10 +1874,6 @@ a.menu-active .menu-bar {
 }
 
 /* 第一行固定table */
-/*.tabulator-row:nth-child(odd) .tabulator-first-col {
-    background: #fff;
-}
-*/
 .fixed-table .tabulator-row {
     background: #F7F2EB;
     border-top: #aaa solid 1px;
@@ -2922,10 +2892,6 @@ a.menu-active .menu-bar {
     content: "$";
 }
 
-/*.detail-board .content-label {
-    padding: 5px 10px 0;
-}*/
-
 .seperate-line-tiny~.content-label {
     padding: 5px 10px 0;
 }
@@ -3173,10 +3139,6 @@ a.menu-active .menu-bar {
     font-weight: bold;
 }
 
-/* table */
-/*.dialog-content .detail-board {
-    padding: 5px;
-}*/
 
 /* 跳窗頁籤 */
 .dialog-content-tab {
@@ -3438,9 +3400,6 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-symmetry {
-    /*display: flex;
-    clear: both;
-    overflow: auto;*/
     width: 100%;
     display: table;
     table-layout: fixed;
@@ -3452,9 +3411,6 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-5 {
-    /*flex: 2;
-    width: 50%;
-    float: left;*/
     border-right: #aaa solid 1px;
     width: 50%;
     display: table-cell;
@@ -3469,7 +3425,6 @@ a.menu-active .menu-bar {
 .customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
     position: relative;
-    /*overflow: auto;*/
 }
 
 .customize-form-row:nth-last-child(1),
@@ -3544,8 +3499,10 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-inner {
-    overflow: hidden;
     background: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .customize-form-row:nth-last-child(1) .customize-form-inner {
@@ -3553,9 +3510,11 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-field {
-    float: left;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
     border-right: #aaa solid 1px;
-    background: #f9f9f9;
+
 }
 
 .customize-form-field-1 {
@@ -3593,37 +3552,32 @@ a.menu-active .menu-bar {
     width: 100%;
 }
 
-/*.customize-form-field:nth-child(1) .customize-form-title {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}*/
-
 .customize-field-inner {
     width: 100%;
-    display: table;
-    table-layout: fixed;
+    display: flex;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
+    background: #F2EDE6;
+
 }
 
 .customize-form-title,
 .customize-form-entry {
-    min-height: 30px;
+    width: 100%;
+    min-height: 32px;
     font-size: 0.875rem;
     margin: 0;
-    padding: 0;
-    display: table-cell;
-    vertical-align: middle;
+
 }
 
 .customize-form-title {
-    padding: 0 3px 0 0;
-    text-align: right;
-    width: 105px;
+    padding: 5px 3px 0;
     max-width: 105px;
     word-break: break-all;
-    background: #F2EDE6;
-    line-height: 1.1;
+    align-items: flex-start;
+    justify-content: flex-end;
+
 }
 
 .required-field .customize-form-title::before {
@@ -3641,6 +3595,7 @@ a.menu-active .menu-bar {
 .customize-form-entry {
     background: #fff;
     padding: 4px 3px;
+    align-items: flex-start;
 }
 
 .customize-form-entry input,
@@ -3664,7 +3619,6 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
-    /*vertical-align: sub;*/
 }
 
 .customize-form-entry input[type="radio"],
@@ -3710,6 +3664,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry-container {
+    width: 100%;
     overflow: hidden;
 }
 
@@ -3831,10 +3786,9 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-row-btn .customize-form-field {
-    width: auto;
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
+    width: 20%;
+    min-height: 32px;
+    flex-grow: 1;
 }
 
 .customize-form-row-btn .customize-form-field:nth-child(1) {
@@ -3843,8 +3797,8 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-row-btn .customize-form-field:nth-last-child(1) {
-    width: 60px;
-    position: relative;
+    width: 45px;
+    /*position: relative;*/
     border: none;
 }
 
@@ -3853,12 +3807,6 @@ a.menu-active .menu-bar {
     display: block;
     background: #026D93;
     color: #fff;
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     border: none;
 }
 
@@ -3899,11 +3847,12 @@ a.menu-active .menu-bar {
 }
 
 /* 圖像上傳 */
-/*.customize-form-upload {
-    border-bottom: #aaa solid 1px;
-}*/
+.customize-form-upload {
+    width: 100%;
+}
 
 .customize-form-desc {
+    width: 100%;
     border-top: #aaa solid 1px;
 }
 
@@ -3973,6 +3922,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-thumbnail {
+    width: 100%;
     padding: 10px;
 }
 
@@ -4296,7 +4246,6 @@ a.menu-active .menu-bar {
 }
 
 .right-item {
-    /*background: #ccc;*/
     background: #f9f6f3;
 }
 
@@ -4611,7 +4560,6 @@ span.tp {
     border-radius: 30px;
     margin-right: 2px;
     background: #75BD0E;
-    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 .hint-normal::before {
@@ -4622,7 +4570,6 @@ span.tp {
     border-radius: 30px;
     margin-right: 2px;
     background: #FFA225;
-    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 .hint-bad::before {
@@ -4633,7 +4580,6 @@ span.tp {
     border-radius: 30px;
     margin-right: 2px;
     background: #F33349;
-    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 .hint-empty::before {
@@ -4644,7 +4590,6 @@ span.tp {
     border-radius: 30px;
     margin-right: 2px;
     background: transparent;
-    /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
 
 /* END:  燈號 */
@@ -4843,7 +4788,6 @@ span.tp {
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
-    /*padding: 0 0 8px;*/
     padding: 3px 10px;
     margin-right: 0;
 }
@@ -4942,7 +4886,6 @@ span.tp {
 /* START: login */
 .login {
     width: 100%;
-    /*height: 100%;*/
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,e60012+100&0.5+0,0.1+100 */
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(230, 0, 18, 0.1) 100%);
     /* FF3.6-15 */
@@ -5427,9 +5370,6 @@ span.tp {
 
     /* END: unittab */
     /* START: query */
-    /*.content-query {
-        overflow: hidden;
-    }*/
 
     .query-row {
         background: none;
@@ -5442,7 +5382,6 @@ span.tp {
 
     .query-field {
         width: 50%;
-        /*border-top: #ccc dotted 1px;*/
         float: left;
     }
 
@@ -5620,7 +5559,7 @@ span.tp {
     /* END: info-block */
     /* START: customize-form */
     .customize-form-field {
-        width: 50% !important;
+        width: 50%;
         border-top: #aaa solid 1px;
     }
 
@@ -5628,7 +5567,7 @@ span.tp {
     .customize-form-field-3,
     .customize-form-field-4,
     .customize-form-field-fluid {
-        width: 100% !important;
+        width: 100%;
         border-right: none !important;
     }
 
@@ -5657,15 +5596,13 @@ span.tp {
     }
 
     .customize-form-row-btn .customize-form-field {
-        float: left;
+        width: 50%;
     }
 
     .customize-form-row-btn .customize-form-field:nth-child(1),
     .customize-form-row-btn .customize-form-field:nth-child(2) {
         border-top: none;
     }
-
-    
 
     .customize-form-row-btn .customize-form-field:nth-last-child(1) {
         width: 100% !important;
@@ -5748,6 +5685,10 @@ span.tp {
 
     .table-func-basic {
         border-bottom: #ccc solid 1px;
+    }
+
+    .card-detail-editable {
+        border-top: #aaa solid 1px;
     }
 
     /* END: tabulator創立table */
