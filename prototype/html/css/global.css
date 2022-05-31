@@ -29,11 +29,11 @@
 */
 
 @font-face {
-    font-family: Microsoft JhengHei;
+    font-family: Microsoft JhengHei, sans-serif;
 }
 
 * {
-    font-family: Microsoft JhengHei;
+    font-family: Microsoft JhengHei, sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -67,7 +67,7 @@ button {
 
 button {
     box-shadow: none;
-    border: none;
+    border-style: none;
     font-size: 0.875rem;
 }
 

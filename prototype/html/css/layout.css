@@ -127,7 +127,7 @@
 
 /* 待辦事項  */
 .group-header-title[title="待辦事項"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "mail_outline";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -171,7 +171,7 @@
 }
 
 .group-header-btn[title="重整"] button::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "sync";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -307,7 +307,7 @@
 
 /* 常用程式 */
 .group-header-title[title="常用程式"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "grade";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -378,7 +378,7 @@
 
 /* 操作手冊 */
 .group-header-title[title="操作手冊"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "source";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -419,7 +419,7 @@
 
 /* 瀏覽紀錄 */
 .group-header-title[title="瀏覽紀錄"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "save";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -496,7 +496,7 @@
 
 /* 使用者設定 */
 .group-header-title[title="使用者設定"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "settings";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -580,7 +580,7 @@
 }
 
 .menu-pgName span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "topic";
     font-feature-settings: 'liga';
     margin-right: 5px;
@@ -637,7 +637,7 @@
 }
 
 .non-menu-list span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "filter_none";
     font-feature-settings: 'liga';
     margin-right: 5px;
@@ -752,7 +752,7 @@
 }
 
 .header-unit-item a[title="財務"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "local_atm";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -763,7 +763,7 @@
 }
 
 .header-unit-item a[title="投資"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "emoji_events";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -774,7 +774,7 @@
 }
 
 .header-unit-item a[title="會計"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "assessment";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -785,7 +785,7 @@
 }
 
 .header-unit-item a[title="報表"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "description";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -796,7 +796,7 @@
 }
 
 .header-unit-item a[title="公用"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "supervisor_account";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -807,7 +807,7 @@
 }
 
 .header-unit-item a[title="管理"]::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "widgets";
     font-feature-settings: 'liga';
     margin-right: 3px;
@@ -934,7 +934,7 @@ a.menu-active .menu-bar {
 }
 
 .header-info-time span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "hourglass_bottom";
     font-feature-settings: 'liga';
     margin-right: 2px;
@@ -980,7 +980,7 @@ a.menu-active .menu-bar {
 }
 
 .content-breadcrumb li:nth-child(1)::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "location_on";
     font-feature-settings: 'liga';
     color: #E60012;
@@ -1077,7 +1077,7 @@ a.menu-active .menu-bar {
 }
 
 .datal-total-row span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "local_atm";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -1203,7 +1203,7 @@ a.menu-active .menu-bar {
 }
 
 .card-data-section li:nth-last-child(1) {
-    border: none;
+    border-style: none;
 }
 
 .card-data-section li span {
@@ -1330,7 +1330,7 @@ a.menu-active .menu-bar {
 }
 
 .card-detail-editable .detail-board {
-    border: none;
+    border-style: none;
     padding: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -1338,7 +1338,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-row-multiple .detail-board {
-    border: none;
+    border-style: none;
 }
 
 /* END: card-detail >> board */
@@ -1378,7 +1378,7 @@ a.menu-active .menu-bar {
 }
 
 .unitname-title::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "label";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -1774,7 +1774,7 @@ a.menu-active .menu-bar {
 /* nest table */
 .table-subtable-container {
     background: #EAF9FF;
-    border: none;
+    border-style: none;
     border-bottom: #aaa solid 3px;
 }
 
@@ -1811,7 +1811,7 @@ a.menu-active .menu-bar {
 }
 
 .tabulator-row .tabulator-cell.table-input.tabulator-editing {
-    border: none;
+    border-style: none;
     padding: 4px;
 }
 
@@ -1853,7 +1853,7 @@ a.menu-active .menu-bar {
 }
 
 .tabulator-select-editable .table-select-inner::after {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "arrow_drop_down";
     font-feature-settings: 'liga';
     vertical-align: text-top;
@@ -1894,7 +1894,7 @@ a.menu-active .menu-bar {
 }
 
 .card-detail-editable .content-table .tabulator {
-    border: none;
+    border-style: none;
 }
 
 .card-detail-editable .content-table .tabulator .tabulator-header .tabulator-col:nth-last-child(1),
@@ -2022,7 +2022,7 @@ a.menu-active .menu-bar {
 }
 
 .counter-item-row:nth-last-child(1) {
-    border: none;
+    border-style: none;
 }
 
 .counter-title,
@@ -2074,7 +2074,7 @@ a.menu-active .menu-bar {
 .content-accordion-btn {
     background: none;
     text-align: left;
-    border: none;
+    border-style: none;
     outline: none;
     transition: 0.4s;
     padding: 0;
@@ -2124,7 +2124,7 @@ a.menu-active .menu-bar {
 }
 
 .content-accordion-btn span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "add_circle_outline";
     font-feature-settings: 'liga';
     vertical-align: text-top;
@@ -2134,7 +2134,7 @@ a.menu-active .menu-bar {
 }
 
 .accordion-active span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "remove_circle_outline";
     font-feature-settings: 'liga';
     vertical-align: text-top;
@@ -2298,7 +2298,7 @@ a.menu-active .menu-bar {
 }
 
 .content-btn::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "apps";
     font-feature-settings: 'liga';
     display: inline-block;
@@ -2452,7 +2452,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-query span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "search";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2476,7 +2476,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-add span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "add_box";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2500,7 +2500,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-modify span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "edit";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2524,7 +2524,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-delete span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "delete";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2551,7 +2551,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-signed span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "check_circle";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2562,7 +2562,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-reject span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "report_problem";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2573,7 +2573,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-print span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "print";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2584,7 +2584,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-insert span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "cloud_upload";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2595,7 +2595,7 @@ a.menu-active .menu-bar {
 }
 
 .btn-save span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "save";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -2888,7 +2888,7 @@ a.menu-active .menu-bar {
 .detail-board-label {
     background: none;
     margin-bottom: 5px;
-    border: none;
+    border-style: none;
     padding: 0;
 }
 
@@ -3329,13 +3329,13 @@ a.menu-active .menu-bar {
 
 /* 跳窗內容加入按鈕 */
 .content-popup .detail-board-btn {
-    border: none;
+    border-style: none;
     background: none;
     padding: 0 5px;
 }
 
 .content-popup .detail-board-btn .content-btn-main {
-    border: none;
+    border-style: none;
 }
 
 /* 跳窗內的label */
@@ -3367,7 +3367,7 @@ a.menu-active .menu-bar {
 }
 
 .dialog-image-title span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "arrow_right";
     font-feature-settings: 'liga';
     vertical-align: top;
@@ -3512,7 +3512,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-header>span::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "arrow_right";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -3750,7 +3750,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry-col .func-download {
-    border: none;
+    border-style: none;
 }
 
 .customize-form-entry-inner {
@@ -3859,7 +3859,7 @@ a.menu-active .menu-bar {
 .customize-form-row-btn .customize-form-field:nth-last-child(1) {
     width: 45px;
     /*position: relative;*/
-    border: none;
+    border-style: none;
 }
 
 .customize-form-row-btn .customize-form-field button.field-btn {
@@ -3867,7 +3867,7 @@ a.menu-active .menu-bar {
     display: block;
     background: #026D93;
     color: #fff;
-    border: none;
+    border-style: none;
 }
 
 .customize-form-row-btn .customize-form-field button:hover,
@@ -4000,7 +4000,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-thumbnail-image[attr="empty"]::after {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "image";
     font-feature-settings: 'liga';
     vertical-align: middle;
@@ -4097,7 +4097,7 @@ a.menu-active .menu-bar {
 
 .customize-form-table .table-func,
 .customize-form-table .table-footer {
-    border: none;
+    border-style: none;
     border-radius: 0;
 }
 
@@ -4217,7 +4217,7 @@ a.menu-active .menu-bar {
 }
 
 .left-right-item li:nth-last-child(1) {
-    border: none;
+    border-style: none;
 }
 
 .left-right-item a {
@@ -4424,7 +4424,7 @@ span.tp {
 /* customize-form-input-upload */
 .customize-form-input-upload .content-upload {
     padding: 0;
-    border: none;
+    border-style: none;
 }
 
 .customize-form-input-upload .content-upload .upload-inner {
@@ -4468,7 +4468,7 @@ span.tp {
     vertical-align: middle;
     font-size: 0.875rem;
     display: table-cell;
-    vertical-align: top;
+    /*vertical-align: top;*/
     color: #026D93;
 }
 
@@ -4658,7 +4658,7 @@ span.tp {
 .dialog-content .detail-board-info-block {
     padding: 0;
     background: none;
-    border: none;
+    border-style: none;
     margin: 0 0 3px 0;
 }
 
@@ -4908,7 +4908,7 @@ span.tp {
     padding: 5px;
     border-radius: 0;
     background: none;
-    border: none;
+    border-style: none;
     margin-bottom: 2px;
 }
 
@@ -4920,7 +4920,7 @@ span.tp {
 }
 
 .single-msg-block p::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "error_outline";
     font-feature-settings: 'liga';
     vertical-align: text-top;
@@ -5056,7 +5056,7 @@ span.tp {
 }
 
 .field-entry input {
-    border: none;
+    border-style: none;
     height: 30px;
     outline: none;
 }
@@ -5151,7 +5151,7 @@ span.tp {
 }
 
 .page-not-found-container h1::before {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "emoji_food_beverage";
     font-feature-settings: 'liga';
     vertical-align: bottom;
@@ -5216,7 +5216,7 @@ span.tp {
 .query-datepicker-item input {
     height: 22px;
     font-size: 0.875rem;
-    border: none;
+    border-style: none;
     outline: none;
     padding: 0 0 0 4px;
     vertical-align: top;
@@ -5269,7 +5269,7 @@ span.tp {
 }
 
 .query-datepicker-item-icon::after {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons', sans-serif;
     content: "date_range";
     font-feature-settings: 'liga';
     vertical-align: top;
@@ -5340,7 +5340,7 @@ span.tp {
 /* START: 資訊磚 */
 .detail-board-info-block {
     background: none;
-    border: none;
+    border-style: none;
 }
 
 /* END: 資訊磚 */
@@ -5463,7 +5463,7 @@ span.tp {
     .content-btn-secondary,
     .content-btn-third {
         display: block;
-        border: none;
+        border-style: none;
         padding-right: 0;
         padding-bottom: 5px;
     }
@@ -5544,7 +5544,7 @@ span.tp {
     }
 
     .content-info-cash-1 .info-block-item ul {
-        border: none;
+        border-style: none;
     }
 
     .content-info-cash-1 .info-block-item ul:nth-child(1) li.group-title {
@@ -5777,7 +5777,7 @@ span.tp {
     }
 
     .card-data-section li:nth-last-child(-n+3) {
-        border: none;
+        border-style: none;
     }
 
     .card-data-section li span {
