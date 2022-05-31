@@ -1843,6 +1843,78 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 多檔案上傳區塊+tabulator創建table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <!-- 多檔案上傳區塊 -->
+                                <div class="content-component content-multiple-upload">
+                                    <div class="upload-inner">
+                                        <div class="upload-item upload-btn">
+                                            <ul>
+                                                <li><button>瀏覽</button></li>
+                                                <li><button disabled="">上傳</button></li>
+                                                <li><button disabled="">清除</button></li>
+                                            </ul>
+                                        </div>
+                                        <div class="upload-item upload-error">
+                                            <p>上傳檔案已存在!!</p>
+                                        </div>
+                                        <div class="upload-item upload-note">
+                                            <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
+                                        </div>
+                                        <div class="content-file-list">
+                                            <div class="content-file-list-inner">
+                                                <ul>
+                                                    <li>
+                                                        <span>檔案名稱.clv</span>
+                                                        <span class="material-icons">cancel</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>檔案名稱.clv</span>
+                                                        <span class="material-icons">cancel</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>檔案名稱.clv</span>
+                                                        <span class="material-icons">cancel</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">15</li>
+                                                        <li class="count-check">12</li>
+                                                        <li class="count-error">修改上限不得超過2筆！</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table13"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -3118,6 +3190,117 @@ var table12 = new Tabulator("#table12", {
 });
 // 選擇預設勾選row
 table12.selectRow(["a1", "a2"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+////////////////////////////////////
+var table13Data = [{
+        id: "a1",
+        借貸: "貸",
+        燈號: "不良",
+        銀行代號: "0060855",
+        銀行名稱: "合庫仁愛",
+        帳號: "0855717326151",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
+    },
+    {
+        id: "a2",
+        借貸: "貸",
+        燈號: "不良",
+        銀行代號: "8221252",
+        銀行名稱: "中信銀信義",
+        帳號: "252890002163",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
+    },
+];
+
+
+
+var table13 = new Tabulator("#table13", {
+    data: table13Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    //height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            title: "",
+            field: "借貸",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+        },
+        {
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        {
+            title: "",
+            field: "燈號",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            formatter: function(cell, formatterParams, onRendered) {
+                let hintData = cell.getValue();
+                if (hintData === "不良") {
+                    return "<span class='hint-bad'></span>";
+                } else if (hintData === "正常") {
+                    return "<span class='hint-normal'></span>";
+                } else if (hintData === "良好") {
+                    return "<span class='hint-good'></span>";
+                }
+            },
+            // formatter: "link",
+        },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "狀態", field: "狀態" },
+        {
+            title: "調度金額",
+            field: "調度金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+        {
+            title: "匯費",
+            field: "匯費",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+    ],
+});
+// 選擇預設勾選row
+table13.selectRow(["a1", "a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>

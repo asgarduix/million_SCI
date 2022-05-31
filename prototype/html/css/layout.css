@@ -2223,6 +2223,61 @@ a.menu-active .menu-bar {
 }
 
 /* END: 跟隨tabulator_upload */
+/* START: 多檔案上傳區+tabulator創建table */
+.content-multiple-upload {
+    margin: 0;
+}
+
+.content-multiple-upload .upload-error p {
+    color: #E60012;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.content-multiple-upload .content-file-list ul {
+    list-style: none;
+    padding: 0 2px;
+    margin: 0;
+}
+
+.content-multiple-upload .content-file-list {
+    padding: 0;
+}
+
+.content-multiple-upload .content-file-list li {
+    border: #aaa solid 1px;
+    display: inline-block;
+    margin-right: 3px;
+    border-radius: 4px;
+    background: #fff;
+    line-height: 1;
+    padding: 4px 2px;
+}
+
+.content-multiple-upload .content-file-list li span {
+    padding: 2px 0 0 2px;
+    line-height: 1.1;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    display: table-cell;
+    vertical-align: top;
+    color: #026D93;
+}
+
+.content-multiple-upload .content-file-list li span:nth-last-child(1) {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.content-multiple-upload .content-file-list li:hover {
+    border-color: #026D93;
+}
+
+.content-multiple-upload .content-file-list li span:nth-last-child(1):hover {
+    opacity: .6;
+}
+
+/* END: 多檔案上傳區+tabulator創建table */
 /* START: btn */
 .detail-board-btn {
     background: #F2EDE6;
