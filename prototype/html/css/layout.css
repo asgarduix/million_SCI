@@ -5445,7 +5445,11 @@ span.tp {
         float: left;
     }
 
-    .query-field:nth-last-child(1) {
+    /*.query-field:nth-last-child(1) {
+        float: none;
+    }*/
+
+    .query-row:nth-last-child(1) .query-field:nth-last-child(1) {
         float: none;
     }
 
