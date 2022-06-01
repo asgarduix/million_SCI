@@ -2261,7 +2261,6 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     font-size: 0.875rem;
     display: table-cell;
-    vertical-align: top;
     color: #026D93;
 }
 
@@ -2653,7 +2652,7 @@ a.menu-active .menu-bar {
 
 .query-field {
     width: 33%;
-    min-height: 35px;
+    min-height: 40px;
     display: inline-block;
     vertical-align: top;
     padding: 5px 10px 5px 5px;
@@ -5749,6 +5748,10 @@ span.tp {
 
     .table-func-basic {
         border-bottom: #ccc solid 1px;
+    }
+
+    .table-func-page {
+        padding: 5px;
     }
 
     .card-detail-editable {
