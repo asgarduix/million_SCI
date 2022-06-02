@@ -589,7 +589,7 @@
 
 .menu-list ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 20px 0;
     margin: 0;
 }
 
@@ -1671,7 +1671,7 @@ a.menu-active .menu-bar {
     text-align: right;
     background: #f7f7f7;
     font-size: 0.875rem;
-    padding: 0 5px;
+    padding: 5px;
 }
 
 .table-func-rows-top {
@@ -2348,6 +2348,7 @@ a.menu-active .menu-bar {
     display: inline-block;
     border-right: #d7d7d7 solid 1px;
     padding-right: 5px;
+    margin-right: 5px;
 }
 
 .btn-prime {
@@ -3614,7 +3615,7 @@ a.menu-active .menu-bar {
 .customize-field-inner {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0;
     padding: 0;
     background: #F2EDE6;
@@ -4330,7 +4331,7 @@ a.menu-active .menu-bar {
 }
 
 .up-down-form-field-title {
-    background: rgba(3, 140, 199, .05);
+    /*background: rgba(3, 140, 199, .05);*/
     text-align: center;
     font-size: 0.875rem;
 }
@@ -5445,9 +5446,9 @@ span.tp {
         border-bottom: #aaa dotted 1px;
     }
 
-    /*.query-row:not([style*="display: none;"]:last-child) .query-field:not([style*="display: none;"]):last-child {
-        border: #f00 solid 1px;
-    }*/
+    .query-field-fluid {
+        width: 100%;
+    }
 
     .query-row:nth-last-child(1) .query-field:nth-last-child(1) {
         float: none;
@@ -5488,7 +5489,7 @@ span.tp {
 
     .content-btn-secondary ul,
     .content-btn-third ul {
-        margin-left: 25px;
+        margin-left: 20px;
     }
 
     /* END: btn */
