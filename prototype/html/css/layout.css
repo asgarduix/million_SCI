@@ -5442,10 +5442,11 @@ span.tp {
     .query-field {
         width: 50%;
         float: left;
+        border-bottom: #aaa dotted 1px;
     }
 
-    /*.query-field:nth-last-child(1) {
-        float: none;
+    /*.query-row:not([style*="display: none;"]:last-child) .query-field:not([style*="display: none;"]):last-child {
+        border: #f00 solid 1px;
     }*/
 
     .query-row:nth-last-child(1) .query-field:nth-last-child(1) {
@@ -5752,6 +5753,10 @@ span.tp {
 
     .table-func-page {
         padding: 5px;
+    }
+
+    .table-paginator {
+        justify-content: flex-start !important;
     }
 
     .card-detail-editable {
