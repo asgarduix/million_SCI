@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0900-add">
+<body id="canvas" class="fedm0900-delete">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -280,6 +280,7 @@
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">1</li>
+                                                        <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -453,211 +454,24 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-delete -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-add">
+        <div class="popup-dialog popup-dialog-delete">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">刪除</div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="#" onclick="location.href='fedm0900-01-query.html'"><span class="material-icons">cancel</span></a>
+                            <a href="fedm0900-01-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>銀行存款</span>
-                            </div>
-                        </div>
-                        <!-- 類別選擇/控管選擇 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">類別選擇</div>
-                                        <div class="customize-form-entry">
-                                            <select name="類別選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>銀行</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">控管選擇</div>
-                                        <div class="customize-form-entry">
-                                            <select name="控管選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>內控</option>
-                                                <option value="">保險法</option>
-                                                <option value="">金融公司法</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 條件選擇/說明 -->
-                        <div class="customize-form-row customize-form-row-note">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">條件選擇</div>
-                                        <div class="customize-form-entry">
-                                            <select name="條件選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>專案控管</option>
-                                                <option value="">信用評等</option>
-                                                <option value="">保險業資金</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-3 customize-form-field-note">
-                                    <ul>
-                                        <li>
-                                            <p>使用專案設定需點選新增，專案號碼以『PROJECT+流水號』</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 專案、信評、保險業資金/說明 -->
-                        <div class="customize-form-row customize-form-row-note">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">專案</div>
-                                        <div class="customize-form-entry">
-                                            <select name="專案" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>PROJECT13</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-3 customize-form-field-note">
-                                    <ul>
-                                        <li>
-                                            <p>目前專案號碼：PROJECT13</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 限額比例/說明 -->
-                        <div class="customize-form-row customize-form-row-note">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">限額比例</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-9">
-                                                    <input type="text" name="限額比例" value=".00" title=".00" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-1">%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-3 customize-form-field-note">
-                                    <ul>
-                                        <li>
-                                            <p>可運用資金：20,585,880,308</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 限額金額/簽核日(有效起日)/迄日 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">限額金額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="限額比例" value="10000000.00" title="10000000.00" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">簽核日<br/>(有效起日)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="簽核日(有效起日)" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">迄日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="迄日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 銀行代號/定存/活存 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行代號</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-2">
-                                                    <input type="text" name="銀行代號" value="904" title="904" attr="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-8">
-                                                    <input type="text" name="銀行代號" value="新莊區農會" title="新莊區農會" attr="readonly" data-toggle="tooltip" data-placement="left" placeholder="" disabled="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">定存</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="定存" value="10,000,000" title="10,000,000" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">活存</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="活存" value="0" title="0" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 備註 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-4">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">備註</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="備註" value="" title="" attr="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>是否執行刪除?<br />刪除<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button class="btn-prime" onclick="location.href='fedm0900-01-query.html'" type="button">確定</button></li>
+                        <li><button class="btn-warn" onclick="location.href='fedm0900-01-query.html'" type="button">確定</button></li>
                         <li><button class="btn-outline" onclick="location.href='fedm0900-01-query.html'" type="button">取消</button></li>
                     </ul>
                 </div>
@@ -735,7 +549,7 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-// table.selectRow("a1");
+table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>

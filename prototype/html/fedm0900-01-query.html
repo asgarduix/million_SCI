@@ -255,8 +255,8 @@
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query" onclick="location.href='fedm0900-01-query.html'"><span>查詢</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-add" onclick="location.href='fedm0900-02-add.html'"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify" onclick="location.href='fedm0900-04-modify.html'"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete" onclick="location.href='fedm0900-05-delete.html'"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -499,6 +499,7 @@ var table01 = new Tabulator("#table01", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
+    selectable: true,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -514,7 +515,13 @@ var table01 = new Tabulator("#table01", {
         { title: "類別", field: "類別" },
         { title: "控管", field: "控管" },
         { title: "條件", field: "條件" },
-        { title: "專案", field: "專案" },
+        {
+            title: "專案",
+            field: "專案",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='fedm0900-03-detail.html'>" + cell.getValue() + "</a>"
+            },
+        },
         { title: "限額比例", field: "限額比例" },
         { title: "限額金額", field: "限額金額" },
         { title: "簽核日", field: "簽核日" },

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0900-add">
+<body id="canvas" class="fedm0900-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -280,6 +280,7 @@
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">1</li>
+                                                        <li class="count-check">1</li>
                                                     </ul>
                                                 </div>
                                                 <div class="func-basic-item func-filter">
@@ -453,13 +454,13 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-modify -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">PROJECT13</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#" onclick="location.href='fedm0900-01-query.html'"><span class="material-icons">cancel</span></a>
                         </div>
@@ -493,8 +494,8 @@
                                         <div class="customize-form-entry">
                                             <select name="控管選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>內控</option>
-                                                <option value="">保險法</option>
+                                                <option value="">內控</option>
+                                                <option value="" selected>保險法</option>
                                                 <option value="">金融公司法</option>
                                             </select>
                                         </div>
@@ -511,9 +512,9 @@
                                         <div class="customize-form-entry">
                                             <select name="條件選擇" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled hidden selected>請選擇</option>
-                                                <option value="" selected>專案控管</option>
+                                                <option value="">專案控管</option>
                                                 <option value="">信用評等</option>
-                                                <option value="">保險業資金</option>
+                                                <option value="" selected>保險業資金</option>
                                             </select>
                                         </div>
                                     </div>
@@ -521,7 +522,7 @@
                                 <div class="customize-form-field customize-form-field-3 customize-form-field-note">
                                     <ul>
                                         <li>
-                                            <p>使用專案設定需點選新增，專案號碼以『PROJECT+流水號』</p>
+                                            <p>保險業資金文案說明</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -647,7 +648,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">備註</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="備註" value="" title="" attr="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                            <input type="text" name="備註" value="備註文案修改" title="" attr="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                         </div>
                                     </div>
                                 </div>
@@ -735,7 +736,7 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-// table.selectRow("a1");
+table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
