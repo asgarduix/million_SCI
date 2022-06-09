@@ -2805,6 +2805,10 @@ a.menu-active .menu-bar {
     width: 100%;
 }
 
+.required-field .query-field-title {
+    color: #E60012;
+}
+
 .required-field .query-field-title::before {
     content: "*";
     color: #E60012;
