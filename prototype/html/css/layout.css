@@ -3644,6 +3644,10 @@ a.menu-active .menu-bar {
     text-align: right;
 }
 
+.required-field .customize-form-title {
+    color: #E60012;
+}
+
 .required-field .customize-form-title::before {
     content: "*";
     color: #E60012;
