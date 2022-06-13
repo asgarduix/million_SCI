@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FEDM0900-限額控管維護作業</title>
+    <title>華南產物保險-FEBM0600-活存利息更正作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fedm0900-query">
+<body id="canvas" class="febm0600-query-save">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -100,9 +100,21 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="fedm0900-01-query.html" class="menu-list-active">
+                                <a href="fedm0900-01-query.html">
                                     <span>FEDM0900</span>
                                     <span>限額控管維護作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fbfm0100-01-query.html">
+                                    <span>FBFM0100</span>
+                                    <span>銀行存款收入來源國別維護作業</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="febm0600-01-query-save.html" class="menu-list-active">
+                                    <span>FEBM0600</span>
+                                    <span>活存利息更正作業</span>
                                 </a>
                             </li>
                         </ul>
@@ -175,7 +187,7 @@
                             <li><a href="#">財務</a></li>
                             <li><a href="#">資金運用</a></li>
                             <li><a href="#">銀行存款</a></li>
-                            <li><a href="#">限額控管維護作業</a></li>
+                            <li><a href="#">活存利息更正作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -183,7 +195,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">限額控管維護作業</div>
+                                <div class="unitname-item unitname-title">活存利息更正作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -195,49 +207,18 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 控管選擇 -->
+                                    <!-- 帳號/入息年月 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">控管選擇</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="控管選擇" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>內控</option>
-                                                        <option value="">保險法</option>
-                                                        <option value="">金融公司法</option>
-                                                    </select>
-                                                </div>
+                                                <div class="query-field-item query-field-title">帳號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="帳號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- 條件選擇（專案、信評、保險業資金） -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">條件選擇</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="條件選擇" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>專案</option>
-                                                        <option value="">信評</option>
-                                                        <option value="">保險業資金</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 專案、信評、保險業資金 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">專案</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="專案" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>PROJECT13</option>
-                                                    </select>
-                                                </div>
+                                                <div class="query-field-item query-field-title">入息年月</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="入息年月" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -253,52 +234,138 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query" onclick="location.href='fedm0900-01-query.html'"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add" onclick="location.href='fedm0900-02-add.html'"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify" onclick="location.href='fedm0900-04-modify.html'"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete" onclick="location.href='fedm0900-05-delete.html'"><span>刪除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-secondary">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 搜尋結果標題 -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board result-title-block">
-                                搜尋結果
-                            </div>
-                        </div>
+                        <hr class="seperate-line">
                         <!-- tabulator創立table -->
                         <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board">
-                                <div class="content-component content-table">
-                                    <div class="table-func">
-                                        <div class="table-func-inner">
-                                            <div class="table-func-basic">
-                                                <div class="func-basic-item func-download">
-                                                    <ul>
-                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
-                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
-                                                    </ul>
-                                                </div>
-                                                <div class="func-basic-item func-count">
-                                                    <ul>
-                                                        <li class="count-total">1</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="func-basic-item func-filter">
-                                                    <div class="func-filter-inner">
-                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                            <!-- customize-form -->
+                            <div class="customize-form">
+                                <div class="customize-form-row">
+                                    <div class="customize-form-header">
+                                        <span>活存利息維護</span>
+                                    </div>
+                                </div>
+                                <!-- 銀行代號/幣別 -->
+                                <div class="customize-form-row">
+                                    <div class="customize-form-inner">
+                                        <div class="customize-form-field customize-form-field-2">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">銀行代號</div>
+                                                <div class="customize-form-entry">
+                                                    <div class="customize-form-entry-container">
+                                                        <div class="customize-form-entry-col customize-form-entry-3">
+                                                            <input type="text" name="銀行代號" value="0081061" title="0081061" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                        </div>
+                                                        <div class="customize-form-entry-col customize-form-entry-7">
+                                                            <input type="text" name="銀行代號" value="華銀中山" title="華銀中山" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                        <div class="customize-form-field customize-form-field-2">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">幣別</div>
+                                                <div class="customize-form-entry">
+                                                    <div class="customize-form-entry-container">
+                                                        <div class="customize-form-entry-col customize-form-entry-3">
+                                                            <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                        </div>
+                                                        <div class="customize-form-entry-col customize-form-entry-7">
+                                                            <input type="text" name="幣別" value="新台幣" title="新台幣" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div id="table01"></div>
-                                    <div class="table-footer"></div>
+                                </div>
+                                <!-- 利息收入 -->
+                                <div class="customize-form-row up-down-form-row">
+                                    <div class="customize-form-inner">
+                                        <!-- 利息收入 -->
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner customize-field-inner-title">
+                                                <div class="up-down-form-field-title">利息收入</div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">原來</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="利息收入" value="31,478.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='readonly-money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">更正</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="利息收入" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 預付款 -->
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner customize-field-inner-title">
+                                                <div class="up-down-form-field-title">預付款</div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">原來</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="預付款" value="3,147.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='readonly-money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">更正</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="預付款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 銀行存款 -->
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner customize-field-inner-title">
+                                                <div class="up-down-form-field-title">銀行存款</div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">原來</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="銀行存款" value="28,331.00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='readonly-money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">更正</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="銀行存款" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 匯費 -->
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner customize-field-inner-title">
+                                                <div class="up-down-form-field-title">匯費</div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">原來</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="匯費" value="1.0000" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='readonly-money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">更正</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="匯費" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -477,70 +544,5 @@
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
-<script>
-let table01Data = [{
-    id: "a1",
-    類別: "類別",
-    控管: "控管",
-    條件: "條件",
-    專案: "專案",
-    限額比例: "限額比例",
-    限額金額: "限額金額",
-    簽核日: "簽核日",
-    銀行代號: "銀行代號",
-    定存: "定存",
-    活存: "活存",
-    備註: "備註",
-}, ]
-
-var table01 = new Tabulator("#table01", {
-    data: table01Data,
-    layout: "fitColumns",
-    height: "255px",
-    pagination: "local",
-    paginationSize: 5,
-    paginationSizeSelector: [5, 10, 30, 50, true],
-    movableColumns: true,
-    resizableRows: true,
-    tooltips: true,
-    tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
-    selectable: true,
-    columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
-            }
-        },
-        { title: "類別", field: "類別" },
-        { title: "控管", field: "控管" },
-        { title: "條件", field: "條件" },
-        {
-            title: "專案",
-            field: "專案",
-            formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='fedm0900-03-detail.html'>" + cell.getValue() + "</a>"
-            },
-        },
-        { title: "限額比例", field: "限額比例" },
-        { title: "限額金額", field: "限額金額" },
-        { title: "簽核日", field: "簽核日" },
-        { title: "銀行代號", field: "銀行代號" },
-        { title: "定存", field: "定存", hozAlign: "right" },
-        { title: "活存", field: "活存", hozAlign: "right" },
-        { title: "備註", field: "備註" },
-    ],
-});
-// 選擇預設勾選row
-// table.selectRow("a1");
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
-</script>
 
 </html>
