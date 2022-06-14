@@ -1836,6 +1836,29 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+/* 金額合計 */
+/*.counting-subtable-container,
+.content-table .counting-subtable-container .tabulator {
+    border-style: none;
+}
+
+.counting-subtable-container .table-subtable {
+    overflow: hidden;
+}
+
+.counting-subtable-container .tabulator-header,
+.counting-subtable-container .tabulator-tableHolder {
+
+}
+
+.counting-subtable-container .tabulator-header {
+    width: 200px;
+}
+
+.counting-subtable-container .tabulator-tableHolder {
+    width: 200px;
+}*/
+
 /* select */
 .tabulator-editing {
     background: #fff;
