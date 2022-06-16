@@ -508,47 +508,54 @@
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
-<!-- 巢狀結構tabulator設定 -->
 <script>
-let nestedData = [{
+let table01Data = [{
         id: "a1",
-        name: "123",
-        progress: "Progress",
-        帳號: "01",
-        rating: "Rating",
-        col: "Favourite Color",
-        dob: "Date Of Birth",
-        金額: "123",
+        管理單位: "總公司",
+        銀行代號: "0040037",
+        銀行名稱: "臺銀營業部",
+        帳號: "00300130855",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "0",
+        餘額日: "111/06/02",
+        餘額160: "266078",
     },
     {
         id: "a2",
-        name: "123",
-        progress: "Progress",
-        帳號: "01",
-        rating: "Rating",
-        col: "Favourite Color",
-        dob: "Date Of Birth",
-        金額: "123",
-    },
-    {
-        id: "a4",
-        name: "123",
-        progress: "Progress",
-        帳號: "02",
-        rating: "Rating",
-        col: "Favourite Color",
-        dob: "Date Of Birth",
-        金額: "123",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001039661",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/05",
+        餘額160: "2244694",
     },
     {
         id: "a3",
-        name: "123",
-        progress: "Progress",
-        帳號: "01",
-        rating: "Rating",
-        col: "Favourite Color",
-        dob: "Date Of Birth",
-        金額: "123",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001055189",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/30",
+        餘額160: "9076983",
+    },
+    {
+        id: "a4",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "3001507",
     },
 ]
 var hasGroupSummary = {}
@@ -558,7 +565,7 @@ var table = new Tabulator("#table01", {
     height: "311px",
     layout: "fitColumns",
     movableRows: true,
-    groupBy: ["帳號"],
+    groupBy: ["銀行名稱"],
     // groupBy: function totalCalc(data) {
     //     let nameNum = Number(data.我是金額);
     //     return "123",
@@ -570,20 +577,22 @@ var table = new Tabulator("#table01", {
         //group - the group component for the group
         let total = data.reduce((sum, item) => {
 
-            return sum += item["金額"] * 1
+            return sum += item["餘額160"] * 1
         }, 0)
         console.log(group);
         return `${total}`
     },
-    data: nestedData,
+    data: table01Data,
     columns: [
-        { title: "Name", field: "name" },
-        { title: "Progress", field: "progress" },
+        { title: "管理單位", field: "管理單位" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
         { title: "帳號", field: "帳號" },
-        { title: "Rating", field: "rating" },
-        { title: "Favourite Color", field: "col" },
-        { title: "Date Of Birth", field: "dob" },
-        { title: "金額", field: "金額" },
+        { title: "幣別", field: "幣別" },
+        { title: "去年業績", field: "去年業績", hozAlign: "right" },
+        { title: "今年業績", field: "今年業績", hozAlign: "right" },
+        { title: "餘額日", field: "餘額日" },
+        { title: "餘額1/60", field: "餘額160", hozAlign: "right" },
     ],
 
     rowFormatter: function(row) {
@@ -592,8 +601,8 @@ var table = new Tabulator("#table01", {
         var data = row.getData();
         var group = row.getGroup();
 
-        var newElement = document.createElement("div");
-        newElement.innerText = "Summary here";
+        //var newElement = document.createElement("div");
+        //newElement.innerText = "Summary here";
 
         // var key = group.getKey();
         // if (!(key in hasGroupSummary)) {
@@ -604,6 +613,7 @@ var table = new Tabulator("#table01", {
         console.log(dataCount,count)
         
         var key = group.getKey();
+        var moneyInfo;
         
         if(key in hasGroupSummary){
             el = element
@@ -612,14 +622,18 @@ var table = new Tabulator("#table01", {
             hasGroupSummary[key] = true;
         }else{
             let container = document.createElement("div");
-            container.innerText="qwe";
+            container.classList.add("table-money-count");
+            // 可抓『tabulator-group-level-0 』dom值
+            container.innerText="金額";
             el.appendChild(container);
             hasGroupSummary[key] = true;
             el = element
         }
         if(dataCount===count){
             let container = document.createElement("div");
-            container.innerText="qwe";
+            container.classList.add("table-money-count");
+            // 可抓『tabulator-group-level-0 』dom值
+            container.innerText="金額";
             element.appendChild(container);
             return
         }

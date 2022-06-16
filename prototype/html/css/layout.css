@@ -1837,27 +1837,21 @@ a.menu-active .menu-bar {
 }
 
 /* 金額合計 */
-/*.counting-subtable-container,
-.content-table .counting-subtable-container .tabulator {
-    border-style: none;
+.table-money-count {
+    padding: 5px 10px;
+    border-right: #aaa solid 1px;
+    border-top: #aaa solid 1px;
+    background: #b6d9ff;
+    text-align: right;
 }
 
-.counting-subtable-container .table-subtable {
-    overflow: hidden;
+.table-money-count::before {
+    content: "小計：";
 }
 
-.counting-subtable-container .tabulator-header,
-.counting-subtable-container .tabulator-tableHolder {
-
+.tabulator-group-level-0 {
+    display: none;
 }
-
-.counting-subtable-container .tabulator-header {
-    width: 200px;
-}
-
-.counting-subtable-container .tabulator-tableHolder {
-    width: 200px;
-}*/
 
 /* select */
 .tabulator-editing {
