@@ -576,7 +576,7 @@ var table = new Tabulator("#table01", {
 
             return sum += item["餘額160"] * 1
         }, 0)
-        console.log(group);
+        // console.log(group);
         return `${total}`
     },
     data: table01Data,
@@ -613,24 +613,34 @@ var table = new Tabulator("#table01", {
         var moneyInfo;
         
         if(key in hasGroupSummary){
-            el = element
+            el = row
         }else if(el===null){
-            el = element
+            el = row
             hasGroupSummary[key] = true;
         }else{
             let container = document.createElement("div");
             container.classList.add("table-money-count");
             // 可抓『tabulator-group-level-0 』dom值
-            container.innerText="金額";
-            el.appendChild(container);
+            let rows = el.getGroup().getRows()
+            let amount = rows.reduce((sum, row)=>{
+                console.log(row.getData())
+                return sum+=row.getData()["餘額160"]*1
+            }, 0)
+            console.log(amount)
+            container.innerText=amount;
+            el.getElement().appendChild(container);
             hasGroupSummary[key] = true;
-            el = element
+            el = row
         }
         if(dataCount===count){
             let container = document.createElement("div");
             container.classList.add("table-money-count");
             // 可抓『tabulator-group-level-0 』dom值
-            container.innerText="金額";
+            let rows = row.getGroup().getRows()
+            let amount = rows.reduce((sum, row)=>{
+                return sum+=row.getData()["餘額160"]*1
+            }, 0)
+            container.innerText=amount;
             element.appendChild(container);
             return
         }
