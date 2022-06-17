@@ -588,8 +588,25 @@ var table = new Tabulator("#table01", {
         { title: "幣別", field: "幣別" },
         { title: "去年業績", field: "去年業績", hozAlign: "right" },
         { title: "今年業績", field: "今年業績", hozAlign: "right" },
-        { title: "餘額日", field: "餘額日" },
-        { title: "餘額1/60", field: "餘額160", hozAlign: "right" },
+        {
+            title: "餘額日",
+            field: "餘額日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+        },
+        {
+            title: "餘額1/60",
+            field: "餘額160",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
     ],
 
     rowFormatter: function(row) {
@@ -597,17 +614,8 @@ var table = new Tabulator("#table01", {
         var element = row.getElement();
         var data = row.getData();
         var group = row.getGroup();
-
-        //var newElement = document.createElement("div");
-        //newElement.innerText = "Summary here";
-
-        // var key = group.getKey();
-        // if (!(key in hasGroupSummary)) {
-        //     element.insertBefore(newElement, element.firstChild);
-        //     hasGroupSummary[key] = true;
-        // }
-        var dataCount = row.getTable().getDataCount()
-        console.log(dataCount,count)
+        var dataCount = row.getTable().getDataCount();
+        console.log(dataCount,count);
         
         var key = group.getKey();
         
@@ -620,12 +628,12 @@ var table = new Tabulator("#table01", {
             let container = document.createElement("div");
             container.classList.add("table-money-count");
             // 可抓『tabulator-group-level-0 』dom值
-            let rows = el.getGroup().getRows()
+            let rows = el.getGroup().getRows();
             let amount = rows.reduce((sum, row)=>{
                 console.log(row.getData())
                 return sum+=row.getData()["餘額160"]*1
             }, 0)
-            console.log(amount)
+            console.log(amount);
             container.innerText=amount;
             el.getElement().appendChild(container);
             hasGroupSummary[key] = true;
@@ -635,7 +643,7 @@ var table = new Tabulator("#table01", {
             let container = document.createElement("div");
             container.classList.add("table-money-count");
             // 可抓『tabulator-group-level-0 』dom值
-            let rows = row.getGroup().getRows()
+            let rows = row.getGroup().getRows();
             let amount = rows.reduce((sum, row)=>{
                 return sum+=row.getData()["餘額160"]*1
             }, 0)
@@ -644,19 +652,6 @@ var table = new Tabulator("#table01", {
             return
         }
     }
-
-    // rowFormatter: function(row) {
-    //     let container = document.createElement("div");
-    //     let subtable = document.createElement("div");
-
-    //     $(container).css("display", "block")
-    //     $(subtable).attr("id", row.getData().id)
-
-    //     container.appendChild(subtable);
-    //     row.getElement().appendChild(container);
-
-    //     subtable.innerText="qwe";
-    // },
 });
 </script>
 
