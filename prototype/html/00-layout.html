@@ -1921,6 +1921,40 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 金額合計+tabulator創建table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">1</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table14"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -3307,6 +3341,143 @@ var table13 = new Tabulator("#table13", {
 table13.selectRow(["a1", "a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+////////////////////////////////////
+let table14Data = [{
+        id: "a1",
+        管理單位: "總公司",
+        銀行代號: "0040037",
+        銀行名稱: "臺銀營業部",
+        帳號: "00300130855",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "0",
+        餘額日: "111/06/02",
+        餘額160: "266078",
+    },
+    {
+        id: "a2",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001039661",
+        幣別: "USD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/05",
+        餘額160: "2244694",
+    },
+    {
+        id: "a3",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001055189",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/30",
+        餘額160: "9076983",
+    },
+    {
+        id: "a4",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "3001507",
+    },
+    {
+        id: "a5",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "1",
+    },
+]
+var hasGroupSummary = {}
+var table = new Tabulator("#table14", {
+    height: "311px",
+    layout: "fitColumns",
+    movableRows: true,
+    groupBy: ["銀行名稱","幣別"],
+    movableRows: false,
+    headerSort: false,
+    groupHeader: function(value, count, data, group) {
+        //value - the value all members of this group share
+        //count - the number of rows in this group
+        //data - an array of all the row data objects in this group
+        //group - the group component for the group
+        let total = data.reduce((sum, item) => {
+
+            return sum += item["餘額160"] * 1
+        }, 0)
+        // console.log(group);
+        return `${total}`
+    },
+    data: table14Data,
+    columns: [
+        { title: "管理單位", field: "管理單位" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "幣別", field: "幣別" },
+        { title: "去年業績", field: "去年業績", hozAlign: "right" },
+        { title: "今年業績", field: "今年業績", hozAlign: "right" },
+        {
+            title: "餘額日",
+            field: "餘額日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+        },
+        {
+            title: "餘額1/60",
+            field: "餘額160",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+    ],
+
+    rowFormatter: function(row) {
+        var element = row.getElement();
+        var data = row.getData();
+        var group = row.getGroup();
+        
+        var key = data["銀行名稱"] + group.getKey();
+        var groupRows = group.getRows();
+
+        if (key in hasGroupSummary) {
+            hasGroupSummary[key] += 1;
+        } else {
+            hasGroupSummary[key] = 1;
+        }
+
+        if (groupRows.length === hasGroupSummary[key]) {
+        let container = document.createElement("div");
+        container.classList.add("table-money-count");
+        let amount = groupRows.reduce((sum, row)=>{
+            return sum+=row.getData()["餘額160"]*1
+        }, 0)
+        container.innerText = amount;
+        element.appendChild(container);
+        }
+    },
+});
 </script>
 
 </html>

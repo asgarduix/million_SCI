@@ -527,7 +527,7 @@ let table01Data = [{
         銀行代號: "0040646",
         銀行名稱: "臺銀松山",
         帳號: "064001039661",
-        幣別: "NTD",
+        幣別: "USD",
         去年業績: "0",
         今年業績: "1459",
         餘額日: "111/05/05",
@@ -557,16 +557,27 @@ let table01Data = [{
         餘額日: "110/12/21",
         餘額160: "3001507",
     },
+    {
+        id: "a5",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "1",
+    },
 ]
 var hasGroupSummary = {}
-var el = null
-var count = 0
 var table = new Tabulator("#table01", {
     height: "311px",
     layout: "fitColumns",
     movableRows: true,
-    groupBy: ["銀行名稱"],
-     movableRows: false,
+    groupBy: ["銀行名稱","幣別"],
+    movableRows: false,
+    headerSort: false,
     groupHeader: function(value, count, data, group) {
         //value - the value all members of this group share
         //count - the number of rows in this group
@@ -610,48 +621,29 @@ var table = new Tabulator("#table01", {
     ],
 
     rowFormatter: function(row) {
-        count+=1
         var element = row.getElement();
         var data = row.getData();
         var group = row.getGroup();
-        var dataCount = row.getTable().getDataCount();
-        console.log(dataCount,count);
         
-        var key = group.getKey();
-        
-        if(key in hasGroupSummary){
-            el = row
-        }else if(el===null){
-            el = row
-            hasGroupSummary[key] = true;
-        }else{
-            let container = document.createElement("div");
-            container.classList.add("table-money-count");
-            // 可抓『tabulator-group-level-0 』dom值
-            let rows = el.getGroup().getRows();
-            let amount = rows.reduce((sum, row)=>{
-                console.log(row.getData())
-                return sum+=row.getData()["餘額160"]*1
-            }, 0)
-            console.log(amount);
-            container.innerText=amount;
-            el.getElement().appendChild(container);
-            hasGroupSummary[key] = true;
-            el = row
+        var key = data["銀行名稱"] + group.getKey();
+        var groupRows = group.getRows();
+
+        if (key in hasGroupSummary) {
+            hasGroupSummary[key] += 1;
+        } else {
+            hasGroupSummary[key] = 1;
         }
-        if(dataCount===count){
-            let container = document.createElement("div");
-            container.classList.add("table-money-count");
-            // 可抓『tabulator-group-level-0 』dom值
-            let rows = row.getGroup().getRows();
-            let amount = rows.reduce((sum, row)=>{
-                return sum+=row.getData()["餘額160"]*1
-            }, 0)
-            container.innerText=amount;
-            element.appendChild(container);
-            return
+
+        if (groupRows.length === hasGroupSummary[key]) {
+        let container = document.createElement("div");
+        container.classList.add("table-money-count");
+        let amount = groupRows.reduce((sum, row)=>{
+            return sum+=row.getData()["餘額160"]*1
+        }, 0)
+        container.innerText = amount;
+        element.appendChild(container);
         }
-    }
+    },
 });
 </script>
 

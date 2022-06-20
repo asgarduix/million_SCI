@@ -1434,7 +1434,6 @@ a.menu-active .menu-bar {
     margin: 0;
     padding: 0;
     width: 100%;
-    ;
     display: flex;
 }
 
@@ -1843,13 +1842,15 @@ a.menu-active .menu-bar {
     border-top: #aaa solid 1px;
     background: #b6d9ff;
     text-align: right;
+    font-weight: 700;
 }
 
 .table-money-count::before {
     content: "小計：$";
 }
 
-.tabulator-group-level-0 {
+.tabulator-group-level-0,
+.tabulator-group-level-1 {
     display: none;
 }
 
@@ -5421,6 +5422,58 @@ span.tp {
 }
 
 /* END: 設定頁面列印 */
+/* START: 月曆 */
+.content-calendar {
+    padding: 0;
+    margin: 5px 10px;
+    border-right: #eee solid 1px;
+    border-left: #eee solid 1px;
+}
+
+.content-calendar-week {
+    border-top: #eee solid 1px;
+    background: #f0ffff;
+}
+
+.content-calendar-item {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.content-calendar-unit {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    border-right: #eee solid 1px;
+    border-bottom: #eee solid 1px;
+}
+
+.content-calendar-unit:nth-child(7n) {
+    border-right: none;
+}
+
+.content-calendar-week .content-calendar-unit {
+    color: #777;
+    font-size: 0.875rem;
+}
+
+.content-calendar-date .content-calendar-unit:nth-child(7n) {
+    background: #f7f7f7;
+}
+
+.content-calendar-date .content-calendar-unit:nth-child(7n+1) {
+    background: #f7f7f7;
+}
+
+.calendar-num {
+    padding-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #555;
+}
+
+/* END: 月曆 */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
