@@ -1962,9 +1962,9 @@
                             <div class="detail-board detail-board-calendar">
                                 <!-- year and month -->
                                 <div class="detail-board-calendar-title">
+                                    <span class="calendar-condition calendar-item">銷帳</span>
                                     <span class="calendar-condition calendar-year" time-unit="年">2022</span>
                                     <span class="calendar-condition calendar-month" time-unit="月">06</span>
-                                    <span class="calendar-condition calendar-item">銷帳</span>
                                 </div>
                                 <!-- info-block  -->
                                 <div class="content-component content-calendar">
@@ -3718,7 +3718,7 @@ var table = new Tabulator("#table14", {
     height: "311px",
     layout: "fitColumns",
     movableRows: true,
-    groupBy: ["銀行名稱","幣別"],
+    groupBy: ["銀行名稱", "幣別"],
     movableRows: false,
     headerSort: false,
     groupHeader: function(value, count, data, group) {
@@ -3767,7 +3767,7 @@ var table = new Tabulator("#table14", {
         var element = row.getElement();
         var data = row.getData();
         var group = row.getGroup();
-        
+
         var key = data["銀行名稱"] + group.getKey();
         var groupRows = group.getRows();
 
@@ -3778,13 +3778,13 @@ var table = new Tabulator("#table14", {
         }
 
         if (groupRows.length === hasGroupSummary[key]) {
-        let container = document.createElement("div");
-        container.classList.add("table-money-count");
-        let amount = groupRows.reduce((sum, row)=>{
-            return sum+=row.getData()["餘額160"]*1
-        }, 0)
-        container.innerText = amount;
-        element.appendChild(container);
+            let container = document.createElement("div");
+            container.classList.add("table-money-count");
+            let amount = groupRows.reduce((sum, row) => {
+                return sum += row.getData()["餘額160"] * 1
+            }, 0)
+            container.innerText = amount;
+            element.appendChild(container);
         }
     },
 });
