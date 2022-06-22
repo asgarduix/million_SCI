@@ -5443,7 +5443,6 @@ span.tp {
 
 .content-calendar-unit {
     width: 14.28%;
-    padding: 10px;
     text-align: center;
     border-right: #eee solid 1px;
     border-bottom: #eee solid 1px;
@@ -5459,19 +5458,15 @@ span.tp {
     padding: 5px 10px;
 }
 
-.content-calendar-date .content-calendar-unit:nth-child(7n) {
-    background: #f4f4f4;
-}
-
-.content-calendar-date .content-calendar-unit:nth-child(7n+1) {
-    background: #f4f4f4;
-}
-
 .calendar-num {
-    padding-bottom: 10px;
+    padding: 10px;
     font-size: 0.875rem;
     font-weight: 700;
     color: #555;
+}
+
+.calendar-content {
+    padding: 10px;
 }
 
 .content-calendar-break {
