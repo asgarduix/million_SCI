@@ -5458,15 +5458,16 @@ span.tp {
     padding: 5px 10px;
 }
 
-.calendar-num {
+.content-calendar-unit-inner {
     padding: 10px;
+    height: 100%;
+}
+
+.calendar-num {
+    padding-bottom: 10px;
     font-size: 0.875rem;
     font-weight: 700;
     color: #555;
-}
-
-.calendar-content {
-    padding: 10px;
 }
 
 .content-calendar-break {
