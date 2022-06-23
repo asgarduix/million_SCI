@@ -5500,6 +5500,159 @@ span.calendar-item::after {
 }
 
 /* END: 月曆 */
+/* START: notification */
+.notification {
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.notification-item {
+    min-width: 280px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    pointer-events: visible;
+    overflow: hidden;
+    border: #ddd solid 1px;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-box-shadow: 5px 4px 15px -5px rgba(0, 0, 0, 0.85);
+    box-shadow: 5px 4px 15px -5px rgba(0, 0, 0, 0.85);
+}
+
+.animate {
+    animation: reduce 0.5s;
+}
+
+@keyframes reduce {
+    from{
+        opacity: 1;
+        height: 85px;
+    }
+    to{
+        opacity: 0;
+        height: 0;
+        margin-bottom: 0;
+    }
+}
+
+.notification-item:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.notification-item-header {
+    width: 100%;
+    display: table;
+    table-layout: fixedx;
+}
+
+.notification-item-header-title,
+.notification-item-header-cancel {
+    height: 25px;
+    padding: 4px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 25px;
+}
+
+.notification-item-header-title {
+    border-bottom: #eee solid 1px;
+}
+
+.notification-item-header-cancel {
+    width: 25px;
+    border-bottom: #eee solid 1px;
+    text-align: center;
+}
+
+.notification-item-header-cancel span {
+    cursor: pointer;
+}
+
+.notification-content {
+    padding: 10px;
+}
+
+.notification-content p {
+    margin-bottom: 0;
+}
+
+/* success */
+.success .notification-item-header-title::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "check_circle";
+    font-feature-settings: 'liga';
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+    color: #67c23a;
+}
+
+/* warning */
+.warning .notification-item-header-title::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "error";
+    font-feature-settings: 'liga';
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+    color: #e6a23c;
+}
+
+/* info */
+.info .notification-item-header-title::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "info";
+    font-feature-settings: 'liga';
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+    color: #555;
+}
+
+/* error */
+.error .notification-item-header-title::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "error";
+    font-feature-settings: 'liga';
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+    color: #E60012;
+}
+
+/*@keyframes change-color {
+    0% {
+        position: absolute;
+    }
+
+    50% {
+        position: relative;
+    }
+
+    100% {
+        position: relative;
+    }
+}*/
+
+/* END: notification */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
