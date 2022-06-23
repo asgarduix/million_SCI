@@ -5627,7 +5627,7 @@ span.calendar-item::after {
 /* error */
 .error .notification-item-header-title::before {
     font-family: 'Material Icons', sans-serif;
-    content: "error";
+    content: "cancel";
     font-feature-settings: 'liga';
     width: 20px;
     height: 20px;
