@@ -5592,7 +5592,7 @@ span.calendar-item::after {
     margin-right: 3px;
     font-size: 20px;
     line-height: 1;
-    vertical-align: middle;
+    vertical-align: sub;
     color: #67c23a;
 }
 
@@ -5606,7 +5606,7 @@ span.calendar-item::after {
     margin-right: 3px;
     font-size: 20px;
     line-height: 1;
-    vertical-align: middle;
+    vertical-align: sub;
     color: #e6a23c;
 }
 
@@ -5620,7 +5620,7 @@ span.calendar-item::after {
     margin-right: 3px;
     font-size: 20px;
     line-height: 1;
-    vertical-align: middle;
+    vertical-align: sub;
     color: #555;
 }
 
@@ -5634,23 +5634,9 @@ span.calendar-item::after {
     margin-right: 3px;
     font-size: 20px;
     line-height: 1;
-    vertical-align: middle;
+    vertical-align: sub;
     color: #E60012;
 }
-
-/*@keyframes change-color {
-    0% {
-        position: absolute;
-    }
-
-    50% {
-        position: relative;
-    }
-
-    100% {
-        position: relative;
-    }
-}*/
 
 /* END: notification */
 @media only screen and (max-width: 1280px) {
