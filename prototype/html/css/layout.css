@@ -693,13 +693,12 @@
 }
 
 .header-unit-item ul {
-    width: 120px;
+    width: 140px;
     list-style: none;
     padding: 0;
     margin: 0;
-    border: #ccc solid 1px;
     border-bottom: #CC000C solid 3px;
-    background: #f4f4f4;
+    background: #fff;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
     -moz-box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
     box-shadow: 3px 3px 5px 0px rgba(17, 17, 17, 0.1);
@@ -707,15 +706,16 @@
     display: none;
 }
 
-.header-unit-item:hover ul {
+.header-unit-item:hover>ul {
     display: block;
 }
 
 .header-unit-item:hover>a {
-    background: #CC000C;
+    background: #ad1717;
 }
 
 .header-unit-item li {
+    position: relative;
     border-bottom: #ccc solid 1px;
 }
 
@@ -725,30 +725,55 @@
 
 .header-unit-item li a {
     display: block;
-    padding: 7px;
+    padding: 7px 7px 7px 15px;
     color: #111;
     text-decoration: none;
 }
 
+.header-unit-item li a[level-next="true"]::after {
+    font-family: 'Material Icons', sans-serif;
+    content: "arrow_right";
+    font-feature-settings: 'liga';
+    float: right;
+}
+
 .header-unit-item li a:hover {
-    background: #CC000C;
+    background: #ad1717;
     color: #fff;
 }
 
-.header-unit-item li a::before {
-    content: "";
-    width: 4px;
-    height: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 4px;
-    background: #111;
-    margin-right: 5px;
+.header-unit-item li a~ul {
+    position: absolute;
+    left: 140px;
+    top: 0;
+    background: #f2f2f2;
+    display: none;
+    border-left: #ccc solid 1px;
+    border-right: #ccc solid 1px;
 }
 
-.header-unit-item li a:hover::before {
-    content: "";
-    background: #fff;
+/*.header-unit-item li a~ul li {
+    -webkit-box-shadow: inset 15px 0px 12px -14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 15px 0px 12px -14px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 15px 0px 12px -14px rgba(0, 0, 0, 0.1);
+}*/
+
+.header-unit-item li a~ul li:nth-child(1) {
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(204, 204, 204, 1);
+    box-shadow: inset 0px 1px 0px 0px rgba(204, 204, 204, 1);
+}
+
+.header-unit-item li:hover {
+    background: #ad1717;
+}
+
+.header-unit-item>a+ul>li:hover>a {
+    color: #fff;
+}
+
+.header-unit-item li:hover ul {
+    display: block;
 }
 
 .header-unit-item a[title="財務"]::before {
@@ -5530,11 +5555,12 @@ span.calendar-item::after {
 }
 
 @keyframes reduce {
-    from{
+    from {
         opacity: 1;
         height: 85px;
     }
-    to{
+
+    to {
         opacity: 0;
         height: 0;
         margin-bottom: 0;
