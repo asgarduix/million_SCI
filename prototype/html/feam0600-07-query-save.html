@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="feam0600-checked-save">
+<body id="canvas" class="feam0600-07-checked-save">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -43,34 +43,8 @@
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
                     <div class="menu-pgName"><span>定存管理</span></div>
-                    <div class="menu-list">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span>FEAM0100</span>
-                                    <span>定存維護作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FEAM0500</span>
-                                    <span>定存利息更正作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-list-active">
-                                    <span>FEAM0600</span>
-                                    <span>強制險準備金統計維護作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span></span>
-                                    <span>定存單報表作業</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- menu-list -->
+                    <div class="menu-list" include-html="include/menu/deposit-management.html"></div>
                 </div>
             </div>
         </nav>
@@ -200,26 +174,26 @@
                                 <div class="content-component content-info-block content-info-cash">
                                     <div class="content-info-block-note">
                                         <ul>
-                                            <li>前月特別準備金<span>12345678</span></li>
-                                            <li>前月非特別準備金<span>45678</span></li>
+                                            <li>特別準備金<span>1,507,390,361</span></li>
+                                            <li>非特別準備金<span>488,500,000</span></li>
                                         </ul>
                                     </div>
                                     <div class="content-info-block-inner">
                                         <div class="info-block-item">
                                             <div class="info-block-item-inner">
                                                 <ul>
-                                                    <li><span>特別準備金</span><span icon="－">1,507,390,361</span></li>
-                                                    <li><span>定存單</span><span icon="＝">1,507,833,238</span></li>
-                                                    <li><span>定存單差額</span><span class="total-minus">-442,877</span></li>
+                                                    <li><span>特別準備金</span><span icon-before="$" icon-after="-">1,507,390,361</span></li>
+                                                    <li><span>非特別準備金</span><span icon-before="$" icon-after="=">1,507,833,238</span></li>
+                                                    <li><span>定存單差額</span><span class="total-minus" icon-before="$" icon-after="=">-442,877</span></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="info-block-item">
                                             <div class="info-block-item-inner">
                                                 <ul>
-                                                    <li><span>非特別準備金</span><span icon="－">1,507,390,361</span></li>
-                                                    <li><span>定存單</span><span icon="＝">488,500,000</span></li>
-                                                    <li><span>定存單差額</span><span>0</span></li>
+                                                    <li><span>非特別準備金</span><span icon-before="$" icon-after="-">488,500,000</span></li>
+                                                    <li><span>定存單</span><span icon-before="$" icon-after="=">488,500,000</span></li>
+                                                    <li><span>定存單差額</span><span icon-before="$" icon-after="=">0</span></li>
                                                 </ul>
                                             </div>
                                         </div>
