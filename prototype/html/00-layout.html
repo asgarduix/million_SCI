@@ -2350,6 +2350,40 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 合計總計+tabulator創建table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table content-table-counter">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">1</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table15"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -3515,6 +3549,8 @@ var table11 = new Tabulator("#table11", {
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 ////////////////////////////////////
+</script>
+<script>
 var table12Data = [{
         id: "a1",
         借貸: "貸",
@@ -3626,6 +3662,8 @@ table12.selectRow(["a1", "a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 ////////////////////////////////////
+</script>
+<script>
 var table13Data = [{
         id: "a1",
         借貸: "貸",
@@ -3737,6 +3775,8 @@ table13.selectRow(["a1", "a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 ////////////////////////////////////
+</script>
+<script>
 let table14Data = [{
         id: "a1",
         管理單位: "總公司",
@@ -3799,7 +3839,7 @@ let table14Data = [{
     },
 ]
 var hasGroupSummary = {}
-var table = new Tabulator("#table14", {
+var table14 = new Tabulator("#table14", {
     height: "311px",
     layout: "fitColumns",
     movableRows: true,
@@ -3872,6 +3912,80 @@ var table = new Tabulator("#table14", {
             element.appendChild(container);
         }
     },
+});
+</script>
+<script>
+// 合計總計+tabulator創建table 
+let table15Data = [{
+        name: "A",
+        gender: "男",
+        amount: 10000,
+        debt: -100,
+    },
+    {
+        name: "B",
+        gender: "男",
+        amount: 20000,
+        debt: -200,
+    },
+    {
+        name: "C",
+        gender: "男",
+        amount: 30000,
+        debt: -300,
+    },
+    {
+        name: "D",
+        gender: "女",
+        amount: 40000,
+        debt: -400,
+    },
+    {
+        name: "E",
+        gender: "女",
+        amount: 50000,
+        debt: -500,
+    },
+    {
+        name: "F",
+        gender: "女",
+        amount: 60000,
+        debt: -600,
+    },
+];
+
+let table15 = new Tabulator("#table15", {
+    height: "100%",
+    layout: "fitColumns",
+    groupBy: ["gender"], //資料依照此設定分組
+    columnCalcs: "both", //計算欄位顯示 分組 與 總計
+    data: table15Data,
+    columns: [
+        { title: "對象姓名", field: "name" },
+        { title: "性別", field: "gender" },
+        {
+            title: "存款金額",
+            field: "amount",
+            bottomCalc: function(values, data, calcParams) {
+                let table = Tabulator.prototype.findTable("#table15")[0];
+                let str =
+                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                return `${str}：` + values.reduce((a, b) => a + b, 0);
+            },
+            formatter: "money",
+        },
+        {
+            title: "負債金額",
+            field: "debt",
+            bottomCalc: function(values, data, calcParams) {
+                let table = Tabulator.prototype.findTable("#table15")[0];
+                let str =
+                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                return `${str}：` + values.reduce((a, b) => a + b, 0);
+            },
+            formatter: "money",
+        },
+    ],
 });
 </script>
 

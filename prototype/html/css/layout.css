@@ -1772,6 +1772,23 @@ a.menu-active .menu-bar {
     display: none;
 }
 
+.content-table-counter .tabulator .tabulator-footer {
+    display: block;
+}
+
+.content-table-counter .tabulator .tabulator-footer .tabulator-row {
+    background: #dbecff !important;
+}
+
+.content-table-counter .tabulator .tabulator-tableHolder .tabulator-table .tabulator-row.tabulator-calcs.tabulator-calcs-bottom {
+    border-top: none;
+    border-bottom: #ccc solid 1px;
+}
+
+.content-table-counter .tabulator .tabulator-footer .tabulator-calcs-holder {
+    border-top: none;
+}
+
 .content-table .tabulator .tabulator-footer .tabulator-page-size {
     padding: 0;
 }
