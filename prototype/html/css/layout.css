@@ -3259,8 +3259,9 @@ a.menu-active .menu-bar {
 }
 
 .popup-dialog-select .dialog-content {
-    overflow: auto;
     height: calc(100% - 100px);
+    padding: 0;
+    overflow: auto;
 }
 
 /* 有輸入的跳窗 */
