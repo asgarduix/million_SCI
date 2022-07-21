@@ -3232,6 +3232,37 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
+/* 跳窗select */
+.popup-dialog-select {
+    width: 776px;
+    max-width: 776px;
+    height: 85%;
+    position: relative;
+}
+
+.popup-dialog-select form {
+    height: 100%;
+}
+
+.popup-dialog-select .dialog-header {
+    background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-dialog-select .dialog-btn {
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    border-top: #eee solid 1px;
+}
+
+.popup-dialog-select .dialog-content {
+    overflow: auto;
+    height: calc(100% - 100px);
+}
+
 /* 有輸入的跳窗 */
 .dialog-entry {
     padding: 10px;
@@ -5681,6 +5712,59 @@ span.calendar-item::after {
 }
 
 /* END: notification */
+/* START: 自定義table(popup) */
+.customize-table-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.customize-table-header {
+    background: #ddd;
+}
+
+.customize-table-col {
+    flex-grow: 1;
+    border-bottom: #bbb solid 1px;
+}
+
+.customize-table-header .customize-table-col {
+    padding: 2px 4px;
+    border-right: #bbb solid 1px;
+}
+
+.customize-table-header .customize-table-col:nth-last-child(1) {
+    border-right: none;
+}
+
+.customize-table-row:nth-last-child(1) .customize-table-col {
+    border-bottom: none;
+}
+
+.customize-table-col a {
+    display: flex;
+    align-items: stretch;
+    text-decoration: none;
+    color: #333;
+}
+
+.customize-table-col a:hover {
+    background: #e9f4ff;
+}
+
+.customize-table-col a.select-active {
+    background: #cee6ff;
+}
+
+.customize-table-col span {
+    flex-grow: 1;
+    padding: 2px 4px;
+    border-right: #bbb solid 1px;
+}
+
+.customize-table-col span:nth-last-child(1) {
+    border-right: none;
+}
+/* END: 自定義table(popup) */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
