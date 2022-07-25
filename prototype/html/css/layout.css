@@ -1965,6 +1965,7 @@ a.menu-active .menu-bar {
 .tabulator-row .tabulator-cell.tabulator-input-editable-btn {
     padding: 0;
 }
+
 /* END: tabulator創立table */
 /* START: 跟隨tabulator_condition */
 .content-condition {
@@ -2944,6 +2945,21 @@ a.menu-active .menu-bar {
     color: #fff;
     border-radius: 4px;
     padding: 0 12px;
+}
+
+.query-popup-select a {
+    height: 25px;
+    display: block;
+    padding: 2px 4px;
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    background: #fff;
+}
+
+.query-popup-select a[attr="empty"] {
+    color: #bbb;
 }
 
 /* END: query */
@@ -5765,6 +5781,7 @@ span.calendar-item::after {
 .customize-table-col span:nth-last-child(1) {
     border-right: none;
 }
+
 /* END: 自定義table(popup) */
 @media only screen and (max-width: 1280px) {
 
