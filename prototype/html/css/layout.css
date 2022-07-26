@@ -5462,11 +5462,7 @@ span.tp {
     font-size: 0.875rem;
 }
 
-.query-datepicker-item.query-datepicker-item-y div::before {
-    content: "";
-}
-
-.query-datepicker-item.query-datepicker-item-d div::after {
+.query-datepicker-item:nth-child(1) div::before {
     content: "";
 }
 
