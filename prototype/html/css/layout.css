@@ -2950,25 +2950,41 @@ a.menu-active .menu-bar {
 .query-popup-select a {
     height: 25px;
     display: block;
-    padding: 2px 4px;
+    padding: 2px 30px 2px 4px;
     border: #aaa solid 1px;
     border-radius: 4px;
     font-size: 0.875rem;
     text-decoration: none;
     background: #fff;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .query-popup-select a[attr="empty"] {
     color: #bbb;
 }
 
+.query-field-entry .query-popup-select-cancel {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    color: #ff4c4c;
+    cursor: pointer;
+}
+
+.query-popup-select .query-field-entry {
+    position: relative;
+}
+
 /* END: query */
 /* START: label */
 .detail-board-label {
+    padding: 0;
     background: none;
     margin-bottom: 5px;
     border-style: none;
-    padding: 0;
 }
 
 .content-label {
