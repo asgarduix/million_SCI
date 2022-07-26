@@ -3742,7 +3742,7 @@ a.menu-active .menu-bar {
 .customize-field-inner {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     margin: 0;
     padding: 0;
     background: #F2EDE6;
@@ -3759,8 +3759,8 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-title {
-    padding: 5px 3px 0;
     max-width: 105px;
+    padding: 5px 3px 0;
     word-break: break-all;
     align-items: flex-start;
     justify-content: flex-end;
@@ -4725,6 +4725,42 @@ span.tp {
 .row-mark .customize-form-title {
     font-weight: bold;
     background: #81F677;
+}
+
+.customize-form-popup {
+    position: relative;
+}
+
+.customize-form-popup a {
+    height: 25px;
+    display: block;
+    padding: 2px 30px 2px 4px;
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.customize-form-popup a[attr="empty"] {
+    color: #bbb;
+}
+
+.customize-form-popup .field-popup-cancel {
+    position: absolute;
+    top: 0;
+    right: 7px;
+    color: #ff4c4c;
+    cursor: pointer;
+}
+
+.customize-form-popup .field-popup-cancel span {
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 /* END: customize-form */
