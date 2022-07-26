@@ -3803,7 +3803,7 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry {
-    width: 100%;
+    width: calc(100% - 105px);
     background: #fff;
     padding: 4px 3px;
     align-items: flex-start;
