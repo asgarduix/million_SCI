@@ -2978,6 +2978,24 @@ a.menu-active .menu-bar {
     position: relative;
 }
 
+.query-field-text {
+    padding: 0 10px;
+}
+
+.query-field-text p {
+    margin-bottom: 0;
+    padding: 4px;
+    font-size: 0.875rem;
+}
+
+.query-field-warning p {
+    color: #f00;
+}
+
+.query-field-text p.align-right {
+    text-align: right;
+}
+
 /* END: query */
 /* START: label */
 .detail-board-label {
