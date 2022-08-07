@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FAEP0100-條碼資料列印作業</title>
+    <title>華南產物保險-FAEP0300-條碼盤點報表列印作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="faep0100-01-query-02">
+<body id="canvas" class="faep0300-01-query-03">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -63,7 +63,7 @@
                             <li><a href="#">財務</a></li>
                             <li><a href="#">資金運用</a></li>
                             <li><a href="#">應收票據</a></li>
-                            <li><a href="#">條碼資料列印作業</a></li>
+                            <li><a href="#">條碼盤點報表列印作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -71,7 +71,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">條碼資料列印作業</div>
+                                <div class="unitname-item unitname-title">條碼盤點報表列印作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -83,81 +83,109 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 作業選擇/報表選擇 -->
+                                    <!-- 銷帳單位/報表/往來對象 -->
                                     <div class="query-row">
-                                        <div class="query-field query-radio">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業選擇</div>
+                                                <div class="query-field-item query-field-title">銷帳單位</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="作業選擇" checked><label for="rd01" value="">交易日</label></li>
-                                                        <li><input type="radio" id="rd02" name="作業選擇"><label for="rd02" value="">立帳日</label></li>
-                                                    </ul>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="銷帳單位" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-input-half query-radio">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表選擇</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd03" name="報表選擇"><label for="rd03">明細表</label></li>
-                                                        <li><input type="radio" id="rd04" name="報表選擇" checked><label for="rd04" value="">總表</label></li>
-                                                        <li><input type="radio" id="rd05" name="報表選擇"><label for="rd05" value="">手續費明細表</label></li>
-                                                        <li><input type="radio" id="rd06" name="報表選擇"><label for="rd06" value="">手續費總表</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 銀行帳號/交易日 -->
-                                    <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">銀行帳號</div>
+                                                <div class="query-field-item query-field-title">報表</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="管理單位" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">OK 超商</option>
-                                                        <option value="">條碼全部</option>
-                                                        <option value="">全方位4028(9749/95218/90290/90289...)</option>
-                                                        <option value="">全方位5883(9482)</option>
-                                                        <option value="">全方位9085(9610)</option>
-                                                        <option value="">全方位3993(90029)</option>
-                                                        <option value="">郵局</option>
-                                                        <option value="">統一超商</option>
-                                                        <option value="">統一超商 MZC</option>
-                                                        <option value="">統一超商 MZE</option>
-                                                        <option value="">統一超商 I0E</option>
-                                                        <option value="">統一超商 I02</option>
-                                                        <option value="">全家超商</option>
-                                                        <option value="">全家超商 I0E/I0L</option>
-                                                        <option value="">全家超商 L61</option>
-                                                        <option value="">全家超商 I02</option>
-                                                        <option value="">OK 超商</option>
-                                                        <option value="">OK 超商 I0E</option>
-                                                        <option value="">OK 超商 I02</option>
-                                                        <option value="">萊爾富超</option>
-                                                        <option value="">萊爾富超 I0E/I0L</option>
-                                                        <option value="">萊爾富超 I02</option>
-                                                        <option value="">全國農金</option>
+                                                    <select name="報表" id="">
+                                                        <option value="">總表</option>
+                                                        <option value="">月報表</option>
+                                                        <option value="" selected>明細表</option>
+                                                        <option value="">結帳日盤點月報表</option>
+                                                        <option value="">帳齡分析</option>
+                                                        <option value="">已印單未繳費報表</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">往來對象</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="往來對象" id="">
+                                                        <option value="" selected>條碼全部</option>
+                                                        <option value="">全方位4028(9749/5218/90290/9028)</option>
+                                                        <option value="">全方位5883(9482)</option>
+                                                        <option value="">全方位9085(9610)</option>
+                                                        <option value="">全方位3993(90029)</option>
+                                                        <option value="">已印單未繳費報表</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 立帳截止日/加總依據/種類 -->
+                                    <div class="query-row">
                                         <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">交易日</div>
+                                                <div class="query-field-item query-field-title">立帳截止日</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="交易日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="立帳截止日" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-1">～</div>
                                                         <div class="entry-combine entry-45">
-                                                            <input type="date" name="交易日" data-toggle="tooltip" data-placement="top">
+                                                            <input type="date" name="立帳截止日" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">加總依據</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="加總依據" id="">
+                                                        <option value="" selected>立帳日</option>
+                                                        <option value="">銷帳日</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">種類</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="種類" id="">
+                                                        <option value="">全部</option>
+                                                        <option value="">未銷帳</option>
+                                                        <option value="">已銷帳</option>
+                                                        <option value="" selected>異常表</option>
+                                                        <option value="">異常明細保單金額小於0</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 異常表類型 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input-half query-radio">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">異常表類型</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="異常表類型" checked><label for="rd01" value="">報表</label></li>
+                                                        <li><input type="radio" id="rd02" name="異常表類型"><label for="rd02" value="">未銷帳明細表</label></li>
+                                                        <li><input type="radio" id="rd03" name="異常表類型"><label for="rd03" value="">mail明細表</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
