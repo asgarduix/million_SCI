@@ -22,16 +22,16 @@ async function includeMenu() {
             xhttp.open("GET", file, false);
             xhttp.send();
             /* Exit the function: */
-            return 
+            return
         }
     }
 }
 
-includeMenu().then(()=>{
+includeMenu().then(() => {
     const pageId = document.getElementById('canvas');
     const pageClass = pageId.getAttribute("class");
     const pageName = pageClass.split('-')[0];
-    document.querySelector(`.menu-list a[href^=${pageName}]`)?.classList?.add('menu-list-active');
+    document.querySelector(`.menu-list a[href^=${pageName}]`) ?.classList ?.add('menu-list-active');
 });
 
 // include-header-structure 
@@ -58,7 +58,7 @@ async function includeHeader() {
             xhttp.open("GET", file, false);
             xhttp.send();
             /* Exit the function: */
-            return 
+            return
         }
     }
 }
@@ -89,7 +89,7 @@ async function includeAside() {
             xhttp.open("GET", file, false);
             xhttp.send();
             /* Exit the function: */
-            return 
+            return
         }
     }
 }
@@ -156,4 +156,16 @@ function onlyNumberKey(evt) {
     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
         return false;
     return true;
+}
+
+// query-sbu-row-group-trigger ////////////////////////////////////////////////////////////////////////
+function querySubRowTrigger() {
+  var querySubRowStatus = document.getElementById("querySubRow");
+  if (querySubRowStatus.style.display === "none") {
+    querySubRowStatus.style.display = "block";
+    document.querySelector('.query-more-link').setAttribute('attr','open');
+  } else {
+    querySubRowStatus.style.display = "none";
+    document.querySelector('.query-more-link').setAttribute('attr','close');
+  }
 }

@@ -1693,7 +1693,6 @@ a.menu-active .menu-bar {
 
 .table-func-page {
     text-align: right;
-    background: #f7f7f7;
     font-size: 0.875rem;
     padding: 5px;
 }
@@ -2789,6 +2788,24 @@ a.menu-active .menu-bar {
     vertical-align: text-bottom;
 }
 
+.query-field-detail {
+    width: 100%;
+    padding: 10px 0 0;
+    display: table;
+    table-layout: fixed;
+}
+
+.query-field-detail textarea {
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+.entry-btn button {
+    border: #ccc solid 1px;
+    border-radius: 4px;
+    background: #eee;
+}
+
 .query-input input[attr="money"] {
     text-align: right;
 }
@@ -2994,6 +3011,45 @@ a.menu-active .menu-bar {
 
 .query-field-text p.align-right {
     text-align: right;
+}
+
+.query-field-entry label.query-field-combine-checkbox {
+    font-size: 0.75rem;
+}
+
+.query-field-trigger a {
+    display: block;
+    padding: 6px 12px;
+    color: #026D93;
+    text-align: center; 
+    font-size: 0.875rem;
+    text-decoration: none;
+    background: #ecf6ff;
+    border: #d9edff solid 2px;
+}
+
+.query-field-trigger a:hover {
+    background: #d9edff;
+}
+
+.query-field-trigger a[attr="close"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "expand_more";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #018dcd;
+    width: 18px;
+    display: inline-block;
+}
+
+.query-field-trigger a[attr="open"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "expand_less";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #018dcd;
+    width: 18px;
+    display: inline-block;
 }
 
 /* END: query */
