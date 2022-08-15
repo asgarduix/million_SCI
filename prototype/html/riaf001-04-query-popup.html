@@ -42,7 +42,7 @@
                     <div class="menu-filter">
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
-                    <div class="menu-pgName"><span>分進分出</span></div>
+                    <div class="menu-pgName"><span>分入分出</span></div>
                     <!-- menu-list -->
                     <div class="menu-list" include-html="include/menu/reinsurance.html"></div>
                 </div>
@@ -61,7 +61,7 @@
                     <div class="content-component content-breadcrumb">
                         <ul>
                             <li><a href="#">再保</a></li>
-                            <li><a href="#">分進分出</a></li>
+                            <li><a href="#">分入分出</a></li>
                             <li><a href="#">分出帳單維護</a></li>
                         </ul>
                     </div>
@@ -325,7 +325,7 @@
                                                     <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="賠案號" title="" data-toggle="tooltip" data-placement="top"></div>
                                                 </div>
                                             </div>
-                                            <div class="query-field query-checkbox query-input-half">
+                                            <div class="query-field query-checkbox query-input-66">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">批號狀態</div>
                                                     <div class="query-field-item query-field-entry">
@@ -740,13 +740,20 @@
                     <div class="card-detail">
                         <!-- card-detail >> board -->
                         <div class="detail-board">
+                            <!-- tab-link -->
+                            <div class="content-component content-tab-link">
+                                <ul>
+                                    <li><a href="riaf001-04-query-popup.html" class="tab-link-active">帳單項目</a></li>
+                                    <li><a href="riaf001-05-query-popup.html">再保人資料</a></li>
+                                </ul>
+                            </div>
                             <div class="content-component content-table">
                                 <div class="table-func">
                                     <div class="table-func-inner">
                                         <div class="table-func-basic">
                                             <div class="func-basic-item func-count">
                                                 <ul>
-                                                    <li class="count-total">2</li>
+                                                    <li class="count-total">3</li>
                                                 </ul>
                                             </div>
                                             <div class="func-basic-item func-filter">
@@ -793,39 +800,136 @@
 <script>
 let table01Data = [{
         id: "a1",
-        序號: "序號",
-        險別: "險別",
-        凍結日期: "凍結日期",
-        帳單年月: "帳單年月",
-        帳單號碼: "帳單號碼",
-        經紀人: "經紀人",
-        再保公司: "再保公司",
-        幣別: "幣別",
-        同業往來: "同業往來",
-        險種: "險種",
-        OurReference: "Our Reference",
-        YourReference: "Your Reference",
-        期數: "期數",
-        紀錄單號: "紀錄單號",
-        作業狀態: "作業狀態",
+        序號: "01",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0413-0",
+        經紀人: "--",
+        再保公司: "R000051",
+        幣別: "NTD",
+        同業往來: "-115,039.00",
+        險種: "03",
+        OurReference: "2021FF137",
+        YourReference: "20211100361A1",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
     },
     {
         id: "a2",
-        序號: "序號",
-        險別: "險別",
-        凍結日期: "凍結日期",
-        帳單年月: "帳單年月",
-        帳單號碼: "帳單號碼",
-        經紀人: "經紀人",
-        再保公司: "再保公司",
-        幣別: "幣別",
-        同業往來: "同業往來",
-        險種: "險種",
-        OurReference: "Our Reference",
-        YourReference: "Your Reference",
-        期數: "期數",
-        紀錄單號: "紀錄單號",
-        作業狀態: "作業狀態",
+        序號: "02",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0413-0",
+        經紀人: "--",
+        再保公司: "R000051",
+        幣別: "NTD",
+        同業往來: "-448,895.00",
+        險種: "28",
+        OurReference: "2021FF137",
+        YourReference: "20211100361A1",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
+    },
+    {
+        id: "a3",
+        序號: "03",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0413-0",
+        經紀人: "--",
+        再保公司: "R103005",
+        幣別: "NTD",
+        同業往來: "-17,001.00",
+        險種: "28",
+        OurReference: "2021FF137",
+        YourReference: "20211100361A1",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
+    },
+    {
+        id: "a4",
+        序號: "04",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0413-0",
+        經紀人: "--",
+        再保公司: "R103005",
+        幣別: "NTD",
+        同業往來: "-35,776.00",
+        險種: "25",
+        OurReference: "2021FF137",
+        YourReference: "--",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
+    },
+    {
+        id: "a5",
+        序號: "05",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0413-0",
+        經紀人: "--",
+        再保公司: "R103005",
+        幣別: "NTD",
+        同業往來: "-4,356.00",
+        險種: "03",
+        OurReference: "2021FF137",
+        YourReference: "--",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
+    },
+    {
+        id: "a6",
+        序號: "06",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0414-0",
+        經紀人: "--",
+        再保公司: "R000051",
+        幣別: "NTD",
+        同業往來: "-845,749.00",
+        險種: "25",
+        OurReference: "2021FF138",
+        YourReference: "20211100362A1",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
+    },
+    {
+        id: "a7",
+        序號: "07",
+        險別: "火險",
+        凍結日期: "//",
+        帳單年月: "2021-07",
+        帳單號碼: "2021FAC0414-0",
+        經紀人: "--",
+        再保公司: "R000051",
+        幣別: "NTD",
+        同業往來: "-156,922.00",
+        險種: "03",
+        OurReference: "2021FF138",
+        YourReference: "20211100362A1",
+        分入分出: "C",
+        期數: "--",
+        紀錄單號: "--",
+        作業狀態: "--",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -833,7 +937,7 @@ var table01 = new Tabulator("#table01", {
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
-    paginationSize: 5,
+    paginationSize: true,
     paginationSizeSelector: [5, 10, 30, 50, true],
     movableColumns: true,
     resizableRows: true,
@@ -853,7 +957,13 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "序號", field: "序號" },
+        {
+            title: "序號",
+            field: "序號",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
+            },
+        },
         { title: "險別", field: "險別" },
         { title: "凍結日期", field: "凍結日期" },
         { title: "帳單年月", field: "帳單年月" },
@@ -865,6 +975,7 @@ var table01 = new Tabulator("#table01", {
         { title: "險種", field: "險種" },
         { title: "Our Reference", field: "OurReference" },
         { title: "Your Reference", field: "YourReference" },
+        { title: "分入/分出", field: "分入分出" },
         { title: "期數", field: "期數" },
         { title: "紀錄單號", field: "紀錄單號" },
         { title: "作業狀態", field: "作業狀態" },
@@ -1011,6 +1122,8 @@ let table02Data = [{
         id: "a1",
         代碼: "31",
         資料項名稱: "RI-COMM",
+        借貸: "+",
+        幣別: "TWD-台幣",
         金額: "-621",
         再保科目: "515040",
         科目名稱: "再保佣金費用",
@@ -1019,6 +1132,8 @@ let table02Data = [{
         id: "a2",
         代碼: "03",
         資料項名稱: "LOSS-PAID",
+        借貸: "-",
+        幣別: "TWD-台幣",
         金額: "1,777,710",
         再保科目: "512501",
         科目名稱: "再保賠款與給付",
@@ -1027,6 +1142,8 @@ let table02Data = [{
         id: "a3",
         代碼: "01",
         資料項名稱: "RI-PREM",
+        借貸: "-",
+        幣別: "TWD-台幣",
         金額: "-1,714",
         再保科目: "411020",
         科目名稱: "再保費收入",
@@ -1037,7 +1154,7 @@ var table02 = new Tabulator("#table02", {
     layout: "fitColumns",
     height: "100%",
     pagination: "local",
-    paginationSize: 5,
+    paginationSize: true,
     paginationSizeSelector: [5, 10, 30, 50, true],
     movableColumns: true,
     resizableRows: true,
@@ -1045,20 +1162,11 @@ var table02 = new Tabulator("#table02", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
-            }
-        },
+    columns: [
         { title: "代碼", field: "代碼" },
         { title: "資料項名稱", field: "資料項名稱" },
+        { title: "借+貸", field: "借貸" },
+        { title: "幣別", field: "幣別" },
         { title: "金額", field: "金額", hozAlign: "right" },
         { title: "再保科目", field: "再保科目" },
         { title: "科目名稱", field: "科目名稱" },

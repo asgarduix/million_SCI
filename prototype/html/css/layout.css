@@ -1811,6 +1811,23 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+.table-footer-btn ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table-footer-btn li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.table-footer-btn button {
+    border: #aaa solid 1px;
+    border-radius: 4px;
+}
+
 /* nest table */
 .table-subtable-container {
     background: #EAF9FF;
@@ -1963,6 +1980,12 @@ a.menu-active .menu-bar {
 
 .tabulator-row .tabulator-cell.tabulator-input-editable-btn {
     padding: 0;
+}
+
+.dialog-content .func-detail p {
+    padding: 0;
+    font-weight: bold;
+    color: #026D93;
 }
 
 /* END: tabulator創立table */
@@ -3070,6 +3093,8 @@ a.menu-active .menu-bar {
 .sub-query-row-group {
     border: #D9EDFE solid 2px;
     border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 /* END: query */
