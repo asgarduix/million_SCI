@@ -100,36 +100,35 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 險別 -->
+                                    <!-- 險別/險種 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector query-input-all">
+                                        <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">險別</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-2">
-                                                            <select name="險別" id="">
-                                                                <option value="">全部</option>
-                                                                <option value="" selected>車險</option>
-                                                                <option value="">水險(貨物險)</option>
-                                                                <option value="">火險</option>
-                                                                <option value="">意外險</option>
-                                                                <option value="">AH險</option>
-                                                                <option value="">漁船險</option>
-                                                                <option value="">船體險</option>
-                                                                <option value="">航空險</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="entry-combine entry-8 entry-btn">
-                                                            <button type="button" onclick="location.href='riaf001-02-query-popup.html'">選擇險種</button>
-                                                        </div>
-                                                    </div>
+                                                    <select name="險別" id="">
+                                                        <option value="">全部</option>
+                                                        <option value="" selected>車險</option>
+                                                        <option value="">水險(貨物險)</option>
+                                                        <option value="">火險</option>
+                                                        <option value="">意外險</option>
+                                                        <option value="">AH險</option>
+                                                        <option value="">漁船險</option>
+                                                        <option value="">船體險</option>
+                                                        <option value="">航空險</option>
+                                                    </select>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input query-input-66">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">險種</div>
+                                                <div class="query-field-item query-field-entry entry-btn"><button type="button" onclick="location.href='riaf001-02-query-popup.html'">選擇險種</button></div>
                                             </div>
                                             <div class="query-field-detail">
                                                 <div class="query-field-item query-field-title"></div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <textarea name="" id="" cols="30" rows="2">01-一年期住宅火災保險, 02-長期住宅火災保險, 03-一年期商業火災保險, 05-內陸運輸保險</textarea>
+                                                    <textarea name="" id="" cols="30" rows="3">01-一年期住宅火災保險, 02-長期住宅火災保險, 03-一年期商業火災保險, 05-內陸運輸保險</textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,9 +182,13 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="作業狀態" id="">
                                                         <option value="" selected>全部</option>
-                                                        <option value="">作業狀態-選項1</option>
-                                                        <option value="">作業狀態-選項2</option>
-                                                        <option value="">作業狀態-選項3</option>
+                                                        <option value="">01-待收件</option>
+                                                        <option value="">02-已收件</option>
+                                                        <option value="">05-傳票待過帳</option>
+                                                        <option value="">06-傳票已過帳</option>
+                                                        <option value="">07-取消入帳待過帳</option>
+                                                        <option value="">08-已取消入帳</option>
+                                                        <option value="">09-不處理</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -331,6 +334,7 @@
                                                             <li><input type="checkbox" id="cb03" name="批號狀態"><label for="cb03">含現金攤賠</label></li>
                                                             <li><input type="checkbox" id="cb04" name="批號狀態"><label for="cb04">含應攤回</label></li>
                                                             <li><input type="checkbox" id="cb05" name="批號狀態"><label for="cb05">含轉移帳單</label></li>
+                                                            <li><input type="checkbox" id="cb06" name="批號狀態"><label for="cb06">復效保費</label></li>
                                                         </ul>
                                                     </div>
                                                 </div>

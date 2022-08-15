@@ -1341,7 +1341,7 @@ a.menu-active .menu-bar {
     border: #eee solid 1px;
     border-radius: 5px;
     background: #fff;
-    padding: 5px 0;
+    padding: 5px 0 10px;
 }
 
 .card-scroll-fixed {
@@ -2745,6 +2745,10 @@ a.menu-active .menu-bar {
     width: 100%;
 }
 
+.query-input-66 {
+    width: 66%;
+}
+
 .query-field-inner {
     width: 100%;
     display: table;
@@ -3061,6 +3065,11 @@ a.menu-active .menu-bar {
     color: #018dcd;
     width: 18px;
     display: inline-block;
+}
+
+.sub-query-row-group {
+    border: #D9EDFE solid 2px;
+    border-top: none;
 }
 
 /* END: query */
