@@ -1811,6 +1811,28 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+.table-note {
+    padding: 2px 5px;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.table-note p {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0;
+}
+
+.table-note ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+.table-note li {
+    font-size: 0.75rem;
+    color: #555;
+}
+
 .table-footer-btn ul {
     list-style: none;
     margin: 0;
