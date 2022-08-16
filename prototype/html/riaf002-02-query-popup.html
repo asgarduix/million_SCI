@@ -82,7 +82,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 部門 -->
+                                    <!-- 部門/入帳批號 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -97,6 +97,12 @@
                                                         <option value="">AH險部</option>
                                                     </select>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">入帳批號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="入帳批號" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -252,7 +258,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- 入帳日期/入帳批號 -->
+                                        <!-- 入帳日期/傳票日期 -->
                                         <div class="query-row">
                                             <div class="query-field query-double-datepicker">
                                                 <div class="query-field-inner">
@@ -270,15 +276,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="query-field query-input">
-                                                <div class="query-field-inner">
-                                                    <div class="query-field-item query-field-title">入帳批號</div>
-                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="入帳批號" title="" data-toggle="tooltip" data-placement="top"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 傳票日期/傳票號 -->
-                                        <div class="query-row">
                                             <div class="query-field query-double-datepicker">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">傳票日期</div>
@@ -295,36 +292,39 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!-- 傳票號/保單號 -->
+                                        <div class="query-row">
                                             <div class="query-field query-input">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">傳票號</div>
                                                     <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="傳票號" title="" data-toggle="tooltip" data-placement="top"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 保單號/批單號 -->
-                                        <div class="query-row">
                                             <div class="query-field query-input">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">保單號</div>
                                                     <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="保單號" title="" data-toggle="tooltip" data-placement="top"></div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!-- 批單號/賠案號 -->
+                                        <div class="query-row">
                                             <div class="query-field query-input">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">批單號</div>
                                                     <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="批單號" title="" data-toggle="tooltip" data-placement="top"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 賠案號/批號狀態 -->
-                                        <div class="query-row">
                                             <div class="query-field query-input">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">賠案號</div>
                                                     <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="賠案號" title="" data-toggle="tooltip" data-placement="top"></div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!-- /批號狀態 -->
+                                        <div class="query-row">
                                             <div class="query-field query-checkbox query-input-66">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">批號狀態</div>
@@ -339,9 +339,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- 印表人員 -->
-                                        <div class="query-row">
                                             <div class="query-field query-input">
                                                 <div class="query-field-inner">
                                                     <div class="query-field-item query-field-title">印表人員</div>
