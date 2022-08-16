@@ -417,7 +417,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 洽攬人代碼 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">票券公司</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票券公司" attr='' title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-note"><span>%代表全部</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input-66">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款批號起訖</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票券公司" attr='' title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="query-row">
                                         <div class="query-field query-input query-input-half query-input-combine">
                                             <div class="query-field-inner">
@@ -469,6 +483,171 @@
                                                         </div>
                                                         <div class="entry-combine entry-2">
                                                             <button>瀏覽</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 更多搜尋欄位 -->
+                                    <div class="query-row">
+                                        <div class="query-field-full query-field-trigger">
+                                            <a href="#" class="query-more-link" attr="close" onclick="querySubRowTrigger()">更多搜尋條件</a>
+                                        </div>
+                                    </div>
+                                    <!-- 次要欄位 -->
+                                    <div class="sub-query-row-group" id="querySubRow" style="display: none;">
+                                        <!-- 收檔日期/轉入批號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">收檔日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="收檔日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="收檔日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">轉入批號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="轉入批號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 預計付款日/帳單編號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">預計付款日</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="預計付款日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="預計付款日" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">帳單編號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="帳單編號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 入帳日期/入帳批號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">入帳日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="入帳日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="入帳日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">入帳批號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="入帳批號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 傳票日期/傳票號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">傳票日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="傳票日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="傳票日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">傳票號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="傳票號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 保單號/批單號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">保單號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="保單號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">批單號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="批單號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 賠案號/批號狀態 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">賠案號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="賠案號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-checkbox query-input-66">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">批號狀態</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <ul>
+                                                            <li><input type="checkbox" id="cb02" name="批號狀態"><label for="cb02">含超賠帳單</label></li>
+                                                            <li><input type="checkbox" id="cb03" name="批號狀態"><label for="cb03">含現金攤賠</label></li>
+                                                            <li><input type="checkbox" id="cb04" name="批號狀態"><label for="cb04">含應攤回</label></li>
+                                                            <li><input type="checkbox" id="cb05" name="批號狀態"><label for="cb05">含轉移帳單</label></li>
+                                                            <li><input type="checkbox" id="cb06" name="批號狀態"><label for="cb06">復效保費</label></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 印表人員 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">印表人員</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-4">
+                                                                <input type="text" name="印表人員" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-6">
+                                                                <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -944,7 +1123,8 @@
                                     </div>
                                     <div id="table01"></div>
                                     <div class="table-footer">footer</div>
-                                    <div class="table-note">表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。<br><br><p>以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。</p>
+                                    <div class="table-note">表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。<br><br>
+                                        <p>以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。</p>
                                         <br>
                                         <ul>
                                             <li>以ul li標籤包夾的表格備註，顯示說明。</li>
@@ -2359,7 +2539,7 @@
                     </div>
                 </div>
                 <div class="aside">
-                   <div class="aside-list" include-html-aside="include/aside/aside.html"></div> 
+                    <div class="aside-list" include-html-aside="include/aside/aside.html"></div>
                 </div>
             </main>
         </div>
@@ -3792,7 +3972,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                    values.length === table ? .getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",
@@ -3803,7 +3983,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                    values.length === table ? .getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",
