@@ -3081,7 +3081,7 @@ a.menu-active .menu-bar {
     display: block;
     padding: 6px 12px;
     color: #026D93;
-    text-align: center; 
+    text-align: center;
     font-size: 0.875rem;
     text-decoration: none;
     background: #ecf6ff;
@@ -4684,6 +4684,59 @@ span.tp {
     font-size: 1.3125rem;
 }
 
+/*span.add_circle {
+    position: absolute;
+    color: #ff8c00;
+    cursor: default;
+    line-height: 1;
+    padding: 0 3px;
+}
+
+.customize-form-entry span.add_circle,
+.customize-form-entry span.add_circle>span {
+    font-size: 1.3125rem;
+}*/
+
+a.customize-form-sub-table-field-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.customize-form-sub-table-field-btn[attr="close"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "remove_circle";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ff8c00;
+    display: block;
+    font-size: 1.3125rem;
+    line-height: 1;
+}
+
+a.customize-form-sub-table-field-btn[attr="open"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "add_circle";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ff8c00;
+    display: block;
+    font-size: 1.3125rem;
+    line-height: 1;
+}
+
+.customize-form-sub-table {
+    background: #eee;
+    padding: 10px 0;
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.customize-form-sub-table .table-func {
+    background: #fff;
+}
+
 .fade-in {
     display: block;
     animation: fade 0.2s linear forwards;
@@ -4911,6 +4964,7 @@ span.tp {
     font-size: 0.75rem;
     color: #555;
 }
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {

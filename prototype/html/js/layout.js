@@ -169,3 +169,15 @@ function querySubRowTrigger() {
     document.querySelector('.query-more-link').setAttribute('attr','close');
   }
 }
+
+// query-sbu-row-group-trigger ////////////////////////////////////////////////////////////////////////
+function collapseTrigger() {
+  var collapseStatus = document.querySelector(".collapseTable");
+  if (collapseStatus.style.display === "none") {
+    collapseStatus.style.display = "block";
+    document.querySelector('.collapse-btn').setAttribute('attr','close');
+  } else {
+    collapseStatus.style.display = "none";
+    document.querySelector('.collapse-btn').setAttribute('attr','open');
+  }
+}
