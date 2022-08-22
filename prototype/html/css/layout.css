@@ -2829,7 +2829,8 @@ a.menu-active .menu-bar {
 .query-field-entry ul {
     list-style: none;
     padding: 0 0 0 3px;
-    margin: 0;
+    margin: 0.15rem 0 0;
+    line-height: 1;
 }
 
 .query-field-entry li {
@@ -2840,12 +2841,15 @@ a.menu-active .menu-bar {
 .query-field-entry li input {
     height: inherit;
     margin-right: 1px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .query-field-entry label {
     margin-left: 1px;
     font-size: 0.875rem;
-    vertical-align: text-bottom;
+     display: inline-block;
+    vertical-align: middle;
 }
 
 .query-field-detail {
@@ -2878,12 +2882,17 @@ a.menu-active .menu-bar {
 
 .entry-combine {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     padding-right: 3px;
 }
 
 .entry-combine:nth-last-child(1) {
     padding-right: 0;
+}
+
+.entry-note {
+    font-size: 0.75rem;
+    color: #777;
 }
 
 .hack {
