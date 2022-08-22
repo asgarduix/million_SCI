@@ -2864,6 +2864,48 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+.query-field-detail .multipe-options {
+    /*font-size: 0.875rem;*/
+    width: 100%;
+    padding: 2px 4px;
+    border: #aaa solid 1px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.query-field-detail .multipe-options li {
+    margin-right: 4px;
+    margin-bottom: 6px;
+    padding: 4px;
+    border-radius: 4px;
+    background: #ecf6ff;
+    border: #ccc solid 1px;
+}
+
+.query-field-detail .multipe-options li:hover {
+    border-color: #777;
+    cursor: pointer;
+}
+
+.query-field-detail .multipe-options li span.multipe-options-item {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.option-no::after {
+    content: attr(icon-after);
+}
+
+.option-cancel {
+    color: #015478;
+}
+
+.query-field-detail .multipe-options li:hover .option-cancel {
+    color: #28373e;
+}
+
 .entry-btn button {
     border: #ccc solid 1px;
     border-radius: 4px;
