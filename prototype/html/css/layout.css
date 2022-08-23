@@ -6164,8 +6164,8 @@ span.calendar-item::after {
     }
 
     .query-field {
-        width: 50%;
-        float: left;
+        width: 100%;
+        /*float: left;*/
         border-bottom: #aaa dotted 1px;
     }
 
@@ -6183,6 +6183,10 @@ span.calendar-item::after {
 
     .query-input-combine {
         width: 100%;
+    }
+
+    .query-field-trigger a {
+        clear: both;
     }
 
     /* END: query */
