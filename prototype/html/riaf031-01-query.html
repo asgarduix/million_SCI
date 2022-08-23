@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>華南產物保險-RIAF031-分出估計維護</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- jQuery-ui -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <!-- Bootstrap_4.5.2 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- material_icon -->
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/material-icons-ie.css">
+    <!-- tabulator_4.9 -->
+    <link rel="stylesheet" href="css/tabulator.min.css">
+    <!-- 全域 -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- 框架 -->
+    <link rel="stylesheet" href="css/layout.css">
+    <!-- 頁面 -->
+    <link rel="stylesheet" href="css/page.css">
+    <!-- pg使用 -->
+    <link rel="stylesheet" href="css/pg.css">
+</head>
+
+<body id="canvas" class="riaf031-01-query">
+    <div class="frame">
+        <!-- frame: menu -->
+        <nav class="frame-block leftBlock" id="left_menu">
+            <div class="leftBlock-inner mCustomScrollbar">
+                <!-- menu-logo -->
+                <div class="frame-logo">
+                    <a href="#"><img src="img/logo-w.svg" alt=""></a>
+                </div>
+                <div class="frame-menu">
+                    <!-- menu-filter -->
+                    <div class="menu-filter">
+                        <input type="text" id="menu_filter" placeholder="搜尋目錄">
+                    </div>
+                    <div class="menu-pgName"><span>再保預估</span></div>
+                    <!-- menu-list -->
+                    <div class="menu-list" include-html="include/menu/estimate.html"></div>
+                </div>
+            </div>
+        </nav>
+        <!-- frame: content -->
+        <div class="frame-block rightBlock" id="right_content">
+            <!-- header -->
+            <header class="frame-content headerModule">
+                <div class="header-list" include-html-header="include/header/reinsurance/header.html"></div>
+            </header>
+            <!-- main -->
+            <main class="frame-content mainModule">
+                <div class="content">
+                    <!-- breadcrumb -->
+                    <div class="content-component content-breadcrumb">
+                        <ul>
+                            <li><a href="#">再保</a></li>
+                            <li><a href="#">再保預估</a></li>
+                            <li><a href="#">分出估計維護</a></li>
+                        </ul>
+                    </div>
+                    <!-- card -->
+                    <div class="content-component content-card">
+                        <!-- unitname -->
+                        <div class="content-component content-unitname">
+                            <div class="unitname-inner">
+                                <div class="unitname-item unitname-title">分出估計維護</div>
+                                <div class="unitname-item unitname-favourite">
+                                    <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- query -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-query">
+                                <!-- query -->
+                                <div class="content-component content-query">
+                                    <!-- 預估年月/傳票日期 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">預估年月</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">傳票日期</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 公司別/部門 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">公司別</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="公司別" id="">
+                                                        <option value="" selected>非OIU</option>
+                                                        <option value="">OIU</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">部門</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="部門" id="">
+                                                        <option value="" selected>全部</option>
+                                                        <option value="">火險部</option>
+                                                        <option value="">水險部</option>
+                                                        <option value="">意險部</option>
+                                                        <option value="">車險部</option>
+                                                        <option value="">AH險部</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 報表表達/選擇 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">報表表達</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-6">
+                                                            <select name="報表表達" id="">
+                                                                <option value="" selected>折台</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="entry-combine entry-4 query-field-note">
+                                                            <ul>
+                                                                <li><input type="checkbox" id="cb01" name="強制險"><label for="cb01" class="query-field-combine-checkbox">強制險</label></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-radio">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">選擇</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="選擇"><label for="rd01">簽單分出</label></li>
+                                                        <li><input type="radio" id="rd02" name="選擇"><label for="rd02">分入轉分出</label></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-btn">
+                                <!-- btn -->
+                                <div class="content-component content-btn">
+                                    <div class="content-btn-main">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-secondary">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-secondary btn-reject"><span>駁回</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-third">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-third"><span>轉檔</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>立帳傳票</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>迴轉傳票</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>報表</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>EXCEL</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>一月提存轉收回</span></button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- tabulator創立table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">5</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="table-func-page"></div>
+                                        </div>
+                                    </div>
+                                    <div id="table01"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- copyright -->
+                        <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="aside-list" include-html-aside="include/aside/aside.html"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- popup -->
+</body>
+<!-- jQuery_3.5.1  -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<!-- jQuery-ui_1.12.1 -->
+<script src="js/jquery-ui.js"></script>
+<!-- Popper -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap_4.5.2 -->
+<script src="js/bootstrap.min.js"></script>
+<!-- tabulator_4.9 -->
+<script src="js/tabulator.min.js"></script>
+<!-- tabulator_json -->
+<!-- <script src="json/table01.js"></script> -->
+<!-- 自定義js -->
+<script src="js/layout.js"></script>
+<!-- pg使用 -->
+<script src="js/pg.js"></script>
+<script>
+let table01Data = [{
+        id: "a1",
+        列號: "1",
+        險別: "一年期住宅保險(火)",
+        代號: "0010",
+        再保費支出1: "0",
+        再保佣金收入1: "0",
+        應付再保業務款1: "0",
+        攤回再保賠款1: "0",
+        再保費支出2: "0",
+        再保佣金收入2: "0",
+        應付再保業務款2: "0",
+        攤回再保賠款2: "0",
+        本期立帳傳票: "--",
+        本期沖帳傳票: "--",
+    },
+    {
+        id: "a2",
+        列號: "2",
+        險別: "長期住宅火災保險(火)",
+        代號: "0020",
+        再保費支出1: "-23,326",
+        再保佣金收入1: "-12,130",
+        應付再保業務款1: "-11,196",
+        攤回再保賠款1: "0",
+        再保費支出2: "-23,326",
+        再保佣金收入2: "-12,130",
+        應付再保業務款2: "-11,196",
+        攤回再保賠款2: "0",
+        本期立帳傳票: "--",
+        本期沖帳傳票: "--",
+    },
+    {
+        id: "a3",
+        列號: "3",
+        險別: "一年期商業火災保險(火)",
+        代號: "0030",
+        再保費支出1: "115,149,875",
+        再保佣金收入1: "22,844,741",
+        應付再保業務款1: "92,305,134",
+        攤回再保賠款1: "0",
+        再保費支出2: "115,149,875",
+        再保佣金收入2: "22,844,741",
+        應付再保業務款2: "92,305,134",
+        攤回再保賠款2: "0",
+        本期立帳傳票: "--",
+        本期沖帳傳票: "--",
+    },
+    {
+        id: "a4",
+        列號: "4",
+        險別: "長期商業火災保險(火)",
+        代號: "0040",
+        再保費支出1: "0",
+        再保佣金收入1: "0",
+        應付再保業務款1: "0",
+        攤回再保賠款1: "0",
+        再保費支出2: "0",
+        再保佣金收入2: "0",
+        應付再保業務款2: "0",
+        攤回再保賠款2: "0",
+        本期立帳傳票: "--",
+        本期沖帳傳票: "--",
+    },
+    {
+        id: "a5",
+        列號: "5",
+        險別: "內陸運輸保險(水)",
+        代號: "0050",
+        再保費支出1: "5,389,424",
+        再保佣金收入1: "304,446",
+        應付再保業務款1: "5,084,978",
+        攤回再保賠款1: "0",
+        再保費支出2: "5,389,424",
+        再保佣金收入2: "304,446",
+        應付再保業務款2: "5,084,978",
+        攤回再保賠款2: "0",
+        本期立帳傳票: "--",
+        本期沖帳傳票: "--",
+    },
+];
+
+var table01 = new Tabulator("#table01", {
+    data: table01Data,
+    layout: "fitColumns",
+    height: "100%",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [
+        /*{
+                    formatter: "rowSelection",
+                    titleFormatter: "rowSelection",
+                    headerHozAlign: "center",
+                    hozAlign: "center",
+                    headerSort: false,
+                    maxWidth: 30,
+                    minWidth: 30,
+                    cellClick: function(e, cell) {
+                        cell.getRow().toggleSelect();
+                    }
+                },
+                {
+                    title: "列號",
+                    field: "列號",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },*/
+        { title: "列號", field: "列號" },
+        { title: "險別", field: "險別" },
+        { title: "代號", field: "代號" },
+        {
+            title: "分出再保業務",
+            columns: [{
+                    title: "再保費支出",
+                    field: "再保費支出1",
+                    hozAlign: "right"
+                },
+                {
+                    title: "再保佣金收入",
+                    field: "再保佣金收入1",
+                    hozAlign: "right"
+                },
+                {
+                    title: "應付再保業務款",
+                    field: "應付再保業務款1",
+                    hozAlign: "right"
+                },
+                {
+                    title: "攤回再保賠款",
+                    field: "攤回再保賠款1",
+                    hozAlign: "right"
+                },
+            ],
+        },
+        {
+            title: "分出轉分出",
+            columns: [{
+                    title: "再保費支出",
+                    field: "再保費支出2",
+                    hozAlign: "right"
+                },
+                {
+                    title: "再保佣金收入",
+                    field: "再保佣金收入2",
+                    hozAlign: "right"
+                },
+                {
+                    title: "應付再保業務款",
+                    field: "應付再保業務款2",
+                    hozAlign: "right"
+                },
+                {
+                    title: "攤回再保賠款",
+                    field: "攤回再保賠款2",
+                    hozAlign: "right"
+                },
+            ],
+        },
+        { title: "本期立帳傳票", field: "本期立帳傳票" },
+        { title: "本期沖帳傳票", field: "本期沖帳傳票" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
+</script>
+
+</html>
