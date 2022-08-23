@@ -31,7 +31,7 @@ includeMenu().then(() => {
     const pageId = document.getElementById('canvas');
     const pageClass = pageId.getAttribute("class");
     const pageName = pageClass.split('-')[0];
-    document.querySelector(`.menu-list a[href^=${pageName}]`) ?.classList ?.add('menu-list-active');
+    document.querySelector(`.menu-list a[href^=${pageName}]`)?.classList?.add('menu-list-active');
 });
 
 // include-header-structure 
@@ -160,24 +160,24 @@ function onlyNumberKey(evt) {
 
 // query-sbu-row-group-trigger ////////////////////////////////////////////////////////////////////////
 function querySubRowTrigger() {
-  var querySubRowStatus = document.getElementById("querySubRow");
-  if (querySubRowStatus.style.display === "none") {
-    querySubRowStatus.style.display = "block";
-    document.querySelector('.query-more-link').setAttribute('attr','open');
-  } else {
-    querySubRowStatus.style.display = "none";
-    document.querySelector('.query-more-link').setAttribute('attr','close');
-  }
+    var querySubRowStatus = document.getElementById("querySubRow");
+    if (querySubRowStatus.style.display === "none") {
+        querySubRowStatus.style.display = "block";
+        document.querySelector('.query-more-link').setAttribute('attr', 'open');
+    } else {
+        querySubRowStatus.style.display = "none";
+        document.querySelector('.query-more-link').setAttribute('attr', 'close');
+    }
 }
 
 // query-sbu-row-group-trigger ////////////////////////////////////////////////////////////////////////
 function collapseTrigger() {
-  var collapseStatus = document.querySelector(".collapseTable");
-  if (collapseStatus.style.display === "none") {
-    collapseStatus.style.display = "block";
-    document.querySelector('.collapse-btn').setAttribute('attr','close');
-  } else {
-    collapseStatus.style.display = "none";
-    document.querySelector('.collapse-btn').setAttribute('attr','open');
-  }
+    var collapseStatus = document.querySelector(".collapseTable");
+    if (collapseStatus.style.display === "none") {
+        collapseStatus.style.display = "block";
+        document.querySelector('.collapse-btn').setAttribute('attr', 'close');
+    } else {
+        collapseStatus.style.display = "none";
+        document.querySelector('.collapse-btn').setAttribute('attr', 'open');
+    }
 }

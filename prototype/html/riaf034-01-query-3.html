@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF031-分出估計維護</title>
+    <title>華南產物保險-RIAF034-分入估計維護</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf031-01-query">
+<body id="canvas" class="riaf034-01-query-3">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -62,7 +62,7 @@
                         <ul>
                             <li><a href="#">再保</a></li>
                             <li><a href="#">再保預估</a></li>
-                            <li><a href="#">分出估計維護</a></li>
+                            <li><a href="#">分入估計維護</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -70,7 +70,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">分出估計維護</div>
+                                <div class="unitname-item unitname-title">分入估計維護</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -176,13 +176,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-radio">
+                                        <div class="query-field query-radio query-input-66">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">選擇</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="radio" id="rd01" name="選擇"><label for="rd01">簽單分出</label></li>
-                                                        <li><input type="radio" id="rd02" name="選擇"><label for="rd02">分入轉分出</label></li>
+                                                        <li><input type="radio" id="rd01" name="選擇" checked=""><label for="rd01">未決未賠攤回</label></li>
+                                                        <li><input type="radio" id="rd02" name="選擇"><label for="rd02">未決賠款</label></li>
+                                                        <li><input type="radio" id="rd03" name="選擇"><label for="rd03">暫付賠款</label></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -215,17 +216,23 @@
                                             <li><button class="content-btn-item btn-third"><span>迴轉傳票</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>報表</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>EXCEL</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>一月提存轉收回</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="riaf034-01-query.html">A表</a></li>
+                                        <li><a href="riaf034-01-query-2.html">B表</a></li>
+                                        <li><a href="riaf034-01-query-3.html" class="tab-link-active">增減變動表</a></li>
+                                    </ul>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -237,14 +244,9 @@
                                                 </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li class="count-total">5</li>
+                                                        <li class="count-total">6</li>
                                                     </ul>
                                                 </div>
-                                                <!-- <div class="func-basic-item func-filter">
-                                                    <div class="func-filter-inner">
-                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                    </div>
-                                                </div> -->
                                             </div>
                                             <div class="table-func-page"></div>
                                         </div>
@@ -288,80 +290,72 @@ let table01Data = [{
         列號: "1",
         險別: "一年期住宅保險(火)",
         代號: "0010",
-        再保費支出1: "0",
-        再保佣金收入1: "0",
-        應付再保業務款1: "0",
-        攤回再保賠款1: "0",
-        再保費支出2: "0",
-        再保佣金收入2: "0",
-        應付再保業務款2: "0",
-        攤回再保賠款2: "0",
-        本期立帳傳票: "--",
-        本期沖帳傳票: "--",
+        未決未賠1: "12,830,000",
+        未決未賠2: "17,730,000",
+        增減變動1: "4,900,000",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
     },
     {
         id: "a2",
         列號: "2",
-        險別: "長期住宅火災保險(火)",
+        險別: "長期住宅火災保險",
         代號: "0020",
-        再保費支出1: "-23,326",
-        再保佣金收入1: "-12,130",
-        應付再保業務款1: "-11,196",
-        攤回再保賠款1: "0",
-        再保費支出2: "-23,326",
-        再保佣金收入2: "-12,130",
-        應付再保業務款2: "-11,196",
-        攤回再保賠款2: "0",
-        本期立帳傳票: "--",
-        本期沖帳傳票: "--",
+        未決未賠1: "130,000",
+        未決未賠2: "130,000",
+        增減變動1: "0",
+        未決未賠3: "19,500",
+        未決未賠4: "19,500",
+        增減變動2: "0",
     },
     {
         id: "a3",
         列號: "3",
-        險別: "一年期商業火災保險(火)",
+        險別: "一年期商業火災保險",
         代號: "0030",
-        再保費支出1: "115,149,875",
-        再保佣金收入1: "22,844,741",
-        應付再保業務款1: "92,305,134",
-        攤回再保賠款1: "0",
-        再保費支出2: "115,149,875",
-        再保佣金收入2: "22,844,741",
-        應付再保業務款2: "92,305,134",
-        攤回再保賠款2: "0",
-        本期立帳傳票: "--",
-        本期沖帳傳票: "--",
+        未決未賠1: "1,451,731,666",
+        未決未賠2: "1,419,422,879",
+        增減變動1: "32,308,878",
+        未決未賠3: "1,209,561,282",
+        未決未賠4: "1,183,221,305",
+        增減變動2: "26,339,977",
     },
     {
         id: "a4",
         列號: "4",
-        險別: "長期商業火災保險(火)",
+        險別: "長期商業火災保險",
         代號: "0040",
-        再保費支出1: "0",
-        再保佣金收入1: "0",
-        應付再保業務款1: "0",
-        攤回再保賠款1: "0",
-        再保費支出2: "0",
-        再保佣金收入2: "0",
-        應付再保業務款2: "0",
-        攤回再保賠款2: "0",
-        本期立帳傳票: "--",
-        本期沖帳傳票: "--",
+        未決未賠1: "0",
+        未決未賠2: "0",
+        增減變動1: "0",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
     },
     {
         id: "a5",
         列號: "5",
         險別: "內陸運輸保險(水)",
         代號: "0050",
-        再保費支出1: "5,389,424",
-        再保佣金收入1: "304,446",
-        應付再保業務款1: "5,084,978",
-        攤回再保賠款1: "0",
-        再保費支出2: "5,389,424",
-        再保佣金收入2: "304,446",
-        應付再保業務款2: "5,084,978",
-        攤回再保賠款2: "0",
-        本期立帳傳票: "--",
-        本期沖帳傳票: "--",
+        未決未賠1: "2,814,138",
+        未決未賠2: "3,728,888",
+        增減變動1: "914,750",
+        未決未賠3: "2,802,138",
+        未決未賠4: "3,167,688",
+        增減變動2: "365,550",
+    },
+    {
+        id: "a6",
+        列號: "6",
+        險別: "內陸運輸保險(意)",
+        代號: "0050",
+        未決未賠1: "775,975",
+        未決未賠2: "569,583",
+        增減變動1: "206,392",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
     },
 ];
 
@@ -379,80 +373,63 @@ var table01 = new Tabulator("#table01", {
     tooltipGenerationMode: "hover",
     selectable: true,
     columns: [
-        /*{
-                    formatter: "rowSelection",
-                    titleFormatter: "rowSelection",
-                    headerHozAlign: "center",
-                    hozAlign: "center",
-                    headerSort: false,
-                    maxWidth: 30,
-                    minWidth: 30,
-                    cellClick: function(e, cell) {
-                        cell.getRow().toggleSelect();
-                    }
-                },
-                {
-                    title: "列號",
-                    field: "列號",
-                    formatter: function(cell, formatterParams, onRendered) {
-                        return "<a href='#'>" + cell.getValue() + "</a>"
-                    },
-                },*/
         { title: "列號", field: "列號", maxWidth: 40, minWidth: 40, headerSort: false },
         { title: "險別", field: "險別" },
         { title: "代號", field: "代號" },
         {
-            title: "分出再保業務",
+            title: "110/9月",
             headerHozAlign: "center",
             columns: [{
-                    title: "再保費支出",
-                    field: "再保費支出1",
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠1",
                     hozAlign: "right"
-                },
-                {
-                    title: "再保佣金收入",
-                    field: "再保佣金收入1",
-                    hozAlign: "right"
-                },
-                {
-                    title: "應付再保業務款",
-                    field: "應付再保業務款1",
-                    hozAlign: "right"
-                },
-                {
-                    title: "攤回再保賠款",
-                    field: "攤回再保賠款1",
-                    hozAlign: "right"
-                },
-            ],
+                }],
+            }],
         },
         {
-            title: "分出轉分出",
+            title: "110/10月",
             headerHozAlign: "center",
             columns: [{
-                    title: "再保費支出",
-                    field: "再保費支出2",
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠2",
                     hozAlign: "right"
-                },
-                {
-                    title: "再保佣金收入",
-                    field: "再保佣金收入2",
-                    hozAlign: "right"
-                },
-                {
-                    title: "應付再保業務款",
-                    field: "應付再保業務款2",
-                    hozAlign: "right"
-                },
-                {
-                    title: "攤回再保賠款",
-                    field: "攤回再保賠款2",
-                    hozAlign: "right"
-                },
-            ],
+                }],
+            }],
         },
-        // { title: "本期立帳傳票", field: "本期立帳傳票" },
-        // { title: "本期沖帳傳票", field: "本期沖帳傳票" },
+        { title: "增減變動", field: "增減變動1", hozAlign: "right" },
+        {
+            title: "110/9月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠3",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        {
+            title: "110/10月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠4",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        { title: "增減變動", field: "增減變動2", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row

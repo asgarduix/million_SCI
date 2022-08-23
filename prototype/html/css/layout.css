@@ -1335,6 +1335,25 @@ a.menu-active .menu-bar {
     width: calc(100% - 265px);
 }
 
+.card-data-right-sm {
+    width: 220px;
+}
+
+/*.card-data-right-sm .data-row-title,
+.card-data-right-sm .data-row-content {
+    width: 100%;
+    display: block;
+}*/
+
+.card-data-right-sm .data-row-title {
+    width: 60px;
+    padding: 4px;
+}
+
+.card-table-left-sm {
+    width: calc(100% - 220px);
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -2848,7 +2867,7 @@ a.menu-active .menu-bar {
 .query-field-entry label {
     margin-left: 1px;
     font-size: 0.875rem;
-     display: inline-block;
+    display: inline-block;
     vertical-align: middle;
 }
 
