@@ -2937,6 +2937,10 @@ a.menu-active .menu-bar {
     color: #777;
 }
 
+.entry-note[status="warning"] {
+    color: #E60012;
+}
+
 .hack {
     height: 0;
 }
