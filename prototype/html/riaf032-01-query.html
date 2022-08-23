@@ -155,7 +155,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 報表表達/選擇 -->
+                                    <!-- 報表表達 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -173,17 +173,6 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-radio">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">選擇</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="選擇"><label for="rd01">簽單分出</label></li>
-                                                        <li><input type="radio" id="rd02" name="選擇"><label for="rd02">分入轉分出</label></li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,14 +277,11 @@ let table01Data = [{
         列號: "1",
         險別: "一年期住宅保險(火)",
         代號: "0010",
-        再保費支出1: "0",
-        再保佣金收入1: "0",
-        應付再保業務款1: "0",
-        攤回再保賠款1: "0",
-        再保費支出2: "0",
-        再保佣金收入2: "0",
-        應付再保業務款2: "0",
-        攤回再保賠款2: "0",
+        再保費收入: "0",
+        再保佣金支出: "0",
+        應收再保業務款: "0",
+        再保賠款: "0",
+        攤回再保賠款: "0",
         本期立帳傳票: "--",
         本期沖帳傳票: "--",
     },
@@ -304,14 +290,11 @@ let table01Data = [{
         列號: "2",
         險別: "長期住宅火災保險(火)",
         代號: "0020",
-        再保費支出1: "-23,326",
-        再保佣金收入1: "-12,130",
-        應付再保業務款1: "-11,196",
-        攤回再保賠款1: "0",
-        再保費支出2: "-23,326",
-        再保佣金收入2: "-12,130",
-        應付再保業務款2: "-11,196",
-        攤回再保賠款2: "0",
+        再保費收入: "0",
+        再保佣金支出: "0",
+        應收再保業務款: "0",
+        再保賠款: "0",
+        攤回再保賠款: "0",
         本期立帳傳票: "--",
         本期沖帳傳票: "--",
     },
@@ -320,14 +303,11 @@ let table01Data = [{
         列號: "3",
         險別: "一年期商業火災保險(火)",
         代號: "0030",
-        再保費支出1: "115,149,875",
-        再保佣金收入1: "22,844,741",
-        應付再保業務款1: "92,305,134",
-        攤回再保賠款1: "0",
-        再保費支出2: "115,149,875",
-        再保佣金收入2: "22,844,741",
-        應付再保業務款2: "92,305,134",
-        攤回再保賠款2: "0",
+        再保費收入: "0",
+        再保佣金支出: "0",
+        應收再保業務款: "0",
+        再保賠款: "6,662,632",
+        攤回再保賠款: "4,179,247",
         本期立帳傳票: "--",
         本期沖帳傳票: "--",
     },
@@ -336,14 +316,11 @@ let table01Data = [{
         列號: "4",
         險別: "長期商業火災保險(火)",
         代號: "0040",
-        再保費支出1: "0",
-        再保佣金收入1: "0",
-        應付再保業務款1: "0",
-        攤回再保賠款1: "0",
-        再保費支出2: "0",
-        再保佣金收入2: "0",
-        應付再保業務款2: "0",
-        攤回再保賠款2: "0",
+        再保費收入: "0",
+        再保佣金支出: "0",
+        應收再保業務款: "0",
+        再保賠款: "0",
+        攤回再保賠款: "0",
         本期立帳傳票: "--",
         本期沖帳傳票: "--",
     },
@@ -352,14 +329,11 @@ let table01Data = [{
         列號: "5",
         險別: "內陸運輸保險(水)",
         代號: "0050",
-        再保費支出1: "5,389,424",
-        再保佣金收入1: "304,446",
-        應付再保業務款1: "5,084,978",
-        攤回再保賠款1: "0",
-        再保費支出2: "5,389,424",
-        再保佣金收入2: "304,446",
-        應付再保業務款2: "5,084,978",
-        攤回再保賠款2: "0",
+        再保費收入: "0",
+        再保佣金支出: "0",
+        應收再保業務款: "0",
+        再保賠款: "0",
+        攤回再保賠款: "0",
         本期立帳傳票: "--",
         本期沖帳傳票: "--",
     },
@@ -379,72 +353,38 @@ var table01 = new Tabulator("#table01", {
     tooltipGenerationMode: "hover",
     selectable: true,
     columns: [
-        /*{
-                    formatter: "rowSelection",
-                    titleFormatter: "rowSelection",
-                    headerHozAlign: "center",
-                    hozAlign: "center",
-                    headerSort: false,
-                    maxWidth: 30,
-                    minWidth: 30,
-                    cellClick: function(e, cell) {
-                        cell.getRow().toggleSelect();
-                    }
-                },
-                {
-                    title: "列號",
-                    field: "列號",
-                    formatter: function(cell, formatterParams, onRendered) {
-                        return "<a href='#'>" + cell.getValue() + "</a>"
-                    },
-                },*/
-        { title: "列號", field: "列號" },
+        { title: "列號", field: "列號", maxWidth: 40, minWidth: 40, headerSort: false },
         { title: "險別", field: "險別" },
         { title: "代號", field: "代號" },
         {
-            title: "分出再保業務",
+            title: "分入再保業務",
             columns: [{
-                    title: "再保費支出",
-                    field: "再保費支出1",
+                    title: "再保費收入",
+                    field: "再保費收入",
                     hozAlign: "right"
                 },
                 {
-                    title: "再保佣金收入",
-                    field: "再保佣金收入1",
+                    title: "再保佣金支出",
+                    field: "再保佣金支出",
                     hozAlign: "right"
                 },
                 {
-                    title: "應付再保業務款",
-                    field: "應付再保業務款1",
-                    hozAlign: "right"
-                },
-                {
-                    title: "攤回再保賠款",
-                    field: "攤回再保賠款1",
+                    title: "應收再保業務款",
+                    field: "應收再保業務款",
                     hozAlign: "right"
                 },
             ],
         },
         {
-            title: "分出轉分出",
+            title: "分入再保業務",
             columns: [{
-                    title: "再保費支出",
-                    field: "再保費支出2",
-                    hozAlign: "right"
-                },
-                {
-                    title: "再保佣金收入",
-                    field: "再保佣金收入2",
-                    hozAlign: "right"
-                },
-                {
-                    title: "應付再保業務款",
-                    field: "應付再保業務款2",
+                    title: "再保賠款",
+                    field: "再保賠款",
                     hozAlign: "right"
                 },
                 {
                     title: "攤回再保賠款",
-                    field: "攤回再保賠款2",
+                    field: "攤回再保賠款",
                     hozAlign: "right"
                 },
             ],
