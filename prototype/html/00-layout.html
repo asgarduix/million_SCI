@@ -490,6 +490,71 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 文字提示 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input query-input-half">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">再保公司</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" name="再保公司" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <span class="entry-note">CHINA RE(GROUP) SG</span>
+                                                        </div>
+                                                        <div class="entry-combine entry-4 query-field-note">
+                                                            <ul>
+                                                                <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01" class="query-field-combine-checkbox">經紀人註記</label></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 選擇tag欄位 -->
+                                    <div class="query-field query-input query-input-all">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">險種</div>
+                                            <div class="query-field-item query-field-entry entry-btn"><button type="button" onclick="location.href='basic-09-query-popup.html'">選擇險種</button></div>
+                                        </div>
+                                        <div class="query-field-detail">
+                                            <div class="query-field-item query-field-title"></div>
+                                            <div class="query-field-item query-field-entry">
+                                                <div class="multipe-options">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">01</span>
+                                                            <span class="multipe-options-item option-name">一年期住宅火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">02</span>
+                                                            <span class="multipe-options-item option-name">長期住宅火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">03</span>
+                                                            <span class="multipe-options-item option-name">一年期商業火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">05</span>
+                                                            <span class="multipe-options-item option-name">內陸運輸保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!-- 更多搜尋欄位 -->
                                     <div class="query-row">
                                         <div class="query-field-full query-field-trigger">
@@ -2536,6 +2601,92 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 複合式table：tab+複雜表格+金額合計 -->
+                        <div class="card-detail" style="margin-bottom: 5px;">
+                            <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="#" class="tab-link-active">A表</a></li>
+                                        <li><a href="#">B表</a></li>
+                                        <li><a href="#">增減變動表</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-detail">
+                            <div class="card-multiple-container">
+                                <!-- data -->
+                                <div class="card-detail card-data card-data-right card-data-right-sm">
+                                    <div class="card-data-inner">
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">水險</div>
+                                                <div class="data-row-content" attr="money">601,042,192</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">AH險</div>
+                                                <div class="data-row-content" attr="money">60,951,417</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">意險</div>
+                                                <div class="data-row-content" attr="money">613,540,797</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">車險</div>
+                                                <div class="data-row-content" attr="money">2,071,442,855</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">火險部</div>
+                                                <div class="data-row-content" attr="money">1,470,928,852</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row datal-total-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title"><span>合計</span></div>
+                                                <div class="data-row-content" attr="money">4,817,906,113</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabulator創立table -->
+                                <div class="card-detail card-table card-table-left card-table-left-sm">
+                                    <!-- card-detail >> board -->
+                                    <div class="detail-board">
+                                        <div class="content-component content-table">
+                                            <div class="table-func">
+                                                <div class="table-func-inner">
+                                                    <div class="table-func-basic">
+                                                        <div class="func-basic-item func-download">
+                                                            <ul>
+                                                                <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="func-basic-item func-count">
+                                                            <ul>
+                                                                <li class="count-total">6</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-func-page"></div>
+                                                </div>
+                                            </div>
+                                            <div id="table16"></div>
+                                            <div class="table-footer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -3992,6 +4143,160 @@ let table15 = new Tabulator("#table15", {
         },
     ],
 });
+</script>
+<script>
+// 複合式table：tab+複雜表格+金額合計
+let table16Data = [{
+        id: "a1",
+        列號: "1",
+        險別: "一年期住宅保險(火)",
+        代號: "0010",
+        未決未賠1: "12,830,000",
+        未決未賠2: "17,730,000",
+        增減變動1: "4,900,000",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+    {
+        id: "a2",
+        列號: "2",
+        險別: "長期住宅火災保險",
+        代號: "0020",
+        未決未賠1: "130,000",
+        未決未賠2: "130,000",
+        增減變動1: "0",
+        未決未賠3: "19,500",
+        未決未賠4: "19,500",
+        增減變動2: "0",
+    },
+    {
+        id: "a3",
+        列號: "3",
+        險別: "一年期商業火災保險",
+        代號: "0030",
+        未決未賠1: "1,451,731,666",
+        未決未賠2: "1,419,422,879",
+        增減變動1: "32,308,878",
+        未決未賠3: "1,209,561,282",
+        未決未賠4: "1,183,221,305",
+        增減變動2: "26,339,977",
+    },
+    {
+        id: "a4",
+        列號: "4",
+        險別: "長期商業火災保險",
+        代號: "0040",
+        未決未賠1: "0",
+        未決未賠2: "0",
+        增減變動1: "0",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+    {
+        id: "a5",
+        列號: "5",
+        險別: "內陸運輸保險(水)",
+        代號: "0050",
+        未決未賠1: "2,814,138",
+        未決未賠2: "3,728,888",
+        增減變動1: "914,750",
+        未決未賠3: "2,802,138",
+        未決未賠4: "3,167,688",
+        增減變動2: "365,550",
+    },
+    {
+        id: "a6",
+        列號: "6",
+        險別: "內陸運輸保險(意)",
+        代號: "0050",
+        未決未賠1: "775,975",
+        未決未賠2: "569,583",
+        增減變動1: "206,392",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+];
+
+var table16 = new Tabulator("#table16", {
+    data: table16Data,
+    layout: "fitColumns",
+    height: "100%",
+    pagination: "local",
+    paginationSize: 100,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [
+        { title: "列號", field: "列號", maxWidth: 40, minWidth: 40, headerSort: false },
+        { title: "險別", field: "險別" },
+        { title: "代號", field: "代號" },
+        {
+            title: "110/9月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠1",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        {
+            title: "110/10月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠2",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        { title: "增減變動", field: "增減變動1", hozAlign: "right" },
+        {
+            title: "110/9月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠3",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        {
+            title: "110/10月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠4",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        { title: "增減變動", field: "增減變動2", hozAlign: "right" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
