@@ -3273,7 +3273,7 @@ a.menu-active .menu-bar {
     padding: 0;
     position: fixed;
     overflow: auto;
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, .65);
     z-index: 999;
     top: 0;
     left: 0;
@@ -3290,6 +3290,10 @@ a.menu-active .menu-bar {
     -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sub-content-popup .popup-dialog {
+    margin-top: 80px;
 }
 
 .dialog-header-inner {
@@ -3479,35 +3483,34 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
-/* 跳窗select */
-.popup-dialog-select {
+/* md尺寸視窗 */
+.popup-dialog-md {
     width: 776px;
     max-width: 776px;
-    height: 85%;
+    /*height: 85%;*/
     position: relative;
 }
 
-.popup-dialog-select form {
+.popup-dialog-md form {
     height: 100%;
 }
 
-.popup-dialog-select .dialog-header {
+.popup-dialog-md .dialog-header {
     background: #018dcd;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.popup-dialog-select .dialog-btn {
+.popup-dialog-md .dialog-btn {
     width: 100%;
-    position: absolute;
+   /* position: absolute;
     z-index: 99;
-    bottom: 0;
+    bottom: 0;*/
     border-top: #eee solid 1px;
 }
 
-.popup-dialog-select .dialog-content {
+.popup-dialog-md .dialog-content {
     height: calc(100% - 100px);
-    padding: 0;
     overflow: auto;
 }
 
@@ -3843,6 +3846,18 @@ a.menu-active .menu-bar {
     position: relative;
 }
 
+.customize-form-row:nth-last-child(1) .customize-form-field:nth-child(1) .customize-field-inner {
+    border-bottom-left-radius: 4px;
+}
+
+.customize-form-row:nth-last-child(1) .customize-form-field:nth-last-child(1) .customize-field-inner {
+    border-bottom-right-radius: 4px;
+}
+
+.customize-form-row:nth-last-child(1) .customize-form-field:nth-last-child(1) .customize-form-entry {
+    border-bottom-right-radius: 4px;
+}
+
 .customize-form-header {
     background: rgba(3, 140, 199, .05);
 }
@@ -4004,6 +4019,10 @@ a.menu-active .menu-bar {
     background: #fff;
     padding: 4px 3px;
     align-items: flex-start;
+}
+
+.customize-form-entry-all {
+    width: 100%;
 }
 
 .customize-form-entry input,
@@ -4758,19 +4777,6 @@ span.tp {
     font-size: 1.3125rem;
 }
 
-/*span.add_circle {
-    position: absolute;
-    color: #ff8c00;
-    cursor: default;
-    line-height: 1;
-    padding: 0 3px;
-}
-
-.customize-form-entry span.add_circle,
-.customize-form-entry span.add_circle>span {
-    font-size: 1.3125rem;
-}*/
-
 a.customize-form-sub-table-field-btn {
     display: block;
     text-align: center;
@@ -4801,7 +4807,7 @@ a.customize-form-sub-table-field-btn[attr="open"]::before {
 
 .customize-form-sub-table {
     background: #eee;
-    padding: 10px 0;
+    padding: 0;
     -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
@@ -5037,6 +5043,39 @@ a.customize-form-sub-table-field-btn[attr="open"]::before {
 .customize-form-note {
     font-size: 0.75rem;
     color: #555;
+}
+
+.customize-form-row .content-table {
+    padding: 5px;
+}
+
+/* 自定義表格btn+table */
+.customize-form-field-btn {
+    padding: 5px;
+    background: #eee;
+}
+
+.customize-form-field-btn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.customize-form-field-btn li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.customize-form-field-btn button {
+    border: #848bd0 solid 1px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    background: #62679f;
+    color: #fff;
+}
+
+.customize-form-field-btn button:hover {
+    background: #848bd0;
 }
 
 /* END: customize-form */

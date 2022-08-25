@@ -4125,7 +4125,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ? .getDataCount() ? "合計" : "小計";
+                    values.length === table ?.getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",
@@ -4136,7 +4136,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ? .getDataCount() ? "合計" : "小計";
+                    values.length === table ?.getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",

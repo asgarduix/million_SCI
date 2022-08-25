@@ -1303,7 +1303,7 @@
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-4">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-entry customize-form-input">
+                                        <div class="customize-form-entry customize-form-entry-all customize-form-input">
                                             <ul>
                                                 <li>
                                                     <div><input type="checkbox" id="add-ck03" name="理由"><label for="add-ck03">換票(銀行尚未託收)</label></div>
@@ -1339,7 +1339,7 @@
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-4">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-entry customize-form-input">
+                                        <div class="customize-form-entry customize-form-entry-all customize-form-input">
                                             <ul>
                                                 <li>
                                                     <div><input type="checkbox" id="add-ck09" name="處理方式"><label for="add-ck09">更正支票</label><span><input type="text" placeholder="請輸入更正說明"></span></div>
@@ -1594,6 +1594,75 @@
                                 <div class="content-component content-table form-content-table">
                                     <div id="table03"></div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>信評設定</span>
+                            </div>
+                        </div>
+                        <!-- 信評機構/信評等級/信評備註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">信評機構</div>
+                                        <div class="customize-form-entry">
+                                            <select name="信評機構" id="">
+                                                <option value="" disabled selected hidden>請選擇</option>
+                                                <option value="">信評機構1</option>
+                                                <option value="">信評機構2</option>
+                                                <option value="">信評機構3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">信評等級</div>
+                                        <div class="customize-form-entry">
+                                            <select name="信評等級" id="">
+                                                <option value="" disabled selected hidden>請選擇</option>
+                                                <option value="">信評等級1</option>
+                                                <option value="">信評等級2</option>
+                                                <option value="">信評等級3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">信評備註</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="信評備註" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 按鈕 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4 customize-form-field-btn">
+                                    <ul>
+                                        <li>
+                                            <button>確認</button>
+                                        </li>
+                                        <li>
+                                            <button>歷程顯示</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- table -->
+                        <div class="customize-form-row">
+                            <div class="content-component content-table">
+                                <div id="add-credit-table"></div>
                             </div>
                         </div>
                     </div>
@@ -2120,6 +2189,55 @@ var table01 = new Tabulator("#table99", {
 table01.selectRow(["b1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+</script>
+<script>
+let addCreditTableData = [{
+    id: "a1",
+    信評機構: "信評機構",
+    信評等級: "信評等級",
+    評等: "評等",
+    適格性: "適格性",
+    更新日期: "更新日期",
+    撤銷: "撤銷",
+}, ];
+
+var addCreditTable = new Tabulator("#add-credit-table", {
+    data: addCreditTableData,
+    layout: "fitColumns",
+    height: "100%",
+    pagination: "local",
+    paginationSize: 100,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "信評機構", field: "信評機構" },
+        { title: "信評等級", field: "信評等級評等" },
+        { title: "評等", field: "評等" },
+        { title: "適格性", field: "適格性" },
+        { title: "更新日期", field: "更新日期" },
+        { title: "撤銷", field: "撤銷" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
