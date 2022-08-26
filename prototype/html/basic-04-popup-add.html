@@ -409,86 +409,89 @@
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
-                            <div class="customize-form-header">
+                            <div class="customize-form-header customize-form-header-btn">
+                                <div class="header-btn"><a href="#" class="customize-form-sub-table-field-btn collapse-btn" attr="close" onclick="collapseTrigger()"></a></div>
                                 <span>基本資料維護</span>
                             </div>
                         </div>
-                        <!-- 總行代號/銀行代號/銀行統編/銀行電話 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1 required-field">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">總行代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="總行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                        <div class="collapseTable">
+                            <!-- 總行代號/銀行代號/銀行統編/銀行電話 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1 required-field">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">總行代號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="總行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行代號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="銀行代號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行統編</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀行統編" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行統編</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="銀行統編" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- customize-form > 電話 -->
-                                <div class="customize-form-field customize-form-field-1 customize-form-tel">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行電話</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-2">
-                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="2">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="4">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="4">
+                                    <!-- customize-form > 電話 -->
+                                    <div class="customize-form-field customize-form-field-1 customize-form-tel">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行電話</div>
+                                            <div class="customize-form-entry">
+                                                <div class="customize-form-entry-container">
+                                                    <div class="customize-form-entry-col customize-form-entry-2">
+                                                        <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="2">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                        <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="4">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                        <input type="text" name="銀行電話" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值" maxlength="4">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 銀行簡稱/銀行全名-->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行簡稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀行簡稱" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                            <!-- 銀行簡稱/銀行全名-->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行簡稱</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="銀行簡稱" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行全名</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銀行全名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-2">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行全名</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="銀行全名" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 銀行地址 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-3">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行地址</div>
-                                        <div class="customize-form-entry"><input type="text" name="銀行電話" value="" title="" placeholder="請輸入值"></div>
+                            <!-- 銀行地址 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-3">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">銀行地址</div>
+                                            <div class="customize-form-entry"><input type="text" name="銀行電話" value="" title="" placeholder="請輸入值"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

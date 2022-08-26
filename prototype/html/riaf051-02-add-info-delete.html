@@ -255,253 +255,372 @@
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
-                            <div class="customize-form-header">
+                            <div class="customize-form-header customize-form-header-btn">
+                                <div class="header-btn"><a href="#" class="customize-form-sub-table-field-btn collapse-btn" attr="close" onclick="collapseTrigger()"></a></div>
                                 <span>公司基本資料</span>
                             </div>
                         </div>
-                        <!-- 再保人代號/更新日期/收付代號/歸戶 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">再保人代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="再保人代號" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                        <div class="collapseTable">
+                            <!-- 再保人代號/更新日期/收付代號/歸戶 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">再保人代號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="再保人代號" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">更新日期</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="更新日期" value="20220613" title="20220613" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">更新日期</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="更新日期" value="20220613" title="20220613" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">收付代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="收付代號" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">收付代號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="收付代號" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">歸戶</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="歸戶" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 保發中心代碼/歸戶後保發代碼/行業別/歸戶後行業別 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">保發中心代碼</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="保發中心代碼" value="008USGB045" title="008USGB045" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">歸戶後保發代碼</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="歸戶後保發代碼" value="008USGB045" title="008USGB045" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">行業別</div>
-                                        <div class="customize-form-entry">
-                                            <select name="行業別" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">行業別1</option>
-                                                <option value="">行業別2</option>
-                                                <option value="">行業別3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">歸戶後行業別</div>
-                                        <div class="customize-form-entry">
-                                            <select name="歸戶後行業別" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">歸戶後行業別1</option>
-                                                <option value="">歸戶後行業別2</option>
-                                                <option value="">歸戶後行業別3</option>
-                                            </select>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">歸戶</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="歸戶" value="0006248" title="0006248" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 英文縮寫/ 國內/外 /英文簡稱/國別 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">英文縮寫</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="英文縮寫" value="rrr" title="rrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                            <!-- 保發中心代碼/歸戶後保發代碼/行業別/歸戶後行業別 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">保發中心代碼</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="保發中心代碼" value="008USGB045" title="008USGB045" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">國內/外</div>
-                                        <div class="customize-form-entry">
-                                            <select name="國內外" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">國內/外1</option>
-                                                <option value="">國內/外2</option>
-                                                <option value="">國內/外3</option>
-                                            </select>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">歸戶後保發代碼</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="歸戶後保發代碼" value="008USGB045" title="008USGB045" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">英文簡稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="英文簡稱" value="AIU U.K. 123" title="AIU U.K. 123" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">行業別</div>
+                                            <div class="customize-form-entry">
+                                                <select name="行業別" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">行業別1</option>
+                                                    <option value="">行業別2</option>
+                                                    <option value="">行業別3</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">國別</div>
-                                        <div class="customize-form-entry">
-                                            <select name="國別" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">國別1</option>
-                                                <option value="">國別2</option>
-                                                <option value="">國別3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 英文全名/大陸地區 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">英文全名</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="英文全名" value="AMERICAN INTERNATIONAL UNDERWRITERS, U.K." title="AMERICAN INTERNATIONAL UNDERWRITERS, U.K." placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">大陸地區</div>
-                                        <div class="customize-form-entry">
-                                            <select name="大陸地區" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">大陸地區1</option>
-                                                <option value="">大陸地區2</option>
-                                                <option value="">大陸地區3</option>
-                                            </select>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">歸戶後行業別</div>
+                                            <div class="customize-form-entry">
+                                                <select name="歸戶後行業別" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">歸戶後行業別1</option>
+                                                    <option value="">歸戶後行業別2</option>
+                                                    <option value="">歸戶後行業別3</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 中文簡稱/中文全名 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">中文簡稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="中文簡稱" value="rrr" title="rrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                            <!-- 英文縮寫/ 國內/外 /英文簡稱/國別 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">英文縮寫</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="英文縮寫" value="rrr" title="rrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">中文全名</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="中文全名" value="rrrr" title="rrrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">國內/外</div>
+                                            <div class="customize-form-entry">
+                                                <select name="國內外" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">國內/外1</option>
+                                                    <option value="">國內/外2</option>
+                                                    <option value="">國內/外3</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 保經代碼/負責人/適格性/統一編號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">保經代碼</div>
-                                        <div class="customize-form-entry">
-                                            <select name="保經代碼" id="">
-                                                <option value="" disabled selected hidden>請選擇</option>
-                                                <option value="">保經代碼1</option>
-                                                <option value="">保經代碼2</option>
-                                                <option value="">保經代碼3</option>
-                                            </select>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">英文簡稱</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="英文簡稱" value="AIU U.K. 123" title="AIU U.K. 123" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">負責人</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="負責人" value="rtewer" title="rtewer" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">適格性</div>
-                                        <div class="customize-form-entry">
-                                            <ul>
-                                                <li><input type="radio" id="rd01" name="適格性"><label for="rd01">適格</label></li>
-                                                <li><input type="radio" id="rd02" name="適格性"><label for="rd02">未適格</label></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">統一編號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="統一編號" value="323424" title="323424" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">國別</div>
+                                            <div class="customize-form-entry">
+                                                <select name="國別" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">國別1</option>
+                                                    <option value="">國別2</option>
+                                                    <option value="">國別3</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 狀態/國外部創建人代號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">狀態</div>
-                                        <div class="customize-form-entry">
-                                            <ul>
-                                                <li><input type="radio" id="rd03" name="狀態"><label for="rd03">使用中</label></li>
-                                                <li><input type="radio" id="rd04" name="狀態"><label for="rd04">暫停使用中</label></li>
-                                                <li><input type="radio" id="rd05" name="狀態"><label for="rd05">已停用</label></li>
-                                            </ul>
+                            <!-- 英文全名/大陸地區 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-2">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">英文全名</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="英文全名" value="AMERICAN INTERNATIONAL UNDERWRITERS, U.K." title="AMERICAN INTERNATIONAL UNDERWRITERS, U.K." placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">大陸地區</div>
+                                            <div class="customize-form-entry">
+                                                <select name="大陸地區" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">大陸地區1</option>
+                                                    <option value="">大陸地區2</option>
+                                                    <option value="">大陸地區3</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">國外部創建人代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="國外部創建人代號" value="C010702" title="C010702" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                            </div>
+                            <!-- 中文簡稱/中文全名 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-2">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">中文簡稱</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="中文簡稱" value="rrr" title="rrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-2">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">中文全名</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="中文全名" value="rrrr" title="rrrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 保經代碼/負責人/適格性/統一編號 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">保經代碼</div>
+                                            <div class="customize-form-entry">
+                                                <select name="保經代碼" id="">
+                                                    <option value="" disabled selected hidden>請選擇</option>
+                                                    <option value="">保經代碼1</option>
+                                                    <option value="">保經代碼2</option>
+                                                    <option value="">保經代碼3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">負責人</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="負責人" value="rtewer" title="rtewer" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">適格性</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li><input type="radio" id="rd01" name="適格性"><label for="rd01">適格</label></li>
+                                                    <li><input type="radio" id="rd02" name="適格性"><label for="rd02">未適格</label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">統一編號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="統一編號" value="323424" title="323424" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 狀態/國外部創建人代號 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-2">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">狀態</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li><input type="radio" id="rd03" name="狀態"><label for="rd03">使用中</label></li>
+                                                    <li><input type="radio" id="rd04" name="狀態"><label for="rd04">暫停使用中</label></li>
+                                                    <li><input type="radio" id="rd05" name="狀態"><label for="rd05">已停用</label></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">國外部創建人代號</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="國外部創建人代號" value="C010702" title="C010702" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 合約分出-->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-4">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">合約分出</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck03" name="合約分出"><label for="add-ck03">車險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck04" name="合約分出"><label for="add-ck04">水險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck05" name="合約分出"><label for="add-ck05">火險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck06" name="合約分出"><label for="add-ck06">意外險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck07" name="合約分出"><label for="add-ck07">健康險</label></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 臨分分出-->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-4">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">臨分分出</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck08" name="臨分分出"><label for="add-ck08">車險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ch09" name="臨分分出"><label for="add-ch09">水險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck10" name="臨分分出"><label for="add-ck10">火險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck11" name="臨分分出"><label for="add-ck11">意外險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck12" name="臨分分出"><label for="add-ck12">健康險</label></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 合約分入-->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-4">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">合約分入</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck13" name="合約分入"><label for="add-ck13">車險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck14" name="合約分入"><label for="add-ck14">水險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck15" name="合約分入"><label for="add-ck15">火險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck16" name="合約分入"><label for="add-ck16">意外險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck17" name="合約分入"><label for="add-ck17">健康險</label></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 臨分分入 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-4">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">臨分分入</div>
+                                            <div class="customize-form-entry">
+                                                <ul>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck18" name="臨分分入"><label for="add-ck18">車險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck19" name="臨分分入"><label for="add-ck19">水險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck20" name="臨分分入"><label for="add-ck20">火險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck21" name="臨分分入"><label for="add-ck21">意外險</label></div>
+                                                    </li>
+                                                    <li>
+                                                        <div><input type="checkbox" id="add-ck22" name="臨分分入"><label for="add-ck22">健康險</label></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -572,7 +691,7 @@
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                    <p>是否執行刪除?<br />刪除<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>

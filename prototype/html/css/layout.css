@@ -3908,6 +3908,7 @@ a.menu-active .menu-bar {
     display: block;
     font-size: 1rem;
     line-height: 1;
+    margin-top: -2px;
 }
 
 .header-btn a.customize-form-sub-table-field-btn[attr="open"]::before {
@@ -3919,6 +3920,7 @@ a.menu-active .menu-bar {
     display: block;
     font-size: 1rem;
     line-height: 1;
+    margin-top: -2px;
 }
 
 .customize-form-header .add-sub-form button {
