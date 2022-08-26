@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf051-03-modify-transfer">
+<body id="canvas" class="riaf051-03-modify-transfer-modify">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -274,7 +274,7 @@
                                 <div class="customize-form-field customize-form-field-4 customize-form-field-btn">
                                     <ul>
                                         <li>
-                                            <button type="button" onclick="location.href='riaf051-03-modify-transfer-add.html'">新增</button>
+                                            <button>新增</button>
                                         </li>
                                         <li>
                                             <button>修改</button>
@@ -298,6 +298,100 @@
                     <ul>
                         <li><button type="button" class="btn-prime" onclick="location.href='riaf051-01-query.html'">確定</button></li>
                         <li><button type="button" class="btn-outline" onclick="location.href='riaf051-01-query.html'">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- popup-modify -->
+    <div class="content-component content-popup sub-content-popup">
+        <div class="popup-dialog popup-dialog-md">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">home insurance co.</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>匯款資訊</span>
+                            </div>
+                        </div>
+                        <!-- 帳戶說明/幣別 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳戶說明</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="帳戶說明" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="幣別" value="TWD" title="TWD" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行名稱/匯款戶名 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行名稱</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行名稱" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款戶名</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款戶名" value="home insurance co." title="home insurance co." placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 匯款帳號/狀態 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款帳號" value="12345678899" title="12345678899" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">狀態</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="狀態" value="已註銷" title="已註銷" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime" type="button" onclick="location.href='riaf051-03-modify-transfer.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-transfer.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -448,7 +542,7 @@ var modifyTransferTable = new Tabulator("#modify-transfer-table", {
 });
 
 // 選擇預設勾選row
-// modifyTransferTable.selectRow(["a1"]);
+modifyTransferTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 // table.selectRow(table.setFilter("id","=","a1"));
 </script>
