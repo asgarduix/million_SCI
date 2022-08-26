@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf051-03-modify-contact">
+<body id="canvas" class="riaf051-03-modify-contact-delete">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -303,6 +303,30 @@
             </form>
         </div>
     </div>
+    <!-- popup-delete -->
+    <div class="content-component content-popup sub-content-popup">
+        <div class="popup-dialog popup-dialog-delete">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">刪除</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-warn" type="button" onclick="location.href='riaf051-03-modify-contact.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-contact.html'">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -450,7 +474,7 @@ var modifyTransferTable = new Tabulator("#modify-transfer-table", {
 });
 
 // 選擇預設勾選row
-// modifyTransferTable.selectRow(["a1"]);
+modifyTransferTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 // table.selectRow(table.setFilter("id","=","a1"));
 </script>
