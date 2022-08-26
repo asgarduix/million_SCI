@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf051-03-modify-note">
+<body id="canvas" class="riaf051-03-modify-note-add">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -348,6 +348,79 @@
             </form>
         </div>
     </div>
+    <!-- popup-add -->
+    <div class="content-component content-popup sub-content-popup">
+        <div class="popup-dialog popup-dialog-md">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">序號：1234567</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>備註</span>
+                            </div>
+                        </div>
+                        <!-- 序號/異動說明 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">序號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="序號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">異動說明</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="異動說明" value="異動說明" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 異動日期/異動人員 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">異動日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="異動日期" value="異動日期" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">異動人員</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="異動人員" value="異動人員" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime" type="button" onclick="location.href='riaf051-03-modify-note.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-note.html'">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -486,7 +559,7 @@ var modifyNoteTable = new Tabulator("#modify-note-table", {
 });
 
 // 選擇預設勾選row
-// modifyNoteTable.selectRow(["a1"]);
+modifyNoteTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 // table.selectRow(table.setFilter("id","=","a1"));
 </script>
