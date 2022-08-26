@@ -274,10 +274,10 @@
                                 <div class="customize-form-field customize-form-field-4 customize-form-field-btn">
                                     <ul>
                                         <li>
-                                            <button>新增</button>
+                                            <button type="button" onclick="location.href='riaf051-03-modify-transfer-add.html'">新增</button>
                                         </li>
                                         <li>
-                                            <button>修改</button>
+                                            <button type="button" onclick="location.href='riaf051-03-modify-transfer-modify.html'">修改</button>
                                         </li>
                                         <li>
                                             <button>註銷顯示</button>
@@ -309,7 +309,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">home insurance co.</div>
+                        <div class="dialog-header-item dialog-title">匯款資訊-新增</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -323,14 +323,82 @@
                                 <span>匯款資訊</span>
                             </div>
                         </div>
-                        <!-- 帳戶說明/幣別 -->
+                        <!-- 匯款識別序號/帳戶說明 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款識別序號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款識別序號" value="匯款識別序號" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳戶說明 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">帳戶說明</div>
+                                        <div class="customize-form-entry">
+                                            <textarea name="" id="" cols="30" rows="3" placeholder="請輸入值">帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明帳戶說明</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行代號/銀行名稱 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">帳戶說明</div>
+                                        <div class="customize-form-title">銀行代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="帳戶說明" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="銀行代號" value="銀行代號" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行名稱</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行名稱" value="銀行名稱" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 匯款戶名/匯款帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款戶名</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款戶名" value="匯款戶名" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款帳號" value="匯款帳號" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行地址/幣別 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銀行地址</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銀行地址" value="銀行地址" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -338,49 +406,159 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">幣別</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="幣別" value="TWD" title="TWD" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="幣別" value="幣別" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 銀行名稱/匯款戶名 -->
+                        <!-- SWIFT CODE/IABN CODE -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">銀行名稱</div>
+                                        <div class="customize-form-title">SWIFT CODE</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="銀行名稱" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="SWIFT CODE" value="SWIFT CODE" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">匯款戶名</div>
+                                        <div class="customize-form-title">IABN CODE</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="匯款戶名" value="home insurance co." title="home insurance co." placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="IABN CODE" value="IABN CODE" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 匯款帳號/狀態 -->
+                        <!-- SORT CODE/FEDWIRE ABA -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">匯款帳號</div>
+                                        <div class="customize-form-title">SORT CODE</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="匯款帳號" value="12345678899" title="12345678899" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="SORT CODE" value="SORT CODE" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">狀態</div>
+                                        <div class="customize-form-title">FEDWIRE ABA</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="狀態" value="已註銷" title="已註銷" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="FEDWIRE ABA" value="FEDWIRE ABA" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 受款地/中轉行 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">受款地</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="受款地" value="受款地" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉行</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉行" value="中轉行" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 中轉匯款帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉匯款帳號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉匯款帳號" value="054-895-000-238-605" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 中轉行SWIFT CODE/中轉行IBAN CODE -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉行<br/>SWIFT CODE</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉行SWIFT CODE" value="DEUTHKHH" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉行<br/>IBAN CODE</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉行IBAN CODE" value="中轉行IBAN CODE" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 中轉行SORT CODE/中轉行FEDWIRE ABA -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉行<br/>SORT CODE</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉行SORT CODE" value="中轉行SORT CODE" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">中轉行<br/>FEDWIRE ABA</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="中轉行FEDWIRE ABA" value="中轉行FEDWIRE ABA" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 備註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">備註</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="備註" value="備註" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 新增日期/註銷日期 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">新增日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="新增日期" value="新增日期" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">註銷日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="註銷日期" value="註銷日期" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -463,7 +641,7 @@ var table01 = new Tabulator("#table01", {
             title: "序號",
             field: "序號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf051-03-modify.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf051-03-modify-transfer.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "再保人代號", field: "再保人代號" },

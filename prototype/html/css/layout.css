@@ -3296,6 +3296,26 @@ a.menu-active .menu-bar {
     margin-top: 80px;
 }
 
+.popup-dialog form {
+    height: 100%;
+}
+
+.popup-dialog .dialog-header {
+    background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-dialog .dialog-btn {
+    width: 100%;
+    border-top: #eee solid 1px;
+}
+
+.popup-dialog .dialog-content {
+    height: calc(100% - 100px);
+    overflow: auto;
+}
+
 .dialog-header-inner {
     width: 100%;
     display: table;
@@ -3487,31 +3507,13 @@ a.menu-active .menu-bar {
 .popup-dialog-md {
     width: 776px;
     max-width: 776px;
-    /*height: 85%;*/
     position: relative;
 }
 
-.popup-dialog-md form {
-    height: 100%;
-}
-
-.popup-dialog-md .dialog-header {
-    background: #018dcd;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.popup-dialog-md .dialog-btn {
-    width: 100%;
-   /* position: absolute;
-    z-index: 99;
-    bottom: 0;*/
-    border-top: #eee solid 1px;
-}
-
-.popup-dialog-md .dialog-content {
-    height: calc(100% - 100px);
-    overflow: auto;
+.popup-dialog-lg {
+    width: 991px;
+    max-width: 991px;
+    position: relative;
 }
 
 /* 有輸入的跳窗 */
@@ -3991,7 +3993,7 @@ a.menu-active .menu-bar {
 .customize-form-title {
     max-width: 105px;
     min-width: 105px;
-    padding: 5px 3px 0;
+    padding: 5px 3px;
     word-break: break-all;
     align-items: flex-start;
     justify-content: flex-end;
