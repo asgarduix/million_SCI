@@ -3888,6 +3888,39 @@ a.menu-active .menu-bar {
     padding: 2px 4px;
 }
 
+.customize-form-header-btn span::before {
+    content: "";
+    margin: 0;
+}
+
+.header-btn {
+    padding: 0 0 0 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-btn a.customize-form-sub-table-field-btn[attr="close"]::before{
+    font-family: 'Material Icons', sans-serif;
+    content: "remove_circle";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ff8c00;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.header-btn a.customize-form-sub-table-field-btn[attr="open"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "add_circle";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ff8c00;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+}
+
 .customize-form-header .add-sub-form button {
     font-size: 0.75rem;
     line-height: 1;
