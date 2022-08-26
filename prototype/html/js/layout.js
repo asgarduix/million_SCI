@@ -31,7 +31,7 @@ includeMenu().then(() => {
     const pageId = document.getElementById('canvas');
     const pageClass = pageId.getAttribute("class");
     const pageName = pageClass.split('-')[0];
-    document.querySelector(`.menu-list a[href^=${pageName}]`)?.classList?.add('menu-list-active');
+    document.querySelector(`.menu-list a[href^=${pageName}]`) ?.classList ?.add('menu-list-active');
 });
 
 // include-header-structure 
