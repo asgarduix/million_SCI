@@ -143,54 +143,6 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">勾選總計</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <br>
-                                        <div class="label-item">
-                                            <div class="label-title">台幣(TWD/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">美幣(USD/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">歐元(EUR/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">英鎊(GBP/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">港幣(HKD/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">日圓(JPY/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">韓圜(KRW/元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">其他外幣(元)</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -255,53 +207,26 @@
 let table01Data = [{
         id: "a1",
         群組: "G1",
-        分入分出: "分001",
-        險別: "險別",
-        記錄單號: "記錄單號",
-        期間: "期間",
-        年月: "年月",
-        幣別: "幣別",
-        經紀人: "經紀人",
-        再保公司: "再保公司",
-        原始金額: "原始金額",
-        未清金額: "未清金額",
-        OurReference: "Our Reference",
-        YourReference: "Your Reference",
-        帳務描述: "帳務描述",
+        設計1: "設計1",
+        設計2: "設計2",
+        設計3: "設計3",
+        設計4: "設計4",
     },
     {
         id: "a2",
-        群組: "G1",
-        分入分出: "分002",
-        險別: "險別",
-        記錄單號: "記錄單號",
-        期間: "期間",
-        年月: "年月",
-        幣別: "幣別",
-        經紀人: "經紀人",
-        再保公司: "再保公司",
-        原始金額: "原始金額",
-        未清金額: "未清金額",
-        OurReference: "Our Reference",
-        YourReference: "Your Reference",
-        帳務描述: "帳務描述",
+        群組: "G2",
+        設計1: "設計1",
+        設計2: "設計2",
+        設計3: "設計3",
+        設計4: "設計4",
     },
     {
         id: "a3",
-        群組: "G2",
-        分入分出: "分003",
-        險別: "險別",
-        記錄單號: "記錄單號",
-        期間: "期間",
-        年月: "年月",
-        幣別: "幣別",
-        經紀人: "經紀人",
-        再保公司: "再保公司",
-        原始金額: "原始金額",
-        未清金額: "未清金額",
-        OurReference: "Our Reference",
-        YourReference: "Your Reference",
-        帳務描述: "帳務描述",
+        群組: "G3",
+        設計1: "設計1",
+        設計2: "設計2",
+        設計3: "設計3",
+        設計4: "設計4",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -336,26 +261,17 @@ var table01 = new Tabulator("#table01", {
         //         return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
         //     },
         // },
-        { title: "群組", field: "群組" },
         {
-            title: "分入/分出",
-            field: "分入分出",
+            title: "群組",
+            field: "群組",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "險別", field: "險別" },
-        { title: "記錄單號", field: "記錄單號" },
-        { title: "期間", field: "期間" },
-        { title: "年月", field: "年月" },
-        { title: "幣別", field: "幣別" },
-        { title: "經紀人", field: "經紀人" },
-        { title: "再保公司", field: "再保公司" },
-        { title: "原始金額", field: "原始金額", hozAlign: "right" },
-        { title: "未清金額", field: "未清金額", hozAlign: "right" },
-        { title: "Our Reference", field: "OurReference" },
-        { title: "Your Reference", field: "YourReference" },
-        { title: "帳務描述", field: "帳務描述" },
+        { title: "設計1", field: "設計1" },
+        { title: "設計2", field: "設計2" },
+        { title: "設計3", field: "設計3" },
+        { title: "設計4", field: "設計4" },
     ],
 });
 // 選擇預設勾選row
