@@ -4739,7 +4739,6 @@ a.menu-active .menu-bar {
 }
 
 .up-down-form-field-title {
-    /*background: rgba(3, 140, 199, .05);*/
     text-align: center;
     font-size: 0.875rem;
 }
@@ -4916,7 +4915,6 @@ a.customize-form-sub-table-field-btn[attr="open"]::before {
     vertical-align: middle;
     font-size: 0.875rem;
     display: table-cell;
-    /*vertical-align: top;*/
     color: #026D93;
 }
 
@@ -5113,6 +5111,34 @@ a.customize-form-sub-table-field-btn[attr="open"]::before {
 
 .customize-form-field-btn button:hover {
     background: #848bd0;
+}
+
+/* customize-form-popup(currency) */
+.customize-form-popup-select .customize-form-entry {
+    position: relative;
+}
+
+.customize-form-popup-select a {
+    height: 25px;
+    display: block;
+    padding: 2px 30px 2px 4px;
+    border: #aaa solid 1px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    background: #fff;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.customize-form-entry .customize-form-popup-select-cancel {
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    color: #ff4c4c;
+    cursor: pointer;
 }
 
 /* END: customize-form */
