@@ -1443,7 +1443,7 @@ a.menu-active .menu-bar {
 .unitname-item a {
     height: 30px;
     line-height: 1;
-    color: #777;
+    color: #2477a3;
     display: block;
     border: #777 solid 1px;
     background: #f4f4f4;
@@ -1464,6 +1464,10 @@ a.menu-active .menu-bar {
 .unitname-cancel a {
     border: none;
     background: none;
+}
+
+.unitname-cancel a:hover {
+    color: #164c69;
 }
 
 .unitname-cancel a:active,
