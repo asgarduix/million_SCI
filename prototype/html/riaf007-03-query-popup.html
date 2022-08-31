@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF002-分入帳單維護</title>
+    <title>華南產物保險-RIAF007-分入帳單維護</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf002-02-query-popup">
+<body id="canvas" class="RIAF007-03-query-popup">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -82,7 +82,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 部門/入帳批號／合約編號 -->
+                                    <!-- 部門/入帳批號/合約編號 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -184,7 +184,7 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">幣別</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <a href="riaf002-03-query-popup.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
+                                                    <a href="RIAF007-03-query-popup.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
                                                     <div class="query-popup-select-cancel"><span class="material-icons">backspace</span></div>
                                                 </div>
                                             </div>
@@ -362,7 +362,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- /批號狀態 -->
+                                        <!-- 批號狀態/印表人員 -->
                                         <div class="query-row">
                                             <div class="query-field query-checkbox query-input-66">
                                                 <div class="query-field-inner">
@@ -523,9 +523,9 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">險種選擇</div>
+                        <div class="dialog-header-item dialog-title">幣別</div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf002-01-query.html"><span class="material-icons">cancel</span></a>
+                            <a href="RIAF007-01-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
@@ -548,8 +548,8 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf002-01-query.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf002-01-query.html'">取消</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='RIAF007-01-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='RIAF007-01-query.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -729,7 +729,7 @@ var table01 = new Tabulator("#table01", {
             title: "序號",
             field: "序號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf002-04-query-popup.html'>" + cell.getValue() + "</a>"
+                return "<a href='RIAF007-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "險別", field: "險別" },
@@ -755,131 +755,103 @@ var table01 = new Tabulator("#table01", {
 
 let tableSelectData = [{
         id: "a1",
-        險種名稱: "01-一年期住宅火災保險"
+        幣別: "AUD 澳幣"
     },
     {
         id: "a2",
-        險種名稱: "02-長期住宅火災保險"
+        幣別: "AZN 亞塞拜然馬納特"
     },
     {
         id: "a3",
-        險種名稱: "03-一年期商業火災保險"
+        幣別: "BDT 孟加拉塔卡"
     },
     {
         id: "a4",
-        險種名稱: "04-長期商業火災保險"
+        幣別: "CAD 加幣"
     },
     {
         id: "a5",
-        險種名稱: "05-內陸運輸保險"
+        幣別: "CHF 瑞士法郎"
     },
     {
         id: "a6",
-        險種名稱: "06-貨物運輸保險"
+        幣別: "CNH 離岸人民幣"
     },
     {
         id: "a7",
-        險種名稱: "07-船體保險"
+        幣別: "CNY 在岸人民幣"
     },
     {
         id: "a8",
-        險種名稱: "08-漁船保險"
+        幣別: "EUR 歐元"
     },
     {
         id: "a9",
-        險種名稱: "09-航空保險"
+        幣別: "GBP 英鎊"
     },
     {
         id: "a10",
-        險種名稱: "10-一般自用汽車財產損失保險"
+        幣別: "HKD 港幣"
     },
     {
         id: "a11",
-        險種名稱: "11-一般商業汽車財產損失保險"
+        幣別: "IDR 印尼盾"
     },
     {
         id: "a12",
-        險種名稱: "12-一般自用汽車責任保險"
+        幣別: "JPY 日圓"
     },
     {
         id: "a13",
-        險種名稱: "13-一般商業汽車責任保險"
+        幣別: "KRW 韓幣"
     },
     {
         id: "a14",
-        險種名稱: "14-強制自用汽車責任保險"
+        幣別: "MXN 墨西哥幣"
     },
     {
         id: "a15",
-        險種名稱: "15-強制商業汽車責任保險"
+        幣別: "MYR 馬來西亞幣"
     },
     {
         id: "a16",
-        險種名稱: "16-強制機車責任保險"
+        幣別: "NTD 新台幣"
     },
     {
         id: "a17",
-        險種名稱: "17-一般責任保險"
+        幣別: "NZD 紐西蘭幣"
     },
     {
         id: "a18",
-        險種名稱: "18-專業責任保險"
+        幣別: "PHP 菲律賓幣"
     },
     {
         id: "a19",
-        險種名稱: "19-工程保險"
+        幣別: "RMB 人民幣"
     },
     {
         id: "a20",
-        險種名稱: "20-核能保險"
+        幣別: "RUB 俄國盧布"
     },
     {
         id: "a21",
-        險種名稱: "21-保證保險"
+        幣別: "SEK 瑞典克朗"
     },
     {
         id: "a22",
-        險種名稱: "22-信用保險"
+        幣別: "SGD 新加玻幣"
     },
     {
         id: "a23",
-        險種名稱: "23-其他財產"
+        幣別: "THB 泰銖"
     },
     {
         id: "a24",
-        險種名稱: "24-傷害保險"
+        幣別: "USD 美金"
     },
     {
         id: "a25",
-        險種名稱: "25-商業性地震保險"
-    },
-    {
-        id: "a26",
-        險種名稱: "26-個人綜合保險"
-    },
-    {
-        id: "a27",
-        險種名稱: "27-商業綜合保險"
-    },
-    {
-        id: "a28",
-        險種名稱: "28-颱風洪水保險"
-    },
-    {
-        id: "a29",
-        險種名稱: "29-政策性地震保險"
-    },
-    {
-        id: "a30",
-        險種名稱: "30-健康保險"
-    },
-    {
-        id: "a31",
-        險種名稱: "31-國外再保分入業務"
-    },
-    {
-        id: "a32",
-        險種名稱: "32-強制微型電動二輪車"
+        幣別: "VND 越南盾"
     }
 ];
 var tableSelect = new Tabulator("#tableSelect", {
@@ -892,7 +864,7 @@ var tableSelect = new Tabulator("#tableSelect", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: true,
+    selectable: 1,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -905,11 +877,11 @@ var tableSelect = new Tabulator("#tableSelect", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "險種名稱", field: "險種名稱" },
+        { title: "幣別", field: "幣別" },
     ],
 });
 // 選擇預設勾選row
-tableSelect.selectRow(["a1"]);
+// tableSelect.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>

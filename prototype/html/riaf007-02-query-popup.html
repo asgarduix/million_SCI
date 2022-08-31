@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF002-分入帳單維護</title>
+    <title>華南產物保險-RIAF007-分入帳單維護</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf002-04-query-popup">
+<body id="canvas" class="RIAF007-02-query-popup">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -184,7 +184,7 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">幣別</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <a href="riaf002-03-query-popup.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
+                                                    <a href="RIAF007-03-query-popup.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
                                                     <div class="query-popup-select-cancel"><span class="material-icons">backspace</span></div>
                                                 </div>
                                             </div>
@@ -212,7 +212,7 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="已銷/未銷" id="">
                                                         <option value="" selected>全部</option>
-                                                        <option value="">已銷</option>
+                                                        <option value="">已銷/option>
                                                         <option value="">未銷</option>
                                                     </select>
                                                 </div>
@@ -362,7 +362,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- 批號狀態/印表人員 -->
+                                        <!-- /批號狀態 -->
                                         <div class="query-row">
                                             <div class="query-field query-checkbox query-input-66">
                                                 <div class="query-field-inner">
@@ -517,15 +517,15 @@
             </main>
         </div>
     </div>
-    <!-- popup-detail -->
+    <!-- popup-add -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-add">
+        <div class="popup-dialog popup-dialog-md">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">序號<span>12345</span></div>
+                        <div class="dialog-header-item dialog-title">險種選擇</div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf001-01-query.html"><span class="material-icons">cancel</span></a>
+                            <a href="RIAF007-01-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
@@ -533,326 +533,12 @@
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>RIAF008分入/再保賠款帳單資料</span>
-                            </div>
-                        </div>
-                        <!-- key號/對方帳單編號/簽單公司 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">key號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="key號" value="YIC0040-1" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">對方帳單編號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="對方帳單編號" value="CA-0001" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">簽單公司</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="簽單公司" value="0062282-50% | 5001500-50%" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                            <!-- <input type="text" name="簽單公司" value="5001500 50%" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled=""> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 分入公司 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-field customize-form-field-4">
-                                <div class="customize-field-inner">
-                                    <div class="customize-form-title">分入公司</div>
-                                    <div class="customize-form-entry">
-                                        <input type="text" name="分入公司" value="0011700 CEBTRAL R/I CORPORATION" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 合約編號/保單號 /合約類型/合約年度(核保年度)/合約型態 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">合約編號/保單號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="合約編號/保單號" value="CA-0001" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">合約類型</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="合約類型" value="2-臨分分入" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">合約年度(核保年度)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="合約年度(核保年度)" value="2019" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">合約型態</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="合約型態" value="Q/S" title="2022-08-02T16:00:00.000+00:00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 批單號/賠案號/險別/險種 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">批單號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="批單號" value="0007FAL077" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">賠案號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="賠案號" value="0007FAL077" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">險別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="險別" value="火險" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">險種</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="險種" value="F71-地震商" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 被保險人/ 標的物/船名 /再保分入比例 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">被保險人</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="被保險人" value="李xx" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">標的物/船名</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="標的物/船名" value="XXX大樓" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">再保分入比例</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="再保分入比例" value="30%" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 再保分入金額(原幣)/公司自留額(原幣) -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">再保分入金額(原幣)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="再保分入金額(原幣)" value="30,000,000.00" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">公司自留額(原幣)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="公司自留額(原幣)" value="30,000,000.00" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- KEY帳單單位/預計付款日/期別/異動類別 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">KEY帳單單位</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="KEY帳單單位" value="火災保險部" title="火災保險部" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">預計付款日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="預計付款日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">期別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="期別" value="002" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">異動類別</div>
-                                        <div class="customize-form-entry">
-                                            <select name="異動類別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">01-原始立帳</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 轉檔日/轉檔批號/作業狀態/印表人員 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">轉檔日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="轉檔日" value="20200815" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">轉檔批號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="轉檔批號" value="FI2020081500001" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">作業狀態</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="作業狀態" value="01-待收件" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">險種</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="險種" value="A11楊雅娟" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 訊息/財管備註 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">訊息</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="訊息" value="正常" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">財管備註</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="財管備註" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 幣別/同業往來(原幣)/同業往來(本位幣)/入帳批號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">幣別</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="幣別" value="TWD-台幣" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">同業往來(原幣)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="同業往來(原幣)" value="1,778,803.00" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">同業往來(本位幣)</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="同業往來(本位幣)" value="1,778,803" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly-money" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">入帳批號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="入帳批號" value="RIN202011181234567" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 傳票日/傳票號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">傳票日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="傳票日" value="2020/10/10" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">傳票號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="傳票號" value="BB2011180001" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                            <div class="customize-table">
+                                <div class="card-detail">
+                                    <!-- card-detail >> board -->
+                                    <div class="detail-board">
+                                        <div class="content-component content-table content-table-counter">
+                                            <div id="tableSelect"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -862,8 +548,8 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf002-01-query.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf002-01-query.html'">取消</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='RIAF007-01-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='RIAF007-01-query.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -1043,7 +729,7 @@ var table01 = new Tabulator("#table01", {
             title: "序號",
             field: "序號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
+                return "<a href='RIAF007-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "險別", field: "險別" },
@@ -1066,106 +752,134 @@ var table01 = new Tabulator("#table01", {
 //table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
-////////////////////////////////////////////////////////////////////////
+
 let tableSelectData = [{
         id: "a1",
-        幣別: "AUD 澳幣"
+        險種名稱: "01-一年期住宅火災保險"
     },
     {
         id: "a2",
-        幣別: "AZN 亞塞拜然馬納特"
+        險種名稱: "02-長期住宅火災保險"
     },
     {
         id: "a3",
-        幣別: "BDT 孟加拉塔卡"
+        險種名稱: "03-一年期商業火災保險"
     },
     {
         id: "a4",
-        幣別: "CAD 加幣"
+        險種名稱: "04-長期商業火災保險"
     },
     {
         id: "a5",
-        幣別: "CHF 瑞士法郎"
+        險種名稱: "05-內陸運輸保險"
     },
     {
         id: "a6",
-        幣別: "CNH 離岸人民幣"
+        險種名稱: "06-貨物運輸保險"
     },
     {
         id: "a7",
-        幣別: "CNY 在岸人民幣"
+        險種名稱: "07-船體保險"
     },
     {
         id: "a8",
-        幣別: "EUR 歐元"
+        險種名稱: "08-漁船保險"
     },
     {
         id: "a9",
-        幣別: "GBP 英鎊"
+        險種名稱: "09-航空保險"
     },
     {
         id: "a10",
-        幣別: "HKD 港幣"
+        險種名稱: "10-一般自用汽車財產損失保險"
     },
     {
         id: "a11",
-        幣別: "IDR 印尼盾"
+        險種名稱: "11-一般商業汽車財產損失保險"
     },
     {
         id: "a12",
-        幣別: "JPY 日圓"
+        險種名稱: "12-一般自用汽車責任保險"
     },
     {
         id: "a13",
-        幣別: "KRW 韓幣"
+        險種名稱: "13-一般商業汽車責任保險"
     },
     {
         id: "a14",
-        幣別: "MXN 墨西哥幣"
+        險種名稱: "14-強制自用汽車責任保險"
     },
     {
         id: "a15",
-        幣別: "MYR 馬來西亞幣"
+        險種名稱: "15-強制商業汽車責任保險"
     },
     {
         id: "a16",
-        幣別: "NTD 新台幣"
+        險種名稱: "16-強制機車責任保險"
     },
     {
         id: "a17",
-        幣別: "NZD 紐西蘭幣"
+        險種名稱: "17-一般責任保險"
     },
     {
         id: "a18",
-        幣別: "PHP 菲律賓幣"
+        險種名稱: "18-專業責任保險"
     },
     {
         id: "a19",
-        幣別: "RMB 人民幣"
+        險種名稱: "19-工程保險"
     },
     {
         id: "a20",
-        幣別: "RUB 俄國盧布"
+        險種名稱: "20-核能保險"
     },
     {
         id: "a21",
-        幣別: "SEK 瑞典克朗"
+        險種名稱: "21-保證保險"
     },
     {
         id: "a22",
-        幣別: "SGD 新加玻幣"
+        險種名稱: "22-信用保險"
     },
     {
         id: "a23",
-        幣別: "THB 泰銖"
+        險種名稱: "23-其他財產"
     },
     {
         id: "a24",
-        幣別: "USD 美金"
+        險種名稱: "24-傷害保險"
     },
     {
         id: "a25",
-        幣別: "VND 越南盾"
+        險種名稱: "25-商業性地震保險"
+    },
+    {
+        id: "a26",
+        險種名稱: "26-個人綜合保險"
+    },
+    {
+        id: "a27",
+        險種名稱: "27-商業綜合保險"
+    },
+    {
+        id: "a28",
+        險種名稱: "28-颱風洪水保險"
+    },
+    {
+        id: "a29",
+        險種名稱: "29-政策性地震保險"
+    },
+    {
+        id: "a30",
+        險種名稱: "30-健康保險"
+    },
+    {
+        id: "a31",
+        險種名稱: "31-國外再保分入業務"
+    },
+    {
+        id: "a32",
+        險種名稱: "32-強制微型電動二輪車"
     }
 ];
 var tableSelect = new Tabulator("#tableSelect", {
@@ -1178,7 +892,7 @@ var tableSelect = new Tabulator("#tableSelect", {
     tooltips: true,
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
-    selectable: 1,
+    selectable: true,
     columns: [{
             formatter: "rowSelection",
             titleFormatter: "rowSelection",
@@ -1191,11 +905,11 @@ var tableSelect = new Tabulator("#tableSelect", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "幣別", field: "幣別" },
+        { title: "險種名稱", field: "險種名稱" },
     ],
 });
 // 選擇預設勾選row
-// tableSelect.selectRow(["a1"]);
+tableSelect.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
