@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護-設計3</title>
+    <title>華南產物保險-RIAF013-同業往來維護-設計5</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -63,16 +63,17 @@
                             <li><a href="#">再保</a></li>
                             <li><a href="#">同業往來</a></li>
                             <li><a href="#">同業往來維護</a></li>
+                            <li><a href="#">G1</a></li>
                         </ul>
                     </div>
                     <!-- card -->
-                    <div class="content-component content-card">
+                    <div class="content-component content-card content-next">
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">同業往來維護</div>
-                                <div class="unitname-item unitname-favourite">
-                                    <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
+                                <div class="unitname-item unitname-title unitname-back">G1群組作業</div>
+                                <div class="unitname-item unitname-cancel">
+                                    <a href="riaf013-design3.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
                             </div>
                         </div>
@@ -83,10 +84,10 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="riaf013-design1.html">明細查詢</a></li>
-                                        <li><a href="riaf013-design3.html" class="unittab-active">清帳批號</a></li>
-                                        <li></li>
-                                        <li></li>
+                                        <li><a href="#" class="unittab-active">作業1</a></li>
+                                        <li><a href="#">作業2</a></li>
+                                        <li><a href="#">作業3</a></li>
+                                        <li><a href="#">作業4</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -94,67 +95,6 @@
                                         <li></li>
                                         <li></li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- query -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-query">
-                                <!-- query -->
-                                <div class="content-component content-query">
-                                    <!-- 清帳報表 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-checkbox query-input-all">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">清帳報表</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01">清帳明細(原幣)</label></li>
-                                                        <li><input type="checkbox" id="cb02" name="作業項目"><label for="cb02">清帳明細(折台幣)</label></li>
-                                                        <li><input type="checkbox" id="cb03" name="作業項目"><label for="cb03">清帳日報</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 公司類型/清帳日期/公司代碼 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公司類型</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="公司類型" id="">
-                                                        <option value="" selected>全部</option>
-                                                        <option value="">非OIU</option>
-                                                        <option value="">OIU</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">清帳日期</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="清帳日期" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="清帳日期" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公司代碼</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="公司代碼" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -167,27 +107,18 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third" type="button"><span>轉檔付款</span></button></li>
-                                            <li><button class="content-btn-item btn-third" type="button"><span>編製傳票</span></button></li>
+                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- tabulator創立table -->
+                        <!-- 自定義table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
@@ -214,7 +145,7 @@
                                             <div class="table-func-page"></div>
                                         </div>
                                     </div>
-                                    <div id="table01"></div>
+                                    <div id="table03"></div>
                                     <div class="table-footer"></div>
                                 </div>
                             </div>
@@ -250,27 +181,54 @@
 <script>
 let table01Data = [{
         id: "a1",
-        清帳批號: "11008017",
-        清帳日期: "清帳日期",
-        公司代碼: "公司代碼",
-        公司名稱: "公司名稱",
-        編輯日期: "編輯日期",
+        群組: "G1",
+        分入分出: "分001",
+        險別: "險別",
+        記錄單號: "記錄單號",
+        期間: "期間",
+        年月: "年月",
+        幣別: "幣別",
+        經紀人: "經紀人",
+        再保公司: "再保公司",
+        原始金額: "原始金額",
+        未清金額: "未清金額",
+        OurReference: "Our Reference",
+        YourReference: "Your Reference",
+        帳務描述: "帳務描述",
     },
     {
         id: "a2",
-        清帳批號: "清帳批號1",
-        清帳日期: "清帳日期",
-        公司代碼: "公司代碼",
-        公司名稱: "公司名稱",
-        編輯日期: "編輯日期",
+        群組: "G1",
+        分入分出: "分002",
+        險別: "險別",
+        記錄單號: "記錄單號",
+        期間: "期間",
+        年月: "年月",
+        幣別: "幣別",
+        經紀人: "經紀人",
+        再保公司: "再保公司",
+        原始金額: "原始金額",
+        未清金額: "未清金額",
+        OurReference: "Our Reference",
+        YourReference: "Your Reference",
+        帳務描述: "帳務描述",
     },
     {
         id: "a3",
-        清帳批號: "清帳批號1",
-        清帳日期: "清帳日期",
-        公司代碼: "公司代碼",
-        公司名稱: "公司名稱",
-        編輯日期: "編輯日期",
+        群組: "G2",
+        分入分出: "分003",
+        險別: "險別",
+        記錄單號: "記錄單號",
+        期間: "期間",
+        年月: "年月",
+        幣別: "幣別",
+        經紀人: "經紀人",
+        再保公司: "再保公司",
+        原始金額: "原始金額",
+        未清金額: "未清金額",
+        OurReference: "Our Reference",
+        YourReference: "Your Reference",
+        帳務描述: "帳務描述",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -298,17 +256,33 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
+        // {
+        //     title: "序號",
+        //     field: "序號",
+        //     formatter: function(cell, formatterParams, onRendered) {
+        //         return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
+        //     },
+        // },
+        { title: "群組", field: "群組" },
         {
-            title: "清帳批號",
-            field: "清帳批號",
+            title: "分入/分出",
+            field: "分入分出",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf013-design4.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "清帳日期", field: "清帳日期" },
-        { title: "公司代碼", field: "公司代碼" },
-        { title: "公司名稱", field: "公司名稱" },
-        { title: "編輯日期", field: "編輯日期" },
+        { title: "險別", field: "險別" },
+        { title: "記錄單號", field: "記錄單號" },
+        { title: "期間", field: "期間" },
+        { title: "年月", field: "年月" },
+        { title: "幣別", field: "幣別" },
+        { title: "經紀人", field: "經紀人" },
+        { title: "再保公司", field: "再保公司" },
+        { title: "原始金額", field: "原始金額", hozAlign: "right" },
+        { title: "未清金額", field: "未清金額", hozAlign: "right" },
+        { title: "Our Reference", field: "OurReference" },
+        { title: "Your Reference", field: "YourReference" },
+        { title: "帳務描述", field: "帳務描述" },
     ],
 });
 // 選擇預設勾選row
@@ -362,6 +336,80 @@ var table02 = new Tabulator("#table02", {
 //popupOperationTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+
+
+let table3Data = [{
+        id: 1,
+        make: "Ford",
+        model: "focus",
+        reg: "P232 NJP",
+        color: "white",
+        serviceHistory: [
+            { date: "01/02/2016", engineer: "Steve Boberson", actions: "Changed oli filter" },
+            { date: "07/02/2017", engineer: "Martin Stevenson", actions: "Break light broken" },
+        ]
+    },
+    {
+        id: 1,
+        make: "BMW",
+        model: "m3",
+        reg: "W342 SEF",
+        color: "red",
+        serviceHistory: [
+            { date: "22/05/2017", engineer: "Jimmy Brown", actions: "Aligned wheels" },
+            { date: "11/02/2018", engineer: "Lotty Ferberson", actions: "Changed Oil" },
+            { date: "04/04/2018", engineer: "Franco Martinez", actions: "Fixed Tracking" },
+        ]
+    },
+]
+
+//define table
+var table03 = new Tabulator("#table03", {
+    height: "100%",
+    layout: "fitColumns",
+    columnDefaults: {
+        resizable: true,
+    },
+    data: table3Data,
+    columns: [{
+            title: "Make",
+            field: "make",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='riaf013-design6.html'>" + cell.getValue() + "</a>"
+            },
+        },
+        { title: "Model", field: "model" },
+        { title: "Registration", field: "reg" },
+        { title: "Color", field: "color" },
+    ],
+    rowFormatter: function(row) {
+        //create and style holder elements
+        var holderEl = document.createElement("div");
+        var tableEl = document.createElement("div");
+
+        holderEl.style.boxSizing = "border-box";
+        holderEl.style.padding = "10px 30px 10px 10px";
+        holderEl.style.borderTop = "1px solid #333";
+        holderEl.style.borderBotom = "1px solid #333";
+
+
+        tableEl.style.border = "1px solid #333";
+
+        holderEl.appendChild(tableEl);
+
+        row.getElement().appendChild(holderEl);
+
+        var subTable = new Tabulator(tableEl, {
+            layout: "fitColumns",
+            data: row.getData().serviceHistory,
+            columns: [
+                { title: "Date", field: "date", sorter: "date" },
+                { title: "Engineer", field: "engineer" },
+                { title: "Action", field: "actions" },
+            ]
+        })
+    },
+});
 </script>
 
 </html>

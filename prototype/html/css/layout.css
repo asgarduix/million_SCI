@@ -1039,7 +1039,10 @@ a.menu-active .menu-bar {
 }
 
 .content-next {
-    background: #eaeaea;
+    background: #f9f9f9;
+    -webkit-box-shadow: inset 4px 4px 0px 0px rgba(238, 238, 238, 1);
+    -moz-box-shadow: inset 4px 4px 0px 0px rgba(238, 238, 238, 1);
+    box-shadow: inset 4px 4px 0px 0px rgba(238, 238, 238, 1);
 }
 
 .card-multiple-container {
@@ -1343,12 +1346,6 @@ a.menu-active .menu-bar {
     width: 220px;
 }
 
-/*.card-data-right-sm .data-row-title,
-.card-data-right-sm .data-row-content {
-    width: 100%;
-    display: block;
-}*/
-
 .card-data-right-sm .data-row-title {
     width: 60px;
     padding: 4px;
@@ -1356,6 +1353,32 @@ a.menu-active .menu-bar {
 
 .card-table-left-sm {
     width: calc(100% - 220px);
+}
+
+
+.card-data-right-vertical .card-data-row {
+    margin-bottom: 6px;
+}
+
+.card-data-right-vertical .card-data-row:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.card-data-right-vertical .data-row-title,
+.card-data-right-vertical .data-row-content {
+    display: block;
+    width: 100%;
+}
+
+.card-data-right-vertical .data-row-title {
+    padding: 2px 4px;
+    font-size: 0.75rem;
+    border-bottom: #fff solid 1px;
+}
+
+.card-data-right-vertical .data-row-content {
+    padding: 3px 4px;
+    font-weight: bold;
 }
 
 /* END: card */
@@ -1414,15 +1437,15 @@ a.menu-active .menu-bar {
 
 .unitname-item {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .unitname-title {
+    padding-right: 5px;
     font-weight: bold;
     color: #026D93;
     word-break: keep-all;
     white-space: nowrap;
-    padding-right: 5px;
 }
 
 .unitname-title::before {
@@ -1443,7 +1466,7 @@ a.menu-active .menu-bar {
 .unitname-item a {
     height: 30px;
     line-height: 1;
-    color: #2477a3;
+    color: #777;
     display: block;
     border: #777 solid 1px;
     background: #f4f4f4;
@@ -1464,6 +1487,7 @@ a.menu-active .menu-bar {
 .unitname-cancel a {
     border: none;
     background: none;
+    color: #038CC7;
 }
 
 .unitname-cancel a:hover {
@@ -1479,9 +1503,43 @@ a.menu-active .menu-bar {
 
 .unitname-back::before {
     content: "";
-    margin-right: 0; 
+    margin-right: 0;
 }
 
+.sub-unitname-title::before {
+    content: "";
+    margin-right: 2px;
+}
+
+.sub-unitname-title span {
+    font-size: 1rem;
+}
+
+.sub-unitname-title span::before {
+    content: "：";
+    font-size: 1rem;
+    vertical-align: text-bottom;
+}
+
+.sub-unitname-title[belongto]::before {
+    content: attr(belongto);
+    display: table;
+    padding: 2px 6px 4px 6px;
+    background: #EADECA;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    color: #8C7457;
+    border-radius: 4px;
+}
+
+.content-unitname-hint span {
+    padding: 2px 6px;
+    background: #EADECA;
+    font-size: 0.75rem;
+    color: #8C7457;
+    border-radius: 4px;
+}
 /* END: unitname */
 /* START: unittab */
 .detail-board-unittab {
@@ -1896,9 +1954,11 @@ a.menu-active .menu-bar {
 
 /* nest table */
 .table-subtable-container {
-    background: #EAF9FF;
+    padding: 7px;
+    background: #555;
     border-style: none;
     border-bottom: #aaa solid 3px;
+    border-top: #aaa solid 3px;
 }
 
 .table-btn-switch {
@@ -1914,13 +1974,18 @@ a.menu-active .menu-bar {
     margin-top: 4px;
 }
 
-.table-subtable-container .tabulator .tabulator-header {
-    background: #f0ebf7;
-    color: #111;
+.table-subtable-container .tabulator .tabulator-headers .tabulator-col,
+.table-subtable-container .tabulator .tabulator-headers .tabulator-col:hover {
+    background: #37eecf;
+    color: #333;
 }
 
-.table-subtable-container .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
-    background: #F7F2EB;
+.content-table .table-subtable-container .tabulator .tabulator-headers .tabulator-col:hover {
+    background: #37eecf;
+}
+
+.content-table .table-subtable-container .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+    padding: 2px;
 }
 
 .table-input-inner {
@@ -3924,7 +3989,7 @@ a.menu-active .menu-bar {
     vertical-align: middle;
 }
 
-.header-btn a.customize-form-sub-table-field-btn[attr="close"]::before{
+.header-btn a.customize-form-sub-table-field-btn[attr="close"]::before {
     font-family: 'Material Icons', sans-serif;
     content: "remove_circle";
     font-feature-settings: 'liga';
