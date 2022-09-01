@@ -1425,7 +1425,7 @@ a.menu-active .menu-bar {
 /* END: copyright */
 /* START: unitname */
 .content-unitname {
-    padding: 6px 0;
+    padding: 6px 0 9px;
     margin: 0;
 }
 
@@ -1531,6 +1531,7 @@ a.menu-active .menu-bar {
     line-height: 1;
     color: #8C7457;
     border-radius: 4px;
+    margin-bottom: 2px;
 }
 
 .content-unitname-hint span {
@@ -5179,14 +5180,9 @@ a.customize-form-sub-table-field-btn[attr="open"]::before {
 }
 
 /* 自定義表格btn+table */
-.customize-form-field-btn {
-    padding: 5px;
-    background: #eee;
-}
-
 .customize-form-field-btn ul {
     list-style: none;
-    padding: 0;
+    padding: 5px;
     margin: 0;
 }
 

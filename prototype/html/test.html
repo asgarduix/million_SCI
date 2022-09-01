@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護-設計10</title>
+    <title>華南產物保險-RIAF013-同業往來維護-設計9</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -86,7 +86,7 @@
                                     <ul>
                                         <li><a href="riaf013-design4.html">清帳作業</a></li>
                                         <li><a href="riaf013-design7.html" class="unittab-active">暫收付紀錄</a></li>
-                                        <li><a href="riaf013-design11.html">付款設定</a></li>
+                                        <li><a href="#">付款設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -153,24 +153,93 @@
             </main>
         </div>
     </div>
-    <!-- popup-delete -->
+    <!-- popup-add -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-delete">
+        <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">刪除</div>
+                        <div class="dialog-header-item dialog-title">撤票維護</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="riaf013-design7.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <!-- 票據號碼 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據號碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據號碼" value="JE7737502" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 幣別/暫收付金額 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">新收費狀態</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="新收費狀態" value="撤票" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">撤票日</div>
+                                        <div class="customize-form-entry">
+                                            <div class="query-datepicker-YMD">
+                                                <div class="query-datepicker-YMD-inner">
+                                                    <div class="query-datepicker-item query-datepicker-item-y">
+                                                        <div><input type="text" maxlength="3" placeholder="yyy" value="111"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-m">
+                                                        <div><input type="text" maxlength="2" placeholder="mm" value="09"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-d">
+                                                        <div><input type="text" maxlength="2" placeholder="dd" value="01"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-icon">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">撤票原因</div>
+                                        <div class="customize-form-entry">
+                                            <select name="暫收/暫付" id="">
+                                                <option value="" selected>請選擇</option>
+                                                <option value="">暫付</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1 customize-form-field-btn">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">修改申請單</div>
+                                        <div class="customize-form-entry">
+                                            <button>進入頁面</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-warn" onclick="location.href='riaf013-design7.html'">確定</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-design7.html'">確定</button></li>
                         <li><button type="button" class="btn-outline" onclick="location.href='riaf013-design7.html'">取消</button></li>
                     </ul>
                 </div>
@@ -249,139 +318,7 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-table01.selectRow(["a1"]);
-// 使用filter能精準指定欄位
-//table.selectRow(table.setFilter("id","=","a1"));
-
-let tableSelectData = [{
-        id: "a1",
-        幣別: "AUD 澳幣"
-    },
-    {
-        id: "a2",
-        幣別: "AZN 亞塞拜然馬納特"
-    },
-    {
-        id: "a3",
-        幣別: "BDT 孟加拉塔卡"
-    },
-    {
-        id: "a4",
-        幣別: "CAD 加幣"
-    },
-    {
-        id: "a5",
-        幣別: "CHF 瑞士法郎"
-    },
-    {
-        id: "a6",
-        幣別: "CNH 離岸人民幣"
-    },
-    {
-        id: "a7",
-        幣別: "CNY 在岸人民幣"
-    },
-    {
-        id: "a8",
-        幣別: "EUR 歐元"
-    },
-    {
-        id: "a9",
-        幣別: "GBP 英鎊"
-    },
-    {
-        id: "a10",
-        幣別: "HKD 港幣"
-    },
-    {
-        id: "a11",
-        幣別: "IDR 印尼盾"
-    },
-    {
-        id: "a12",
-        幣別: "JPY 日圓"
-    },
-    {
-        id: "a13",
-        幣別: "KRW 韓幣"
-    },
-    {
-        id: "a14",
-        幣別: "MXN 墨西哥幣"
-    },
-    {
-        id: "a15",
-        幣別: "MYR 馬來西亞幣"
-    },
-    {
-        id: "a16",
-        幣別: "NTD 新台幣"
-    },
-    {
-        id: "a17",
-        幣別: "NZD 紐西蘭幣"
-    },
-    {
-        id: "a18",
-        幣別: "PHP 菲律賓幣"
-    },
-    {
-        id: "a19",
-        幣別: "RMB 人民幣"
-    },
-    {
-        id: "a20",
-        幣別: "RUB 俄國盧布"
-    },
-    {
-        id: "a21",
-        幣別: "SEK 瑞典克朗"
-    },
-    {
-        id: "a22",
-        幣別: "SGD 新加玻幣"
-    },
-    {
-        id: "a23",
-        幣別: "THB 泰銖"
-    },
-    {
-        id: "a24",
-        幣別: "USD 美金"
-    },
-    {
-        id: "a25",
-        幣別: "VND 越南盾"
-    }
-];
-var tableSelect = new Tabulator("#tableSelect", {
-    data: tableSelectData,
-    height: "100%",
-    layout: "fitColumns",
-    pagination: false,
-    movableColumns: false,
-    resizableRows: false,
-    tooltips: true,
-    tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
-    selectable: 1,
-    columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
-            headerHozAlign: "center",
-            hozAlign: "center",
-            headerSort: false,
-            maxWidth: 30,
-            minWidth: 30,
-            cellClick: function(e, cell) {
-                cell.getRow().toggleSelect();
-            }
-        },
-        { title: "幣別", field: "幣別" },
-    ],
-});
-// 選擇預設勾選row
-// tableSelect.selectRow(["a1"]);
+//popupOperationTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
