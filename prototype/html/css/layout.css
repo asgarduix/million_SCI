@@ -3594,7 +3594,7 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
-/* md尺寸視窗 */
+/* 各尺寸視窗 */
 .popup-dialog-md {
     width: 776px;
     max-width: 776px;
@@ -3606,6 +3606,10 @@ a.menu-active .menu-bar {
     width: 991px;
     max-width: 991px;
     position: relative;
+}
+
+.sub-content-popup .popup-dialog-md {
+    height: 70%;
 }
 
 /* 有輸入的跳窗 */
