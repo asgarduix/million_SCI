@@ -73,7 +73,7 @@
                             <div class="unitname-inner">
                                 <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">對帳批號<span>11008017</span></div>
                                 <div class="unitname-item unitname-cancel">
-                                    <a href="riaf013-design3.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
+                                    <a href="riaf013-tab2-01-query.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +84,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="riaf013-design4.html" class="unittab-active">清帳作業</a></li>
-                                        <li><a href="riaf013-design7.html">暫收付紀錄</a></li>
-                                        <li><a href="riaf013-design11.html">付款設定</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab1-query.html" class="unittab-active">清帳作業</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab2-query.html">暫收付紀錄</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab3-query.html">付款設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -172,7 +172,7 @@
                     <div class="dialog-header-inner">
                         <div class="dialog-header-item dialog-title">再保公司</div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf013-design4.html"><span class="material-icons">cancel</span></a>
+                            <a href="riaf013-tab2-detail-tab1-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
@@ -247,8 +247,8 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-design4.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-design4.html'">取消</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab1-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab1-query.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -393,7 +393,7 @@ var table01 = new Tabulator("#table01", {
             title: "再保公司",
             field: "再保公司",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf013-design6.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf013-tab2-detail-tab1-query-counter.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "險別", field: "險別" },

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護-設計17</title>
+    <title>華南產物保險-RIAF013-同業往來維護-設計16</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -154,25 +154,236 @@
             </main>
         </div>
     </div>
-    <!-- popup-delete -->
+    <!-- popup-add -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-delete">
+        <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">刪除</div>
+                        <div class="dialog-header-item dialog-title">新增</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="riaf013-tab2-detail-tab3-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>付款設定</span>
+                            </div>
+                        </div>
+                        <!-- 銷帳編號/收付代碼/付款幣別/匯款戶名 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">銷帳編號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="銷帳編號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">收付代碼</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="收付代碼" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-popup-select customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">付款幣別</div>
+                                        <div class="customize-form-entry">
+                                            <a href="riaf013-tab2-detail-tab3-add-cueerncy.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
+                                            <div class="customize-form-popup-select-cancel"><span class="material-icons">backspace</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款戶名</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款戶名" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 匯款帳號/匯款金額/即時兌換率 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">暫收付金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="暫收付金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">匯款金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="匯款金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">即時兌換率</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="即時兌換率" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>付款設定</span>
+                            </div>
+                        </div>
+                        <!-- 轉換本位幣金額/損益別/損益金額/手續費 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">轉換本位幣金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="轉換本位幣金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">損益別</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="損益別" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">損益金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="損益金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">手續費</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="手續費" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 其他金額/預計付款日/指定傳票日 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">其他金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="暫收付金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">預計付款日</div>
+                                        <div class="customize-form-entry">
+                                            <div class="query-datepicker-YMD">
+                                                <div class="query-datepicker-YMD-inner">
+                                                    <div class="query-datepicker-item query-datepicker-item-y">
+                                                        <div><input type="text" maxlength="3" placeholder="yyy" value="YYY"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-m">
+                                                        <div><input type="text" maxlength="2" placeholder="mm" value="MM"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-d">
+                                                        <div><input type="text" maxlength="2" placeholder="dd" value="DD"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-icon">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">指定傳票日</div>
+                                        <div class="customize-form-entry">
+                                            <div class="query-datepicker-YMD">
+                                                <div class="query-datepicker-YMD-inner">
+                                                    <div class="query-datepicker-item query-datepicker-item-y">
+                                                        <div><input type="text" maxlength="3" placeholder="yyy" value="YYY"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-m">
+                                                        <div><input type="text" maxlength="2" placeholder="mm" value="MM"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-d">
+                                                        <div><input type="text" maxlength="2" placeholder="dd" value="DD"></div>
+                                                    </div>
+                                                    <div class="query-datepicker-item query-datepicker-item-icon">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-warn" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">確定</button></li>
                         <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">取消</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- popup-add -->
+    <div class="content-component content-popup sub-content-popup">
+        <div class="popup-dialog popup-dialog-md">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">幣別</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="riaf013-tab2-detail-tab3-add.html"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-table">
+                                <div class="card-detail">
+                                    <!-- card-detail >> board -->
+                                    <div class="detail-board">
+                                        <div class="content-component content-table content-table-counter">
+                                            <div id="tableSelect"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab3-add.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab3-add.html'">取消</button></li>
                     </ul>
                 </div>
             </form>

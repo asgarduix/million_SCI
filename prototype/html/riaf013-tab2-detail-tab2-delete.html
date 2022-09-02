@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護-設計9</title>
+    <title>華南產物保險-RIAF013-同業往來維護</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -73,7 +73,7 @@
                             <div class="unitname-inner">
                                 <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">對帳批號<span>11008017</span></div>
                                 <div class="unitname-item unitname-cancel">
-                                    <a href="riaf013-design3.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
+                                    <a href="riaf013-tab2-01-query.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +84,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="riaf013-design4.html">清帳作業</a></li>
-                                        <li><a href="riaf013-design7.html" class="unittab-active">暫收付紀錄</a></li>
-                                        <li><a href="riaf013-design11.html">付款設定</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab1-query.html">清帳作業</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab2-query.html" class="unittab-active">暫收付紀錄</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab3-query.html">付款設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -108,8 +108,8 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-design8.html'"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-design10.html'"><span>刪除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-tab2-detail-tab2-add.html'"><span>新增</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-tab2-detail-tab2-delete.html'"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -153,132 +153,25 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-delete -->
     <div class="content-component content-popup">
-        <div class="popup-dialog popup-dialog-add">
+        <div class="popup-dialog popup-dialog-delete">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">刪除</div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf013-design7.html"><span class="material-icons">cancel</span></a>
+                            <a href="riaf013-tab2-detail-tab2-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <div class="customize-form-row">
-                            <div class="customize-form-header">
-                                <span>暫收付紀錄</span>
-                            </div>
-                        </div>
-                        <!-- 銷帳編號/ 暫收/暫付 / 暫收/付編號 /再保人代號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銷帳編號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銷帳編號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">暫收/暫付</div>
-                                        <div class="customize-form-entry">
-                                            <select name="暫收/暫付" id="">
-                                                <option value="" selected>暫收</option>
-                                                <option value="">暫付</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">暫收/付編號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="暫收/付編號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">再保人代號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="再保人代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 幣別/暫收付金額 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-popup-select customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">幣別</div>
-                                        <div class="customize-form-entry">
-                                            <a href="riaf013-design9.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
-                                            <div class="customize-form-popup-select-cancel"><span class="material-icons">backspace</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">暫收付金額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="暫收付金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-design7.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-design7.html'">取消</button></li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- popup-add -->
-    <div class="content-component content-popup sub-content-popup">
-        <div class="popup-dialog popup-dialog-md">
-            <form action="">
-                <div class="dialog-header">
-                    <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">幣別</div>
-                        <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf013-design8.html"><span class="material-icons">cancel</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dialog-content">
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <div class="customize-form-row">
-                            <div class="customize-table">
-                                <div class="card-detail">
-                                    <!-- card-detail >> board -->
-                                    <div class="detail-board">
-                                        <div class="content-component content-table content-table-counter">
-                                            <div id="tableSelect"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dialog-btn">
-                    <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-design8.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-design8.html'">取消</button></li>
+                        <li><button type="button" class="btn-warn" onclick="location.href='riaf013-tab2-detail-tab2-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab2-query.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -356,7 +249,7 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-//popupOperationTable.selectRow(["a1"]);
+table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 

@@ -73,7 +73,7 @@
                             <div class="unitname-inner">
                                 <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">對帳批號<span>11008017</span></div>
                                 <div class="unitname-item unitname-cancel">
-                                    <a href="riaf013-design3.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
+                                    <a href="riaf013-tab2-01-query.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +84,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="riaf013-design4.html">清帳作業</a></li>
-                                        <li><a href="riaf013-design7.html">暫收付紀錄</a></li>
-                                        <li><a href="riaf013-design11.html" class="unittab-active">付款設定</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab1-query.html">清帳作業</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab2-query.html">暫收付紀錄</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab3-query.html" class="unittab-active">付款設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -108,9 +108,9 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-design14.html'"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf013-design15.html'"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-design17.html'"><span>刪除</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-tab2-detail-tab3-add.html'"><span>新增</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf013-tab2-detail-tab3-modify.html'"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-tab2-detail-tab3-delete.html'"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                     <div class="dialog-header-inner">
                         <div class="dialog-header-item dialog-title">銷帳編號<span>123456</span></div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf013-design11.html"><span class="material-icons">cancel</span></a>
+                            <a href="riaf013-tab2-detail-tab3-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">付款幣別</div>
                                         <div class="customize-form-entry">
-                                            <a href="riaf013-design16.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
+                                            <a href="riaf013-tab2-detail-tab3-add-currency.html" attr="" title="AUD 澳幣" data-toggle="tooltip" data-placement="top">AUD 澳幣</a>
                                             <div class="customize-form-popup-select-cancel"><span class="material-icons">backspace</span></div>
                                         </div>
                                     </div>
@@ -344,8 +344,8 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-design11.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-design11.html'">取消</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -437,7 +437,7 @@ var table01 = new Tabulator("#table01", {
             title: "銷帳編號",
             field: "銷帳編號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf013-design12.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf013-tab2-detail-tab3-detail.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "收付代碼", field: "收付代碼" },
