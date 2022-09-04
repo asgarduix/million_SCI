@@ -3609,7 +3609,7 @@ a.menu-active .menu-bar {
 }
 
 .sub-content-popup .popup-dialog-md {
-    height: 70%;
+    max-height: 70%;
 }
 
 /* 有輸入的跳窗 */
