@@ -983,9 +983,10 @@ a.menu-active .menu-bar {
 }
 
 .content-breadcrumb ul {
-    list-style: none;
+    display: inline-block;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .content-breadcrumb li {
@@ -1028,6 +1029,52 @@ a.menu-active .menu-bar {
     color: #555;
 }
 
+/* category */
+.globl-category {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 8px;
+    margin-right: 3px;
+    position: relative;
+}
+
+.globl-category::after {
+    content: "";
+    display: block;
+    height: 20px;
+    border-right: #aaa solid 1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.globl-category select {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1;
+    border: none;
+    color: #026D93;
+    outline: none;
+}
+
+.globl-category::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "grid_views";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    width: 12px;
+    display: inline-block;
+    color: #038CC7;
+    line-height: 1;
+    margin-top: -1px;
+}
+
+.globl-category-inner {
+    display: inline-block;
+}
+
 /* END: breadcrumb */
 /* START: card */
 .content-card {
@@ -1036,6 +1083,7 @@ a.menu-active .menu-bar {
     background: #F4F4F4;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    clear: both;
 }
 
 .content-next {
@@ -1541,6 +1589,7 @@ a.menu-active .menu-bar {
     color: #8C7457;
     border-radius: 4px;
 }
+
 /* END: unitname */
 /* START: unittab */
 .detail-board-unittab {
