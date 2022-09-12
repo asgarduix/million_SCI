@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護</title>
+    <title>華南產物保險-RIAF013-同業往來維護-設計4</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -115,8 +115,8 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <!-- <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li> -->
+                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
@@ -130,37 +130,6 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- label -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-label">
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">美金(USD)</div>
-                                            <div class="label-content label-content-counter">40.00</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">日幣(JPY)</div>
-                                            <div class="label-content label-content-counter">50.00</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">人民幣(CNY)</div>
-                                            <div class="label-content label-content-counter">0.00</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">港幣(HKD)</div>
-                                            <div class="label-content label-content-counter">0.00</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">台幣(TWD)</div>
-                                            <div class="label-content label-content-counter">0.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -169,11 +138,11 @@
                                     <div class="table-func">
                                         <div class="table-func-inner">
                                             <div class="table-func-basic">
-                                                <!-- <div class="func-basic-item func-download">
+                                                <div class="func-basic-item func-download">
                                                     <ul>
                                                         <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
                                                     </ul>
-                                                </div> -->
+                                                </div>
                                                 <div class="func-basic-item func-count">
                                                     <ul>
                                                         <li class="count-total">3</li>
@@ -222,75 +191,181 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-var table01Data = [{
+let nestedData = [{
         id: "a1",
         再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "USD",
-        帳單金額: "100.00",
+        險別: "險別",
+        險種: "險種",
+        期間: "期間",
+        帳單號: "帳單號",
+        銷帳別: "銷帳別",
         銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "40.00"
+        ntTable: [{
+                帳單幣別: "USD",
+                帳單金額: "帳單金額",
+                轉入日期: "轉入日期",
+                未沖銷餘額: "未沖銷餘額",
+                銷帳金額: "40.00",
+                月兌換率: "31.00",
+                本位幣銷帳金額: "40.00",
+                銷帳編號: "銷帳編號"
+            },
+            {
+                帳單幣別: "JPY",
+                帳單金額: "帳單金額",
+                轉入日期: "轉入日期",
+                未沖銷餘額: "未沖銷餘額",
+                銷帳金額: "50.00",
+                月兌換率: "2.00",
+                本位幣銷帳金額: "50.00",
+                銷帳編號: "銷帳編號"
+            },
+        ]
     },
     {
         id: "a2",
         再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "JPY",
-        帳單金額: "100.00",
+        險別: "險別",
+        險種: "險種",
+        期間: "期間",
+        帳單號: "帳單號",
+        銷帳別: "銷帳別",
         銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "20.00"
+        ntTable: [{
+            帳單幣別: "帳單幣別",
+            帳單金額: "帳單金額",
+            轉入日期: "轉入日期",
+            未沖銷餘額: "未沖銷餘額",
+            銷帳金額: "銷帳金額",
+            月兌換率: "月兌換率",
+            本位幣銷帳金額: "本位幣銷帳金額",
+            銷帳編號: "銷帳編號"
+        }, ]
     },
     {
         id: "a3",
         再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "JPY",
-        帳單金額: "70.00",
+        險別: "險別",
+        險種: "險種",
+        期間: "期間",
+        帳單號: "帳單號",
+        銷帳別: "銷帳別",
         銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "30.00"
+        ntTable: [{
+            帳單幣別: "帳單幣別",
+            帳單金額: "帳單金額",
+            轉入日期: "轉入日期",
+            未沖銷餘額: "未沖銷餘額",
+            銷帳金額: "銷帳金額",
+            月兌換率: "月兌換率",
+            本位幣銷帳金額: "本位幣銷帳金額",
+            銷帳編號: "銷帳編號"
+        }, ]
     },
-];
+]
 
 var table01 = new Tabulator("#table01", {
-    data: table01Data,
-    layout: "fitColumns",
     height: "100%",
-    pagination: "local",
-    paginationSize: 10,
-    paginationSizeSelector: [10, 30, 50, true],
+    layout: "fitColumns",
     movableColumns: true,
-    resizableRows: true,
-    tooltips: true,
-    tooltipsHeader: true,
-    tooltipGenerationMode: "hover",
-    selectable: true,
-    columns: [
-        { title: "再保公司", field: "再保公司" },
-        { title: "帳別", field: "帳別" },
-        { title: "帳單幣別", field: "帳單幣別" },
-        { title: "帳單金額", field: "帳單金額", hozAlign: "right" },
-        { title: "銷帳紀錄", field: "銷帳紀錄" },
-        { title: "未沖銷餘額", field: "未沖銷餘額", hozAlign: "right" },
-        {
-            title: "銷帳金額",
-            field: "銷帳金額",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            hozAlign: "right",
+    data: nestedData,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
         },
+        {
+            formatter: (cell, formatterParams, onRendered) => {
+                let div = document.createElement('div');
+                let el = cell.getRow().getElement()
+                let btnName = ["＋", "–"]
+
+                btnName.forEach((name, index) => {
+                    let btn = document.createElement('button');
+                    $(btn).text(name)
+                    elementsChangeClass(btn, "add", "table-btn-switch")
+                    btn.addEventListener("click", (e) => {
+                        $(el).find(".table-btn-switch").toggle()
+                        $(el).find(".table-subtable-container").toggle()
+                    });
+                    if (index === 1) {
+                        $(btn).css("display", "none")
+                    }
+                    div.appendChild(btn)
+                })
+                return div
+            },
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30
+        },
+        {
+            title: "再保公司",
+            field: "再保公司",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='riaf013-tab2-detail-tab1-query-counter.html'>" + cell.getValue() + "</a>"
+            },
+        },
+        { title: "險別", field: "險別" },
+        { title: "險種", field: "險種" },
+        { title: "期間", field: "期間" },
+        { title: "帳單號", field: "帳單號" },
+        { title: "銷帳別", field: "銷帳別" },
+        { title: "銷帳紀錄", field: "銷帳紀錄" },
     ],
+    rowFormatter: function(row) {
+        let container = document.createElement("div");
+        let subtable = document.createElement("div");
+
+        $(container).css("display", "none")
+        elementsChangeClass(container, "add", "table-subtable-container")
+        elementsChangeClass(subtable, "add", "table-subtable")
+        $(subtable).attr("id", row.getData().id)
+
+        container.appendChild(subtable);
+        row.getElement().appendChild(container);
+
+        let subTable = new Tabulator("#" + row.getData().id, {
+            layout: "fitColumns",
+            data: row.getData().ntTable,
+            columns: [
+                { title: "帳單幣別", field: "帳單幣別" },
+                { title: "帳單金額", field: "帳單金額", hozAlign: "right" },
+                { title: "轉入日期", field: "轉入日期" },
+                { title: "未沖銷餘額", field: "未沖銷餘額", hozAlign: "right" },
+                { title: "銷帳金額", field: "銷帳金額", hozAlign: "right" },
+                { title: "月兌換率", field: "月兌換率", hozAlign: "right"  },
+                { title: "本位幣銷帳金額", field: "本位幣銷帳金額", hozAlign: "right" },
+                { title: "銷帳編號", field: "銷帳編號" },
+            ]
+        })
+    },
 });
+
+function elementsChangeClass(elements, behavior, classNames) {
+    if (behavior === "add") {
+        $(elements).each(function(index, element) {
+            $(element).addClass(classNames)
+        })
+    } else if (behavior === "remove") {
+        $(elements).each(function(index, element) {
+            $(element).removeClass(classNames)
+        })
+    }
+}
 // 選擇預設勾選row
-// table02.selectRow(["a1", "a2"]);
+//table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
-////////////////////////////////////
 </script>
 
 </html>

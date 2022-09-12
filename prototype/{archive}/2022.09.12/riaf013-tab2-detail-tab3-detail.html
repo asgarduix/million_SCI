@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護</title>
+    <title>華南產物保險-RIAF013-同業往來維護-設計12</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -92,9 +92,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="riaf013-tab2-detail-tab1-query.html" class="unittab-active">清帳作業</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab1-query.html">清帳作業</a></li>
                                         <li><a href="riaf013-tab2-detail-tab2-query.html">暫收付紀錄</a></li>
-                                        <li><a href="riaf013-tab2-detail-tab3-query.html">付款設定</a></li>
+                                        <li><a href="riaf013-tab2-detail-tab3-query.html" class="unittab-active">付款設定</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -116,14 +116,9 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-secondary">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-tab2-detail-tab3-add.html'"><span>新增</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf013-tab2-detail-tab3-modify.html'"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-tab2-detail-tab3-delete.html'"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -148,11 +143,6 @@
                                                         <li class="count-total">3</li>
                                                     </ul>
                                                 </div>
-                                                <!-- <div class="func-basic-item func-filter">
-                                                    <div class="func-filter-inner">
-                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                    </div>
-                                                </div> -->
                                             </div>
                                             <div class="table-func-page"></div>
                                         </div>
@@ -178,85 +168,40 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">再保公司</div>
+                        <div class="dialog-header-item dialog-title">銷帳編號<span>123456</span></div>
                         <div class="dialog-header-item dialog-cancel">
-                            <a href="riaf013-tab2-detail-tab1-query.html"><span class="material-icons">cancel</span></a>
+                            <a href="riaf013-tab2-detail-tab3-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- tabulator創立table -->
                     <div class="card-detail">
-                        <div class="card-multiple-container">
-                            <!-- data -->
-                            <div class="card-detail card-data card-data-right card-data-right-sm card-data-right-vertical">
-                                <div class="card-data-inner">
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">美金(USD)</div>
-                                            <div class="data-row-content" attr="money">40.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">日幣(JPY)</div>
-                                            <div class="data-row-content" attr="money">50.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">人民幣(CNY)</div>
-                                            <div class="data-row-content" attr="money">0.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">港幣(HKD)</div>
-                                            <div class="data-row-content" attr="money">0.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-data-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title">台幣(TWD)</div>
-                                            <div class="data-row-content" attr="money">0.00</div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="card-data-row datal-total-row">
-                                        <div class="data-row-inner">
-                                            <div class="data-row-title"><span>合計</span></div>
-                                            <div class="data-row-content" attr="money">4,817,906,113</div>
-                                        </div>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <!-- tabulator創立table -->
-                            <div class="card-detail card-table card-table-left card-table-left-sm">
-                                <!-- card-detail >> board -->
-                                <div class="detail-board">
-                                    <div class="content-component content-table">
-                                        <div class="table-func">
-                                            <div class="table-func-inner">
-                                                <div class="table-func-basic">
-                                                    <div class="func-basic-item func-count">
-                                                        <ul>
-                                                            <li class="count-total">3</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="table-func-page">頁碼</div>
+                        <!-- card-detail >> board -->
+                        <div class="detail-board">
+                            <div class="content-component content-table">
+                                <div class="table-func">
+                                    <div class="table-func-inner">
+                                        <div class="table-func-basic">
+                                            <div class="func-basic-item func-count">
+                                                <ul>
+                                                    <li class="count-total">1</li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div id="table02"></div>
-                                        <div class="table-footer"></div>
+                                        <div class="table-func-page">頁碼</div>
                                     </div>
                                 </div>
+                                <div id="table02"></div>
+                                <div class="table-footer"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab1-query.html'">確定</button></li>
-                        <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab1-query.html'">取消</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">關閉</button></li>
+                        <!-- <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab2-detail-tab3-query.html'">關閉</button></li> -->
                     </ul>
                 </div>
             </form>
@@ -281,77 +226,24 @@
 <script src="js/pg.js"></script>
 <script>
 let nestedData = [{
-        id: "a1",
-        再保公司: "再保公司",
-        險別: "險別",
-        險種: "險種",
-        期間: "期間",
-        帳單號: "帳單號",
-        銷帳別: "銷帳別",
-        銷帳紀錄: "銷帳紀錄",
-        ntTable: [{
-                帳單幣別: "USD",
-                帳單金額: "帳單金額",
-                轉入日期: "轉入日期",
-                未沖銷餘額: "未沖銷餘額",
-                銷帳金額: "40.00",
-                月兌換率: "31.00",
-                本位幣銷帳金額: "40.00",
-                銷帳編號: "銷帳編號"
-            },
-            {
-                帳單幣別: "JPY",
-                帳單金額: "帳單金額",
-                轉入日期: "轉入日期",
-                未沖銷餘額: "未沖銷餘額",
-                銷帳金額: "50.00",
-                月兌換率: "2.00",
-                本位幣銷帳金額: "50.00",
-                銷帳編號: "銷帳編號"
-            },
-        ]
-    },
-    {
-        id: "a2",
-        再保公司: "再保公司",
-        險別: "險別",
-        險種: "險種",
-        期間: "期間",
-        帳單號: "帳單號",
-        銷帳別: "銷帳別",
-        銷帳紀錄: "銷帳紀錄",
-        ntTable: [{
-            帳單幣別: "帳單幣別",
-            帳單金額: "帳單金額",
-            轉入日期: "轉入日期",
-            未沖銷餘額: "未沖銷餘額",
-            銷帳金額: "銷帳金額",
-            月兌換率: "月兌換率",
-            本位幣銷帳金額: "本位幣銷帳金額",
-            銷帳編號: "銷帳編號"
-        }, ]
-    },
-    {
-        id: "a3",
-        再保公司: "再保公司",
-        險別: "險別",
-        險種: "險種",
-        期間: "期間",
-        帳單號: "帳單號",
-        銷帳別: "銷帳別",
-        銷帳紀錄: "銷帳紀錄",
-        ntTable: [{
-            帳單幣別: "帳單幣別",
-            帳單金額: "帳單金額",
-            轉入日期: "轉入日期",
-            未沖銷餘額: "未沖銷餘額",
-            銷帳金額: "銷帳金額",
-            月兌換率: "月兌換率",
-            本位幣銷帳金額: "本位幣銷帳金額",
-            銷帳編號: "銷帳編號"
-        }, ]
-    },
-]
+    id: "a3",
+    銷帳編號: "銷帳編號",
+    收付代碼: "收付代碼",
+    付款幣別: "付款幣別",
+    匯款戶名: "匯款戶名",
+    匯款帳號: "匯款帳號",
+    匯款金額: "匯款金額",
+    即時兌換率: "即時兌換率",
+    ntTable: [{
+        轉換本位幣金額: "轉換本位幣金額",
+        損益別: "損益別",
+        損益金額: "損益金額",
+        手續費: "手續費",
+        其他金額: "其他金額",
+        預計付款日: "預計付款日",
+        指定傳票日: "指定傳票日"
+    }, ]
+}, ]
 
 var table01 = new Tabulator("#table01", {
     height: "100%",
@@ -398,18 +290,18 @@ var table01 = new Tabulator("#table01", {
             minWidth: 30
         },
         {
-            title: "再保公司",
-            field: "再保公司",
+            title: "銷帳編號",
+            field: "銷帳編號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf013-tab2-detail-tab1-query-counter.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf013-tab2-detail-tab3-detail.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "險別", field: "險別" },
-        { title: "險種", field: "險種" },
-        { title: "期間", field: "期間" },
-        { title: "帳單號", field: "帳單號" },
-        { title: "銷帳別", field: "銷帳別" },
-        { title: "銷帳紀錄", field: "銷帳紀錄" },
+        { title: "收付代碼", field: "收付代碼" },
+        { title: "付款幣別", field: "付款幣別" },
+        { title: "匯款戶名", field: "匯款戶名" },
+        { title: "匯款帳號", field: "匯款帳號" },
+        { title: "匯款金額", field: "匯款金額" },
+        { title: "即時兌換率", field: "即時兌換率" },
     ],
     rowFormatter: function(row) {
         let container = document.createElement("div");
@@ -427,14 +319,13 @@ var table01 = new Tabulator("#table01", {
             layout: "fitColumns",
             data: row.getData().ntTable,
             columns: [
-                { title: "帳單幣別", field: "帳單幣別" },
-                { title: "帳單金額", field: "帳單金額", hozAlign: "right" },
-                { title: "轉入日期", field: "轉入日期" },
-                { title: "未沖銷餘額", field: "未沖銷餘額", hozAlign: "right" },
-                { title: "銷帳金額", field: "銷帳金額", hozAlign: "right" },
-                { title: "月兌換率", field: "月兌換率", hozAlign: "right"  },
-                { title: "本位幣銷帳金額", field: "本位幣銷帳金額", hozAlign: "right" },
-                { title: "銷帳編號", field: "銷帳編號" },
+                { title: "轉換本位幣金額", field: "轉換本位幣金額", hozAlign: "right" },
+                { title: "損益別", field: "損益別" },
+                { title: "損益金額", field: "損益金額", hozAlign: "right" },
+                { title: "手續費", field: "手續費", hozAlign: "right" },
+                { title: "其他金額", field: "其他金額", hozAlign: "right" },
+                { title: "預計付款日", field: "預計付款日" },
+                { title: "指定傳票日", field: "指定傳票日" },
             ]
         })
     },
@@ -456,45 +347,32 @@ function elementsChangeClass(elements, behavior, classNames) {
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 
-var table02Data = [{
-        id: "a1",
-        再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "USD",
-        帳單金額: "100.00",
-        銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "40.00"
-    },
-    {
-        id: "a2",
-        再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "JPY",
-        帳單金額: "100.00",
-        銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "20.00"
-    },
-    {
-        id: "a3",
-        再保公司: "再保公司",
-        帳別: "帳別",
-        帳單幣別: "JPY",
-        帳單金額: "70.00",
-        銷帳紀錄: "銷帳紀錄",
-        未沖銷餘額: "未沖銷餘額",
-        銷帳金額: "30.00"
-    },
-];
 
+let table02Data = [{
+        id: "a1",
+        銷帳編號: "銷帳編號",
+        收付代碼: "收付代碼",
+        查詢暫收: "查詢暫收",
+        暫收編號: "暫收編號",
+        再保人代號: "再保人代號",
+        幣別: "幣別",
+        暫收金額: "暫收金額",
+        暫收沖銷金額: "暫收沖銷金額",
+        月兌換率: "月兌換率",
+        轉換本位幣金額: "轉換本位幣金額",
+        損益別: "損益別",
+        損益金額: "損益金額",
+        其他金額: "其他金額",
+    },
+    
+];
 var table02 = new Tabulator("#table02", {
     data: table02Data,
     layout: "fitColumns",
     height: "100%",
     pagination: "local",
-    paginationSize: 10,
-    paginationSizeSelector: [10, 30, 50, true],
+    paginationSize: true,
+    paginationSizeSelector: [5, 10, 30, 50, true],
     movableColumns: true,
     resizableRows: true,
     tooltips: true,
@@ -502,29 +380,25 @@ var table02 = new Tabulator("#table02", {
     tooltipGenerationMode: "hover",
     selectable: true,
     columns: [
-        { title: "再保公司", field: "再保公司" },
-        { title: "帳別", field: "帳別" },
-        { title: "帳單幣別", field: "帳單幣別" },
-        { title: "帳單金額", field: "帳單金額", hozAlign: "right" },
-        { title: "銷帳紀錄", field: "銷帳紀錄" },
-        { title: "未沖銷餘額", field: "未沖銷餘額", hozAlign: "right" },
-        {
-            title: "銷帳金額",
-            field: "銷帳金額",
-            formatter: function(cell, formatterParams, onRendered) {
-                cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-            },
-            editor: "input",
-            hozAlign: "right",
-        },
+        { title: "銷帳編號", field: "銷帳編號" },
+        { title: "收付代碼", field: "收付代碼" },
+        { title: "查詢暫收", field: "查詢暫收" },
+        { title: "暫收編號", field: "暫收編號" },
+        { title: "再保人代號", field: "再保人代號" },
+        { title: "幣別", field: "幣別" },
+        { title: "暫收金額", field: "暫收金額", hozAlign: "right" },
+        { title: "暫收沖銷金額", field: "暫收沖銷金額", hozAlign: "right" },
+        { title: "月兌換率", field: "月兌換率" },
+        { title: "轉換本位幣金額", field: "轉換本位幣金額", hozAlign:"right" },
+        { title: "損益別", field: "損益別" },
+        { title: "損益金額", field: "損益金額", hozAlign: "right" },
+        { title: "其他金額", field: "其他金額", hozAlign: "right" },
     ],
 });
 // 選擇預設勾選row
-// table02.selectRow(["a1", "a2"]);
+//table02.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
-////////////////////////////////////
 </script>
 
 </html>
