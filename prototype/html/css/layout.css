@@ -3356,6 +3356,7 @@ a.menu-active .menu-bar {
     border-left: #6A8EC3 solid 3px;
     border-radius: 4px;
     overflow: hidden;
+    white-space:nowrap;
 }
 
 .label-title {
