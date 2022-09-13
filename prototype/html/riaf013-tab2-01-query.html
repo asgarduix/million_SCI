@@ -258,7 +258,7 @@
 <script>
 let table01Data = [{
         id: "a1",
-        清帳批號: "11008017",
+        暫存批號: "H11008017",
         清帳日期: "清帳日期",
         公司代碼: "公司代碼",
         公司名稱: "公司名稱",
@@ -266,7 +266,7 @@ let table01Data = [{
     },
     {
         id: "a2",
-        清帳批號: "清帳批號1",
+        暫存批號: "H清帳批號1",
         清帳日期: "清帳日期",
         公司代碼: "公司代碼",
         公司名稱: "公司名稱",
@@ -274,7 +274,7 @@ let table01Data = [{
     },
     {
         id: "a3",
-        清帳批號: "清帳批號1",
+        暫存批號: "H清帳批號1",
         清帳日期: "清帳日期",
         公司代碼: "公司代碼",
         公司名稱: "公司名稱",
@@ -307,8 +307,8 @@ var table01 = new Tabulator("#table01", {
             }
         },
         {
-            title: "清帳批號",
-            field: "清帳批號",
+            title: "暫存批號",
+            field: "暫存批號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='riaf013-tab2-detail-tab1-query.html'>" + cell.getValue() + "</a>"
             },

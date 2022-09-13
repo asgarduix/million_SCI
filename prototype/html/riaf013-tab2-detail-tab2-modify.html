@@ -79,17 +79,17 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">對帳批號<span>11008017</span></div>
+                                <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">暫存批號<span>H11008017</span>
+                                    <div class="unitname-comfirm" status="false"><button>取號</button></div>
+                                </div>
                                 <div class="unitname-item unitname-cancel">
                                     <a href="riaf013-tab2-01-query.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
                             </div>
                         </div>
                         <!-- unittab -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
+                        <!-- <div class="card-detail">
                             <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
                                         <li><a href="riaf013-tab2-detail-tab1-query.html">清帳作業</a></li>
@@ -102,6 +102,20 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- unitstep -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-unitstep">
+                                <!-- unitStep -->
+                                <div class="content-component content-unitstep">
+                                    <ul process="3">
+                                        <li step="1" status="true"><a href="riaf013-tab2-detail-tab1-query.html" class="unitstep-active">清帳作業</a></li>
+                                        <li step="2" status="true"><a href="riaf013-tab2-detail-tab2-query.html">暫收付紀錄</a></li>
+                                        <li step="3" status="false"><a href="riaf013-tab2-detail-tab3-query.html">付款設定</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -119,6 +133,11 @@
                                             <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf013-tab2-detail-tab2-add.html'"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf013-tab2-detail-tab2-modify.html'"><span>修改</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-delete" type="button" onclick="location.href='riaf013-tab2-detail-tab2-delete.html'"><span>刪除</span></button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-btn-secondary">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-secondary btn-save" type="button" onclick="location.href='riaf013-tab2-detail-tab3-query.html'"><span>存檔｜下一步：付款設定</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -162,13 +181,13 @@
             </main>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-modify -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">新增</div>
+                        <div class="dialog-header-item dialog-title">銷帳編號<span>1234567</span></div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="riaf013-tab2-detail-tab2-query.html"><span class="material-icons">cancel</span></a>
                         </div>

@@ -842,6 +842,17 @@
     vertical-align: text-bottom;
 }
 
+.header-unit-item a[title="再保"]::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "layers";
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+    font-size: 1.125rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
 .menu-btn a {
     display: block;
     width: 40px;
@@ -1572,8 +1583,9 @@ a.menu-active .menu-bar {
 .sub-unitname-title[belongto]::before {
     content: attr(belongto);
     display: table;
-    padding: 2px 6px 4px 6px;
-    background: #EADECA;
+    padding: 2px 0 4px;
+    /*border: #8C7457 solid 1px;
+    background: #fffbf6;*/
     font-size: 0.75rem;
     font-weight: normal;
     line-height: 1;
@@ -1588,6 +1600,32 @@ a.menu-active .menu-bar {
     font-size: 0.75rem;
     color: #8C7457;
     border-radius: 4px;
+}
+
+.unitname-comfirm {
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding-left: 10px;
+}
+
+.unitname-comfirm button {
+    padding: 4px 15px;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.unitname-comfirm[status="false"] button {
+    background: #ddd;
+    color: #999;
+}
+
+.unitname-comfirm[status="true"] button {
+    background: #14a14a;
+    color: #fff;
+}
+
+.unitname-comfirm[status="true"] button:hover {
+    background: #0e813a;
 }
 
 /* END: unitname */
@@ -1648,6 +1686,112 @@ a.menu-active .menu-bar {
 }
 
 /* END: unittab */
+/* START: unitstep */
+.detail-board-unitstep {
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-top: #ccc solid 1px;
+    border-radius: 0;
+    background: none;
+}
+
+.content-unitstep {
+    margin: 0;
+    padding: 20px 10px;
+    /*background: #fff;*/
+}
+
+.content-unitstep ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+
+.content-unitstep li {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.content-unitstep li:nth-last-child(1) {
+    border-right: none;
+}
+
+.content-unitstep li::before {
+    content: attr(step);
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto 3px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: #027DB4 solid 2px;
+    color: #fff;
+    background: #027DB4;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.content-unitstep li::after {
+    font-family: 'Material Icons', sans-serif;
+    content: "trending_flat";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #027DB4;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.content-unitstep li:nth-last-child(1)::after {
+    content: "";
+    display: none;
+}
+
+.content-unitstep a {
+    color: #027DB4;
+}
+
+.content-unitstep li[status="false"] {
+    background: none;
+}
+
+.content-unitstep li[status="false"] a {
+    color: #aaa;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.content-unitstep li[status="false"]::before {
+    content: attr(step);
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto 3px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: #bbb solid 2px;
+    color: #99a;
+    background: #ddd;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.content-unitstep li[status="false"]::after {
+    font-family: 'Material Icons', sans-serif;
+    content: "trending_flat";
+    font-feature-settings: 'liga';
+    color: #aaa;
+}
+
+/* END: unitstep */
 /* START: tabulator創立table */
 .content-table {
     margin: 0;
@@ -3356,7 +3500,7 @@ a.menu-active .menu-bar {
     border-left: #6A8EC3 solid 3px;
     border-radius: 4px;
     overflow: hidden;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .label-title {
@@ -6372,7 +6516,8 @@ span.calendar-item::after {
     .header-unit-item a[title="會計"]::before,
     .header-unit-item a[title="報表"]::before,
     .header-unit-item a[title="公用"]::before,
-    .header-unit-item a[title="管理"]::before {
+    .header-unit-item a[title="管理"]::before,
+    .header-unit-item a[title="再保"]::before {
         content: "";
         margin-right: 0;
     }

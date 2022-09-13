@@ -79,7 +79,9 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">暫存批號<span>H11008017</span><div class="unitname-comfirm" status="true"><button type="button" onclick="location.href='riaf013-tab2-detail-tab3-request.html'">取號</button></div></div>
+                                <div class="unitname-item unitname-title sub-unitname-title" belongto="#清帳作業">對帳批號<span>11008017</span>
+                                    <div class="unitname-comfirm" status="true"><button>取號</button></div>
+                                </div>
                                 <div class="unitname-item unitname-cancel">
                                     <a href="riaf013-tab2-01-query.html" data-toggle="tooltip" title="取消" data-placement="left"><span class="material-icons">cancel</span></a>
                                 </div>
@@ -327,6 +329,30 @@
                     <div class="aside-list" include-html-aside="include/aside/aside.html"></div>
                 </div>
             </main>
+        </div>
+    </div>
+    <!-- popup-confirm -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-confirm">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">暫存取號</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="riaf013-tab1-01-query.html"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <p>取號成功！<br>對帳批號<span class="dialog-count">11008017</span></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime" type="button" onclick="location.href='riaf013-tab2-01-query.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf013-tab2-01-query.html'">取消</button></li>
+                    </ul>
+                </div>
+            </form>
         </div>
     </div>
 </body>
