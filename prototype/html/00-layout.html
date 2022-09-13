@@ -46,6 +46,28 @@
                     <div class="non-menu-list"><span>暫無項目</span></div>
                     <!-- menu-list -->
                     <div class="menu-list" include-html="include/menu/layout.html"></div>
+                    <!-- menu-list -->
+                    <div class="menu-list">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>小群組2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="00-layout.html">
+                                    <span>FEDM0100</span>
+                                    <span>銀行檔查詢及維護</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="00-layout.html">
+                                    <span>FEDM0500</span>
+                                    <span>印鑑管理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -94,6 +116,20 @@
                                         <li></li>
                                         <li></li>
                                         <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- unitstep -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-unitstep">
+                                <!-- unitStep -->
+                                <div class="content-component content-unitstep">
+                                    <ul process="3">
+                                        <li step="1" status="true"><a href="#" class="unitstep-active">清帳作業</a></li>
+                                        <li step="2" status="false"><a href="#">暫收付紀錄</a></li>
+                                        <li step="3" status="false"><a href="#">付款設定</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -4125,7 +4161,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                    values.length === table ? .getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",
@@ -4136,7 +4172,7 @@ let table15 = new Tabulator("#table15", {
             bottomCalc: function(values, data, calcParams) {
                 let table = Tabulator.prototype.findTable("#table15")[0];
                 let str =
-                    values.length === table ?.getDataCount() ? "合計" : "小計";
+                    values.length === table ? .getDataCount() ? "合計" : "小計";
                 return `${str}：` + values.reduce((a, b) => a + b, 0);
             },
             formatter: "money",

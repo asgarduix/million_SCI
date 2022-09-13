@@ -644,6 +644,19 @@
     vertical-align: bottom;
 }
 
+.menu-list a[href=""]{
+    display: block;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #58a2cd;  
+    cursor: default;  
+}
+
+.menu-list a[href=""]:hover {
+    background: none;
+}
+
 /* END: menu */
 /* START: header */
 .headerModule-inner {
@@ -1711,8 +1724,9 @@ a.menu-active .menu-bar {
 }
 
 .content-unitstep li {
-    flex: 1;
-    text-align: center;
+    /*flex: 1;*/
+    /*text-align: center;*/
+    padding-right: 30px;
     position: relative;
 }
 
@@ -1722,10 +1736,11 @@ a.menu-active .menu-bar {
 
 .content-unitstep li::before {
     content: attr(step);
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     width: 26px;
     height: 26px;
-    margin: 0 auto 3px;
+    margin-right: 5px;
     font-size: 0.875rem;
     font-weight: bold;
     border: #027DB4 solid 2px;
@@ -1743,7 +1758,7 @@ a.menu-active .menu-bar {
     color: #027DB4;
     font-size: 1.5rem;
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1771,10 +1786,11 @@ a.menu-active .menu-bar {
 
 .content-unitstep li[status="false"]::before {
     content: attr(step);
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     width: 26px;
     height: 26px;
-    margin: 0 auto 3px;
+    margin-right: 5px;
     font-size: 0.875rem;
     font-weight: bold;
     border: #bbb solid 2px;
