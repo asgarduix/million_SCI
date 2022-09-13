@@ -867,6 +867,40 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <!-- tabulator創立table -->
+                    <div class="card-detail">
+                        <!-- card-detail >> board -->
+                        <div class="detail-board">
+                            <!-- tab-link -->
+                            <div class="content-component content-tab-link">
+                                <ul>
+                                    <li><a href="riaf007-04-query-popup.html" class="tab-link-active">帳單項目</a></li>
+                                </ul>
+                            </div>
+                            <div class="content-component content-table">
+                                <div class="table-func">
+                                    <div class="table-func-inner">
+                                        <div class="table-func-basic">
+                                            <div class="func-basic-item func-count">
+                                                <ul>
+                                                    <li class="count-total">3</li>
+                                                </ul>
+                                            </div>
+                                            <!-- <div class="func-basic-item func-filter">
+                                                <div class="func-filter-inner">
+                                                    <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="table-func-page"></div>
+                                    </div>
+                                </div>
+                                <div id="table02"></div>
+                                <div class="table-footer"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -1204,6 +1238,65 @@ var tableSelect = new Tabulator("#tableSelect", {
 });
 // 選擇預設勾選row
 // tableSelect.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+
+let table02Data = [{
+        id: "a1",
+        代碼: "31",
+        資料項名稱: "RI-COMM",
+        借貸: "+",
+        幣別: "TWD-台幣",
+        金額: "-621",
+        再保科目: "515040",
+        科目名稱: "再保佣金費用",
+    },
+    {
+        id: "a2",
+        代碼: "03",
+        資料項名稱: "LOSS-PAID",
+        借貸: "-",
+        幣別: "TWD-台幣",
+        金額: "1,777,710",
+        再保科目: "512501",
+        科目名稱: "再保賠款與給付",
+    },
+    {
+        id: "a3",
+        代碼: "01",
+        資料項名稱: "RI-PREM",
+        借貸: "-",
+        幣別: "TWD-台幣",
+        金額: "-1,714",
+        再保科目: "411020",
+        科目名稱: "再保費收入",
+    },
+];
+var table02 = new Tabulator("#table02", {
+    data: table02Data,
+    layout: "fitColumns",
+    height: "100%",
+    pagination: "local",
+    paginationSize: true,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [
+        { title: "代碼", field: "代碼" },
+        { title: "資料項名稱", field: "資料項名稱" },
+        { title: "借+貸", field: "借貸" },
+        { title: "幣別", field: "幣別" },
+        { title: "金額", field: "金額", hozAlign: "right" },
+        { title: "再保科目", field: "再保科目" },
+        { title: "科目名稱", field: "科目名稱" },
+    ],
+});
+// 選擇預設勾選row
+//table02.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
