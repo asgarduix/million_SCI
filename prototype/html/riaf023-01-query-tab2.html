@@ -90,19 +90,25 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 入帳日期/ 已銷/未銷 -->
+                                    <!-- 入帳日期/入帳期間/險別 -->
                                     <div class="query-row">
-                                        <div class="query-field query-double-datepicker">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">入帳日期</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="入帳日期" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="入帳日期" data-toggle="tooltip" data-placement="top">
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -113,7 +119,8 @@
                                                 <div class="query-field-item query-field-title">入帳期間</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="入帳期間" id="">
-                                                        <option value="" selected>逾期三個月</option>
+                                                        <option value="" selected>全部</option>
+                                                        <option value="">逾期三個月</option>
                                                         <option value="">逾期六個月</option>
                                                         <option value="">逾期九個月</option>
                                                         <option value="">逾期一年</option>
@@ -124,19 +131,47 @@
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">已銷/未銷</div>
+                                                <div class="query-field-item query-field-title">險別</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="已銷/未銷" id="">
-                                                        <option value="" selected>全部</option>
-                                                        <option value="">已銷</option>
-                                                        <option value="">未銷</option>
+                                                    <select name="險別" id="">
+                                                        <option value="">全部</option>
+                                                        <option value="" selected="">車險</option>
+                                                        <option value="">水險(貨物險)</option>
+                                                        <option value="">火險</option>
+                                                        <option value="">意外險</option>
+                                                        <option value="">AH險</option>
+                                                        <option value="">漁船險</option>
+                                                        <option value="">船體險</option>
+                                                        <option value="">航空險</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 賠案號碼/再保人代號/公司別 -->
+                                    <!-- 賠案日期/賠案號碼/再保人代號 -->
                                     <div class="query-row">
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">賠案日期</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">賠案號碼</div>
@@ -149,13 +184,17 @@
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="再保人代號" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 已銷/未銷 -->
+                                    <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">公司別</div>
+                                                <div class="query-field-item query-field-title">已銷/未銷</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="公司別" id="">
-                                                        <option value="" selected>非OIU</option>
-                                                        <option value="">OIU</option>
+                                                    <select name="已銷/未銷" id="">
+                                                        <option value="" selected>全部</option>
+                                                        <option value="">已銷</option>
+                                                        <option value="">未銷</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -260,6 +299,7 @@ let table01Data = [{
         險種: "工程保險",
         年度: "106",
         賠付日期: "110/01/11",
+        期數: "1",
         賠案號碼: "06101C0122",
         賠案序號: "00S03",
         地區: "00",
@@ -275,6 +315,7 @@ let table01Data = [{
         險種: "--",
         年度: "--",
         賠付日期: "--",
+        期數: "12",
         賠案號碼: "--",
         賠案序號: "00S03",
         地區: "00",
@@ -321,6 +362,7 @@ var table01 = new Tabulator("#table01", {
         { title: "險種", field: "險種" },
         { title: "年度", field: "年度" },
         { title: "賠付日期", field: "賠付日期" },
+        { title: "期數", field: "期數" },
         { title: "賠案號碼", field: "賠案號碼" },
         { title: "賠案序號", field: "賠案序號" },
         { title: "地區", field: "地區" },
