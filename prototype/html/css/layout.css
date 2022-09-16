@@ -644,13 +644,13 @@
     vertical-align: bottom;
 }
 
-.menu-list a[href=""]{
+.menu-list a[href=""] {
     display: block;
     padding: 20px 10px 4px;
     font-size: 0.75rem;
     font-weight: bold;
-    color: #58a2cd;  
-    cursor: default;  
+    color: #58a2cd;
+    cursor: default;
 }
 
 .menu-list li:nth-child(1) a[href=""] {
@@ -661,7 +661,7 @@
     background: none;
 }
 
-.menu-list li > a[href=""] {
+.menu-list li>a[href=""] {
     padding-top: 20px;
 }
 
@@ -1467,7 +1467,7 @@ a.menu-active .menu-bar {
     border: #eee solid 1px;
     border-radius: 5px;
     background: #fff;
-    padding: 5px 0 10px;
+    padding: 5px 0;
 }
 
 .card-scroll-fixed {
@@ -2494,7 +2494,7 @@ a.menu-active .menu-bar {
 /* END: 跟隨tabulator_count */
 /* START: 跟隨tabulator_accordion */
 .content-accordion {
-    border-bottom: #eee solid 1px;
+    /*border-bottom: #eee solid 1px;*/
     margin: 0;
 }
 
@@ -2509,7 +2509,6 @@ a.menu-active .menu-bar {
     outline: none;
     transition: 0.4s;
     padding: 0;
-    margin-bottom: 5px;
 }
 
 .content-accordion-btn span {
@@ -2522,7 +2521,8 @@ a.menu-active .menu-bar {
 }
 
 .content-accordion-panel {
-    padding: 5px 10px;
+    padding: 10px;
+    margin: 10px 0 0;
     background: #f9f9f9;
     border-radius: 4px;
     display: block;
@@ -2554,6 +2554,56 @@ a.menu-active .menu-bar {
     color: #aaa;
 }
 
+.content-accordion-panel table {
+    width: 100%;
+}
+
+.content-accordion-panel tr {
+    border-top: #ddd solid 1px;
+    color: #027DB4;
+}
+
+.content-accordion-panel tr:nth-last-child(1) {
+    border-bottom: #ddd solid 1px;
+}
+
+.content-accordion-panel tr:nth-child(1) {
+    background: #d9edff;
+    border-top: none;
+}
+
+.content-accordion-panel tr:nth-child(even) {
+    background: #fff;
+}
+
+.content-accordion-panel th:nth-child(1) {
+    width: 120px;
+}
+
+.content-accordion-panel th:nth-child(2) {
+    width: 260px;
+}
+
+.content-accordion-panel th,
+.content-accordion-panel td {
+    padding: 4px;
+    font-size: 0.875rem;
+}
+
+.content-accordion-panel td {
+    padding: 6px;
+    color: #555;
+    border-right: #ddd solid 1px;
+}
+
+.content-accordion-panel td[attr="money"] {
+    text-align: right;
+}
+
+.content-accordion-panel td:nth-last-child(1) {
+    border-right: none;
+}
+
 .content-accordion-btn span::before {
     font-family: 'Material Icons', sans-serif;
     content: "add_circle_outline";
@@ -2571,6 +2621,20 @@ a.menu-active .menu-bar {
     vertical-align: text-top;
     color: #038CC7;
     margin-right: 1px;
+    font-size: 0.875rem;
+}
+
+.content-accordion-btn span.counter-formula {
+    border-left: #038CC7 solid 1px;
+    margin-left: 7px;
+}
+
+.content-accordion-btn span.counter-formula::before {
+    font-family: 'Material Icons', sans-serif;
+    content: "functions";
+    font-feature-settings: 'liga';
+    vertical-align: text-top;
+    margin: 0 2px 0 5px;
     font-size: 0.875rem;
 }
 
