@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf023-01-query">
+<body id="canvas" class="riaf023-01-query-tab2">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -189,6 +189,13 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="riaf023-01-query-tab1.html">帳齡分析</a></li>
+                                        <li><a href="riaf023-01-query-tab2.html" class="tab-link-active">明細表</a></li>
+                                    </ul>
+                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -249,20 +256,32 @@
 let table01Data = [{
         id: "a1",
         序號: "1",
+        險別: "意外險19",
+        險種: "工程保險",
+        年度: "106",
+        賠付日期: "110/01/11",
+        賠案號碼: "06101C0122",
+        賠案序號: "00S03",
+        地區: "00",
+        合約: "CCQEN",
+        再保經紀人: "R000051",
+        再保公司: "--",
+        金額: "-21,255,971",
+    },
+    {
+        id: "a1",
+        序號: "--",
         險別: "--",
         險種: "--",
-        再保人代號: "--",
-        賠案號: "--",
-        賠案序號: "--",
-        三個月內: "--",
-        三到六個月: "--",
-        六到九個月: "--",
-        九到十二個月: "--",
-        十二到十八個月: "--",
-        十八到二十四個月: "--",
-        二十四個月以上: "--",
-        期數: "--",
-        已銷未銷: "--",
+        年度: "--",
+        賠付日期: "--",
+        賠案號碼: "--",
+        賠案序號: "00S03",
+        地區: "00",
+        合約: "CCQEN",
+        再保經紀人: "R000051",
+        再保公司: "--",
+        金額: "21,255,971",
     },
 ];
 var table01 = new Tabulator("#table01", {
@@ -300,18 +319,15 @@ var table01 = new Tabulator("#table01", {
         { title: "序號", field: "序號" },
         { title: "險別", field: "險別" },
         { title: "險種", field: "險種" },
-        { title: "再保人代號", field: "再保人代號" },
-        { title: "賠案號", field: "賠案號" },
+        { title: "年度", field: "年度" },
+        { title: "賠付日期", field: "賠付日期" },
+        { title: "賠案號碼", field: "賠案號碼" },
         { title: "賠案序號", field: "賠案序號" },
-        { title: "3個月內", field: "三個月內" },
-        { title: "3~6個月", field: "三到六個月" },
-        { title: "6~9個月", field: "六到九個月" },
-        { title: "9~12個月", field: "九到十二個月" },
-        { title: "12~18個月", field: "十二到十八個月" },
-        { title: "18~24個月", field: "十八到二十四個月" },
-        { title: "24個月以上", field: "二十四個月以上" },
-        { title: "期數", field: "期數" },
-        { title: "已銷未銷", field: "已銷未銷" },
+        { title: "地區", field: "地區" },
+        { title: "合約", field: "合約" },
+        { title: "再保經紀人", field: "再保經紀人" },
+        { title: "再保公司", field: "再保公司" },
+        { title: "金額", field: "金額", hozAlign:"right" },
     ],
 });
 // 選擇預設勾選row
