@@ -336,6 +336,18 @@
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- 跳窗頁籤 -->
+                    <div class="dialog-content-tab">
+                        <ul>
+                            <li><a href="ffai0400-06-nestdata-popup.html">支票</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html">現金</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html">現金轉銀存</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html" class="tab-active">信用卡</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html">銀行存款</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html">暫收款項</a></li>
+                            <li><a href="ffai0400-06-nestdata-popup.html">中止契約</a></li>
+                        </ul>
+                    </div>
                     <!-- tabulator創立table -->
                     <div class="content-component content-table">
                         <div class="table-func">
@@ -518,7 +530,7 @@ var table = new Tabulator("#table01", {
         let container = document.createElement("div");
         let subtable = document.createElement("div");
 
-        $(container).css("display", "none")
+        $(container).css("display", "block")
         elementsChangeClass(container, "add", "table-subtable-container")
         elementsChangeClass(subtable, "add", "table-subtable")
         $(subtable).attr("id", row.getData().id)
