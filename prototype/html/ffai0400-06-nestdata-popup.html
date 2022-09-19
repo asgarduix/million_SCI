@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="ffai0400-04-cross-region">
+<body id="canvas" class="ffai0400-06-nestdata-popup">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -43,7 +43,7 @@
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
                     <div class="menu-pgName"><span>應收票據</span></div>
-                     <!-- menu-list -->
+                    <!-- menu-list -->
                     <div class="menu-list" include-html="include/menu/bill-receivable.html"></div>
                 </div>
             </div>
@@ -323,68 +323,19 @@
             </main>
         </div>
     </div>
-    <!-- popup-cross-region -->
+    <!-- popup-temporary -->
     <div class="content-component content-popup">
         <div class="popup-dialog popup-dialog-add">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">票號<span>PD4448549</span></div>
+                        <div class="dialog-header-item dialog-title">票號<span>PD4448549</span>｜信用卡</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="ffai0400-01-query.html"><span class="material-icons">cancel</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <!-- 跳窗頁籤 -->
-                    <div class="dialog-content-tab">
-                        <ul>
-                            <li><a href="ffai0400-02-summary.html">彙總檔</a></li>
-                            <li><a href="ffai0400-03-insurance.html">本地保單</a></li>
-                            <li><a href="ffai0400-04-cross-region.html" class="tab-active">跨區資料</a></li>
-                            <li><a href="ffai0400-05-temporary.html">暫收資料</a></li>
-                        </ul>
-                    </div>
-                    <!-- customize-form -->
-                    <div class="customize-form">
-                        <!-- 入帳單位/票號/銷帳日/銷帳序號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">入帳單位</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="入帳單位" value="00" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">票號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="票號" value="01" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銷帳日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銷帳日" value="110/04/06" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">銷帳序號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="銷帳序號" value="1550" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- tabulator創立table -->
                     <div class="content-component content-table">
                         <div class="table-func">
@@ -404,7 +355,7 @@
                                 <div class="table-func-page">頁碼</div>
                             </div>
                         </div>
-                        <div id="table-cross-region"></div>
+                        <div id="table-temporary"></div>
                         <div class="table-footer"></div>
                     </div>
                 </div>
@@ -660,24 +611,18 @@ function elementsChangeClass(elements, behavior, classNames) {
     }
 }
 
-// 跨區資料彈跳視窗tabulator //
-let tableCrossRegionData = [{
+// 暫收資料彈跳視窗tabulator //
+let tableTemporaryData = [{
     id: "a1",
-    入帳單位: "00",
-    銷帳單位: "06",
-    銷帳日: "110/06/10",
-    銷帳序號: "502",
-    票據金額: "1,678",
-    銷帳保費: "88,791",
-    到期日: "110/06/10",
-    託收日: "110/06/10",
-    兌現日: "110/06/10",
-    收費註: "C",
-    關係人: "",
+    訂單號碼: "訂單號碼",
+    收單銀行: "收單銀行",
+    刷卡金額: "刷卡金額",
+    請款日: "請款日",
+    入帳日: "入帳日",
 }, ]
 
-var table = new Tabulator("#table-cross-region", {
-    data: tableCrossRegionData,
+var table = new Tabulator("#table-temporary", {
+    data: tableTemporaryData,
     layout: "fitColumns",
     height: "100%",
     pagination: "local",
@@ -689,17 +634,11 @@ var table = new Tabulator("#table-cross-region", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     columns: [
-        { title: "入帳單位", field: "入帳單位" },
-        { title: "銷帳單位", field: "銷帳單位" },
-        { title: "銷帳日", field: "銷帳日" },
-        { title: "銷帳序號", field: "銷帳序號" },
-        { title: "票據金額", field: "票據金額", hozAlign: "right" },
-        { title: "銷帳保費", field: "銷帳保費", hozAlign: "right" },
-        { title: "到期日", field: "到期日" },
-        { title: "託收日", field: "託收日" },
-        { title: "兌現日", field: "兌現日" },
-        { title: "收費註", field: "收費註" },
-        { title: "關係人", field: "關係人" },
+        { title: "訂單號碼", field: "訂單號碼" },
+        { title: "收單銀行", field: "收單銀行" },
+        { title: "刷卡金額", field: "刷卡金額", hozAlign: "right", },
+        { title: "請款日", field: "請款日" },
+        { title: "入帳日", field: "入帳日" },
     ],
 });
 </script>

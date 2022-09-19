@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="ffai0400-query">
+<body id="canvas" class="ffai0400-01-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -43,94 +43,8 @@
                         <input type="text" id="menu_filter" placeholder="搜尋目錄">
                     </div>
                     <div class="menu-pgName"><span>應收票據</span></div>
-                    <div class="menu-list">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0100</span>
-                                    <span>應收票據維護作業</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0100</span>
-                                    <span>應收票據報表列印</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0250</span>
-                                    <span>應收票據託收入帳列印</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0150</span>
-                                    <span>應收票據更正</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0500</span>
-                                    <span>應收票據異常維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0500</span>
-                                    <span>應收票據撤退票報表列印</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0400</span>
-                                    <span>應收票據整批兌現</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0900</span>
-                                    <span>應收票據一班兌現維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0700</span>
-                                    <span>應收票據異常表列印</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0300</span>
-                                    <span>應收票據兌現銷帳報表列印</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP0400</span>
-                                    <span>託收票據盤點清冊</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCP1000</span>
-                                    <span>應收票據更正統計</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="menu-list-active">
-                                    <span>FFAI0400</span>
-                                    <span>應收票據查詢</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span></span>
-                                    <span>應收票據變動差異查詢</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- menu-list -->
+                    <div class="menu-list" include-html="include/menu/bill-receivable.html"></div>
                 </div>
             </div>
         </nav>
@@ -168,7 +82,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 選擇/建檔單位/票號 -->
+                                    <!-- 選擇 -->
                                     <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
@@ -191,6 +105,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <!-- 建檔單位/票號 -->
+                                    <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">建檔單位</div>
@@ -385,11 +302,11 @@
                                                         <li class="count-total">2</li>
                                                     </ul>
                                                 </div>
-                                                <div class="func-basic-item func-filter">
+                                                <!-- <div class="func-basic-item func-filter">
                                                     <div class="func-filter-inner">
                                                         <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="table-func-page">頁碼</div>
                                         </div>
@@ -431,80 +348,54 @@
 <script src="js/pg.js"></script>
 <script>
 let nestedData = [{
-        id: "a1",
-        燈號: "已結案",
-        單位: "01",
-        票號: "PD4448549",
-        開票人: "聯豐企業股份有限公司",
-        託收銀行: "1N",
-        票據金額: "33,371",
-        到期日: "110/04/15",
-        託收日: "110/04/15",
-        銀行託收日: "110/04/15",
-        兌現日: "110/05/24",
-        會計入帳日: "110/04/13",
-        付款: "04-008",
-        ntTable: [{
-                建檔處理日: "110/03/15",
-                收託日: "110/03/03",
-                銀行收託日: "110/03/03",
-                撤退票日: "110/03/03",
-                退票原因: "0-撤票",
-                銷案註: "N",
-                交換現金: "0",
-                交換憑證: "0",
-                交換信用卡: "0",
-                交換銀存: "0",
-                票據狀態: "撤票"
-            },
-            {
-                建檔處理日: "110/03/15",
-                收託日: "110/03/03",
-                銀行收託日: "110/03/03",
-                撤退票日: "110/03/03",
-                退票原因: "6-記名背書不全",
-                銷案註: "N",
-                交換現金: "0",
-                交換憑證: "0",
-                交換信用卡: "0",
-                交換銀存: "0",
-                票據狀態: "終止"
-            },
-        ]
-    },
-    {
-        id: "a2",
-        燈號: "未結案",
-        單位: "01",
-        票號: "PD4448549",
-        開票人: "聯豐企業股份有限公司",
-        託收銀行: "1N",
-        票據金額: "33,371",
-        到期日: "110/04/15",
-        託收日: "110/04/15",
-        銀行託收日: "110/04/15",
-        兌現日: "110/05/24",
-        會計入帳日: "110/04/13",
-        付款: "04-008",
-        ntTable: [{
-            建檔處理日: "110/03/15",
-            收託日: "110/03/03",
-            銀行收託日: "110/03/03",
-            撤退票日: "110/03/03",
-            退票原因: "0-撤票",
-            銷案註: "N",
-            交換現金: "0",
-            交換憑證: "0",
-            交換信用卡: "0",
-            交換銀存: "0",
-            票據狀態: "撤票"
-        }, ]
-    },
-]
+    id: "a1",
+    燈號: "已結案",
+    單位: "01",
+    票號: "票號",
+    開票人: "開票人",
+    託收銀行: "託收銀行",
+    票據金額: "票據金額",
+    到期日: "到期日",
+    託收日: "託收日",
+    銀行託收日: "銀行託收日",
+    兌現日: "兌現日",
+    會計入帳日: "會計入帳日",
+    發票人帳號: "發票人帳號",
+    關係人: "關係人",
+    入帳單位: "入帳單位",
+    銷帳單位: "銷帳單位",
+    收費註: "收費註",
+    兌現處理日: "兌現處理日",
+    幣別: "幣別",
+    兌換率: "兌換率",
+    折台金額: "折台金額",
+    簽收人: "簽收人",
+    簽收日: "簽收日",
+    換票註: "換票註",
+    銷案註: "銷案註",
+    銷案日期: "銷案日期",
+    ntTable: [{
+        建檔處理日: "建檔處理日",
+        撤退票日: "撤退票日",
+        退票原因: "退票原因",
+        銷案註: "銷案註",
+        支票: "支票",
+        現金: "現金",
+        現金轉銀存: "現金轉銀存",
+        信用卡: "信用卡",
+        銀行存款: "銀行存款",
+        暫收款項: "暫收款項",
+        中止契約: "中止契約",
+        票據狀態: "票據狀態",
+        核准日: "核准日",
+        核准人: "核准人",
+        結案處理日: "結案處理日",
+    }, ]
+}, ]
 
 var table = new Tabulator("#table01", {
     height: "100%",
-    layout: "fitColumns",
+    layout: true,
     movableColumns: true,
     data: nestedData,
     columns: [{
@@ -556,7 +447,7 @@ var table = new Tabulator("#table01", {
             title: "票號",
             field: "票號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='#'>" + cell.getValue() + "</a>"
+                return "<a href='ffai0400-02-summary.html'>" + cell.getValue() + "</a>"
             },
             // formatter: "link",
         },
@@ -568,7 +459,20 @@ var table = new Tabulator("#table01", {
         { title: "銀行託收日", field: "銀行託收日" },
         { title: "兌現日", field: "兌現日" },
         { title: "會計入帳日", field: "會計入帳日" },
-        { title: "付款", field: "付款" },
+        { title: "發票人帳號", field: "發票人帳號" },
+        { title: "關係人", field: "關係人" },
+        { title: "入帳單位", field: "入帳單位" },
+        { title: "銷帳單位", field: "銷帳單位" },
+        { title: "收費註", field: "收費註" },
+        { title: "兌現處理日", field: "兌現處理日" },
+        { title: "幣別", field: "幣別" },
+        { title: "兌換率", field: "兌換率" },
+        { title: "折台金額", field: "折台金額" },
+        { title: "簽收人", field: "簽收人" },
+        { title: "簽收日", field: "簽收日" },
+        { title: "換票註", field: "換票註" },
+        { title: "銷案註", field: "銷案註" },
+        { title: "銷案日期", field: "銷案日期" },
     ],
     rowFormatter: function(row) {
         let container = document.createElement("div");
@@ -587,16 +491,69 @@ var table = new Tabulator("#table01", {
             data: row.getData().ntTable,
             columns: [
                 { title: "建檔/處理日", field: "建檔處理日" },
-                { title: "收託日", field: "收託日" },
-                { title: "銀行收託日", field: "銀行收託日" },
                 { title: "撤/退票日", field: "撤退票日" },
                 { title: "退票原因", field: "退票原因" },
                 { title: "銷案註", field: "銷案註" },
-                { title: "交換現金", field: "交換現金", hozAlign: "right" },
-                { title: "交換憑證", field: "交換憑證" },
-                { title: "交換信用卡", field: "交換信用卡" },
-                { title: "交換銀存", field: "交換銀存" },
+                {
+                    title: "支票",
+                    field: "支票",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "現金",
+                    field: "現金",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "現金轉銀存",
+                    field: "現金轉銀存",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "信用卡",
+                    field: "信用卡",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='ffai0400-06-nestdata-popup.html'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "銀行存款",
+                    field: "銀行存款",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "暫收款項",
+                    field: "暫收款項",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
+                {
+                    title: "中止契約",
+                    field: "中止契約",
+                    hozAlign: "right",
+                    formatter: function(cell, formatterParams, onRendered) {
+                        return "<a href='#'>" + cell.getValue() + "</a>"
+                    },
+                },
                 { title: "票據狀態", field: "票據狀態" },
+                { title: "核准日", field: "核准日" },
+                { title: "核准人", field: "核准人" },
+                { title: "結案處理日", field: "結案處理日" },
             ]
         })
     },

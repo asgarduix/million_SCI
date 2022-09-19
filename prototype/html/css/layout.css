@@ -2337,6 +2337,10 @@ a.menu-active .menu-bar {
     color: #026D93;
 }
 
+.dialog-content .content-table {
+    padding: 5px 0;
+}
+
 /* END: tabulator創立table */
 /* START: 跟隨tabulator_condition */
 .content-condition {
@@ -4236,6 +4240,10 @@ a.menu-active .menu-bar {
 
 .customize-form-row:nth-last-child(1) .customize-form-field:nth-last-child(1) .customize-form-entry {
     border-bottom-right-radius: 4px;
+}
+
+.customize-form-row:nth-last-child(1) .customize-form-field:nth-child(1) .customize-field-inner {
+    border-top-left-radius: 4px;
 }
 
 .customize-form-header {
