@@ -4339,7 +4339,6 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-inner {
-    background: #f7f7f7;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -4936,7 +4935,7 @@ a.menu-active .menu-bar {
 }
 
 .page-customize-form {
-    background: #fff;
+    background: #fefefe;
     margin-bottom: 10px;
     border: #bbb solid 1px;
 }
