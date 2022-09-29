@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="riaf051-03-modify-note-delete">
+<body id="canvas" class="riaf051-03-modify-info-delete">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -269,53 +269,8 @@
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-4">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-entry customize-form-entry-all customize-form-input">
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck01" name="處理方式" checked=""><label for="note-ck01">催收比例 (第一類資產)</label><span><input type="text" placeholder="請輸入值" value="50" widthtt="50px">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck02" name="處理方式"><label for="note-ck02">催收比例 (第二類資產)</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck03" name="處理方式"><label for="note-ck03">催收比例 (第三類資產)</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck04" name="處理方式"><label for="note-ck04">催收比例 (第四類資產)</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck05" name="處理方式"><label for="note-ck05">催收比例 (第五類資產)</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck06" name="處理方式" checked=""><label for="note-ck06">備呆比例</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <div><input type="checkbox" id="note-ck07" name="處理方式"><label for="note-ck07">停止收付</label><span><input type="text" placeholder="請輸入值" value="50">%</span></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>備註</span>
+                                <span>異動資料</span>
                             </div>
                         </div>
                         <!-- 按鈕 -->
@@ -324,13 +279,13 @@
                                 <div class="customize-form-field customize-form-field-4 customize-form-field-btn">
                                     <ul>
                                         <li>
-                                            <button type="button" onclick="location.href='riaf051-03-modify-note-add.html'">新增</button>
+                                            <button type="button" onclick="location.href='riaf051-03-modify-info-add.html'">新增</button>
                                         </li>
                                         <li>
-                                            <button type="button" onclick="location.href='riaf051-03-modify-note-modify.html'">修改</button>
+                                            <button type="button" onclick="location.href='riaf051-02-add-info-modify.html'">修改</button>
                                         </li>
                                         <li>
-                                            <button type="button" onclick="location.href='riaf051-03-modify-note-delete.html'">刪除</button>
+                                            <button type="button" onclick="location.href='riaf051-02-add-info-delete.html'">刪除</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -339,7 +294,7 @@
                         <!-- table -->
                         <div class="customize-form-row">
                             <div class="content-component content-table">
-                                <div id="modify-note-table"></div>
+                                <div id="add-info-table"></div>
                             </div>
                         </div>
                     </div>
@@ -366,12 +321,12 @@
                     </div>
                 </div>
                 <div class="dialog-content">
-                    <p>是否執行刪除?<br/>刪除<span class="dialog-count">1</span></p>
+                    <p>是否執行刪除?<br />刪除<span class="dialog-count">1</span></p>
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button class="btn-warn" type="button" onclick="location.href='riaf051-03-modify-note.html'">確定</button></li>
-                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-note.html'">取消</button></li>
+                        <li><button class="btn-warn" type="button" onclick="location.href='riaf051-03-modify-info.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-info.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -465,25 +420,20 @@ var table01 = new Tabulator("#table01", {
 // 選擇預設勾選row
 // table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
 
-let modifyNoteTableData = [{
-        id: "a1",
-        序號: "--",
-        異動說明: "異動說明",
-        異動日期: "異動日期",
-        異動人員: "異動人員",
-    },
-    {
-        id: "a2",
-        序號: "--",
-        異動說明: "異動說明",
-        異動日期: "異動日期",
-        異動人員: "異動人員",
-    },
-];
 
-var modifyNoteTable = new Tabulator("#modify-note-table", {
-    data: modifyNoteTableData,
+let addinfoTableData = [{
+    id: "a1",
+    異動代號: "異動代號",
+    登入人員代號: "登入人員代號",
+    異動日期: "異動日期",
+    異動內容: "異動內容",
+    檔案: "檔案",
+}, ];
+
+var addinfoTable = new Tabulator("#add-info-table", {
+    data: addinfoTableData,
     layout: "fitColumns",
     height: "100%",
     pagination: "local",
@@ -507,15 +457,15 @@ var modifyNoteTable = new Tabulator("#modify-note-table", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "序號", field: "序號" },
-        { title: "異動說明", field: "異動說明" },
+        { title: "異動代號", field: "異動代號" },
+        { title: "登入人員代號", field: "登入人員代號" },
         { title: "異動日期", field: "異動日期" },
-        { title: "異動人員", field: "異動人員" },
+        { title: "異動內容", field: "異動內容" },
+        { title: "檔案", field: "檔案" },
     ],
 });
-
 // 選擇預設勾選row
-modifyNoteTable.selectRow(["a1"]);
+// table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 // table.selectRow(table.setFilter("id","=","a1"));
 </script>

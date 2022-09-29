@@ -95,6 +95,76 @@ async function includeAside() {
 }
 
 includeAside();
+
+// include-content-structure 
+async function includeContent() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.querySelectorAll(".content-block");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html-content");
+        if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("include-html-content");
+                    includeMenu();
+                }
+            }
+            xhttp.open("GET", file, false);
+            xhttp.send();
+            /* Exit the function: */
+            return
+        }
+    }
+}
+
+includeContent();
+
+// include-content-structure 
+async function includeTab() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.querySelectorAll(".tab-list");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html-tab");
+        if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("include-html-tab");
+                    includeMenu();
+                }
+            }
+            xhttp.open("GET", file, false);
+            xhttp.send();
+            /* Exit the function: */
+            return
+        }
+    }
+}
+
+includeTab();
+includeTab().then(() => {
+    const pageId = document.getElementById('canvas');
+    const pageClass = pageId.getAttribute("class");
+    const {pageName} = /(?<pageName>[a-zA-Z]+[\d]+-[\d]+-[a-zA-Z]+-[a-zA-Z]+)/.exec(pageClass).groups
+    // const pageName = pageClass;
+    // const pageNameAction = pageClass.split("-")[0];
+    document.querySelector(`.tab-list a[href^=${pageName}]`) ?.classList ?.add('tab-active');
+});
 //////////////////////////////////////////////////////////////////////
 var $canvas = document.getElementById("canvas");
 var $menu = document.getElementById("left_menu");

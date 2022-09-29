@@ -59,14 +59,14 @@
                 <div class="content">
                     <!-- breadcrumb -->
                     <div class="content-component content-breadcrumb">
-                        <div class="globl-category">
+                        <!-- <div class="globl-category">
                             <div class="globl-category-inner">
                                 <select name="" id="">
                                     <option value="">非OIU</option>
                                     <option value="">OIU</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <ul>
                             <li><a href="#">再保</a></li>
                             <li><a href="#">匯款資料維護</a></li>
@@ -197,8 +197,8 @@
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-add" type="button" onclick="location.href='riaf051-02-add-credit.html'"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf051-03-modify-transfer.html'"><span>修改</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-main btn-modify" type="button" onclick="location.href='riaf051-03-modify-transfer.html'"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -260,20 +260,17 @@
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- customize-form -->
+                    <!-- 公司基本資料 -->
+                    <div class="content-block" include-html-content="include/content/riaf051/riaf051-popup-company.html"></div>
+                    <hr>
                     <!-- 跳窗頁籤 -->
-                    <div class="dialog-content-tab">
-                        <ul>
-                            <li><a href="riaf051-03-modify-transfer.html">匯款資訊</a></li>
-                            <li><a href="riaf051-03-modify-contact.html" class="tab-active">財管聯絡窗口</a></li>
-                            <li><a href="riaf051-03-modify-builder.html">創建人代號</a></li>
-                            <li><a href="riaf051-03-modify-note.html">備註</a></li>
-                        </ul>
-                    </div>
+                    <div class="tab-list" include-html-tab="include/content/riaf051/riaf051-popup-tab.html"></div>
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>財管聯絡窗口</span>
+                                <span>聯絡窗口</span>
                             </div>
                         </div>
                         <!-- 按鈕 -->
@@ -288,7 +285,7 @@
                                             <button type="button" onclick="location.href='riaf051-03-modify-contact-modify.html'">修改</button>
                                         </li>
                                         <li>
-                                            <button type="button" onclick="location.href='riaf051-03-modify-contact-delete.html'">刪除</button>
+                                            <button type="button" onclick="location.href='riaf051-02-modify-contact-delete.html'">刪除</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -297,7 +294,7 @@
                         <!-- table -->
                         <div class="customize-form-row">
                             <div class="content-component content-table">
-                                <div id="modify-transfer-table"></div>
+                                <div id="add-contact-table"></div>
                             </div>
                         </div>
                     </div>
@@ -311,13 +308,13 @@
             </form>
         </div>
     </div>
-    <!-- popup-add -->
+    <!-- popup-modify -->
     <div class="content-component content-popup sub-content-popup">
         <div class="popup-dialog popup-dialog-md">
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">王小小</div>
+                        <div class="dialog-header-item dialog-title">異動資料-修改</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -328,80 +325,67 @@
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>財管聯絡窗口</span>
+                                <span>聯絡窗口</span>
                             </div>
                         </div>
-                        <!-- 聯絡人說明/姓名 -->
+                        <!-- Name/Email -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">聯絡人說明</div>
+                                        <div class="customize-form-title">Name</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="聯絡人說明" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="Name" value="Name" title="Name" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">姓名</div>
+                                        <div class="customize-form-title">Email</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="姓名" value="王小小" title="王小小" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 職稱/E-mail -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">職稱</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="職稱" value="經理" title="經理" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">E-mail</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="E-mail" value="wang@mail.mail" title="wang@mail.mail" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="Email" value="Email" title="Email" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 電話/傳真 -->
+                        <!-- Tel/Direct -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">電話</div>
+                                        <div class="customize-form-title">Tel</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="電話" value="0911111111" title="0911111111" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="Tel" value="Tel" title="Tel" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">傳真</div>
+                                        <div class="customize-form-title">Direct</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="傳真" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="Direct" value="Direct" title="Direct" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 聯絡地址 -->
+                        <!--Address/備註 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-4">
+                                <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">聯絡地址</div>
+                                        <div class="customize-form-title">Address</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="聯絡地址" value="123台北市信義區忠孝東路2號" title="123台北市信義區忠孝東路2號" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="Address" value="Address" title="Address" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">備註</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="備註" value="備註" title="備註" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -411,8 +395,8 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button class="btn-prime" type="button" onclick="location.href='riaf051-03-modify-contact.html'">確定</button></li>
-                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-contact.html'">取消</button></li>
+                        <li><button class="btn-prime" type="button" onclick="location.href='riaf051-03-modify-contact1.html'">確定</button></li>
+                        <li><button class="btn-outline" type="button" onclick="location.href='riaf051-03-modify-contact1.html'">取消</button></li>
                     </ul>
                 </div>
             </form>
@@ -506,31 +490,20 @@ var table01 = new Tabulator("#table01", {
 // 選擇預設勾選row
 // table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
 
-let modifyTransferTableData = [{
-        id: "a1",
-        聯絡人說明: "--",
-        姓名: "王小小",
-        職稱: "經理",
-        Email: "wang@mail.mail",
-        電話: "0911111111",
-        傳真: "--",
-        聯絡地址: "123台北市信義區忠孝東路2號",
-    },
-    {
-        id: "a2",
-        聯絡人說明: "--",
-        姓名: "--",
-        職稱: "--",
-        Email: "--",
-        電話: "--",
-        傳真: "--",
-        聯絡地址: "--",
-    },
-];
+let addContactTableData = [{
+    id: "a1",
+    Name: "Name",
+    Email: "Email",
+    Tel: "Tel",
+    Direct: "Direct",
+    Address: "Address",
+    備註: "備註",
+}, ];
 
-var modifyTransferTable = new Tabulator("#modify-transfer-table", {
-    data: modifyTransferTableData,
+var addContactTable = new Tabulator("#add-contact-table", {
+    data: addContactTableData,
     layout: "fitColumns",
     height: "100%",
     pagination: "local",
@@ -554,18 +527,17 @@ var modifyTransferTable = new Tabulator("#modify-transfer-table", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "聯絡人說明", field: "聯絡人說明" },
-        { title: "姓名", field: "姓名" },
-        { title: "職稱", field: "職稱" },
-        { title: "E-mail", field: "Email" },
-        { title: "電話", field: "電話" },
-        { title: "傳真", field: "傳真" },
-        { title: "聯絡地址", field: "聯絡地址" },
+        { title: "Name", field: "Name" },
+        { title: "Email", field: "Email" },
+        { title: "Tel", field: "Tel" },
+        { title: "Direct", field: "Direct" },
+        { title: "Address", field: "Address" },
+        { title: "備註", field: "備註" },
     ],
 });
 
 // 選擇預設勾選row
-modifyTransferTable.selectRow(["a1"]);
+// table01.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 // table.selectRow(table.setFilter("id","=","a1"));
 </script>

@@ -59,14 +59,14 @@
                 <div class="content">
                     <!-- breadcrumb -->
                     <div class="content-component content-breadcrumb">
-                        <div class="globl-category">
+                        <!-- <div class="globl-category">
                             <div class="globl-category-inner">
                                 <select name="" id="">
                                     <option value="">非OIU</option>
                                     <option value="">OIU</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <ul>
                             <li><a href="#">再保</a></li>
                             <li><a href="#">匯款資料維護</a></li>
@@ -260,15 +260,12 @@
                     </div>
                 </div>
                 <div class="dialog-content">
+                    <!-- customize-form -->
+                    <!-- 公司基本資料 -->
+                    <div class="content-block" include-html-content="include/content/riaf051/riaf051-popup-company.html"></div>
+                    <hr>
                     <!-- 跳窗頁籤 -->
-                    <div class="dialog-content-tab">
-                        <ul>
-                            <li><a href="riaf051-03-modify-transfer.html">匯款資訊</a></li>
-                            <li><a href="riaf051-03-modify-contact.html">財管聯絡窗口</a></li>
-                            <li><a href="riaf051-03-modify-builder.html">創建人代號</a></li>
-                            <li><a href="riaf051-03-modify-note.html" class="tab-active">備註</a></li>
-                        </ul>
-                    </div>
+                    <div class="tab-list" include-html-tab="include/content/riaf051/riaf051-popup-tab.html"></div>
                     <!-- customize-form -->
                     <div class="customize-form">
                         <div class="customize-form-row">
