@@ -2642,6 +2642,23 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+.date-range span {
+    font-size: 0.875rem;
+}
+
+.date-range::before {
+    content: "(";
+    margin-left: 3px;
+}
+
+.date-range::after {
+    content: ")";
+}
+
+.date-range-year::after {
+    content: "/";
+}
+
 /* END: 跟隨tabulator_accordion */
 /* START: 跟隨tabulator_upload */
 .content-upload {
