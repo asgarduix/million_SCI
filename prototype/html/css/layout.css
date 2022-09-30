@@ -2580,12 +2580,12 @@ a.menu-active .menu-bar {
     background: #fff;
 }
 
-.content-accordion-panel th:nth-child(1) {
-    width: 120px;
+.content-accordion-panel th {
+    width: 15%;
 }
 
-.content-accordion-panel th:nth-child(2) {
-    width: 260px;
+.content-accordion-panel th:nth-child(1) {
+    width: 10%;
 }
 
 .content-accordion-panel th,
