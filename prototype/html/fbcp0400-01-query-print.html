@@ -165,26 +165,86 @@
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        <!-- tabulator創立table -->
+                        <!-- label -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-label">
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
+                                        <div class="label-item">
+                                            <div class="label-title">金額合計</div>
+                                            <div class="label-content label-content-counter">3,300,000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
                                 <!-- 跟隨tabulator_accordion -->
                                 <div class="content-component content-accordion">
                                     <div class="accordion-row">
-                                        <button class="content-accordion-btn accordion-active"><span>使用作業程式 (點擊顯示/收合)</span></button>
+                                        <button class="content-accordion-btn accordion-active"><span>使用科目</span><!-- <span class="counter-formula">(本月總額 - 上月總額) / 上月總額 = 差異百分比</span> --></button>
                                         <div class="content-accordion-panel">
-                                            <ul>
-                                                <li><span>1212</span><span>應收票據-催收款</span></li>
-                                                <li><span>121001</span><span>應收票據-託收保費</span></li>
-                                                <li><span>121002</span><span>應收票據-託收其他</span></li>
-                                                <li><span>121004</span><span>應收票據-外幣票據</span></li>
-                                                <li><span>121005</span><span>應收票據-強制險(純保費)</span></li>
-                                                <li><span>285006</span><span>應收票據-保費票據</span></li>
-                                            </ul>
+                                            <table>
+                                                <tr>
+                                                    <th>科目代號</th>
+                                                    <th>科目名稱</th>
+                                                    <th>金額</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1212</td>
+                                                    <td>應收票據-催收款</td>
+                                                    <td attr="money">1,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>121001</td>
+                                                    <td>應收票據-託收保費</td>
+                                                    <td attr="money">12,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>121002</td>
+                                                    <td>應收票據-託收其他</td>
+                                                    <td attr="money">20,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>121003</td>
+                                                    <td>應收票據-期票兌現</td>
+                                                    <td attr="money">30,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>121004</td>
+                                                    <td>應收票據-外幣票據</td>
+                                                    <td attr="money">2,400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>285005</td>
+                                                    <td>應收票據-強制險(純保費)</td>
+                                                    <td attr="money">10,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>285006</td>
+                                                    <td>應收票據-保費票據</td>
+                                                    <td attr="money">12,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>285008</td>
+                                                    <td>應收票據-保費案據</td>
+                                                    <td attr="money">1,000</td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- tabulator創立table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
                                 <!-- 燈號 -->
                                 <div class="content-component content-hint">
                                     <ul>
