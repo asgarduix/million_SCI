@@ -254,14 +254,18 @@
                 </div>
             </div>
         </div>
-        <!-- 合約分出-->
+        <!-- 分出分入 -->
         <div class="customize-form-row">
             <div class="customize-form-inner">
-                <div class="customize-form-field customize-form-field-4">
+                <div class="customize-form-field customize-form-field-2">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">合約分出</div>
+                        <div class="customize-form-title">分出分入</div>
                         <div class="customize-form-entry">
-                            <ul>
+                            <!-- 合約分出 -->
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><label class="customize-form-subtitle">合約分出</label></div>
+                                </li>
                                 <li>
                                     <div><input type="checkbox" id="add-ck03" name="合約分出"><label for="add-ck03">車險</label></div>
                                 </li>
@@ -278,19 +282,11 @@
                                     <div><input type="checkbox" id="add-ck07" name="合約分出"><label for="add-ck07">健康險</label></div>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 臨分分出-->
-        <div class="customize-form-row">
-            <div class="customize-form-inner">
-                <div class="customize-form-field customize-form-field-4">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">臨分分出</div>
-                        <div class="customize-form-entry">
-                            <ul>
+                            <!-- 臨分分出 -->
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><label class="customize-form-subtitle">臨分分出</label></div>
+                                </li>
                                 <li>
                                     <div><input type="checkbox" id="add-ck08" name="臨分分出"><label for="add-ck08">車險</label></div>
                                 </li>
@@ -307,19 +303,11 @@
                                     <div><input type="checkbox" id="add-ck12" name="臨分分出"><label for="add-ck12">健康險</label></div>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 合約分入-->
-        <div class="customize-form-row">
-            <div class="customize-form-inner">
-                <div class="customize-form-field customize-form-field-4">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">合約分入</div>
-                        <div class="customize-form-entry">
-                            <ul>
+                            <!-- 合約分入 -->
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><label class="customize-form-subtitle">合約分入</label></div>
+                                </li>
                                 <li>
                                     <div><input type="checkbox" id="add-ck13" name="合約分入"><label for="add-ck13">車險</label></div>
                                 </li>
@@ -336,19 +324,11 @@
                                     <div><input type="checkbox" id="add-ck17" name="合約分入"><label for="add-ck17">健康險</label></div>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 臨分分入 -->
-        <div class="customize-form-row">
-            <div class="customize-form-inner">
-                <div class="customize-form-field customize-form-field-4">
-                    <div class="customize-field-inner">
-                        <div class="customize-form-title">臨分分入</div>
-                        <div class="customize-form-entry">
-                            <ul>
+                            <!-- 臨分分入 -->
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><label class="customize-form-subtitle">臨分分入</label></div>
+                                </li>
                                 <li>
                                     <div><input type="checkbox" id="add-ck18" name="臨分分入"><label for="add-ck18">車險</label></div>
                                 </li>
@@ -365,6 +345,62 @@
                                     <div><input type="checkbox" id="add-ck22" name="臨分分入"><label for="add-ck22">健康險</label></div>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-2">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">比例</div>
+                        <div class="customize-form-entry">
+                            <!-- 催收比例 (第一類資產) -->
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck01" name="處理方式" checked=""><label for="note-ck01">催收比例 (第一類資產)</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck02" name="處理方式"><label for="note-ck02">催收比例 (第二類資產)</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck03" name="處理方式"><label for="note-ck03">催收比例 (第三類資產)</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck04" name="處理方式"><label for="note-ck04">催收比例 (第四類資產)</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck05" name="處理方式"><label for="note-ck05">催收比例 (第五類資產)</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck06" name="處理方式" checked=""><label for="note-ck06">備呆比例</label after-icon="%"><span><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                            <ul class="customize-form-entry-group">
+                                <li>
+                                    <div><input type="checkbox" id="note-ck07" name="處理方式"><label for="note-ck07">停止收付</label><span after-icon="%"><input type="text" placeholder="請輸入值" size="10" maxlength="4" value="50"></span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 備註 -->
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-4">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">備註</div>
+                        <div class="customize-form-entry">
+                            <textarea name="" id="" cols="30" rows="3" placeholder="請輸入值"></textarea>
                         </div>
                     </div>
                 </div>

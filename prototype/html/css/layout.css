@@ -4453,6 +4453,10 @@ a.menu-active .menu-bar {
     max-width: 130px;
 }
 
+.customize-form-subtitle {
+    font-weight: bold;
+}
+
 .customize-form-entry {
     width: calc(100% - 105px);
     background: #fff;
@@ -4485,6 +4489,23 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
+}
+
+.customize-form-entry-group {
+    border-bottom: #ccc dotted 1px;
+    position: relative;
+}
+
+.customize-form-entry-group:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.customize-form-entry-group span[after-icon]::after {
+    content: "%";
+    display: inline-block;
+    width: 20px;
+    padding-left: 3px;
+    position: absolute;
 }
 
 .customize-form-entry input[type="radio"],
