@@ -4478,8 +4478,12 @@ a.menu-active .menu-bar {
 
 .customize-form-entry ul {
     list-style: none;
-    padding: 0 2px;
-    margin: 0 0 5px 0;
+    padding: 5px;
+    margin: 0;
+}
+
+.customize-form-entry ul:nth-child(1) {
+    padding-top: 3px;
 }
 
 .customize-form-entry ul:nth-last-child(1) {
@@ -4539,6 +4543,7 @@ a.menu-active .menu-bar {
     display: table;
     table-layout: fixed;
     padding-right: 10px;
+    line-height: 1;
 }
 
 .customize-form-entry li div label,
