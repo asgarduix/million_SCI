@@ -90,14 +90,14 @@
                 </div>
             </div>
         </div>
-        <!-- 英文縮寫/ 國內/外 /英文簡稱/國別 -->
+        <!-- 英文簡稱/ 國內/外 /國別/洲別 -->
         <div class="customize-form-row">
             <div class="customize-form-inner">
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">英文縮寫</div>
+                        <div class="customize-form-title">英文簡稱</div>
                         <div class="customize-form-entry">
-                            <input type="text" name="英文縮寫" value="rrr" title="rrr" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                            <input type="text" name="英文簡稱" value="AIU U.K. 123" title="AIU U.K. 123" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                         </div>
                     </div>
                 </div>
@@ -116,14 +116,6 @@
                 </div>
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">英文簡稱</div>
-                        <div class="customize-form-entry">
-                            <input type="text" name="英文簡稱" value="AIU U.K. 123" title="AIU U.K. 123" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                        </div>
-                    </div>
-                </div>
-                <div class="customize-form-field customize-form-field-1">
-                    <div class="customize-field-inner">
                         <div class="customize-form-title">國別</div>
                         <div class="customize-form-entry">
                             <select name="國別" id="">
@@ -131,6 +123,20 @@
                                 <option value="">國別1</option>
                                 <option value="">國別2</option>
                                 <option value="">國別3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">洲別</div>
+                        <div class="customize-form-entry">
+                            <select name="洲別" id="">
+                                <option value="" disabled selected hidden>請選擇</option>
+                                <option value="">亞洲</option>
+                                <option value="">歐洲</option>
+                                <option value="">北美洲</option>
+                                <option value="">南美洲</option>
                             </select>
                         </div>
                     </div>
@@ -229,7 +235,7 @@
                 </div>
             </div>
         </div>
-        <!-- 狀態/國外部創建人代號 -->
+        <!-- 狀態/創建人代號 -->
         <div class="customize-form-row">
             <div class="customize-form-inner">
                 <div class="customize-form-field customize-form-field-2">
@@ -246,9 +252,80 @@
                 </div>
                 <div class="customize-form-field customize-form-field-1">
                     <div class="customize-field-inner">
-                        <div class="customize-form-title">國外部創建人代號</div>
+                        <div class="customize-form-title">創建人代號</div>
                         <div class="customize-form-entry">
                             <input type="text" name="國外部創建人代號" value="C010702" title="C010702" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 觀察名單/另案簽報/授權書期限/黑名單起始日 -->
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">觀察名單</div>
+                        <div class="customize-form-entry">
+                            <ul>
+                                <li><input type="radio" id="rd06" name="觀察名單"><label for="rd06">是</label></li>
+                                <li><input type="radio" id="rd07" name="觀察名單"><label for="rd07">否</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">另案簽報</div>
+                        <div class="customize-form-entry">
+                            <ul>
+                                <li><input type="radio" id="rd08" name="另案簽報"><label for="rd08">是</label></li>
+                                <li><input type="radio" id="rd09" name="另案簽報"><label for="rd09">否</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">授權書期限</div>
+                        <div class="customize-form-entry">
+                            <input type="date" name="授權書期限" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">黑名單起始日</div>
+                        <div class="customize-form-entry">
+                            <input type="date" name="黑名單起始日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 最終支付公司/使用條件 -->
+        <div class="customize-form-row">
+            <div class="customize-form-inner">
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">最終支付公司</div>
+                        <div class="customize-form-entry">
+                            <ul>
+                                <li><input type="radio" id="rd10" name="最終支付公司"><label for="rd10">是</label></li>
+                                <li><input type="radio" id="rd11" name="最終支付公司"><label for="rd11">否</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="customize-form-field customize-form-field-1">
+                    <div class="customize-field-inner">
+                        <div class="customize-form-title">使用條件</div>
+                        <div class="customize-form-entry">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="ck99" name="理由"><label for="ck99">新保件不得使用</label></div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
