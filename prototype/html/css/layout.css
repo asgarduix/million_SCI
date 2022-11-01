@@ -4762,7 +4762,7 @@ a.menu-active .menu-bar {
 }
 
 .dialog-content .customize-form-upload-item p {
-    padding: 0;
+    padding: 0 0 0 4px;
 }
 
 .customize-form-upload-title {
@@ -4935,6 +4935,82 @@ a.menu-active .menu-bar {
 
 .customize-form-table-content {
     padding: 5px;
+}
+
+.customize-form-thumbnail-list {
+    width: 100%;
+    border-top: #aaa solid 1px;
+}
+
+.customize-form-thumbnail-list-inner {
+    padding: 10px;
+}
+
+.customize-form-thumbnail-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.customize-form-thumbnail-list li {
+    width: 20%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    border: #ccc solid 1px;
+    border-right: none;
+    border-top: none;
+}
+
+.customize-form-thumbnail-list li:nth-child(-n+5){
+    border-top: #ccc solid 1px;
+}
+
+.customize-form-thumbnail-list li:nth-child(5n) {
+    border-right: #ccc solid 1px;
+}
+
+.customize-form-thumbnail-list li:nth-last-child(1) {
+    border-right: #ccc solid 1px;
+}
+
+.thumbnail-list-unit-inner {
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.thumbnail-list-title, .thumbnail-list-img {
+    display: block;
+    width: 100%:;
+    padding: 2px 5px;
+}
+
+.thumbnail-list-title {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.thumbnail-list-img {
+    padding: 10px;
+    min-height: 120px;
+    position: relative;
+    border: #eee solid 1px;
+    background: #f4f4f4;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.thumbnail-list-img::after {
+    font-family: 'Material Icons', sans-serif;
+    content: "image";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #ddd;
+    font-size: 100px;
+    line-height: 1;
 }
 
 /* 流水序號 */
