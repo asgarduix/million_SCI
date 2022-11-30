@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FAFP0200-華銀萬家入帳報表列印作業</title>
+    <title>華南產物保險-FAFP0300-華銀萬家盤點報表列印作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fafp0200-01-query">
+<body id="canvas" class="fafp0300-01-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -63,7 +63,7 @@
                             <li><a href="#">財務</a></li>
                             <li><a href="#">資金運用</a></li>
                             <li><a href="#">應收票據</a></li>
-                            <li><a href="#">華銀萬家入帳報表列印作業</a></li>
+                            <li><a href="#">華銀萬家盤點報表列印作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -71,7 +71,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">華銀萬家入帳報表列印作業</div>
+                                <div class="unitname-item unitname-title">華銀萬家盤點報表列印作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -83,7 +83,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 銷帳單位/入帳起訖日 -->
+                                    <!-- 銷帳單位/報表選擇 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -100,58 +100,33 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-double-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">入帳起訖日</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="入帳起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="入帳起訖日" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 入帳對象/報表選擇 -->
-                                    <div class="query-row">
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">入帳對象</div>
+                                                <div class="query-field-item query-field-title">報表選擇</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="入帳對象" id="">
+                                                    <select name="報表選擇" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected>全部</option>
+                                                        <option value="" selected>結帳日盤點月報表</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-radio">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表選擇</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="報表選擇" checked><label for="rd01" value="">明細表</label></li>
-                                                        <li><input type="radio" id="rd02" name="報表選擇"><label for="rd02" value="">對帳單</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <!-- 報表用途 -->
+                                    <!-- 立帳起訖日 -->
                                     <div class="query-row">
-                                        <div class="query-field query-radio">
+                                        <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表用途</div>
+                                                <div class="query-field-item query-field-title">立帳起訖日</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd03" name="報表用途" checked><label for="rd03" value="">財務用</label></li>
-                                                        <li><input type="radio" id="rd04" name="報表用途"><label for="rd04" value="">會計用</label></li>
-                                                    </ul>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="立帳起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="立帳起訖日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
