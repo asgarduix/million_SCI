@@ -82,7 +82,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 入帳單位/銷帳單位/台北總公司 -->
+                                    <!-- 入帳單位/銷帳單位/入帳人員 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -116,16 +116,70 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">銷帳人員</div>
+                                                <div class="query-field-item query-field-title">入帳人員</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="text" name="銷帳人員" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="入帳人員" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
-                                                            <input type="text" name="銷帳人員" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="入帳人員" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 銷帳日/銷帳序號/報表選擇 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-datepicker">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">銷帳日</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-double-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">銷帳序號</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="text" name="銷帳序號" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="text" name="銷帳序號" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">報表選擇</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="加總依據" id="">
+                                                        <option value="" selected>會計明細表</option>
+                                                        <option value="">總表</option>
+                                                        <option value="">全部</option>
+                                                        <option value="">保單明細</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
