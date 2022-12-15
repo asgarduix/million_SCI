@@ -130,11 +130,11 @@
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
+                                                <div class="query-field-item query-field-title">退款性質</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="作業項目" id="">
+                                                    <select name="退款性質" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">作業項目</option>
+                                                        <option value="">退款性質(需串接)</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -340,6 +340,7 @@
 <script>
 let table02Data = [{
     id: "a1",
+    歸檔: "N",
     未郵寄原因: "未郵寄原因",
     開票日: "開票日",
     支票號碼: "支票號碼",
@@ -373,6 +374,22 @@ var table02 = new Tabulator("#table02", {
             minWidth: 30,
             cellClick: function(e, cell) {
                 cell.getRow().toggleSelect();
+            }
+        },
+        {
+            title: "歸檔",
+            field: "歸檔",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            maxWidth: 50,
+            minWidth: 50,
+            headerSort: false,
+            editorParams: {
+                "Y": "Y",
+                "N": "N",
             }
         },
         { title: "未郵寄原因", field: "未郵寄原因" },
