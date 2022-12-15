@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fchm0100-01-query">
+<body id="canvas" class="fchm0200-01-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -82,7 +82,7 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 開票日/退款性質/選項 -->
+                                    <!-- 開票日/簽入日/付款種類 -->
                                     <div class="query-row">
                                         <div class="query-field query-double-datepicker">
                                             <div class="query-field-inner">
@@ -128,35 +128,54 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
+                                                <div class="query-field-item query-field-title">簽入日</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="作業項目" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">作業項目</option>
-                                                    </select>
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-selector">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">選項</div>
+                                                <div class="query-field-item query-field-title">付款種類</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select name="選項" id="" onchange="location=this.value;">
+                                                    <select name="付款種類" id="">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="fchm0100-01-query.html">簽領</option>
-                                                        <option value="fchm0100-01-query.html">郵寄</option>
-                                                        <option value="fchm0100-01-query-2.html">盤點</option>
-                                                        <option value="fchm0100-01-query.html">領取票據</option>
-                                                        <option value="fchm0100-01-query-3.html">結案單審理狀態</option>
+                                                        <option value="">全部</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 支票號碼/維護人員/盤點日期 -->
+                                    <!-- 選項/支票號碼/簽入人 -->
                                     <div class="query-row">
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">選項</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="選項" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">簽入</option>
+                                                        <option value="">簽出</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="query-field query-double-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">支票號碼</div>
@@ -175,11 +194,11 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">維護人員</div>
+                                                <div class="query-field-item query-field-title">簽入人</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
-                                                            <input type="text" name="維護人員" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <input type="text" name="簽入人" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                         <div class="entry-combine entry-6">
                                                             <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
@@ -188,47 +207,42 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-double-datepicker">
+                                    </div>
+                                    <!-- 盤點日/選擇 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">盤點日期</div>
+                                                <div class="query-field-item query-field-title">盤點日</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <div class="query-datepicker-YMD">
-                                                                <div class="query-datepicker-YMD-inner">
-                                                                    <div class="query-datepicker-item query-datepicker-item-y">
-                                                                        <div><input type="text" maxlength="3" placeholder="yyy"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-m">
-                                                                        <div><input type="text" maxlength="2" placeholder="mm"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-d">
-                                                                        <div><input type="text" maxlength="2" placeholder="dd"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-icon">
-                                                                    </div>
-                                                                </div>
+                                                    <div class="query-datepicker-YMD">
+                                                        <div class="query-datepicker-YMD-inner">
+                                                            <div class="query-datepicker-item query-datepicker-item-y">
+                                                                <div><input type="text" maxlength="3" placeholder="yyy"></div>
                                                             </div>
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <div class="query-datepicker-YMD">
-                                                                <div class="query-datepicker-YMD-inner">
-                                                                    <div class="query-datepicker-item query-datepicker-item-y">
-                                                                        <div><input type="text" maxlength="3" placeholder="yyy"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-m">
-                                                                        <div><input type="text" maxlength="2" placeholder="mm"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-d">
-                                                                        <div><input type="text" maxlength="2" placeholder="dd"></div>
-                                                                    </div>
-                                                                    <div class="query-datepicker-item query-datepicker-item-icon">
-                                                                    </div>
-                                                                </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-m">
+                                                                <div><input type="text" maxlength="2" placeholder="mm"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-d">
+                                                                <div><input type="text" maxlength="2" placeholder="dd"></div>
+                                                            </div>
+                                                            <div class="query-datepicker-item query-datepicker-item-icon">
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">選擇</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="選擇" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">在途票</option>
+                                                        <option value="">隔日取票</option>
+                                                        <option value="">入庫歸檔</option>
+                                                        <option value="">全部(不含在途)</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -267,11 +281,11 @@
                                     <div class="label-inner">
                                         <div class="label-item">
                                             <div class="label-title">金額合計</div>
-                                            <div class="label-content label-content-counter">5</div>
+                                            <div class="label-content label-content-counter">0</div>
                                         </div>
                                         <div class="label-item">
                                             <div class="label-title">筆數合計</div>
-                                            <div class="label-content label-content-counter">100</div>
+                                            <div class="label-content label-content-counter">0</div>
                                         </div>
                                     </div>
                                 </div>
@@ -345,8 +359,9 @@ let table01Data = [{
     幣別: "幣別",
     金額: "金額",
     支付對象: "支付對象",
-    郵遞區號: "郵遞區號",
-    郵寄地址: "郵寄地址",
+    簽收日期: "簽收日期",
+    簽收人員: "簽收人員",
+    退回原因: "退回原因",
 }, ]
 
 var table01 = new Tabulator("#table01", {
@@ -379,8 +394,9 @@ var table01 = new Tabulator("#table01", {
         { title: "幣別", field: "幣別" },
         { title: "金額", field: "金額", hozAlign: "right" },
         { title: "支付對象", field: "支付對象" },
-        { title: "郵遞區號", field: "郵遞區號" },
-        { title: "郵寄地址", field: "郵寄地址" },
+        { title: "簽收日期", field: "簽收日期" },
+        { title: "簽收人員", field: "簽收人員" },
+        { title: "退回原因", field: "退回原因" },
     ],
 });
 // 選擇預設勾選row
