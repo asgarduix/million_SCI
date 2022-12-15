@@ -340,6 +340,7 @@
 <script>
 let table02Data = [{
     id: "a1",
+    未郵寄原因: "未郵寄原因",
     開票日: "開票日",
     支票號碼: "支票號碼",
     幣別: "幣別",
@@ -374,6 +375,7 @@ var table02 = new Tabulator("#table02", {
                 cell.getRow().toggleSelect();
             }
         },
+        { title: "未郵寄原因", field: "未郵寄原因" },
         { title: "開票日", field: "開票日" },
         { title: "支票號碼", field: "支票號碼" },
         { title: "幣別", field: "幣別" },
