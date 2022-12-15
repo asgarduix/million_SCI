@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FCHM0200-資調票據簽收簽退維護作業</title>
+    <title>華南產物保險-FCHM0100-資調票據簽收簽退維護作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/pg.css">
 </head>
 
-<body id="canvas" class="fchm0200-01-query">
+<body id="canvas" class="fchm0100-01-query">
     <div class="frame">
         <!-- frame: menu -->
         <nav class="frame-block leftBlock" id="left_menu">
@@ -145,10 +145,11 @@
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="選項" id="" onchange="location=this.value;">
                                                         <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="fchm0200-01-query.html">簽領</option>
-                                                        <option value="fchm0200-01-query.html">郵寄</option>
-                                                        <option value="fchm0200-01-query-2.html" selected="">盤點</option>
-                                                        <option value="fchm0200-01-query.html">領取票據</option>
+                                                        <option value="fchm0100-01-query.html">簽領</option>
+                                                        <option value="fchm0100-01-query.html">郵寄</option>
+                                                        <option value="fchm0100-01-query-2.html">盤點</option>
+                                                        <option value="fchm0100-01-query.html">領取票據</option>
+                                                        <option value="fchm0100-01-query-3.html" selected="">結案單審理狀態</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -303,7 +304,7 @@
                                             <div class="table-func-page">頁碼</div>
                                         </div>
                                     </div>
-                                    <div id="table02"></div>
+                                    <div id="table03"></div>
                                     <div class="table-footer"></div>
                                 </div>
                             </div>
@@ -331,25 +332,25 @@
 <!-- tabulator_4.9 -->
 <script src="js/tabulator.min.js"></script>
 <!-- tabulator_json -->
-<!-- <script src="json/table02.js"></script> -->
+<!-- <script src="json/table03.js"></script> -->
 <!-- 自定義js -->
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-let table02Data = [{
+let table03Data = [{
     id: "a1",
+    票據位置: "票據位置",
     開票日: "開票日",
     支票號碼: "支票號碼",
-    幣別: "幣別",
-    金額: "金額",
     支付對象: "支付對象",
-    郵遞區號: "郵遞區號",
-    郵寄地址: "郵寄地址",
+    結案單審理狀態: "結案單審理狀態",
+    審理日期: "審理日期",
+    審理人員: "審理人員",
 }, ]
 
-var table02 = new Tabulator("#table02", {
-    data: table02Data,
+var table03 = new Tabulator("#table03", {
+    data: table03Data,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -373,17 +374,17 @@ var table02 = new Tabulator("#table02", {
                 cell.getRow().toggleSelect();
             }
         },
+        { title: "票據位置", field: "票據位置" },
         { title: "開票日", field: "開票日" },
         { title: "支票號碼", field: "支票號碼" },
-        { title: "幣別", field: "幣別" },
-        { title: "金額", field: "金額", hozAlign: "right" },
         { title: "支付對象", field: "支付對象" },
-        { title: "郵遞區號", field: "郵遞區號" },
-        { title: "郵寄地址", field: "郵寄地址" },
+        { title: "結案單審理狀態", field: "結案單審理狀態" },
+        { title: "審理日期", field: "審理日期" },
+        { title: "審理人員", field: "審理人員" },
     ],
 });
 // 選擇預設勾選row
-// table02.selectRow("a1");
+// table03.selectRow("a1");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>
